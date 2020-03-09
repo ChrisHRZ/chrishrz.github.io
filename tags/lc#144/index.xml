@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Focus-ChrisHRZ&#39;s blog</title>
-    <link>http://chrishrz.github.io/</link>
-    <description>Recent content on Focus-ChrisHRZ&#39;s blog</description>
+    <title>lc#144 on Focus-ChrisHRZ&#39;s blog</title>
+    <link>http://chrishrz.github.io/tags/lc#144/</link>
+    <description>Recent content in lc#144 on Focus-ChrisHRZ&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 09 Mar 2020 11:28:56 +0800</lastBuildDate>
     
-	<atom:link href="http://chrishrz.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://chrishrz.github.io/tags/lc#144/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       
       <guid>http://chrishrz.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%89%E7%A7%8D%E9%81%8D%E5%8E%86/</guid>
       <description>二叉树的遍历 二叉树分为前序遍历</description>
-    </item>
-    
-    <item>
-      <title>序</title>
-      <link>http://chrishrz.github.io/post/first/</link>
-      <pubDate>Mon, 09 Mar 2020 11:28:56 +0800</pubDate>
-      
-      <guid>http://chrishrz.github.io/post/first/</guid>
-      <description>ChrisHRZ的第一篇个人博客 写在前面 折腾了一天，终于搭建出来个人博客的雏形，过程还是挺有意思的。也算有了一片自己的领地。今天就这样了，后</description>
     </item>
     
   </channel>
