@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="ChrisHRZ" /><meta name="description" content="二叉树的遍历 二叉树分为前序遍历" /><meta name="keywords" content="code, life, study" />
+<meta name="author" content="ChrisHRZ" /><meta name="description" content="二叉树的遍历 简单地理解，满足以下两个条件的树就是二叉树： 本身是有序树； 树中包含的各个节点的度不能超过 2，即只能是 0、1 或者 2； 下图即一颗二叉" /><meta name="keywords" content="code, life, study" />
 
 
 
@@ -36,25 +36,26 @@
 
 <link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
 
 
 <meta property="og:title" content="二叉树的三种遍历" />
-<meta property="og:description" content="二叉树的遍历 二叉树分为前序遍历" />
+<meta property="og:description" content="二叉树的遍历 简单地理解，满足以下两个条件的树就是二叉树： 本身是有序树； 树中包含的各个节点的度不能超过 2，即只能是 0、1 或者 2； 下图即一颗二叉" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://chrishrz.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%89%E7%A7%8D%E9%81%8D%E5%8E%86/" />
 <meta property="article:published_time" content="2020-03-09T11:28:56+08:00" />
 <meta property="article:modified_time" content="2020-03-09T11:28:56+08:00" />
 <meta itemprop="name" content="二叉树的三种遍历">
-<meta itemprop="description" content="二叉树的遍历 二叉树分为前序遍历">
+<meta itemprop="description" content="二叉树的遍历 简单地理解，满足以下两个条件的树就是二叉树： 本身是有序树； 树中包含的各个节点的度不能超过 2，即只能是 0、1 或者 2； 下图即一颗二叉">
 <meta itemprop="datePublished" content="2020-03-09T11:28:56&#43;08:00" />
 <meta itemprop="dateModified" content="2020-03-09T11:28:56&#43;08:00" />
-<meta itemprop="wordCount" content="15">
+<meta itemprop="wordCount" content="2285">
 
 
 
 <meta itemprop="keywords" content="leetcode,树,lc#94,lc#144,lc#145," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="二叉树的三种遍历"/>
-<meta name="twitter:description" content="二叉树的遍历 二叉树分为前序遍历"/>
+<meta name="twitter:description" content="二叉树的遍历 简单地理解，满足以下两个条件的树就是二叉树： 本身是有序树； 树中包含的各个节点的度不能超过 2，即只能是 0、1 或者 2； 下图即一颗二叉"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -109,6 +110,9 @@
       </li>
   </ul>
 </nav>
+
+
+
     </header>
 
     <main id="main" class="main">
@@ -131,13 +135,257 @@
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
-    <nav id="TableOfContents"></nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#二叉树的遍历">二叉树的遍历</a></li>
+    <li><a href="#遍历代码">遍历代码</a>
+      <ul>
+        <li><a href="#1-递归法">1. 递归法</a></li>
+        <li><a href="#2-迭代法">2. 迭代法</a></li>
+        <li><a href="#3-莫里斯遍历法">3. 莫里斯遍历法</a></li>
+      </ul>
+    </li>
+    <li><a href="#后序遍历的讨论">后序遍历的讨论</a></li>
+  </ul>
+</nav>
   </div>
 </div>
     <div class="post-content">
-      <h1 id="二叉树的遍历">二叉树的遍历</h1>
-<p>二叉树分为前序遍历
-<img src="/img/home.jpg" alt="测试图片"></p>
+      <h2 id="二叉树的遍历">二叉树的遍历</h2>
+<p>简单地理解，满足以下两个条件的树就是二叉树：</p>
+<blockquote>
+<ol>
+<li>本身是有序树；</li>
+<li>树中包含的各个节点的度不能超过 2，即只能是 0、1 或者 2；</li>
+</ol>
+</blockquote>
+<p>下图即一颗二叉树：<br>
+<img src="/img/img2020-03-09-18-45-35.png" alt=""><br>
+二叉树的遍历分为<strong>先序遍历，中序遍历，后续遍历</strong>，我自己将其遍历顺序总结为：</p>
+<blockquote>
+<ol>
+<li><strong>先序遍历</strong>：根-&gt;左-&gt;右</li>
+<li><strong>中序遍历</strong>：左-&gt;根-&gt;右</li>
+<li><strong>后序遍历</strong>：左-&gt;右-&gt;根</li>
+</ol>
+</blockquote>
+<h2 id="遍历代码">遍历代码</h2>
+<p>二叉树的三种遍历方式的实现有<strong>递归法，迭代法，莫里斯遍历法</strong>。递归法和迭代法都会用到栈，因此需要额外的存储空间。递归进行遍历非常简单，但是LeetCode中要求用迭代的方式实现，因此迭代和莫里斯遍历也要注意记忆。<strong>先序遍历和中序遍历</strong>可以由这三种方法严格实现，而<strong>后序遍历</strong>在使用迭代法和莫里斯遍历法时并不是严格执行，而是取巧的通过了OJ(因此后续遍历在LC上也是困难题)。这一节先将三种方法的通用代码记录下来，下一节专门讨论后序遍历。<br>
+二叉树数据结构定义如下：</p>
+<pre><code class="language-cpp">// Definition for a binary tree node.
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
+</code></pre>
+<h3 id="1-递归法">1. 递归法</h3>
+<h4 id="先序遍历"><strong>先序遍历</strong></h4>
+<pre><code class="language-cpp">class Solution {//三种方法，递归简单，先写递归。1、递归
+public:
+   vector&lt;int&gt; preorderTraversal(TreeNode* root) {
+       vector&lt;int&gt; res;
+       preorder(root,res);
+       return res;
+   }
+   void preorder(TreeNode* cur, vector&lt;int&gt; &amp;res){
+       if(!cur) return;
+       res.push_back(cur-&gt;val);
+       preorder(cur-&gt;left,res);
+       preorder(cur-&gt;right,res);
+   }
+};
+</code></pre>
+<h4 id="中序遍历"><strong>中序遍历</strong></h4>
+<pre><code class="language-cpp">class Solution {//链表，树用递归都比较简单，但递归会用栈，效率比较低。
+                //题目要求写个迭代，先写递归吧
+                //1、递归法
+public:
+    vector&lt;int&gt; inorderTraversal(TreeNode* root) {
+        vector&lt;int&gt; res;//设置存储结果的数组
+        inorder(root,res);//调用递归函数
+        return res;//返回结果
+    }
+    void inorder(TreeNode* root, vector&lt;int&gt;&amp; res){
+        if(!root) return;//若该节点为空，则直接返回
+        inorder(root-&gt;left,res);//对左子树进行递归
+        res.push_back(root-&gt;val);//将根节点加入res中
+        inorder(root-&gt;right,res);//对右子树进行递归
+    }
+};
+</code></pre>
+<h4 id="后序遍历"><strong>后序遍历</strong></h4>
+<pre><code class="language-cpp">class Solution {//三种方法。1、递归
+public:
+    vector&lt;int&gt; postorderTraversal(TreeNode* root) {
+        vector&lt;int&gt; res;
+        postorder(root,res);
+        return res;
+    }
+    void postorder(TreeNode* cur, vector&lt;int&gt; &amp;res){//注意用引用形参
+        if(!cur) return;
+        postorder(cur-&gt;left,res);
+        postorder(cur-&gt;right,res);
+        res.push_back(cur-&gt;val);//后序遍历的顺序
+    }
+};
+</code></pre>
+<h3 id="2-迭代法">2. 迭代法</h3>
+<h4 id="先序遍历-1"><strong>先序遍历</strong></h4>
+<pre><code class="language-cpp">class Solution {//三种方法。2、栈迭代
+public:
+   vector&lt;int&gt; preorderTraversal(TreeNode* root) {
+       vector&lt;int&gt; res;
+       if(!root) return res;//遇到特殊情况返回
+       stack&lt;TreeNode*&gt; s;//创建栈
+       auto *cur = root;//设置指针
+       while(cur || !s.empty()){//只有cur指向nullptr且栈s空了才停止遍历。cur指向nullptr可能是遍历完一个子树；s空了可能回到根节点。
+           if(cur){
+               res.push_back(cur-&gt;val);//这是主要区别，先取值再入栈
+               s.push(cur);//入栈
+               cur = cur-&gt;left;
+           }
+           else{
+               cur = s.top();s.pop();//弹出该栈顶元素
+               cur = cur-&gt;right;//进入右子树
+           }
+       }
+       return res;
+   }
+};
+</code></pre>
+<h4 id="中序遍历-1"><strong>中序遍历</strong></h4>
+<pre><code class="language-cpp">class Solution {//链表，树用递归都比较简单，但递归会用栈，效率比较低。
+                //2、迭代法，三种遍历通用
+                //时间O(n)，空间O(n)和迭代一样都是栈消耗
+public:
+    vector&lt;int&gt; inorderTraversal(TreeNode* root) {
+        vector&lt;int&gt; res;//创建结果
+        stack&lt;TreeNode*&gt; s;//创建使用的栈
+        TreeNode *cur = root;//辅助指针指向根节点
+        while(cur || !s.empty()){//只有cur指向nullptr且栈s空了才停止遍历。cur指向nullptr可能是遍历完一个子树；s空了可能回到根节点。
+            if(cur){//若cur为存在，则将该节点压入栈，并继续遍历左子树
+                s.push(cur);
+                cur = cur-&gt;left;
+            }
+            else{//否则就可以从栈中取数存入结果，并遍历
+                cur = s.top();s.pop();
+                res.push_back(cur-&gt;val);
+                cur = cur-&gt;right;
+            }
+        }//若左子树为空，则存入该点，若其右子树也为空，则存入其父节点。
+        return res;
+    }
+};
+</code></pre>
+<h4 id="后序遍历-1"><strong>后序遍历</strong></h4>
+<blockquote>
+<p><strong>注意这种方法不是严格的后序遍历，是反向后序遍历再翻转整个数组</strong></p>
+</blockquote>
+<pre><code class="language-cpp">class Solution {//三种方法。2、栈迭代
+public:
+    vector&lt;int&gt; postorderTraversal(TreeNode* root) {
+        vector&lt;int&gt; res;
+        if(!root) return res;
+        stack&lt;TreeNode*&gt; s;
+        auto cur = root;
+        while(cur || !s.empty()){
+            if(cur){
+                s.push(cur);//这里和先序一样，和中序不一样
+                res.insert(res.begin(),cur-&gt;val);
+                //主要区别，在res开头插入，即由左右中变为中右左
+                cur = cur-&gt;right;//这也是区别，要注意
+            }
+            else{
+                cur = s.top();s.pop();
+                cur = cur-&gt;left;
+            }
+        }
+        return res;
+    }  
+};
+</code></pre>
+<h3 id="3-莫里斯遍历法">3. 莫里斯遍历法</h3>
+<h4 id="先序遍历-2"><strong>先序遍历</strong></h4>
+<blockquote>
+<p>记当前遍历的节点为 cur。</p>
+<ol>
+<li>cur.left 为 null，<strong>保存 cur 的值</strong>，更新 cur = cur.right</li>
+<li>cur.left 不为 null，找到 cur.left 这颗子树最右边的节点记做 pre<br>
+2.1. pre.right 为 null，那么将 pre.right = cur，<strong>保存 cur 的值</strong>，更新 cur = cur.left<br>
+2.2. pre.right 不为 null，说明之前已经访问过，第二次来到这里，表明当前子树遍历完成，更新 cur = cur.right</li>
+</ol>
+</blockquote>
+<pre><code class="language-cpp">class Solution {//三种方法。3、莫里斯遍历
+public:
+   vector&lt;int&gt; preorderTraversal(TreeNode* root) {
+       vector&lt;int&gt; res;
+       if(!root) return res;//遇到特殊情况返回
+       TreeNode *cur = root, *pre = nullptr;
+       while(cur){//cur存在时一直遍历
+           if(!cur-&gt;left){
+               res.push_back(cur-&gt;val);
+               cur = cur-&gt;right;
+           }
+           else{
+               pre = cur-&gt;left;
+               while(pre-&gt;right &amp;&amp; pre-&gt;right != cur) pre = pre-&gt;right;
+               if(!pre-&gt;right){
+                   res.push_back(cur-&gt;val);
+                   pre-&gt;right = cur;
+                   cur = cur-&gt;left;
+               }
+               else{
+                   pre-&gt;right = nullptr;
+                   cur = cur-&gt;right;
+               }
+           }
+       }
+       return res;
+   }
+};
+</code></pre>
+<h4 id="中序遍历-2"><strong>中序遍历</strong></h4>
+<blockquote>
+<p>记当前遍历的节点为 cur。</p>
+<ol>
+<li>cur.left 为 null，<strong>保存 cur 的值</strong>，更新 cur = cur.right</li>
+<li>cur.left 不为 null，找到 cur.left 这颗子树最右边的节点记做 pre
+2.1.  pre.right 为 null，那么将 pre.right = cur，更新 cur = cur.left
+2.2.  pre.right 不为 null，说明之前已经访问过，第二次来到这里，表明当前子树遍历完成，<strong>保存 cur 的值</strong>，更新 cur = cur.right</li>
+</ol>
+</blockquote>
+<pre><code class="language-cpp">class Solution {//链表，树用递归都比较简单，但递归会用栈，效率比较低。
+                //2、迭代法，三种遍历通用
+                //时间O(n)，空间O(n)和迭代一样都是栈消耗
+public:
+    vector&lt;int&gt; inorderTraversal(TreeNode* root) {
+        vector&lt;int&gt; res;//创建结果
+        stack&lt;TreeNode*&gt; s;//创建使用的栈
+        TreeNode *cur = root;//辅助指针指向根节点
+        while(cur || !s.empty()){//只有cur指向nullptr且栈s空了才停止遍历。cur指向nullptr可能是遍历完一个子树；s空了可能回到根节点。
+            if(cur){//若cur为存在，则将该节点压入栈，并继续遍历左子树
+                s.push(cur);
+                cur = cur-&gt;left;
+            }
+            else{//否则就可以从栈中取数存入结果，并遍历
+                cur = s.top();s.pop();
+                res.push_back(cur-&gt;val);
+                cur = cur-&gt;right;
+            }
+        }//若左子树为空，则存入该点，若其右子树也为空，则存入其父节点。
+        return res;
+    }
+};
+</code></pre>
+<h4 id="后序遍历-2"><strong>后序遍历</strong></h4>
+<blockquote>
+<p><strong>注意这种方法不是严格的后序遍历，是反向后序遍历再翻转整个数组</strong></p>
+</blockquote>
+<pre><code class="language-cpp">//占坑，还没写
+</code></pre>
+<h2 id="后序遍历的讨论">后序遍历的讨论</h2>
 
     </div>
 
@@ -236,7 +484,7 @@
       <i class="iconfont icon-up"></i>
     </div>
   </div>
-  
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
