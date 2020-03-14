@@ -16,7 +16,11 @@
       <link>http://chrishrz.github.io/post/lct94t144t145%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%89%E7%A7%8D%E9%81%8D%E5%8E%86/</link>
       <pubDate>Mon, 09 Mar 2020 11:28:56 +0800</pubDate>
       
+<<<<<<< HEAD
       <guid>http://chrishrz.github.io/post/lct94t144t145%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%89%E7%A7%8D%E9%81%8D%E5%8E%86/</guid>
+=======
+      <guid>http://chrishrz.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%89%E7%A7%8D%E9%81%8D%E5%8E%86/</guid>
+>>>>>>> 4ec098e38ee112acf2ff3549c83db5ff804f587a
       <description>二叉树的遍历 简单地理解，满足以下两个条件的树就是二叉树： 本身是有序树； 树中包含的各个节点的度不能超过 2，即只能是 0、1 或者 2； 下图即一颗二叉</description>
     </item>
     

@@ -49,7 +49,11 @@
 <meta itemprop="description" content="二叉树的遍历 简单地理解，满足以下两个条件的树就是二叉树： 本身是有序树； 树中包含的各个节点的度不能超过 2，即只能是 0、1 或者 2； 下图即一颗二叉">
 <meta itemprop="datePublished" content="2020-03-09T11:28:56&#43;08:00" />
 <meta itemprop="dateModified" content="2020-03-09T11:28:56&#43;08:00" />
+<<<<<<< HEAD
 <meta itemprop="wordCount" content="2752">
+=======
+<meta itemprop="wordCount" content="2285">
+>>>>>>> 4ec098e38ee112acf2ff3549c83db5ff804f587a
 
 
 
@@ -272,8 +276,12 @@ public:
             else{//否则就可以从栈中取数存入结果，并遍历
                 cur = s.top();s.pop();
                 res.push_back(cur-&gt;val);
+<<<<<<< HEAD
                 cur = cur-&gt;right;//这一步如果cur无右子树，则返回继续从栈中取数，即返回父节点
                                  //如果cur有右子树，则进入右子树
+=======
+                cur = cur-&gt;right;
+>>>>>>> 4ec098e38ee112acf2ff3549c83db5ff804f587a
             }
         }//若左子树为空，则存入该点，若其右子树也为空，则存入其父节点。
         return res;
@@ -387,6 +395,7 @@ public:
 <pre><code class="language-cpp">//占坑，还没写
 </code></pre>
 <h2 id="后序遍历的讨论">后序遍历的讨论</h2>
+<<<<<<< HEAD
 <p>后序遍历有三种方法。递归法前面已经写了，这里写一个严格后序遍历的<strong>栈迭代法</strong>。 <br>
 后序遍历与中序遍历的区别就在于<strong>在返回根节点时要判断是从左子树回来的还是从右子树回来的</strong>。实现方式就有</p>
 <ol>
@@ -427,6 +436,8 @@ public:
     }
 };
 </code></pre>
+=======
+>>>>>>> 4ec098e38ee112acf2ff3549c83db5ff804f587a
 
     </div>
 
