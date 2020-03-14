@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>markdown on Focus-ChrisHRZ&#39;s blog</title>
+    <link>http://chrishrz.github.io/tags/markdown/</link>
+    <description>Recent content in markdown on Focus-ChrisHRZ&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 13 Mar 2020 17:39:04 +0800</lastBuildDate>
+    
+	<atom:link href="http://chrishrz.github.io/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[转载]在hugo中添加mermaid支持</title>
+      <link>http://chrishrz.github.io/post/%E5%9C%A8hugo%E4%B8%AD%E6%B7%BB%E5%8A%A0mermaid%E6%94%AF%E6%8C%81/</link>
+      <pubDate>Fri, 13 Mar 2020 17:39:04 +0800</pubDate>
+      
+      <guid>http://chrishrz.github.io/post/%E5%9C%A8hugo%E4%B8%AD%E6%B7%BB%E5%8A%A0mermaid%E6%94%AF%E6%8C%81/</guid>
+      <description>在markdown中拓展mermaid 前面用有道云笔记的markdown功能，发现他画流程图非常好用。就想把这个功能加入到自己的blog中。</description>
+    </item>
+    
+  </channel>
+</rss>

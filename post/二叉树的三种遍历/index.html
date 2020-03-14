@@ -49,7 +49,7 @@
 <meta itemprop="description" content="二叉树的遍历 简单地理解，满足以下两个条件的树就是二叉树： 本身是有序树； 树中包含的各个节点的度不能超过 2，即只能是 0、1 或者 2； 下图即一颗二叉">
 <meta itemprop="datePublished" content="2020-03-09T11:28:56&#43;08:00" />
 <meta itemprop="dateModified" content="2020-03-09T11:28:56&#43;08:00" />
-<meta itemprop="wordCount" content="2285">
+<meta itemprop="wordCount" content="2752">
 
 
 
@@ -272,7 +272,8 @@ public:
             else{//否则就可以从栈中取数存入结果，并遍历
                 cur = s.top();s.pop();
                 res.push_back(cur-&gt;val);
-                cur = cur-&gt;right;
+                cur = cur-&gt;right;//这一步如果cur无右子树，则返回继续从栈中取数，即返回父节点
+                                 //如果cur有右子树，则进入右子树
             }
         }//若左子树为空，则存入该点，若其右子树也为空，则存入其父节点。
         return res;
@@ -386,6 +387,46 @@ public:
 <pre><code class="language-cpp">//占坑，还没写
 </code></pre>
 <h2 id="后序遍历的讨论">后序遍历的讨论</h2>
+<p>后序遍历有三种方法。递归法前面已经写了，这里写一个严格后序遍历的<strong>栈迭代法</strong>。 <br>
+后序遍历与中序遍历的区别就在于<strong>在返回根节点时要判断是从左子树回来的还是从右子树回来的</strong>。实现方式就有</p>
+<ol>
+<li>用一个set存储遍历过的节点</li>
+<li>存储上一次遍历的几点</li>
+<li>stack中push两遍值</li>
+</ol>
+<blockquote>
+<p>这里写一个方法2，用的额外空间最少</p>
+</blockquote>
+<pre><code class="language-cpp">class Solution {
+public:
+    vector&lt;int&gt; postorderTraversal(TreeNode* root) {
+        vector&lt;int&gt; res;
+        stack&lt;TreeNode*&gt; s;
+        auto cur = root;
+        TreeNode *last = nullptr;
+        while(cur || !s.empty()){
+            if(cur){
+                s.push(cur);
+                cur = cur-&gt;left;
+            }
+            else{
+                TreeNode *tmp = s.top();//注意！,先暂存栈顶值
+                if(tmp-&gt;right &amp;&amp; tmp-&gt;right != last){//注意！这里是与&amp;&amp;条件
+                //如果栈顶的节点存在右子树，且右子树没去过
+                    cur = tmp-&gt;right;//进入右子树
+                }
+                else{//如果没有右子树，或者右子树去过了，那么就和中序遍历一样，存栈顶的值，弹出栈顶
+                    res.push_back(tmp-&gt;val);//注意！这里不要转为cur
+                    s.pop();
+                    last = tmp;//注意！用last记录上一步遍历的值
+                    //只有存值的时候标记last
+                }
+            }
+        }
+        return res;
+    }
+};
+</code></pre>
 
     </div>
 
@@ -413,7 +454,11 @@ public:
           <a href="/tags/lc#145/">lc#145</a>
           </div>
       <nav class="post-nav">
-        
+        <a class="prev" href="/post/%E8%AE%BE%E7%BD%AEvscode%E7%9A%84%E7%BB%88%E7%AB%AF%E4%B8%BAcmder/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">设置vscode的终端为cmder</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
         <a class="next" href="/post/first/">
             <span class="next-text nav-default">序</span>
             <span class="next-text nav-mobile">Next</span>

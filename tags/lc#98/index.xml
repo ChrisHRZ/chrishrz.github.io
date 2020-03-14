@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>lc#98 on Focus-ChrisHRZ&#39;s blog</title>
+    <link>http://chrishrz.github.io/tags/lc#98/</link>
+    <description>Recent content in lc#98 on Focus-ChrisHRZ&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 14 Mar 2020 13:53:22 +0800</lastBuildDate>
+    
+	<atom:link href="http://chrishrz.github.io/tags/lc#98/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[lc]#98验证二叉搜索树</title>
+      <link>http://chrishrz.github.io/post/lct98%E9%AA%8C%E8%AF%81%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/</link>
+      <pubDate>Sat, 14 Mar 2020 13:53:22 +0800</pubDate>
+      
+      <guid>http://chrishrz.github.io/post/lct98%E9%AA%8C%E8%AF%81%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/</guid>
+      <description>题解 TreeNode的定义： /** * Definition for a binary tree node. * struct TreeNode { * int val; * TreeNode *left; * TreeNode *right; * TreeNode(int x) : val(x), left(NULL), right(NULL) {} * }; */ 1. 直接递归法 class Solution {//三种方法。1、直接递归。利</description>
+    </item>
+    
+  </channel>
+</rss>

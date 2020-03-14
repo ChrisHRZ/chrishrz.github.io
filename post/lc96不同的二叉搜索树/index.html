@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>[lc]#96不同的二叉搜索树 - Focus-ChrisHRZ&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ChrisHRZ" /><meta name="description" content="[lc]#96不同的二叉搜索树 给定一个整数 n，求以 1 &amp;hellip; n 为节点组成的二叉搜索树有多少种？ 示例： 输入: 3 输出: 5 解释: 给定 n = 3, 一共有 5 种不同" /><meta name="keywords" content="code, life, study" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.66.0 with theme even" />
+
+
+<link rel="canonical" href="http://chrishrz.github.io/post/lc96%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
+
+<meta property="og:title" content="[lc]#96不同的二叉搜索树" />
+<meta property="og:description" content="[lc]#96不同的二叉搜索树 给定一个整数 n，求以 1 &hellip; n 为节点组成的二叉搜索树有多少种？ 示例： 输入: 3 输出: 5 解释: 给定 n = 3, 一共有 5 种不同" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://chrishrz.github.io/post/lc96%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/" />
+<meta property="article:published_time" content="2020-03-13T12:26:13+08:00" />
+<meta property="article:modified_time" content="2020-03-13T12:26:13+08:00" />
+<meta itemprop="name" content="[lc]#96不同的二叉搜索树">
+<meta itemprop="description" content="[lc]#96不同的二叉搜索树 给定一个整数 n，求以 1 &hellip; n 为节点组成的二叉搜索树有多少种？ 示例： 输入: 3 输出: 5 解释: 给定 n = 3, 一共有 5 种不同">
+<meta itemprop="datePublished" content="2020-03-13T12:26:13&#43;08:00" />
+<meta itemprop="dateModified" content="2020-03-13T12:26:13&#43;08:00" />
+<meta itemprop="wordCount" content="1411">
+
+
+
+<meta itemprop="keywords" content="树,二叉树,lc#96," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[lc]#96不同的二叉搜索树"/>
+<meta name="twitter:description" content="[lc]#96不同的二叉搜索树 给定一个整数 n，求以 1 &hellip; n 为节点组成的二叉搜索树有多少种？ 示例： 输入: 3 输出: 5 解释: 给定 n = 3, 一共有 5 种不同"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">FOCUS</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">FOCUS</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">[lc]#96不同的二叉搜索树</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-03-13 </span>
+        <div class="post-category">
+            <a href="/categories/leetcode/"> leetcode </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#lc96不同的二叉搜索树">[lc]#96不同的二叉搜索树</a></li>
+    <li><a href="#题解">题解</a>
+      <ul>
+        <li><a href="#方法一递归">方法一：递归</a></li>
+        <li><a href="#方法二动态规划">方法二：动态规划</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="lc96不同的二叉搜索树">[lc]#96不同的二叉搜索树</h2>
+<p>给定一个整数 n，求以 1 &hellip; n 为节点组成的二叉搜索树有多少种？</p>
+<blockquote>
+<p>示例：<br>
+输入: 3<br>
+输出: 5<br>
+解释:<br>
+给定 n = 3, 一共有 5 种不同结构的二叉搜索树:</p>
+<pre><code>  1         3     3      2      1
+   \       /     /      / \      \
+    3     2     1      1   3      2
+   /     /       \                 \
+  2     1         2                 3
+
+</code></pre>
+</blockquote>
+<p><em>来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/unique-binary-search-trees
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</em></p>
+<hr>
+<h2 id="题解">题解</h2>
+<p>这道题是#95的简化版。#95要求写出所有的二叉搜索树，这道题只要求写出二叉搜索树的个数，因此要简单一点，其结题思路与<a href="https://zh.wikipedia.org/wiki/%E5%8D%A1%E5%A1%94%E5%85%B0%E6%95%B0">卡塔兰数</a>有关。有三种方法分别是<strong>递归、动态规划、公式法。</strong></p>
+<h3 id="方法一递归">方法一：递归</h3>
+<p>递归方法包括一个for循环，用来遍历1~n，让每个数都作为根节点进行二叉搜索树的建立。然后对其左右子树进行递归，计算其左右子树的二叉搜索树的排列组合数量。<br>
+注意如果直接递归无法通过OJ，会超时。采用unordered_map先将每个n对应下的结果进行记录，就可以减少大量重复计算通过OJ。</p>
+<pre><code class="language-cpp">class Solution {//三种方法。1、递归。时间复杂度O(n)，空间复杂度O(1),但是递归要用栈，需要额外的空间。
+//直接递归的方法会超时，无法通过OJ，用memo记住运算结果可以减少运算量
+unordered_map&lt;int,int&gt; memo;//注意直接写到私有变量里，写到程序里会出错
+public:
+    int numTrees(int n) {
+        if(n==0 || n==1){
+            return 1;
+        }//特殊情况的判断，只有0和1个数时直接返回1
+        return getRes(n);
+    }
+    int getRes(int n){
+        if(memo.count(n)) return memo[n];
+        //如果已经计算过n下的值，直接返回结果，减少计算量
+        if(n==0 || n==1){
+            return 1;
+        }
+        int res = 0;//设置res用于累加结果
+        for(int i=1;i&lt;=n;i++){//数组是1~n，i表示为根的数
+            int leftTreeNum = getRes(i-1);//左子树的排列组合数量
+            int rightTreeNum = getRes(n-i);//右子树的排列组合数量
+            res += leftTreeNum*rightTreeNum;
+            //二者相乘即以i为根的二叉搜索树数量
+        }
+        memo[n] = res;
+        return res;//返回结果
+    }
+};
+</code></pre>
+<h3 id="方法二动态规划">方法二：动态规划</h3>
+<p>一般的递归都可以转化为动态规划，但递归是top-down，动态规划是bottom-up。递归是通过不断地压栈，直到n为0或1时进行出栈，一直返回到顶层输出结果。动态规划的思路与加入memo的递归类似，对于长度一样的数组,如[1,2,3],[6,7,8],其二叉搜索树的排列组合数量是一致的，只与数组的长度有关。因此我们维护一个数组dp，求出n为0,1,2&hellip;n的结果并存储，最终返回dp[n]。<br>
+动态规划法需要两个循环，一个外循环用于遍历1~n，计算dp[1]~dp[n]；内循环和递归一样首先以不同的数为根节点，其次利用左右子树的排列组合数量相乘得到以该节点为根的二叉搜索树的数量，最后叠加上不同的节点为根的结果得到dp[n]。</p>
+<pre><code class="language-cpp">class Solution {//三种方法。2、动态规划。时间复杂度O(n**2)，空间复杂度O(n)
+public:
+    int numTrees(int n) {
+        if(n==0 || n==1) return 1;//特殊情况
+        //int dp[n+1];//因为有累加，使用静态数组有问题，最好用动态数组
+        vector&lt;int&gt; dp(n+1);//vector&lt;int&gt;的初始化值默认为0
+        //注意这里要用n+1初始化，因为其下标从0开始
+        dp[0]=1;
+        dp[1]=1;
+        for(int len=2; len&lt;=n; ++len){
+            for(int i=1; i&lt;=len; ++i){
+                int left = i-1;
+                int right = len-i;
+//注意这两句与递归不同，这里是获得左右节点的数量而不是二叉搜索树的数量
+                dp[len] += dp[left]*dp[right];
+            }
+        }
+        return dp[n];
+    }
+};
+</code></pre>
+<div class="mermaid" align=" 
+                                center
+                            "> 
+    
+graph LR
+A(面试)-->B(笔试)
+A-->C(面试)
+C-->C1(数据结构与算法*)
+C-->C2(计算机网络)
+C-->C3(操作系统Linux)
+B-->B1(数据结构与算法*)
+
+
+</div>
+
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">ChrisHRZ</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-03-13
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E6%A0%91/">树</a>
+          <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a>
+          <a href="/tags/lc#96/">lc#96</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/%E5%9C%A8hugo%E4%B8%AD%E6%B7%BB%E5%8A%A0mermaid%E6%94%AF%E6%8C%81/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">在hugo中添加mermaid支持</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/c&#43;&#43;%E5%93%88%E5%B8%8C%E8%A1%A8unordered_map%E7%9A%84%E5%B8%B8%E8%A7%81%E6%96%B9%E6%B3%95%E5%B0%8F%E7%BB%93/">
+            <span class="next-text nav-default">C&#43;&#43;哈希表unordered_map的常见方法小结</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/lc96%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/" class="leancloud_visitors" data-flag-title="[lc]#96不同的二叉搜索树">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'M8Fyr1YXIu2Ov8Wh4ByqtEzq-gzGzoHsz',
+        appKey: 'AHiPSGeLQbvrQGQ6KfhvOKvN',
+        notify:  false ,
+        verify:  false ,
+        avatar:'mm',
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/ChrisHRZ" class="iconfont icon-github" title="github"></a>
+  <a href="http://chrishrz.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">ChrisHRZ</span>
+  </span>
+</div>
+
+
+<script src="https://cdn.bootcss.com/mermaid/8.4.8/mermaid.min.js"></script>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
