@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>lc#100 on Focus-ChrisHRZ&#39;s blog</title>
+    <link>http://chrishrz.github.io/tags/lc#100/</link>
+    <description>Recent content in lc#100 on Focus-ChrisHRZ&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 14 Mar 2020 19:54:18 +0800</lastBuildDate>
+    
+	<atom:link href="http://chrishrz.github.io/tags/lc#100/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[lc]#101对称二叉树</title>
+      <link>http://chrishrz.github.io/post/lct101%E5%AF%B9%E7%A7%B0%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
+      <pubDate>Sat, 14 Mar 2020 19:54:18 +0800</pubDate>
+      
+      <guid>http://chrishrz.github.io/post/lct101%E5%AF%B9%E7%A7%B0%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
+      <description>题解 class Solution {//三种方法。1、递归法。有点像#100 public: bool isSymmetric(TreeNode* root) { if(!root) return true;//特殊情况，为空直接返回true return helper(root-&amp;gt</description>
+    </item>
+    
+    <item>
+      <title>[lc]#100相同的树</title>
+      <link>http://chrishrz.github.io/post/lct100%E7%9B%B8%E5%90%8C%E7%9A%84%E6%A0%91/</link>
+      <pubDate>Sat, 14 Mar 2020 19:27:58 +0800</pubDate>
+      
+      <guid>http://chrishrz.github.io/post/lct100%E7%9B%B8%E5%90%8C%E7%9A%84%E6%A0%91/</guid>
+      <description>题解 class Solution {//这道题就是遍历。 //二叉树的遍历包括DFS(深度优先搜索)的先序遍历、中序遍历、后序遍历。 //还有BFS(广度优先搜索)的层次</description>
+    </item>
+    
+  </channel>
+</rss>
