@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: http://chrishrz.github.io/sitemap.xml
+Sitemap: uildDrafts/sitemap.xml
