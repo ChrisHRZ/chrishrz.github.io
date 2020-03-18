@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="ChrisHRZ" /><meta name="description" content="题目 给定一个整数 n，生成所有由 1 &amp;hellip; n 为节点所组成的二叉搜索树。 示例: 输入: 3 输出: [ [1,null,3,2], [3,2,null,1], [3,1,null,null,2], [2,1,3], [1,null,2,null,3] ] 解释: 以上的输出对应以下 5 种不同结构的二叉搜" /><meta name="keywords" content="code, life, study" />
+<meta name="author" content="ChrisHRZ" /><meta name="description" content="题解 1. 递归法 /** * Definition for a binary tree node. * struct TreeNode { * int val; * TreeNode *left; * TreeNode *right; * TreeNode(int x) : val(x), left(NULL), right(NULL) {} * }; */ class Solution {//#96的升级版。两种方法。1、递归 public: vector&amp;lt;TreeNode*&amp;gt; generateTrees(int n) { vector&amp;lt;TreeNode*&amp;gt; ans; if(n==0) return a" /><meta name="keywords" content="code, life, study" />
 
 
 
@@ -40,22 +40,22 @@
 
 
 <meta property="og:title" content="[lc]#95不同的二叉搜索树2" />
-<meta property="og:description" content="题目 给定一个整数 n，生成所有由 1 &hellip; n 为节点所组成的二叉搜索树。 示例: 输入: 3 输出: [ [1,null,3,2], [3,2,null,1], [3,1,null,null,2], [2,1,3], [1,null,2,null,3] ] 解释: 以上的输出对应以下 5 种不同结构的二叉搜" />
+<meta property="og:description" content="题解 1. 递归法 /** * Definition for a binary tree node. * struct TreeNode { * int val; * TreeNode *left; * TreeNode *right; * TreeNode(int x) : val(x), left(NULL), right(NULL) {} * }; */ class Solution {//#96的升级版。两种方法。1、递归 public: vector&lt;TreeNode*&gt; generateTrees(int n) { vector&lt;TreeNode*&gt; ans; if(n==0) return a" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="uildDrafts/post/lct95%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%912/" />
 <meta property="article:published_time" content="2020-03-14T00:59:26+08:00" />
 <meta property="article:modified_time" content="2020-03-14T00:59:26+08:00" />
 <meta itemprop="name" content="[lc]#95不同的二叉搜索树2">
-<meta itemprop="description" content="题目 给定一个整数 n，生成所有由 1 &hellip; n 为节点所组成的二叉搜索树。 示例: 输入: 3 输出: [ [1,null,3,2], [3,2,null,1], [3,1,null,null,2], [2,1,3], [1,null,2,null,3] ] 解释: 以上的输出对应以下 5 种不同结构的二叉搜">
+<meta itemprop="description" content="题解 1. 递归法 /** * Definition for a binary tree node. * struct TreeNode { * int val; * TreeNode *left; * TreeNode *right; * TreeNode(int x) : val(x), left(NULL), right(NULL) {} * }; */ class Solution {//#96的升级版。两种方法。1、递归 public: vector&lt;TreeNode*&gt; generateTrees(int n) { vector&lt;TreeNode*&gt; ans; if(n==0) return a">
 <meta itemprop="datePublished" content="2020-03-14T00:59:26&#43;08:00" />
 <meta itemprop="dateModified" content="2020-03-14T00:59:26&#43;08:00" />
-<meta itemprop="wordCount" content="991">
+<meta itemprop="wordCount" content="808">
 
 
 
-<meta itemprop="keywords" content="树,二叉树," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="树,二叉树,lc#96," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="[lc]#95不同的二叉搜索树2"/>
-<meta name="twitter:description" content="题目 给定一个整数 n，生成所有由 1 &hellip; n 为节点所组成的二叉搜索树。 示例: 输入: 3 输出: [ [1,null,3,2], [3,2,null,1], [3,1,null,null,2], [2,1,3], [1,null,2,null,3] ] 解释: 以上的输出对应以下 5 种不同结构的二叉搜"/>
+<meta name="twitter:description" content="题解 1. 递归法 /** * Definition for a binary tree node. * struct TreeNode { * int val; * TreeNode *left; * TreeNode *right; * TreeNode(int x) : val(x), left(NULL), right(NULL) {} * }; */ class Solution {//#96的升级版。两种方法。1、递归 public: vector&lt;TreeNode*&gt; generateTrees(int n) { vector&lt;TreeNode*&gt; ans; if(n==0) return a"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -66,46 +66,6 @@
   <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
 <![endif]-->
 
-
-<script type="text/javascript"
-        async
-        src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']],
-    displayMath: [['$$','$$'], ['\[\[','\]\]']],
-    processEscapes: true,
-    processEnvironments: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-    TeX: { equationNumbers: { autoNumber: "AMS" },
-         extensions: ["AMSmath.js", "AMSsymbols.js"] }
-  }
-});
-
-MathJax.Hub.Queue(function() {
-    
-    
-    
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i = 0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-});
-</script>
-
-<style>
-code.has-jax {
-    font: inherit;
-    font-size: 100%;
-    background: inherit;
-    border: inherit;
-    color: #515151;
-}
-</style>
-
-
-<meta name="baidu-site-verification" content="GDMA35xQfM" />
-<meta name="google-site-verification" content="f-5-S53Hm0WIn0Tnfu-dg0sNmCZeahUFILgUSI9JLQA" />
 </head>
 <body>
   <div id="mobile-navbar" class="mobile-navbar">
@@ -177,7 +137,6 @@ code.has-jax {
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#题目">题目</a></li>
     <li><a href="#题解">题解</a>
       <ul>
         <li><a href="#1-递归法">1. 递归法</a></li>
@@ -189,47 +148,18 @@ code.has-jax {
   </div>
 </div>
     <div class="post-content">
-      <h2 id="题目">题目</h2>
-<p>给定一个整数 n，生成所有由 1 &hellip; n 为节点所组成的二叉搜索树。</p>
-<blockquote>
-<p>示例:<br>
-输入: 3<br>
-输出:</p>
-</blockquote>
-<pre><code>[
-  [1,null,3,2],
-  [3,2,null,1],
-  [3,1,null,null,2],
-  [2,1,3],
-  [1,null,2,null,3]
-]
-</code></pre>
-<blockquote>
-<p>解释:<br>
-以上的输出对应以下 5 种不同结构的二叉搜索树：</p>
-</blockquote>
-<pre><code>
-   1         3     3      2      1
-    \       /     /      / \      \
-     3     2     1      1   3      2
-    /     /       \                 \
-   2     1         2                 3
-</code></pre>
-<p><em>来源：力扣（LeetCode）
-链接：https://leetcode-cn.com/problems/unique-binary-search-trees-ii
-著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</em></p>
-<h2 id="题解">题解</h2>
-<p>定义二叉树:</p>
-<pre><code class="language-cpp">//Definition for a binary tree node.
-    struct TreeNode {
-        int val;
-        TreeNode *left;
-        TreeNode *right;
-        TreeNode(int x) : val(x), left(NULL), right(NULL) {}
-    * };
-</code></pre>
+      <h2 id="题解">题解</h2>
 <h3 id="1-递归法">1. 递归法</h3>
-<pre><code class="language-cpp">class Solution {//#96的升级版。两种方法。1、递归
+<pre><code class="language-cpp">/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+class Solution {//#96的升级版。两种方法。1、递归
 public:
     vector&lt;TreeNode*&gt; generateTrees(int n) {
         vector&lt;TreeNode*&gt; ans;
@@ -267,7 +197,16 @@ public:
 };
 </code></pre>
 <p>这道题也可以用memo进行优化，代码如下</p>
-<pre><code class="language-cpp">class Solution {//#96的升级版。两种方法。1.1、递归+memo。用空间换时间
+<pre><code class="language-cpp">/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+class Solution {//#96的升级版。两种方法。1.1、递归+memo。用空间换时间
 public:
     vector&lt;TreeNode*&gt; generateTrees(int n) {
         vector&lt;TreeNode*&gt; ans;
@@ -310,9 +249,6 @@ public:
 <h3 id="2-动态规划法">2. 动态规划法</h3>
 <pre><code class="language-cpp">//占坑
 </code></pre>
-<p>$$
-c = \sqrt{a^{2}+b_{0}^{2}+e^{x}}
-$$</p>
 
     </div>
 
@@ -333,8 +269,14 @@ $$</p>
 </div>
 <footer class="post-footer">
       <div class="post-tags">
+<<<<<<< HEAD
           <a href="/uildDrafts/tags/%E6%A0%91/">树</a>
           <a href="/uildDrafts/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a>
+=======
+          <a href="/tags/%E6%A0%91/">树</a>
+          <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a>
+          <a href="/tags/lc#96/">lc#96</a>
+>>>>>>> parent of 02996ee... 添加了一些post,增加了mathjax,增加了google,baidu收录
           </div>
       <nav class="post-nav">
         <a class="prev" href="uildDrafts/post/lct98%E9%AA%8C%E8%AF%81%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/">
@@ -342,7 +284,11 @@ $$</p>
             <span class="prev-text nav-default">[lc]#98验证二叉搜索树</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
+<<<<<<< HEAD
         <a class="next" href="uildDrafts/post/%E8%BD%AC%E8%BD%BD%E5%9C%A8hugo%E4%B8%AD%E6%B7%BB%E5%8A%A0mermaid%E6%94%AF%E6%8C%81/">
+=======
+        <a class="next" href="/post/%E5%9C%A8hugo%E4%B8%AD%E6%B7%BB%E5%8A%A0mermaid%E6%94%AF%E6%8C%81/">
+>>>>>>> parent of 02996ee... 添加了一些post,增加了mathjax,增加了google,baidu收录
             <span class="next-text nav-default">[转载]在hugo中添加mermaid支持</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
@@ -409,8 +355,6 @@ $$</p>
 
 
 <script src="https://cdn.bootcss.com/mermaid/8.4.8/mermaid.min.js"></script>
-
-<script src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js"></script>
     </footer>
 
     <div class="back-to-top" id="back-to-top">

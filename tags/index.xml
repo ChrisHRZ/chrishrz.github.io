@@ -6,71 +6,131 @@
     <description>Recent content in Tags on Focus-ChrisHRZ&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+<<<<<<< HEAD
     <lastBuildDate>Tue, 17 Mar 2020 16:32:45 +0800</lastBuildDate>
+=======
+    <lastBuildDate>Sat, 14 Mar 2020 13:53:22 +0800</lastBuildDate>
+>>>>>>> parent of 02996ee... 添加了一些post,增加了mathjax,增加了google,baidu收录
     
 	<atom:link href="uildDrafts/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+<<<<<<< HEAD
       <title>二叉树</title>
       <link>uildDrafts/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
       <pubDate>Tue, 17 Mar 2020 16:32:45 +0800</pubDate>
       
       <guid>uildDrafts/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
+=======
+      <title>lc#98</title>
+      <link>http://chrishrz.github.io/tags/lc#98/</link>
+      <pubDate>Sat, 14 Mar 2020 13:53:22 +0800</pubDate>
+      
+      <guid>http://chrishrz.github.io/tags/lc#98/</guid>
+>>>>>>> parent of 02996ee... 添加了一些post,增加了mathjax,增加了google,baidu收录
       <description></description>
     </item>
     
     <item>
+<<<<<<< HEAD
       <title>树</title>
       <link>uildDrafts/tags/%E6%A0%91/</link>
       <pubDate>Tue, 17 Mar 2020 16:32:45 +0800</pubDate>
       
       <guid>uildDrafts/tags/%E6%A0%91/</guid>
+=======
+      <title>二叉树</title>
+      <link>http://chrishrz.github.io/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
+      <pubDate>Sat, 14 Mar 2020 13:53:22 +0800</pubDate>
+      
+      <guid>http://chrishrz.github.io/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
+>>>>>>> parent of 02996ee... 添加了一些post,增加了mathjax,增加了google,baidu收录
       <description></description>
     </item>
     
     <item>
+<<<<<<< HEAD
       <title>cdn</title>
       <link>uildDrafts/tags/cdn/</link>
       <pubDate>Mon, 16 Mar 2020 19:47:24 +0800</pubDate>
       
       <guid>uildDrafts/tags/cdn/</guid>
+=======
+      <title>树</title>
+      <link>http://chrishrz.github.io/tags/%E6%A0%91/</link>
+      <pubDate>Sat, 14 Mar 2020 13:53:22 +0800</pubDate>
+      
+      <guid>http://chrishrz.github.io/tags/%E6%A0%91/</guid>
+>>>>>>> parent of 02996ee... 添加了一些post,增加了mathjax,增加了google,baidu收录
       <description></description>
     </item>
     
     <item>
+<<<<<<< HEAD
       <title>latex</title>
       <link>uildDrafts/tags/latex/</link>
       <pubDate>Mon, 16 Mar 2020 19:47:24 +0800</pubDate>
       
       <guid>uildDrafts/tags/latex/</guid>
+=======
+      <title>lc#96</title>
+      <link>http://chrishrz.github.io/tags/lc#96/</link>
+      <pubDate>Sat, 14 Mar 2020 00:59:26 +0800</pubDate>
+      
+      <guid>http://chrishrz.github.io/tags/lc#96/</guid>
+>>>>>>> parent of 02996ee... 添加了一些post,增加了mathjax,增加了google,baidu收录
       <description></description>
     </item>
     
     <item>
+<<<<<<< HEAD
       <title>markdown</title>
       <link>uildDrafts/tags/markdown/</link>
       <pubDate>Mon, 16 Mar 2020 19:47:24 +0800</pubDate>
       
       <guid>uildDrafts/tags/markdown/</guid>
+=======
+      <title>cdn</title>
+      <link>http://chrishrz.github.io/tags/cdn/</link>
+      <pubDate>Fri, 13 Mar 2020 17:39:04 +0800</pubDate>
+      
+      <guid>http://chrishrz.github.io/tags/cdn/</guid>
+>>>>>>> parent of 02996ee... 添加了一些post,增加了mathjax,增加了google,baidu收录
       <description></description>
     </item>
     
     <item>
+<<<<<<< HEAD
       <title>mathjax</title>
       <link>uildDrafts/tags/mathjax/</link>
       <pubDate>Mon, 16 Mar 2020 19:47:24 +0800</pubDate>
       
       <guid>uildDrafts/tags/mathjax/</guid>
+=======
+      <title>hugo</title>
+      <link>http://chrishrz.github.io/tags/hugo/</link>
+      <pubDate>Fri, 13 Mar 2020 17:39:04 +0800</pubDate>
+      
+      <guid>http://chrishrz.github.io/tags/hugo/</guid>
+>>>>>>> parent of 02996ee... 添加了一些post,增加了mathjax,增加了google,baidu收录
       <description></description>
     </item>
     
     <item>
+<<<<<<< HEAD
       <title>转载</title>
       <link>uildDrafts/tags/%E8%BD%AC%E8%BD%BD/</link>
       <pubDate>Mon, 16 Mar 2020 19:47:24 +0800</pubDate>
       
       <guid>uildDrafts/tags/%E8%BD%AC%E8%BD%BD/</guid>
+=======
+      <title>markdown</title>
+      <link>http://chrishrz.github.io/tags/markdown/</link>
+      <pubDate>Fri, 13 Mar 2020 17:39:04 +0800</pubDate>
+      
+      <guid>http://chrishrz.github.io/tags/markdown/</guid>
+>>>>>>> parent of 02996ee... 添加了一些post,增加了mathjax,增加了google,baidu收录
       <description></description>
     </item>
     
@@ -80,6 +140,15 @@
       <pubDate>Fri, 13 Mar 2020 17:39:04 +0800</pubDate>
       
       <guid>uildDrafts/tags/mermaid/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>转载</title>
+      <link>http://chrishrz.github.io/tags/%E8%BD%AC%E8%BD%BD/</link>
+      <pubDate>Fri, 13 Mar 2020 17:39:04 +0800</pubDate>
+      
+      <guid>http://chrishrz.github.io/tags/%E8%BD%AC%E8%BD%BD/</guid>
       <description></description>
     </item>
     
@@ -116,6 +185,33 @@
       <pubDate>Thu, 12 Mar 2020 13:51:37 +0800</pubDate>
       
       <guid>uildDrafts/tags/editor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lc#144</title>
+      <link>http://chrishrz.github.io/tags/lc#144/</link>
+      <pubDate>Mon, 09 Mar 2020 11:28:56 +0800</pubDate>
+      
+      <guid>http://chrishrz.github.io/tags/lc#144/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lc#145</title>
+      <link>http://chrishrz.github.io/tags/lc#145/</link>
+      <pubDate>Mon, 09 Mar 2020 11:28:56 +0800</pubDate>
+      
+      <guid>http://chrishrz.github.io/tags/lc#145/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lc#94</title>
+      <link>http://chrishrz.github.io/tags/lc#94/</link>
+      <pubDate>Mon, 09 Mar 2020 11:28:56 +0800</pubDate>
+      
+      <guid>http://chrishrz.github.io/tags/lc#94/</guid>
       <description></description>
     </item>
     
