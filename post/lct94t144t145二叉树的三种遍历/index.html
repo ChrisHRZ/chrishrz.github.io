@@ -26,34 +26,34 @@
 <meta name="generator" content="Hugo 0.66.0 with theme even" />
 
 
-<link rel="canonical" href="uildDrafts/post/lct94t144t145%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%89%E7%A7%8D%E9%81%8D%E5%8E%86/" />
-<link rel="apple-touch-icon" sizes="180x180" href="/uildDrafts/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/uildDrafts/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/uildDrafts/favicon-16x16.png">
-<link rel="manifest" href="/uildDrafts/manifest.json">
-<link rel="mask-icon" href="/uildDrafts/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="canonical" href="https://chrishrz.github.io/post/lct94t144t145%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%89%E7%A7%8D%E9%81%8D%E5%8E%86/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/uildDrafts/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
-<link rel="stylesheet" href="/uildDrafts/css/https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+<link rel="stylesheet" href="/css/https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
 
 
 <meta property="og:title" content="[lc]#94#144#145二叉树的三种遍历" />
 <meta property="og:description" content="二叉树的遍历 简单地理解，满足以下两个条件的树就是二叉树： 本身是有序树； 树中包含的各个节点的度不能超过 2，即只能是 0、1 或者 2； 下图即一颗二叉" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="uildDrafts/post/lct94t144t145%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%89%E7%A7%8D%E9%81%8D%E5%8E%86/" />
+<meta property="og:url" content="https://chrishrz.github.io/post/lct94t144t145%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%89%E7%A7%8D%E9%81%8D%E5%8E%86/" />
 <meta property="article:published_time" content="2020-03-09T11:28:56+08:00" />
 <meta property="article:modified_time" content="2020-03-09T11:28:56+08:00" />
 <meta itemprop="name" content="[lc]#94#144#145二叉树的三种遍历">
 <meta itemprop="description" content="二叉树的遍历 简单地理解，满足以下两个条件的树就是二叉树： 本身是有序树； 树中包含的各个节点的度不能超过 2，即只能是 0、1 或者 2； 下图即一颗二叉">
 <meta itemprop="datePublished" content="2020-03-09T11:28:56&#43;08:00" />
 <meta itemprop="dateModified" content="2020-03-09T11:28:56&#43;08:00" />
-<meta itemprop="wordCount" content="2752">
+<meta itemprop="wordCount" content="2764">
 
 
 
-<meta itemprop="keywords" content="树,二叉树,lc#94,lc#144,lc#145," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="树,二叉树," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="[lc]#94#144#145二叉树的三种遍历"/>
 <meta name="twitter:description" content="二叉树的遍历 简单地理解，满足以下两个条件的树就是二叉树： 本身是有序树； 树中包含的各个节点的度不能超过 2，即只能是 0、1 或者 2； 下图即一颗二叉"/>
 
@@ -66,11 +66,51 @@
   <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
 <![endif]-->
 
+
+<script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
+
+<meta name="baidu-site-verification" content="GDMA35xQfM" />
+<meta name="google-site-verification" content="f-5-S53Hm0WIn0Tnfu-dg0sNmCZeahUFILgUSI9JLQA" />
 </head>
 <body>
   <div id="mobile-navbar" class="mobile-navbar">
   <div class="mobile-header-logo">
-    <a href="/uildDrafts/" class="logo">FOCUS</a>
+    <a href="/" class="logo">FOCUS</a>
   </div>
   <div class="mobile-navbar-icon">
     <span></span>
@@ -80,13 +120,13 @@
 </div>
 <nav id="mobile-menu" class="mobile-menu slideout-menu">
   <ul class="mobile-menu-list">
-    <a href="uildDrafts/">
+    <a href="/">
         <li class="mobile-menu-item">Home</li>
-      </a><a href="uildDrafts/post/">
+      </a><a href="/post/">
         <li class="mobile-menu-item">Archives</li>
-      </a><a href="uildDrafts/tags/">
+      </a><a href="/tags/">
         <li class="mobile-menu-item">Tags</li>
-      </a><a href="uildDrafts/categories/">
+      </a><a href="/categories/">
         <li class="mobile-menu-item">Categories</li>
       </a>
   </ul>
@@ -94,19 +134,19 @@
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
-  <a href="/uildDrafts/" class="logo">FOCUS</a>
+  <a href="/" class="logo">FOCUS</a>
 </div>
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
     <li class="menu-item">
-        <a class="menu-item-link" href="uildDrafts/">Home</a>
+        <a class="menu-item-link" href="/">Home</a>
       </li><li class="menu-item">
-        <a class="menu-item-link" href="uildDrafts/post/">Archives</a>
+        <a class="menu-item-link" href="/post/">Archives</a>
       </li><li class="menu-item">
-        <a class="menu-item-link" href="uildDrafts/tags/">Tags</a>
+        <a class="menu-item-link" href="/tags/">Tags</a>
       </li><li class="menu-item">
-        <a class="menu-item-link" href="uildDrafts/categories/">Categories</a>
+        <a class="menu-item-link" href="/categories/">Categories</a>
       </li>
   </ul>
 </nav>
@@ -126,7 +166,7 @@
       <div class="post-meta">
         <span class="post-time"> 2020-03-09 </span>
         <div class="post-category">
-            <a href="/uildDrafts/categories/leetcode/"> leetcode </a>
+            <a href="/categories/leetcode/"> leetcode </a>
             </div>
         
       </div>
@@ -161,7 +201,7 @@
 </blockquote>
 <p>下图即一颗二叉树：<br>
 <img src="/img/img2020-03-09-18-45-35.png" alt=""><br>
-二叉树的遍历分为<strong>先序遍历，中序遍历，后续遍历</strong>，我自己将其遍历顺序总结为：</p>
+二叉树的遍历分为<strong>先序遍历，中序遍历，后续遍历</strong>，（还有<a href="">层次遍历</a>,见后文）我自己将其遍历顺序总结为：</p>
 <blockquote>
 <ol>
 <li><strong>先序遍历</strong>：根-&gt;左-&gt;右</li>
@@ -447,27 +487,16 @@ public:
 </div>
 <footer class="post-footer">
       <div class="post-tags">
-<<<<<<< HEAD
-          <a href="/uildDrafts/tags/%E6%A0%91/">树</a>
-          <a href="/uildDrafts/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a>
-=======
           <a href="/tags/%E6%A0%91/">树</a>
           <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a>
-          <a href="/tags/lc#94/">lc#94</a>
-          <a href="/tags/lc#144/">lc#144</a>
-          <a href="/tags/lc#145/">lc#145</a>
-<<<<<<< HEAD
->>>>>>> parent of 02996ee... 添加了一些post,增加了mathjax,增加了google,baidu收录
-=======
->>>>>>> parent of 02996ee... 添加了一些post,增加了mathjax,增加了google,baidu收录
           </div>
       <nav class="post-nav">
-        <a class="prev" href="uildDrafts/post/%E8%AE%BE%E7%BD%AEvscode%E7%9A%84%E7%BB%88%E7%AB%AF%E4%B8%BAcmder/">
+        <a class="prev" href="/post/%E8%AE%BE%E7%BD%AEvscode%E7%9A%84%E7%BB%88%E7%AB%AF%E4%B8%BAcmder/">
             <i class="iconfont icon-left"></i>
             <span class="prev-text nav-default">设置vscode的终端为cmder</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
-        <a class="next" href="uildDrafts/post/first/">
+        <a class="next" href="/post/first/">
             <span class="next-text nav-default">序</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
@@ -478,7 +507,7 @@ public:
         </div>
         
 
-  <span id="/uildDrafts/post/lct94t144t145%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%89%E7%A7%8D%E9%81%8D%E5%8E%86/" class="leancloud_visitors" data-flag-title="[lc]#94#144#145二叉树的三种遍历">
+  <span id="/post/lct94t144t145%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%89%E7%A7%8D%E9%81%8D%E5%8E%86/" class="leancloud_visitors" data-flag-title="[lc]#94#144#145二叉树的三种遍历">
 		<span class="post-meta-item-text">文章阅读量 </span>
 		<span class="leancloud-visitors-count">0</span>
 		<p></p>
@@ -507,7 +536,7 @@ public:
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/ChrisHRZ" class="iconfont icon-github" title="github"></a>
-  <a href="uildDrafts/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  <a href="https://chrishrz.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
 </div>
 
 <div class="copyright">
@@ -534,17 +563,19 @@ public:
 
 
 <script src="https://cdn.bootcss.com/mermaid/8.4.8/mermaid.min.js"></script>
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js"></script>
     </footer>
 
     <div class="back-to-top" id="back-to-top">
       <i class="iconfont icon-up"></i>
     </div>
   </div>
-  <script src="/uildDrafts/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/uildDrafts/dist/even.26188efa.min.js"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
 
 
 
