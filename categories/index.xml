@@ -7,7 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <lastBuildDate>Tue, 17 Mar 2020 16:32:45 +0800</lastBuildDate>
+=======
+    <lastBuildDate>Sat, 14 Mar 2020 13:53:22 +0800</lastBuildDate>
+>>>>>>> parent of 02996ee... 添加了一些post,增加了mathjax,增加了google,baidu收录
 =======
     <lastBuildDate>Sat, 14 Mar 2020 13:53:22 +0800</lastBuildDate>
 >>>>>>> parent of 02996ee... 添加了一些post,增加了mathjax,增加了google,baidu收录
@@ -18,10 +22,17 @@
     <item>
       <title>leetcode</title>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <link>uildDrafts/categories/leetcode/</link>
       <pubDate>Tue, 17 Mar 2020 16:32:45 +0800</pubDate>
       
       <guid>uildDrafts/categories/leetcode/</guid>
+=======
+      <link>http://chrishrz.github.io/categories/leetcode/</link>
+      <pubDate>Sat, 14 Mar 2020 13:53:22 +0800</pubDate>
+      
+      <guid>http://chrishrz.github.io/categories/leetcode/</guid>
+>>>>>>> parent of 02996ee... 添加了一些post,增加了mathjax,增加了google,baidu收录
 =======
       <link>http://chrishrz.github.io/categories/leetcode/</link>
       <pubDate>Sat, 14 Mar 2020 13:53:22 +0800</pubDate>
@@ -34,10 +45,17 @@
     <item>
       <title>hugo</title>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <link>uildDrafts/categories/hugo/</link>
       <pubDate>Mon, 16 Mar 2020 19:47:24 +0800</pubDate>
       
       <guid>uildDrafts/categories/hugo/</guid>
+=======
+      <link>http://chrishrz.github.io/categories/hugo/</link>
+      <pubDate>Fri, 13 Mar 2020 17:39:04 +0800</pubDate>
+      
+      <guid>http://chrishrz.github.io/categories/hugo/</guid>
+>>>>>>> parent of 02996ee... 添加了一些post,增加了mathjax,增加了google,baidu收录
 =======
       <link>http://chrishrz.github.io/categories/hugo/</link>
       <pubDate>Fri, 13 Mar 2020 17:39:04 +0800</pubDate>
