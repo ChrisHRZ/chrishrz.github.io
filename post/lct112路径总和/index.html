@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>[lc]#174二叉树的层次遍历2 - Focus-ChrisHRZ&#39;s blog</title>
+  <title>[Lc]t112路径总和 - Focus-ChrisHRZ&#39;s blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="ChrisHRZ" /><meta name="description" content="题目 给定一个二叉树，返回其节点值自底向上的层次遍历。 （即按从叶子节点所在层到根节点所在的层，逐层从左向右遍历） 例如： 给定二叉树 [3,9,20,null,null,15,7] 3 / \ 9 20 /" /><meta name="keywords" content="code, life, study" />
+<meta name="author" content="ChrisHRZ" /><meta name="description" content="题目 给定一个二叉树和一个目标和，判断该树中是否存在根节点到叶子节点的路径，这条路径上所有节点值相加等于目标和。 说明: 叶子节点是指没有子节点的" /><meta name="keywords" content="code, life, study" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.66.0 with theme even" />
 
 
-<link rel="canonical" href="https://chrishrz.github.io/post/lct174%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E6%AC%A1%E9%81%8D%E5%8E%862/" />
+<link rel="canonical" href="https://chrishrz.github.io/post/lct112%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8C/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -39,23 +39,23 @@
 <link rel="stylesheet" href="/css/https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
 
 
-<meta property="og:title" content="[lc]#174二叉树的层次遍历2" />
-<meta property="og:description" content="题目 给定一个二叉树，返回其节点值自底向上的层次遍历。 （即按从叶子节点所在层到根节点所在的层，逐层从左向右遍历） 例如： 给定二叉树 [3,9,20,null,null,15,7] 3 / \ 9 20 /" />
+<meta property="og:title" content="[Lc]t112路径总和" />
+<meta property="og:description" content="题目 给定一个二叉树和一个目标和，判断该树中是否存在根节点到叶子节点的路径，这条路径上所有节点值相加等于目标和。 说明: 叶子节点是指没有子节点的" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://chrishrz.github.io/post/lct174%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E6%AC%A1%E9%81%8D%E5%8E%862/" />
-<meta property="article:published_time" content="2020-03-17T14:01:58+08:00" />
-<meta property="article:modified_time" content="2020-03-17T14:01:58+08:00" />
-<meta itemprop="name" content="[lc]#174二叉树的层次遍历2">
-<meta itemprop="description" content="题目 给定一个二叉树，返回其节点值自底向上的层次遍历。 （即按从叶子节点所在层到根节点所在的层，逐层从左向右遍历） 例如： 给定二叉树 [3,9,20,null,null,15,7] 3 / \ 9 20 /">
-<meta itemprop="datePublished" content="2020-03-17T14:01:58&#43;08:00" />
-<meta itemprop="dateModified" content="2020-03-17T14:01:58&#43;08:00" />
-<meta itemprop="wordCount" content="533">
+<meta property="og:url" content="https://chrishrz.github.io/post/lct112%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8C/" />
+<meta property="article:published_time" content="2020-03-20T20:06:36+08:00" />
+<meta property="article:modified_time" content="2020-03-20T20:06:36+08:00" />
+<meta itemprop="name" content="[Lc]t112路径总和">
+<meta itemprop="description" content="题目 给定一个二叉树和一个目标和，判断该树中是否存在根节点到叶子节点的路径，这条路径上所有节点值相加等于目标和。 说明: 叶子节点是指没有子节点的">
+<meta itemprop="datePublished" content="2020-03-20T20:06:36&#43;08:00" />
+<meta itemprop="dateModified" content="2020-03-20T20:06:36&#43;08:00" />
+<meta itemprop="wordCount" content="1003">
 
 
 
 <meta itemprop="keywords" content="树,二叉树," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="[lc]#174二叉树的层次遍历2"/>
-<meta name="twitter:description" content="题目 给定一个二叉树，返回其节点值自底向上的层次遍历。 （即按从叶子节点所在层到根节点所在的层，逐层从左向右遍历） 例如： 给定二叉树 [3,9,20,null,null,15,7] 3 / \ 9 20 /"/>
+<meta name="twitter:title" content="[Lc]t112路径总和"/>
+<meta name="twitter:description" content="题目 给定一个二叉树和一个目标和，判断该树中是否存在根节点到叶子节点的路径，这条路径上所有节点值相加等于目标和。 说明: 叶子节点是指没有子节点的"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -161,10 +161,10 @@ code.has-jax {
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">[lc]#174二叉树的层次遍历2</h1>
+      <h1 class="post-title">[Lc]t112路径总和</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2020-03-17 </span>
+        <span class="post-time"> 2020-03-20 </span>
         <div class="post-category">
             <a href="/categories/leetcode/"> leetcode </a>
             </div>
@@ -181,31 +181,29 @@ code.has-jax {
     <li><a href="#题解">题解</a>
       <ul>
         <li><a href="#1-递归法">1. 递归法</a></li>
+        <li><a href="#2-队列迭代法bfs宽度优先搜索">2. 队列迭代法（BFS宽度优先搜索）</a></li>
+        <li><a href="#3-栈迭代法dfs深度优先搜索">3. 栈迭代法（DFS深度优先搜索）</a></li>
       </ul>
     </li>
-    <li><a href="#2-队列迭代法">2. 队列迭代法</a></li>
   </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
       <h2 id="题目">题目</h2>
-<p>给定一个二叉树，返回其节点值自底向上的层次遍历。 （即按从叶子节点所在层到根节点所在的层，逐层从左向右遍历）
-例如：
-给定二叉树 <code>[3,9,20,null,null,15,7]</code></p>
-<pre><code>    3
-   / \
-  9  20
-    /  \
-   15   7
+<p>给定一个二叉树和一个目标和，判断该树中是否存在根节点到叶子节点的路径，这条路径上所有节点值相加等于目标和。</p>
+<p>说明: 叶子节点是指没有子节点的节点。</p>
+<p>示例:
+给定如下二叉树，以及目标和 sum = 22，</p>
+<pre><code>              5
+             / \
+            4   8
+           /   / \
+          11  13  4
+         /  \      \
+        7    2      1
 </code></pre>
-<p>返回锯齿形层次遍历如下：</p>
-<pre><code>[
-  [15,7],
-  [9,20],
-  [3]
-]
-</code></pre>
+<p>返回 true, 因为存在目标和为 22 的根节点到叶子节点的路径 5-&gt;4-&gt;11-&gt;2。</p>
 <h2 id="题解">题解</h2>
 <p>二叉树结构如下：</p>
 <pre><code class="language-cpp">//Definition for a binary tree node.
@@ -217,71 +215,75 @@ code.has-jax {
     };
 </code></pre>
 <h3 id="1-递归法">1. 递归法</h3>
-<p>递归法有两种思路,一种直接翻转最终数组,一种在插入时就改变顺序.</p>
-<h4 id="思路一翻转数组">思路一:翻转数组</h4>
-<p>时间复杂度: $O(N)$<br>
-空间复杂度: $O(N)$</p>
-<pre><code class="language-cpp">class Solution {
-vector&lt;vector&lt;int&gt;&gt; res;
+<ul>
+<li>时间复杂度: 最坏情况$O(N)$</li>
+<li>空间复杂度: 最坏情况$O(N)$</li>
+</ul>
+<pre><code class="language-cpp"> //这道题也是遍历整个树，找符合题意的路径，若没有就返回false
+class Solution {//两种方法。1.递归法
 public:
-    vector&lt;vector&lt;int&gt;&gt; levelOrderBottom(TreeNode* root) {
-        if(!root) return res;
-        helper(root,0);
-        return vector&lt;vector&lt;int&gt;&gt; (res.rbegin(),res.rend());//与#102的主要区别
+    bool hasPathSum(TreeNode* root, int sum) {
+        if(!root) return false;//若该节点为空，说明该路径所有节点之和未达到要求，返回false
+        if(!root-&gt;left &amp;&amp; !root-&gt;right &amp;&amp; root-&gt;val == sum) return true;//若路径之和等于sum，返回true
+        return hasPathSum(root-&gt;left, sum-root-&gt;val) || hasPathSum(root-&gt;right, sum-root-&gt;val);
+        //对左右子树递归
     }
-
-    void helper(TreeNode* cur,int level){
-        if(!cur) return;
-        if(res.size() &lt;= level) res.push_back({});
-        res[level].push_back(cur-&gt;val);
-        helper(cur-&gt;left,level+1);
-        helper(cur-&gt;right,level+1);
-    }
-};
+}; 
 </code></pre>
-<h4 id="思路二插入时改变顺序">思路二:插入时改变顺序</h4>
-<p>时间复杂度: $O(N)$<br>
-空间复杂度: $O(N)$</p>
-<pre><code class="language-cpp">class Solution {
-vector&lt;vector&lt;int&gt;&gt; res;
+<h3 id="2-队列迭代法bfs宽度优先搜索">2. 队列迭代法（BFS宽度优先搜索）</h3>
+<ul>
+<li>时间复杂度: 最坏情况$O(N)$</li>
+<li>空间复杂度: 最坏情况$O(N)$,这个比DFS慢一点。</li>
+</ul>
+<pre><code class="language-cpp">//这道题也是遍历整个树，找符合题意的路径，若没有就返回false
+class Solution {//两种方法。2.队列迭代法（这个方法会改变每个节点的数值，
 public:
-    vector&lt;vector&lt;int&gt;&gt; levelOrderBottom(TreeNode* root) {
-        if(!root) return res;
-        helper(root,0);
-        return res;
-    }
-
-    void helper(TreeNode* cur,int level){
-        if(!cur) return;
-        vector&lt;int&gt; emptyArray;//与#102的区别
-        if(res.size() == level) res.insert(res.begin(),emptyArray);//区别
-        res[res.size()-1-level].push_back(cur-&gt;val);//区别
-        helper(cur-&gt;left,level+1);
-        helper(cur-&gt;right,level+1);
-    }
-};
-</code></pre>
-<h2 id="2-队列迭代法">2. 队列迭代法</h2>
-<p>时间复杂度: $O(N)$<br>
-空间复杂度: $O(N)$</p>
-<pre><code class="language-cpp">class Solution {//两种方法1. 队列迭代法
-public:
-    vector&lt;vector&lt;int&gt;&gt; levelOrderBottom(TreeNode* root) {
-        vector&lt;vector&lt;int&gt;&gt; res;
-        if(!root) return res;
+    bool hasPathSum(TreeNode* root, int sum) {
+        if(!root) return false;//特殊情况
         queue&lt;TreeNode*&gt; q;
         q.push(root);
-        while(!q.empty()){
-            vector&lt;int&gt; thisLevel;
-            for(int i=q.size(); i&gt;0; i--){
-                TreeNode *cur = q.front();q.pop();
-                thisLevel.push_back(cur-&gt;val);
-                if(cur-&gt;left) q.push(cur-&gt;left);
-                if(cur-&gt;right) q.push(cur-&gt;right);
-            }
-            res.insert(res.begin(),thisLevel);//和#102的区别
+        while(!q.empty()){//当q不为空时继续迭代
+            auto cur = q.front();q.pop();//建立指针指向当前迭代的值
+            if(!cur-&gt;left &amp;&amp; !cur-&gt;right &amp;&amp; cur-&gt;val == sum) return true;
+            //若为叶节点,且叠加的叶节点值为sum，返回ture
+            if(cur-&gt;left){
+                cur-&gt;left-&gt;val += cur-&gt;val;
+                q.push(cur-&gt;left);
+            }//左子节点加入父节点的值，并压入队列
+            if(cur-&gt;right){
+                cur-&gt;right-&gt;val += cur-&gt;val;
+                q.push(cur-&gt;right);
+            }//右子节点同上
         }
-        return res;
+        return false;//若未返回true，则全部遍历完成后返回false
+    }
+};
+</code></pre>
+<h3 id="3-栈迭代法dfs深度优先搜索">3. 栈迭代法（DFS深度优先搜索）</h3>
+<ul>
+<li>时间复杂度: 最坏情况$O(N)$</li>
+<li>空间复杂度: 当树不平衡的最坏情况下是 $O(N)$ 。在最好情况（树是平衡的）下是 $O(\log N)$。</li>
+</ul>
+<pre><code class="language-cpp">class Solution {//两种方法。3.栈迭代法，这是DFS（这个方法会改变每个节点的数值，
+public:
+    bool hasPathSum(TreeNode* root, int sum) {
+        if(!root) return false;//特殊情况
+        stack &lt;TreeNode*&gt; s;
+        s.push(root);
+        while(!s.empty()){//当s不为空时继续迭代
+            auto cur = s.top();s.pop();//建立指针指向当前迭代的值
+            if(!cur-&gt;left &amp;&amp; !cur-&gt;right &amp;&amp; cur-&gt;val == sum) return true;
+            //若为叶节点,且叠加的叶节点值为sum，返回ture
+            if(cur-&gt;left){
+                cur-&gt;left-&gt;val += cur-&gt;val;
+                s.push(cur-&gt;left);
+            }//左子节点加入父节点的值，并压入栈
+            if(cur-&gt;right){
+                cur-&gt;right-&gt;val += cur-&gt;val;
+                s.push(cur-&gt;right);
+            }//右子节点同上
+        }
+        return false;//若未返回true，则全部遍历完成后返回false
     }
 };
 </code></pre>
@@ -296,7 +298,7 @@ public:
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-        2020-03-17
+        2020-03-20
         
     </span>
   </p>
@@ -309,13 +311,9 @@ public:
           <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/lct110%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">[lc]#110平衡二叉树</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
-        <a class="next" href="/post/lct104%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E5%A4%A7%E6%B7%B1%E5%BA%A6/">
-            <span class="next-text nav-default">[lc]#104二叉树的最大深度</span>
+        
+        <a class="next" href="/post/lct111%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E5%B0%8F%E6%B7%B1%E5%BA%A6/">
+            <span class="next-text nav-default">[Lc]t111二叉树的最小深度</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>
@@ -325,7 +323,7 @@ public:
         </div>
         
 
-  <span id="/post/lct174%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E6%AC%A1%E9%81%8D%E5%8E%862/" class="leancloud_visitors" data-flag-title="[lc]#174二叉树的层次遍历2">
+  <span id="/post/lct112%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8C/" class="leancloud_visitors" data-flag-title="[Lc]t112路径总和">
 		<span class="post-meta-item-text">文章阅读量 </span>
 		<span class="leancloud-visitors-count">0</span>
 		<p></p>
