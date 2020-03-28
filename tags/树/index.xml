@@ -6,13 +6,22 @@
     <description>Recent content in 树 on Focus-ChrisHRZ&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 20 Mar 2020 20:06:36 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 27 Mar 2020 22:34:03 +0800</lastBuildDate>
     
 	<atom:link href="https://chrishrz.github.io/tags/%E6%A0%91/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>[Lc]t112路径总和</title>
+      <title>[lc]#113路径总和2</title>
+      <link>https://chrishrz.github.io/post/lct113%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8C2/</link>
+      <pubDate>Fri, 27 Mar 2020 22:34:03 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lct113%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8C2/</guid>
+      <description>题目 给定一个二叉树和一个目标和，找到所有从根节点到叶子节点路径总和等于给定目标和的路径。 说明: 叶子节点是指没有子节点的节点。 示例: 给定如下二</description>
+    </item>
+    
+    <item>
+      <title>[lc]t112路径总和</title>
       <link>https://chrishrz.github.io/post/lct112%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8C/</link>
       <pubDate>Fri, 20 Mar 2020 20:06:36 +0800</pubDate>
       
@@ -21,7 +30,7 @@
     </item>
     
     <item>
-      <title>[Lc]t111二叉树的最小深度</title>
+      <title>[lc]t111二叉树的最小深度</title>
       <link>https://chrishrz.github.io/post/lct111%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E5%B0%8F%E6%B7%B1%E5%BA%A6/</link>
       <pubDate>Wed, 18 Mar 2020 17:10:27 +0800</pubDate>
       
