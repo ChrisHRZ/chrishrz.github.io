@@ -21,15 +21,6 @@
     </item>
     
     <item>
-      <title>面经总结</title>
-      <link>https://chrishrz.github.io/post/%E9%9D%A2%E7%BB%8F%E6%80%BB%E7%BB%93/</link>
-      <pubDate>Sat, 11 Apr 2020 12:06:16 +0800</pubDate>
-      
-      <guid>https://chrishrz.github.io/post/%E9%9D%A2%E7%BB%8F%E6%80%BB%E7%BB%93/</guid>
-      <description>记录最近参加的面试的题目 腾讯春招实习提前批（客户端开发） 一面 二叉树的最大直径，编程题 链表的排序，要求时间复杂度$O(Nlog(N))$,空间</description>
-    </item>
-    
-    <item>
       <title>[lc]t29Divide_Two_Integers</title>
       <link>https://chrishrz.github.io/post/lct29divide_two_integers/</link>
       <pubDate>Fri, 10 Apr 2020 22:46:20 +0800</pubDate>
