@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Math on Focus-ChrisHRZ&#39;s blog</title>
+    <link>https://chrishrz.github.io/tags/math/</link>
+    <description>Recent content in Math on Focus-ChrisHRZ&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 11 Apr 2020 13:36:02 +0800</lastBuildDate>
+    
+	<atom:link href="https://chrishrz.github.io/tags/math/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[lc]#43Multiply_Strings</title>
+      <link>https://chrishrz.github.io/post/lct43multiply_strings/</link>
+      <pubDate>Sat, 11 Apr 2020 13:36:02 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lct43multiply_strings/</guid>
+      <description>题目 Given two non-negative integers num1 and num2 represented as strings, return the product of num1 and num2, also represented as a string. Example 1: Input: num1 = &amp;ldquo;2&amp;rdquo;, num2 = &amp;ldquo;3&amp;rdquo; Output: &amp;ldquo;6&amp;rdquo; Example 2: Input: num1 = &amp;ldquo;123&amp;rdquo;, num2 = &amp;ldquo;456&amp;rdquo; Output: &amp;ldquo;56088&amp;rdquo; Note: The length of both num1 and num2 is &amp;lt; 110. Both num1 and num2 contain only digits 0-9. Both num1 and num2 do</description>
+    </item>
+    
+    <item>
+      <title>面经总结</title>
+      <link>https://chrishrz.github.io/post/%E9%9D%A2%E7%BB%8F%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Sat, 11 Apr 2020 12:06:16 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/%E9%9D%A2%E7%BB%8F%E6%80%BB%E7%BB%93/</guid>
+      <description>记录最近参加的面试的题目 腾讯春招实习提前批（客户端开发） 一面 二叉树的最大直径，编程题 链表的排序，要求时间复杂度$O(Nlog(N))$,空间</description>
+    </item>
+    
+    <item>
+      <title>[lc]t29Divide_Two_Integers</title>
+      <link>https://chrishrz.github.io/post/lct29divide_two_integers/</link>
+      <pubDate>Fri, 10 Apr 2020 22:46:20 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lct29divide_two_integers/</guid>
+      <description>题目 Given two integers dividend and divisor, divide two integers without using multiplication, division and mod operator. Return the quotient after dividing dividend by divisor. The integer division should truncate toward zero, which means losing its fractional part. For example, truncate(8.345) = 8 and truncate(-2.7335) = -2. Example 1: Input: dividend = 10, divisor = 3 Output: 3 Explanation: 10/3 = truncate(3.33333..) = 3. Example 2: Input: dividend =</description>
+    </item>
+    
+    <item>
+      <title>[lc]#12Integer_to_Roman</title>
+      <link>https://chrishrz.github.io/post/lct12integer_to_roman/</link>
+      <pubDate>Fri, 10 Apr 2020 00:13:43 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lct12integer_to_roman/</guid>
+      <description>题目 Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M. Symbol Value I 1 V 5 X 10 L 50 C 100 D 500 M 1000 For example, two is written as II in Roman numeral, just two one&amp;rsquo;s added together. Twelve is written as, XII, which is simply X + II. The number twenty seven is written as XXVII, which is</description>
+    </item>
+    
+  </channel>
+</rss>

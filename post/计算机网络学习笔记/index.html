@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>计算机网络学习笔记（待续。。。） - Focus-ChrisHRZ&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ChrisHRZ" /><meta name="description" content="这个主要来自谢希仁的《计算机网络》和网络课程，先记重点。 部分图和概念摘自菜鸟教程,侵删。 菜鸟教程的原文链接是这个:http://www.cn" /><meta name="keywords" content="code, life, study" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.66.0 with theme even" />
+
+
+<link rel="canonical" href="https://chrishrz.github.io/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
+
+<meta property="og:title" content="计算机网络学习笔记（待续。。。）" />
+<meta property="og:description" content="这个主要来自谢希仁的《计算机网络》和网络课程，先记重点。 部分图和概念摘自菜鸟教程,侵删。 菜鸟教程的原文链接是这个:http://www.cn" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chrishrz.github.io/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" />
+<meta property="article:published_time" content="2020-03-28T17:33:57+08:00" />
+<meta property="article:modified_time" content="2020-03-28T17:33:57+08:00" />
+<meta itemprop="name" content="计算机网络学习笔记（待续。。。）">
+<meta itemprop="description" content="这个主要来自谢希仁的《计算机网络》和网络课程，先记重点。 部分图和概念摘自菜鸟教程,侵删。 菜鸟教程的原文链接是这个:http://www.cn">
+<meta itemprop="datePublished" content="2020-03-28T17:33:57&#43;08:00" />
+<meta itemprop="dateModified" content="2020-03-28T17:33:57&#43;08:00" />
+<meta itemprop="wordCount" content="1519">
+
+
+
+<meta itemprop="keywords" content="考研,计算机网络基础知识," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="计算机网络学习笔记（待续。。。）"/>
+<meta name="twitter:description" content="这个主要来自谢希仁的《计算机网络》和网络课程，先记重点。 部分图和概念摘自菜鸟教程,侵删。 菜鸟教程的原文链接是这个:http://www.cn"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+<script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
+
+<meta name="baidu-site-verification" content="GDMA35xQfM" />
+<meta name="google-site-verification" content="f-5-S53Hm0WIn0Tnfu-dg0sNmCZeahUFILgUSI9JLQA" />
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">FOCUS</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">FOCUS</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">计算机网络学习笔记（待续。。。）</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-03-28 </span>
+        <div class="post-category">
+            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"> 计算机网络 </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#一-计算机网络的体系结构">一. <strong>计算机网络的体系结构</strong></a>
+      <ul>
+        <li><a href="#1-计算机网络概述">1. <strong>计算机网络概述</strong></a></li>
+        <li><a href="#2-计算机网络体系结构及参考模型">2. <strong>计算机网络体系结构及参考模型</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#二-物理层">二. <strong>物理层</strong></a></li>
+    <li><a href="#三-数据链路层">三. <strong>数据链路层</strong></a>
+      <ul>
+        <li><a href="#1-数据链路层的功能">1. <strong>数据链路层的功能</strong>*</a></li>
+        <li><a href="#2-组帧">2. <strong>组帧</strong>*</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <blockquote>
+<p>这个主要来自谢希仁的《计算机网络》和网络课程，先记重点。<br>
+部分图和概念摘自<a href="https://www.runoob.com/w3cnote/summary-of-network.html">菜鸟教程</a>,侵删。<br>
+菜鸟教程的原文链接是这个:http://www.cnblogs.com/maybe2030/p/4781555.html。</p>
+</blockquote>
+<h2 id="一-计算机网络的体系结构">一. <strong>计算机网络的体系结构</strong></h2>
+<h3 id="1-计算机网络概述">1. <strong>计算机网络概述</strong></h3>
+<h4 id="11-计算机网络的概念组成功能">1.1. <strong>计算机网络的概念、组成、功能</strong></h4>
+<ul>
+<li><strong>概念</strong>：是通过<strong>通讯设备</strong>（路由器，交换机，网桥，中继器，集线器），<strong>线路</strong>（无线，有线、导向型，无导向型，双绞线，无线电波，双绞线，光纤）把多个计算机系统连接起来，由功能完善的网络软件实现<strong>资源共享</strong>和<strong>信息传递</strong>。</li>
+<li><strong>组成</strong>：
+<ol>
+<li><strong>边缘部分（资源子网）</strong>：个人电脑，智能手机等各种信息处理终端。我们直接使用。</li>
+<li><strong>核心部分（通讯子网）</strong>：路由器等网络设备。</li>
+</ol>
+</li>
+</ul>
+<p><em>边缘设备之间的通信方式分为client-server(c/s，客户-服务器方式)和peer-to-peer(p2p，对等连接)方式。</em></p>
+<ul>
+<li><strong>功能</strong>：数据处理，数据通信。</li>
+</ul>
+<h4 id="12-计算机网络的分类">1.2. <strong>计算机网络的分类</strong></h4>
+<ul>
+<li>
+<p>按作用范围分类：</p>
+<ol>
+<li>广域网WAN(Wide Area Network)：几十~几千公里。</li>
+<li>城域网MAN(Metropolitan Area Network)：5~50km。</li>
+<li>局域网LAN(Local Area Network)：1km左右，真实可能更大，工厂或学校的局域网（校园网，企业网）。</li>
+<li>个域网PAN(Personal Area Network)：10m左右，蓝牙。</li>
+</ol>
+</li>
+<li>
+<p>按作用范围分类：</p>
+<ol>
+<li>公用网</li>
+<li>专用网</li>
+</ol>
+</li>
+<li>
+<p>拓扑结构：</p>
+<ol>
+<li>星型结构</li>
+<li>总线型结构</li>
+<li>环形结构</li>
+<li>树形结构</li>
+</ol>
+</li>
+</ul>
+<h4 id="13-计算机网络标准化工作及相关组织">1.3. <strong>计算机网络标准化工作及相关组织</strong></h4>
+<p>占坑</p>
+<h3 id="2-计算机网络体系结构及参考模型">2. <strong>计算机网络体系结构及参考模型</strong></h3>
+<h4 id="21-计算机网络分层结构">2.1. <strong>计算机网络分层结构</strong></h4>
+<ul>
+<li>体系结构：各层次及协议的集合组成的。</li>
+<li><strong>功能是划分层次的基础。</strong></li>
+<li>垂直分层的形式展开。</li>
+<li>除了物理层，其他层都是虚通信。</li>
+<li>对等层的虚通信采用各种协议。</li>
+</ul>
+<h4 id="22-计算机网络协议接口服务等概念">2.2. <strong>计算机网络协议、接口、服务等概念</strong>*</h4>
+<blockquote>
+<p>以太网，TCP，IP的协议格式要掌握（考研）。</p>
+</blockquote>
+<ul>
+<li><strong>协议</strong>：为进行网络中的数据交换而建立的规则、标准或约定称为网络协议(network protocal)。有以下三个要素：
+<ol>
+<li>语法，即数据与控制信息的结构或格式。</li>
+<li>语义，即需要发出何种控制信息，完成何种动作以及做出何种相应。</li>
+<li>同步（时序），即事件发生顺序的详细说明。</li>
+</ol>
+</li>
+<li><strong>接口</strong>：同一个实体内相邻层之间交换信息的连接点。底层向高层由接口提供服务。</li>
+<li><strong>服务</strong>：底层所提供的功能，通过接口提供给上层。</li>
+<li>实体:任可以发送或接受信息的硬件或软件进程。</li>
+</ul>
+<blockquote>
+<ul>
+<li>传输层对应用层提供的接口：端口号。</li>
+<li>网络层对传输层提供的接口：IP地址。</li>
+<li>链路层对网络层提供的接口：物理MAC地址。</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>下一层对上一层是透明的，意思是上一层只能使用下一层提供的服务，而不知道其具体实现的协议（有点留了个接口的意思，感觉透明这个词有误导性啊）。</li>
+<li>传输在每一层是对等的。</li>
+<li>协议是水平的，服务是垂直对的。</li>
+</ul>
+</blockquote>
+<h4 id="23-isoosi参考模型和tcpip模型">2.3. <strong>ISO/OSI参考模型和TCP/IP模型</strong>*</h4>
+<blockquote>
+<p>数据链路层、网络层、传输层位于计算机内核空间。封装于内核空间。<br>
+TCP/IP模型是重点，一般提到是4层，OSI没人用。<br>
+TCP/IP独立于软硬件。</p>
+</blockquote>
+<ul>
+<li>物理层：比特流的透明传输。所传数据单位是比特（bit）。</li>
+<li>数据链路层：建立数据连接，使比特有意义，网络层提供可靠的数据传输，所传的数据单位是帧（framing）。有一些控制信息（差错控制，同步信息，地址信息等）。</li>
+<li>网络层：两个任务 1.选择合适的<strong>路由</strong>。2.把运输层产生的报文段或用户数据报封装成分组或包发送。</li>
+<li>传输层：两台主机中<strong>进程</strong>之间的通信提供通用的数据传输服务，由端口提供帮助。(用户编程会涉及到)</li>
+<li>应用层：应用进程之间的交互来完成特定网络应用。</li>
+</ul>
+<p><img src="/img/img2020-03-28-22-54-30.png" alt="">
+<img src="/img/img2020-03-28-23-05-58.png" alt=""></p>
+<h2 id="二-物理层">二. <strong>物理层</strong></h2>
+<h2 id="三-数据链路层">三. <strong>数据链路层</strong></h2>
+<p>只管数据链路，不考虑传输方式(4g,光纤 之类的)</p>
+<h3 id="1-数据链路层的功能">1. <strong>数据链路层的功能</strong>*</h3>
+<ol>
+<li><strong>封装成帧</strong></li>
+<li><strong>透明传输</strong></li>
+<li><strong>差错检验</strong></li>
+</ol>
+<h3 id="2-组帧">2. <strong>组帧</strong>*</h3>
+<p>每一种链路层协议都规定了<strong>所能传送的帧的数据长度上限-最大传送单元MTU(Maximum Transfer Unit)。</strong></p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">ChrisHRZ</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-03-28
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E8%80%83%E7%A0%94/">考研</a>
+          <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">计算机网络基础知识</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%80%83%E7%A0%94%E5%A4%A7%E7%BA%B22019/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">[转载]计算机考研大纲2019</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/lct113%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8C2/">
+            <span class="next-text nav-default">[lc]#113路径总和2</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="leancloud_visitors" data-flag-title="计算机网络学习笔记（待续。。。）">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'M8Fyr1YXIu2Ov8Wh4ByqtEzq-gzGzoHsz',
+        appKey: 'AHiPSGeLQbvrQGQ6KfhvOKvN',
+        notify:  false ,
+        verify:  false ,
+        avatar:'mm',
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/ChrisHRZ" class="iconfont icon-github" title="github"></a>
+  <a href="https://chrishrz.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">ChrisHRZ</span>
+  </span>
+</div>
+
+
+<script src="https://cdn.bootcss.com/mermaid/8.4.8/mermaid.min.js"></script>
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js"></script>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

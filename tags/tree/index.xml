@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tree on Focus-ChrisHRZ&#39;s blog</title>
+    <link>https://chrishrz.github.io/tags/tree/</link>
+    <description>Recent content in Tree on Focus-ChrisHRZ&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 09 Apr 2020 11:03:58 +0800</lastBuildDate>
+    
+	<atom:link href="https://chrishrz.github.io/tags/tree/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[lc]#222Count_Complete_Tree_Nodes</title>
+      <link>https://chrishrz.github.io/post/lct222count_complete_tree_nodes/</link>
+      <pubDate>Thu, 09 Apr 2020 11:03:58 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lct222count_complete_tree_nodes/</guid>
+      <description>题目 Given a complete binary tree, count the number of nodes. Note: Definition of a complete binary tree from Wikipedia: In a complete binary tree every level, except possibly the last, is completely filled, and all nodes in the last level are as far left as possible. It can have between 1 and 2h nodes inclusive at the last level h. Example: Input: 1 / \ 2 3 /</description>
+    </item>
+    
+    <item>
+      <title>[lc]#226Invert_Binary_Tree</title>
+      <link>https://chrishrz.github.io/post/lct226invert_binary_tree/</link>
+      <pubDate>Wed, 08 Apr 2020 22:48:38 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lct226invert_binary_tree/</guid>
+      <description>题目 Invert a binary tree. Example: Input: 4 / \ 2 7 / \ / \ 1 3 6 9 Output: 4 / \ 7 2 / \ / \ 9 6 3 1 Trivia: This problem was inspired by this original tweet by Max Howell: Google: 90% of our engineers use the software you wrote (Homebrew), but you can’t invert a binary tree on</description>
+    </item>
+    
+    <item>
+      <title>[lc]#199Binary_Tree_Right_Side_View</title>
+      <link>https://chrishrz.github.io/post/lct199binary_tree_right_side_view/</link>
+      <pubDate>Wed, 08 Apr 2020 22:14:18 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lct199binary_tree_right_side_view/</guid>
+      <description>题目 Given a binary tree, imagine yourself standing on the right side of it, return the values of the nodes you can see ordered from top to bottom. Example: Input: [1,2,3,null,5,null,4] Output: [1, 3, 4] Explanation: 1 &amp;lt;--- / \ 2 3 &amp;lt;--- \ \ 5 4 &amp;lt;--- 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val;</description>
+    </item>
+    
+    <item>
+      <title>[lc]#173Binary_Search_Tree_Iterators</title>
+      <link>https://chrishrz.github.io/post/lct173binary_search_tree_iterators/</link>
+      <pubDate>Wed, 08 Apr 2020 18:20:18 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lct173binary_search_tree_iterators/</guid>
+      <description>题目 Implement an iterator over a binary search tree (BST). Your iterator will be initialized with the root node of a BST. Calling next() will return the next smallest number in the BST. Example: BSTIterator iterator = new BSTIterator(root); iterator.next(); // return 3 iterator.next(); // return 7 iterator.hasNext(); // return true iterator.next(); // return 9 iterator.hasNext(); // return true iterator.next(); // return 15 iterator.hasNext(); // return true iterator.next(); //</description>
+    </item>
+    
+    <item>
+      <title>[lc]#129Sum_Root_to_Leaf_Numbers</title>
+      <link>https://chrishrz.github.io/post/lct129sum_root_to_leaf_numbers/</link>
+      <pubDate>Wed, 08 Apr 2020 13:24:46 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lct129sum_root_to_leaf_numbers/</guid>
+      <description>题目 Given a binary tree containing digits from 0-9 only, each root-to-leaf path could represent a number. An example is the root-to-leaf path 1-&amp;gt;2-&amp;gt;3 which represents the number 123. Find the total sum of all root-to-leaf numbers. Note: A leaf is a node with no children. Example: Input: [1,2,3] 1 / \ 2 3 Output: 25 Explanation: The root-to-leaf path 1-&amp;gt;2 represents the number 12. The root-to-leaf path 1-&amp;gt;3</description>
+    </item>
+    
+    <item>
+      <title>[lc]#117Populating_Next_Right_Pointers_in_Each_Node2</title>
+      <link>https://chrishrz.github.io/post/lct117populating_next_right_pointers_in_each_node2/</link>
+      <pubDate>Wed, 08 Apr 2020 11:41:56 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lct117populating_next_right_pointers_in_each_node2/</guid>
+      <description>题目 Given a binary tree struct Node { int val; Node *left; Node *right; Node *next; } Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL. Initially, all next pointers are set to NULL. Follow up: You may only use constant extra space. Recursive approach is fine, you may assume implicit stack</description>
+    </item>
+    
+    <item>
+      <title>[lc]#116Populating_Next_Right_Pointers_in_Each_Node</title>
+      <link>https://chrishrz.github.io/post/lct116populating_next_right_pointers_in_each_node/</link>
+      <pubDate>Tue, 07 Apr 2020 22:15:10 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lct116populating_next_right_pointers_in_each_node/</guid>
+      <description>题目 You are given a perfect binary tree where all leaves are on the same level, and every parent has two children. The binary tree has the following definition: struct Node { int val; Node *left; Node *right; Node *next; } Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL. Initially, all</description>
+    </item>
+    
+    <item>
+      <title>[lc]#114Flatten_Binary_Tree_to_LinkedList</title>
+      <link>https://chrishrz.github.io/post/lct114flatten_binary_tree_to_linkedlist/</link>
+      <pubDate>Tue, 07 Apr 2020 20:12:38 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lct114flatten_binary_tree_to_linkedlist/</guid>
+      <description>面试中题目大多以英文呈现，因此后面的[lc]文章题目改为英文,已经发表的博客后面有时间再修改 题目 Given a binary tree, flatten it to a linked list in-place. For example, given the following tree: 1 / \ 2 5</description>
+    </item>
+    
+    <item>
+      <title>[lc]#113路径总和2</title>
+      <link>https://chrishrz.github.io/post/lct113%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8C2/</link>
+      <pubDate>Fri, 27 Mar 2020 22:34:03 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lct113%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8C2/</guid>
+      <description>题目 给定一个二叉树和一个目标和，找到所有从根节点到叶子节点路径总和等于给定目标和的路径。 说明: 叶子节点是指没有子节点的节点。 示例: 给定如下二</description>
+    </item>
+    
+    <item>
+      <title>[lc]t112路径总和</title>
+      <link>https://chrishrz.github.io/post/lct112%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8C/</link>
+      <pubDate>Fri, 20 Mar 2020 20:06:36 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lct112%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8C/</guid>
+      <description>题目 给定一个二叉树和一个目标和，判断该树中是否存在根节点到叶子节点的路径，这条路径上所有节点值相加等于目标和。 说明: 叶子节点是指没有子节点的</description>
+    </item>
+    
+    <item>
+      <title>[lc]t111二叉树的最小深度</title>
+      <link>https://chrishrz.github.io/post/lct111%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E5%B0%8F%E6%B7%B1%E5%BA%A6/</link>
+      <pubDate>Wed, 18 Mar 2020 17:10:27 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lct111%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E5%B0%8F%E6%B7%B1%E5%BA%A6/</guid>
+      <description>题目 给定一个二叉树，找出其最大深度。 二叉树的深度为根节点到最远叶子节点的最长路径上的节点数。 说明: 叶子节点是指没有子节点的节点。 示例： 给定二</description>
+    </item>
+    
+    <item>
+      <title>[lc]#110平衡二叉树</title>
+      <link>https://chrishrz.github.io/post/lct110%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
+      <pubDate>Tue, 17 Mar 2020 16:32:45 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lct110%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
+      <description>题目 给定一个二叉树，判断它是否是高度平衡的二叉树。 本题中，一棵高度平衡二叉树定义为： 一个二叉树每个节点 的左右两个子树的高度差的绝对值不超过1</description>
+    </item>
+    
+    <item>
+      <title>[lc]#174二叉树的层次遍历2</title>
+      <link>https://chrishrz.github.io/post/lct174%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E6%AC%A1%E9%81%8D%E5%8E%862/</link>
+      <pubDate>Tue, 17 Mar 2020 14:01:58 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lct174%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E6%AC%A1%E9%81%8D%E5%8E%862/</guid>
+      <description>题目 给定一个二叉树，返回其节点值自底向上的层次遍历。 （即按从叶子节点所在层到根节点所在的层，逐层从左向右遍历） 例如： 给定二叉树 [3,9,20,null,null,15,7] 3 / \ 9 20 /</description>
+    </item>
+    
+    <item>
+      <title>[lc]#104二叉树的最大深度</title>
+      <link>https://chrishrz.github.io/post/lct104%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E5%A4%A7%E6%B7%B1%E5%BA%A6/</link>
+      <pubDate>Tue, 17 Mar 2020 13:12:19 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lct104%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E5%A4%A7%E6%B7%B1%E5%BA%A6/</guid>
+      <description>题目 给定一个二叉树，找出其最大深度。 二叉树的深度为根节点到最远叶子节点的最长路径上的节点数。 说明: 叶子节点是指没有子节点的节点。 示例： 给定二</description>
+    </item>
+    
+    <item>
+      <title>[lc]#103二叉树的锯齿层次遍历</title>
+      <link>https://chrishrz.github.io/post/lct103%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%94%AF%E9%BD%BF%E5%B1%82%E6%AC%A1%E9%81%8D%E5%8E%86/</link>
+      <pubDate>Tue, 17 Mar 2020 11:48:54 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lct103%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%94%AF%E9%BD%BF%E5%B1%82%E6%AC%A1%E9%81%8D%E5%8E%86/</guid>
+      <description>题目 给定一个二叉树，返回其节点值的锯齿形层次遍历。（即先从左往右，再从右往左进行下一层遍历，以此类推，层与层之间交替进行）。 例如： 给定二叉树</description>
+    </item>
+    
+    <item>
+      <title>[lc]#102二叉树的层次遍历</title>
+      <link>https://chrishrz.github.io/post/lct102%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E6%AC%A1%E9%81%8D%E5%8E%86/</link>
+      <pubDate>Sun, 15 Mar 2020 15:03:26 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lct102%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E6%AC%A1%E9%81%8D%E5%8E%86/</guid>
+      <description>题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 队列迭代法 class Solution {//两种方法。1、队列迭代法。 public: vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; levelOrder(TreeNode* root) { vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; res; if(!root) return res; //定</description>
+    </item>
+    
+    <item>
+      <title>[lc]#101对称二叉树</title>
+      <link>https://chrishrz.github.io/post/lct101%E5%AF%B9%E7%A7%B0%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
+      <pubDate>Sat, 14 Mar 2020 19:54:18 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lct101%E5%AF%B9%E7%A7%B0%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
+      <description>题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 递归法 class Solution {//三种方法。1、递归法。有点像#100 public: bool isSymmetric(TreeNode* root) { if(!root) return tru</description>
+    </item>
+    
+    <item>
+      <title>[lc]#100相同的树</title>
+      <link>https://chrishrz.github.io/post/lct100%E7%9B%B8%E5%90%8C%E7%9A%84%E6%A0%91/</link>
+      <pubDate>Sat, 14 Mar 2020 19:27:58 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lct100%E7%9B%B8%E5%90%8C%E7%9A%84%E6%A0%91/</guid>
+      <description>题解 这道题就是遍历。这里写一个先序遍历，其他遍历方式见相应例题。 二叉树的遍历包括DFS(深度优先搜索)的先序遍历、中序遍历、后序遍历。 还有B</description>
+    </item>
+    
+    <item>
+      <title>[lc]#98验证二叉搜索树</title>
+      <link>https://chrishrz.github.io/post/lct98%E9%AA%8C%E8%AF%81%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/</link>
+      <pubDate>Sat, 14 Mar 2020 13:53:22 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lct98%E9%AA%8C%E8%AF%81%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/</guid>
+      <description>题解 TreeNode的定义： /** * Definition for a binary tree node. * struct TreeNode { * int val; * TreeNode *left; * TreeNode *right; * TreeNode(int x) : val(x), left(NULL), right(NULL) {} * }; */ 1. 直接递归法 class Solution {//三种方法。1、直接递归。利</description>
+    </item>
+    
+    <item>
+      <title>[lc]#95不同的二叉搜索树2</title>
+      <link>https://chrishrz.github.io/post/lct95%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%912/</link>
+      <pubDate>Sat, 14 Mar 2020 00:59:26 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lct95%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%912/</guid>
+      <description>题目 给定一个整数 n，生成所有由 1 &amp;hellip; n 为节点所组成的二叉搜索树。 示例: 输入: 3 输出: [ [1,null,3,2], [3,2,null,1], [3,1,null,null,2], [2,1,3], [1,null,2,null,3] ] 解释: 以上的输出对应以下 5 种不同结构的二叉搜</description>
+    </item>
+    
+    <item>
+      <title>[lc]#96不同的二叉搜索树</title>
+      <link>https://chrishrz.github.io/post/lct96%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/</link>
+      <pubDate>Fri, 13 Mar 2020 12:26:13 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lct96%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/</guid>
+      <description>给定一个整数 n，求以 1 &amp;hellip; n 为节点组成的二叉搜索树有多少种？ 示例： 输入: 3 输出: 5 解释: 给定 n = 3, 一共有 5 种不同结构的二叉搜索树: 1 3 3 2 1 \</description>
+    </item>
+    
+    <item>
+      <title>[lc]#94#144#145二叉树的三种遍历</title>
+      <link>https://chrishrz.github.io/post/lct94t144t145%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%89%E7%A7%8D%E9%81%8D%E5%8E%86/</link>
+      <pubDate>Mon, 09 Mar 2020 11:28:56 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lct94t144t145%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%89%E7%A7%8D%E9%81%8D%E5%8E%86/</guid>
+      <description>二叉树的遍历 简单地理解，满足以下两个条件的树就是二叉树： 本身是有序树； 树中包含的各个节点的度不能超过 2，即只能是 0、1 或者 2； 下图即一颗二叉</description>
+    </item>
+    
+  </channel>
+</rss>

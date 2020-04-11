@@ -6,7 +6,7 @@
     <description>Recent content in Categories on Focus-ChrisHRZ&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 27 Mar 2020 22:34:03 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 11 Apr 2020 13:36:02 +0800</lastBuildDate>
     
 	<atom:link href="https://chrishrz.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,27 @@
     <item>
       <title>leetcode</title>
       <link>https://chrishrz.github.io/categories/leetcode/</link>
-      <pubDate>Fri, 27 Mar 2020 22:34:03 +0800</pubDate>
+      <pubDate>Sat, 11 Apr 2020 13:36:02 +0800</pubDate>
       
       <guid>https://chrishrz.github.io/categories/leetcode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>计算机基础</title>
+      <link>https://chrishrz.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Sat, 28 Mar 2020 17:46:39 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>计算机网络</title>
+      <link>https://chrishrz.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</link>
+      <pubDate>Sat, 28 Mar 2020 17:33:57 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</guid>
       <description></description>
     </item>
     
