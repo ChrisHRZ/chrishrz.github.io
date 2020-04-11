@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Focus-ChrisHRZ&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 11 Apr 2020 13:36:02 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 11 Apr 2020 22:04:52 +0800</lastBuildDate>
     
 	<atom:link href="https://chrishrz.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Lc]t50Pow(x,n)</title>
+      <link>https://chrishrz.github.io/post/lct50powxn/</link>
+      <pubDate>Sat, 11 Apr 2020 22:04:52 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lct50powxn/</guid>
+      <description>题目 Implement pow(x, n), which calculates x raised to the power n (xn). Example 1: Input: 2.00000, 10 Output: 1024.00000 Example 2: Input: 2.10000, 3 Output: 9.26100 Example 3: Input: 2.00000, -2 Output: 0.25000 Explanation: 2-2 = 1/22 = 1/4 = 0.25 Note: -100.0 &amp;lt; x &amp;lt; 100.0 n is a 32-bit signed integer, within the range [−231, 231 − 1]</description>
+    </item>
     
     <item>
       <title>[lc]#43Multiply_Strings</title>
