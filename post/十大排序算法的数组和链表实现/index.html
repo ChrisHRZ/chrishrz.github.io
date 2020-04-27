@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>十大排序算法的数组和链表实现 - Focus-ChrisHRZ&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ChrisHRZ" /><meta name="description" content="数组排序在牛客,进行测试；链表排序在leetcode进行测试。 链表定义： Definition for singly-linked list. struct ListNode { int val; ListNode *next; ListNode(int x) : val(x), next(NULL) {} }; 概述 相关概念 稳定：如果a原本在b" /><meta name="keywords" content="code, life, study" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.66.0 with theme even" />
+
+
+<link rel="canonical" href="https://chrishrz.github.io/post/%E5%8D%81%E5%A4%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%9A%84%E6%95%B0%E7%BB%84%E5%92%8C%E9%93%BE%E8%A1%A8%E5%AE%9E%E7%8E%B0/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
+
+<meta property="og:title" content="十大排序算法的数组和链表实现" />
+<meta property="og:description" content="数组排序在牛客,进行测试；链表排序在leetcode进行测试。 链表定义： Definition for singly-linked list. struct ListNode { int val; ListNode *next; ListNode(int x) : val(x), next(NULL) {} }; 概述 相关概念 稳定：如果a原本在b" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chrishrz.github.io/post/%E5%8D%81%E5%A4%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%9A%84%E6%95%B0%E7%BB%84%E5%92%8C%E9%93%BE%E8%A1%A8%E5%AE%9E%E7%8E%B0/" />
+<meta property="article:published_time" content="2020-04-22T16:40:07+08:00" />
+<meta property="article:modified_time" content="2020-04-22T16:40:07+08:00" />
+<meta itemprop="name" content="十大排序算法的数组和链表实现">
+<meta itemprop="description" content="数组排序在牛客,进行测试；链表排序在leetcode进行测试。 链表定义： Definition for singly-linked list. struct ListNode { int val; ListNode *next; ListNode(int x) : val(x), next(NULL) {} }; 概述 相关概念 稳定：如果a原本在b">
+<meta itemprop="datePublished" content="2020-04-22T16:40:07&#43;08:00" />
+<meta itemprop="dateModified" content="2020-04-22T16:40:07&#43;08:00" />
+<meta itemprop="wordCount" content="6246">
+
+
+
+<meta itemprop="keywords" content="Sort,Linked List,Array," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="十大排序算法的数组和链表实现"/>
+<meta name="twitter:description" content="数组排序在牛客,进行测试；链表排序在leetcode进行测试。 链表定义： Definition for singly-linked list. struct ListNode { int val; ListNode *next; ListNode(int x) : val(x), next(NULL) {} }; 概述 相关概念 稳定：如果a原本在b"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+<script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
+
+<meta name="baidu-site-verification" content="GDMA35xQfM" />
+<meta name="google-site-verification" content="f-5-S53Hm0WIn0Tnfu-dg0sNmCZeahUFILgUSI9JLQA" />
+<meta name="baidu-site-verification" content="74mXju2aOk" />
+<meta name="google-site-verification" content="2yu63Vg3wEmB1XF77uGbZdOQB_a_KSLTk-zNxL4oGRg" />
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">FOCUS</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">FOCUS</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">十大排序算法的数组和链表实现</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-04-22 </span>
+        <div class="post-category">
+            <a href="/categories/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"> 学习总结 </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#概述">概述</a></li>
+    <li><a href="#相关概念">相关概念</a></li>
+    <li><a href="#1-冒泡排序bubble-sort">1. 冒泡排序（Bubble Sort）</a></li>
+    <li><a href="#2-选择排序selection-sort">2. 选择排序（Selection Sort）</a></li>
+    <li><a href="#3-插入排序insertion-sort">3. 插入排序（Insertion Sort）</a></li>
+    <li><a href="#4-希尔排序shell-sort">4. 希尔排序（Shell Sort）</a></li>
+    <li><a href="#5-堆排序heap-sort">5. 堆排序（Heap Sort）</a></li>
+    <li><a href="#6-归并排序merge-sort">6. 归并排序（Merge Sort）</a></li>
+    <li><a href="#7-快速排序quick-sort">7. 快速排序（Quick Sort）</a></li>
+    <li><a href="#8-计数排序counting-sort">8. 计数排序（Counting Sort）</a></li>
+    <li><a href="#9-桶排序bucket-sort">9. 桶排序（Bucket Sort）</a></li>
+    <li><a href="#10-基数排序radix-sort">10. 基数排序（Radix Sort）</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <blockquote>
+<p>数组排序在<a href="https://www.nowcoder.com/questionTerminal/508f66c6c93d4191ab25151066cb50ef">牛客</a>,进行测试；链表排序在<a href="https://leetcode-cn.com/problems/insertion-sort-list/submissions/">leetcode</a>进行测试。</p>
+</blockquote>
+<p>链表定义：</p>
+<pre><code class="language-cpp">Definition for singly-linked list.
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode(int x) : val(x), next(NULL) {}
+};
+</code></pre>
+<h2 id="概述">概述</h2>
+<p><img src="/img/img2020-04-22-16-41-50.png" alt="">
+<img src="/img/img2020-04-22-16-42-06.png" alt=""></p>
+<h2 id="相关概念">相关概念</h2>
+<ul>
+<li>稳定：如果a原本在b前面，而a=b，排序之后a仍然在b的前面。</li>
+<li>不稳定：如果a原本在b的前面，而a=b，排序之后 a 可能会出现在 b 的后面。</li>
+<li>时间复杂度：对排序数据的总的操作次数。反映当n变化时，操作次数呈现什么规律。</li>
+<li>空间复杂度：是指算法在计算机内执行时所需存储空间的度量，它也是数据规模n的函数。</li>
+</ul>
+<h2 id="1-冒泡排序bubble-sort">1. 冒泡排序（Bubble Sort）</h2>
+<ul>
+<li>平均时间复杂度$O(N^{2})$</li>
+<li>空间复杂度$O(1)$</li>
+<li>稳定</li>
+</ul>
+<p><strong>数组</strong></p>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+//注意：本算法排序要求链表在2个及以上，暂未加入对于0 1个数的排序；数组不能为空
+//newoder pass
+array
+int main(){
+   ios::sync_with_stdio(0);
+   cin.tie(0);
+   int tmp = 0;
+   vector&lt;int&gt; a;
+   cin&gt;&gt;tmp;
+   a.push_back(tmp);//注意用cin.get()要先输入一个数字，然后用cin.get()去接受空格和回车
+   while(true){
+       if(cin.get()=='\n') break;
+       cin&gt;&gt;tmp;
+       a.push_back(tmp);
+   }
+
+   bool isChange = true;//标志位用来标记这一轮是否进行过交换，未交换说明数组已经有序
+   int n = a.size();
+   for(int i=0; i&lt;n-1; i++){
+       if(!isChange) break;
+       isChange = false;
+       for(int j=0; j&lt;n-i-1;j++){
+           if(a[j] &gt; a[j+1]){
+//                int tmp = a[j+1];
+//                a[j+1] = a[j];
+//                a[j] = tmp;
+               swap(a[j],a[j+1]);
+               isChange = true;
+           }
+       }
+   }
+
+   for(const int &amp;e:a){
+       cout&lt;&lt;e&lt;&lt;' ';
+   }
+   cout&lt;&lt;'\n';
+}
+</code></pre>
+<p><strong>链表</strong><br>
+交换val的值</p>
+<pre><code class="language-cpp">class Solution {
+public:
+    ListNode* insertionSortList(ListNode* head) {
+        if(!head || !head-&gt;next) return head;
+        ListNode *dummy = new ListNode(0);
+        dummy-&gt;next = head;
+        auto cur = dummy-&gt;next;
+        bool isChange = true;//标志位用来标记这一轮是否进行过交换，未交换说明数组已经有序
+        ListNode *tail = nullptr;//冒泡的范围是[head,tail)，head就是cur
+        while(tail != cur-&gt;next &amp;&amp; isChange){//若尾部指针tail没到第二位，继续冒泡
+            ListNode *p = cur;//p从cur开始
+            isChange = false;
+            for(;p-&gt;next != tail; p = p-&gt;next){//从前往后，直到tail
+                if(p-&gt;val &gt; p-&gt;next-&gt;val){
+                swap(p-&gt;val, p-&gt;next-&gt;val);
+                isChange = true;
+                }
+            }
+        }
+        return dummy-&gt;next;
+    }
+};
+</code></pre>
+<h2 id="2-选择排序selection-sort">2. 选择排序（Selection Sort）</h2>
+<ul>
+<li>平均时间复杂度$O(N^{2})$</li>
+<li>空间复杂度$O(1)$</li>
+<li>不稳定</li>
+</ul>
+<p><strong>数组</strong></p>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+////注意：数组不能为空
+//array
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    int tmp = 0;
+    vector&lt;int&gt; a;
+    int n = 0;
+    cin&gt;&gt;n;
+    cin&gt;&gt;tmp;
+    a.push_back(tmp);//注意用cin.get()要先输入一个数字，然后用cin.get()去接受空格和回车
+    while(true){
+        if(cin.get()=='\n') break;
+        cin&gt;&gt;tmp;
+        a.push_back(tmp);
+    }
+
+    for(int i=0; i&lt;a.size()-1; i++){
+        int min_index = i;
+        for(int j=i+1; j&lt;a.size(); j++){
+            if(a[j] &lt; a[min_index]) min_index = j;
+        }
+        if(min_index != i) swap(a[i],a[min_index]);
+    }
+
+    for(const int &amp;e:a){
+        cout&lt;&lt;e&lt;&lt;' ';
+    }
+    cout&lt;&lt;'\n';
+}
+</code></pre>
+<p><strong>链表</strong><br>
+交换val的值</p>
+<pre><code class="language-cpp">占坑
+</code></pre>
+<h2 id="3-插入排序insertion-sort">3. 插入排序（Insertion Sort）</h2>
+<ul>
+<li>平均时间复杂度$O(N^{2})$</li>
+<li>空间复杂度$O(1)$</li>
+<li>稳定</li>
+</ul>
+<p><strong>数组</strong></p>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+////注意：数组不能为空
+////nowcoder pass
+//array
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    int tmp = 0;
+    vector&lt;int&gt; a;
+    cin&gt;&gt;tmp;
+    a.push_back(tmp);//注意用cin.get()要先输入一个数字，然后用cin.get()去接受空格和回车
+    while(true){
+        if(cin.get()=='\n') break;
+        cin&gt;&gt;tmp;
+        a.push_back(tmp);
+    }
+
+    for(int i=1; i&lt;a.size(); ++i){//有序区的长度依次递增，范围为[0,i)
+        for(int j=i; j&gt;0; --j){//从i开始往前挨个比较
+            if(a[j] &lt; a[j-1]) swap(a[j],a[j-1]);//若小就
+            else break;
+        }
+    }
+
+    for(const int &amp;e:a){
+        cout&lt;&lt;e&lt;&lt;' ';
+    }
+    cout&lt;&lt;'\n';
+}
+</code></pre>
+<p><strong>链表</strong><br>
+交换节点</p>
+<pre><code class="language-cpp">占坑
+</code></pre>
+<h2 id="4-希尔排序shell-sort">4. 希尔排序（Shell Sort）</h2>
+<ul>
+<li>平均时间复杂度$O(N^{1.3})$</li>
+<li>空间复杂度$O(1)$</li>
+<li>不稳定</li>
+</ul>
+<p><strong>数组</strong></p>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+////注意：数组不能为空
+///nowcoder pass
+//array
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    int tmp = 0;
+    vector&lt;int&gt; a;
+    int n = 0;
+    cin&gt;&gt;n;//这个是nowcoder会用到的一个n，用来记录数组长度
+    cin&gt;&gt;tmp;
+    a.push_back(tmp);//注意用cin.get()要先输入一个数字，然后用cin.get()去接受空格和回车
+    while(true){
+        if(cin.get()=='\n') break;
+        cin&gt;&gt;tmp;
+        a.push_back(tmp);
+    }
+
+    n = a.size();
+    int dis = n/2;//设置步长，保证小于n，且最后能迭代到1就行，如dis/3-1
+    while(dis&gt;=1){//缩短到dis=1停止
+        for(int i=dis; i&lt;n; i++){//通过dis选择比较的第二个数的位置
+            for(int j=i-dis; j&gt;=0; j -= dis){//注意j-dis若&gt;=0，继续比较
+                if(a[j] &gt; a[j+dis]) swap(a[j], a[j+dis]);
+            }
+        }
+        dis /= 2;//全部交换完成，dis减小，此处应该和dis定义处相同，即可以为dis/3-1
+    }
+
+
+    for(const int &amp;e:a){
+        cout&lt;&lt;e&lt;&lt;' ';
+    }
+    cout&lt;&lt;'\n';
+}
+
+</code></pre>
+<p><strong>链表</strong></p>
+<blockquote>
+<p>对于<strong>希尔排序</strong>，因为排序过程中经常涉及到a[i+dis]操作，其中dis为希尔排序的当前步长，这种操作不适合链表。</p>
+</blockquote>
+<h2 id="5-堆排序heap-sort">5. 堆排序（Heap Sort）</h2>
+<ul>
+<li>平均时间复杂度$O(Nlog{N})$</li>
+<li>空间复杂度$O(1)$</li>
+<li>不稳定</li>
+</ul>
+<p><strong>数组</strong></p>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+////注意：数组不能为空
+///nowcoder pass
+//array
+
+void heapify(vector&lt;int&gt;&amp; a, int father, int end){
+    int son = father*2+1;
+    while(son&lt;end){
+        if(son+1 &lt; end &amp;&amp; a[son] &lt; a[son+1]) son++;//取两个子节点里面大的
+        if(a[father] &gt; a[son]) break;//若father&gt;son，说明三个数里面最大的数已经在顶上
+        else{
+            swap(a[father],a[son]);
+            father = son;//变化的son变为father继续取最大
+            son = son*2+1;
+        }
+    }
+}
+
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    int tmp = 0;
+    vector&lt;int&gt; a;
+    int n = 0;
+    cin&gt;&gt;n;//这个是nowcoder会用到的一个n，用来记录数组长度
+    cin&gt;&gt;tmp;
+    a.push_back(tmp);//注意用cin.get()要先输入一个数字，然后用cin.get()去接受空格和回车
+    while(true){
+        if(cin.get()=='\n') break;
+        cin&gt;&gt;tmp;
+        a.push_back(tmp);
+    }
+
+    n = a.size();
+    for(int i=n/2+1; i&gt;=0; i--){//最后一个父节点是从n/2+1开始，从这个节点往前迭代建立第一个堆
+        heapify(a, i, n);
+    }
+    for(int i=n-1; i&gt;0; --i){
+        swap(a[0], a[i]);//取堆顶的最大值，放到数组最后
+        heapify(a, 0, i);//这次只调整最大的堆顶就可以，因为其他父节点已经有序
+    }
+
+
+    for(const int &amp;e:a){
+        cout&lt;&lt;e&lt;&lt;' ';
+    }
+    cout&lt;&lt;'\n';
+}
+</code></pre>
+<p><strong>链表</strong></p>
+<blockquote>
+<p>堆排序也经常会有<strong>跨越多个节点找子节点的情况</strong>，因此不适合链表。<br>
+也可以用二叉树实现，但<strong>需要额外空间，比较复杂。</strong></p>
+</blockquote>
+<h2 id="6-归并排序merge-sort">6. 归并排序（Merge Sort）</h2>
+<ul>
+<li>平均时间复杂度$O(Nlog{N})$</li>
+<li>空间复杂度$O(N)$(非递归法); $O(N+log{N})$(递归法)</li>
+<li>稳定</li>
+</ul>
+<p><strong>数组</strong><br>
+递归</p>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+////注意：数组不能为空
+///nowcoder pass
+//array
+//递归
+void Merge(vector&lt;int&gt;&amp; a, vector&lt;int&gt; &amp;b, int start1, int end1, int start2, int end2){
+    int b_start = start1;
+    int tmp_start = start1;
+    while(start1 &lt;= end1 &amp;&amp; start2 &lt;= end2){
+        b[b_start++] = a[start1] &lt; a[start2]? a[start1++]:a[start2++];//取两序列比较中小的值
+    }
+    while(start1 &lt;= end1) b[b_start++] = (a[start1++]);
+    while(start2 &lt;= end2) b[b_start++] = (a[start2++]);//会有一个序列还剩一些数，接到tmp_vec后面
+
+    for(int i=tmp_start; i&lt;=end2; i++){
+        a[i] = b[i];
+    }
+}
+
+void MergeSort(vector&lt;int&gt;&amp; a, vector&lt;int&gt;&amp; b, int start, int end){
+    if(start &gt;= end) return;//递归终止条件
+    int mid = (end-start)/2 + start;//计算中间值
+    int start1 = start, end1 = mid;
+    int start2 = mid+1, end2 = end;//把数组分成两部分
+
+    MergeSort(a, b, start1, end1);
+    MergeSort(a, b, start2, end2);//两部分分别归并
+    Merge(a, b, start1, end1, start2, end2);
+
+}
+
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    int tmp = 0;
+    vector&lt;int&gt; a;
+    int n = 0;
+    cin&gt;&gt;n;//这个是nowcoder会用到的一个n，用来记录数组长度
+    cin&gt;&gt;tmp;
+    a.push_back(tmp);//注意用cin.get()要先输入一个数字，然后用cin.get()去接受空格和回车
+    while(true){
+        if(cin.get()=='\n') break;
+        cin&gt;&gt;tmp;
+        a.push_back(tmp);
+    }
+
+    n = a.size();
+    vector&lt;int&gt; b(n);
+    MergeSort(a,b,0,n-1);
+
+
+    for(const int &amp;e:a){
+        cout&lt;&lt;e&lt;&lt;' ';
+    }
+    cout&lt;&lt;'\n';
+}
+</code></pre>
+<p>非递归</p>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+////注意：数组不能为空
+///nowcoder pass
+//array
+//非递归
+void Merge(vector&lt;int&gt;&amp; a, vector&lt;int&gt; &amp;b, int start1, int end1, int start2, int end2){
+    int b_start = start1;
+    int tmp_start = start1;
+    while(start1 &lt;= end1 &amp;&amp; start2 &lt;= end2){
+        b[b_start++] = a[start1] &lt; a[start2]? a[start1++]:a[start2++];//取两序列比较中小的值
+    }
+    while(start1 &lt;= end1) b[b_start++] = (a[start1++]);
+    while(start2 &lt;= end2) b[b_start++] = (a[start2++]);//会有一个序列还剩一些数，接到tmp_vec后面
+
+    for(int i=tmp_start; i&lt;=end2; i++){
+        a[i] = b[i];
+    }
+}
+
+void MergeSort(vector&lt;int&gt;&amp; a, vector&lt;int&gt;&amp; b, int start, int end){
+    int n = end-start+1;
+    for(int stride = 1;stride &lt;= n; stride *= 2){
+        int i = start;
+        for(; i&lt;=end-2*stride+1; i += 2*stride){
+            Merge(a, b, i, i+stride-1, i+stride, i+2*stride-1);
+        }
+        if(i &lt; end-stride+1){
+            Merge(a, b, i, i+stride-1, i+stride, end);
+        }
+    }
+
+
+
+
+}
+
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    int tmp = 0;
+    vector&lt;int&gt; a;
+    int n = 0;
+    cin&gt;&gt;n;//这个是nowcoder会用到的一个n，用来记录数组长度
+    cin&gt;&gt;tmp;
+    a.push_back(tmp);//注意用cin.get()要先输入一个数字，然后用cin.get()去接受空格和回车
+    while(true){
+        if(cin.get()=='\n') break;
+        cin&gt;&gt;tmp;
+        a.push_back(tmp);
+    }
+
+    n = a.size();
+    vector&lt;int&gt; b(n);
+    MergeSort(a,b,0,n-1);
+
+
+    for(const int &amp;e:a){
+        cout&lt;&lt;e&lt;&lt;' ';
+    }
+    cout&lt;&lt;'\n';
+}
+
+</code></pre>
+<p><strong>链表</strong><br>
+递归</p>
+<pre><code class="language-cpp">class Solution {//用归并排序，且不能用递归（因为递归会用到栈，会用到O(n)级别的空间复杂度）
+                //但是写个递归练练手，正确答案看第一个提交结果，merge直接用双路归并merge。递归方法不用cut，各种边界条件还得记记
+public:
+    ListNode* sortList(ListNode* head) {//递归方法不用哑节点，另一种方法需要
+        if(!head || !head-&gt;next) return head;//当只有0-1个数时，直接返回该链表，不用排序
+        auto *slow = head, *fast = head, *pre = head;
+        //三个指针，slow，fast用于找终点，pre指向中点前一个节点，slow指向中点后一个节点
+        //注意这里中点是靠前的一个，奇数个节点fast指向最后一个数，偶数个节点fast指向nullptr
+        while(fast &amp;&amp; fast-&gt;next){//注意这种前进两个指针fast的需要判断两个值
+            pre = slow;
+            slow = slow-&gt;next;
+            fast = fast-&gt;next-&gt;next;
+        }
+        pre-&gt;next = nullptr;//断开链表
+        return merge(sortList(head),sortList(slow));//调用递归双路归并
+    }
+
+    ListNode* merge(ListNode* l1, ListNode* l2){//双路归并
+        auto DummyHead = new ListNode(-1);//哑节点
+        auto cur = DummyHead;//注意这里哑节点先不加入链表，用于创建新链表
+        while(l1 &amp;&amp; l2){
+            if(l1-&gt;val &lt; l2-&gt;val){
+                cur-&gt;next = l1;
+                l1 = l1-&gt;next;
+            }
+            else{
+                cur-&gt;next = l2;
+                l2 = l2-&gt;next;
+            }//哪个小接哪个
+            cur = cur-&gt;next;//cur指针后移一位
+        }
+        cur-&gt;next = l1? l1:l2;//一条链遍历完成另一条可能还有剩余，因此判断哪条有剩并接上
+        return DummyHead-&gt;next;
+    }
+};
+</code></pre>
+<p>非递归<br>
+leetcode#148里提到使用栈会使用额外的空间，空间复杂度不为常数，因此应该使用迭代</p>
+<pre><code class="language-cpp">/*迭代写法*/
+class Solution {//用归并排序，且不能用递归（因为递归会用到栈，会用到O(n)级别的空间复杂度）
+                //两个重要函数
+                //双路归并(merge)：挨个比较两链表的节点大小，哪个小(大)取哪个接在新链表后面
+                //断链(cut)：将链表 l 切掉前 n 个节点，并返回后半部分的链表头。
+public:
+    ListNode* sortList(ListNode* head) {
+        auto DummyHead = new ListNode(-1);//哑节点
+        DummyHead-&gt;next = head;//这里哑节点要接上
+        auto p = head;//p用于计数
+        int length = 0;
+        while(p){
+            length++;
+            p = p-&gt;next;
+        }//这一段用来算链表长度length
+        for(int size=1; size &lt; length; size &lt;&lt;= 1){
+            //第一次切成每份一个数，第二次两个数。。。用size左移一位表示size*2
+            auto cur = DummyHead-&gt;next;//cur表示该切的链表头部
+            auto tail = DummyHead;//tail表示切完的前一个链表的尾部，用于接上下一个合并的链表
+            while(cur){
+                auto left = cur;//设定需要切的链表第一条链表头
+                auto right = cut(left,size);//设定需要切的第二条链表表头
+                cur = cut(right,size);//将cur移动到第二条链表后面
+
+                tail-&gt;next = merge(left,right);
+                while(tail-&gt;next){//注意是判断next是否存在，否则tail会指向nullptr
+                    tail = tail-&gt;next;
+                }
+            }
+        }
+        return DummyHead-&gt;next;//返回哑节点后面的值
+    }
+    ListNode* cut(ListNode* head, int n){//n是到第几位切断,注意只切断前半段，后半段不用切断
+        auto first = head;//设置标记断点前半的指针
+        while(--n &amp;&amp; first) first = first-&gt;next;//将first指针移动到断点前
+        if(!first) return nullptr;//若前半段已经遍历完该链表，则返回空指针
+        auto second = first-&gt;next;
+        first-&gt;next = nullptr;//断开两条链
+        return second;//返回后半段的链表头
+    }
+
+    ListNode* merge(ListNode* l1, ListNode* l2){//双路归并
+        auto DummyHead = new ListNode(-1);//哑节点
+        auto cur = DummyHead;//注意这里哑节点先不加入链表，用于创建新链表
+        while(l1 &amp;&amp; l2){
+            if(l1-&gt;val &lt; l2-&gt;val){
+                cur-&gt;next = l1;
+                l1 = l1-&gt;next;
+            }
+            else{
+                cur-&gt;next = l2;
+                l2 = l2-&gt;next;
+            }//哪个小接哪个
+            cur = cur-&gt;next;//cur指针后移一位
+        }
+        cur-&gt;next = l1? l1:l2;//一条链遍历完成另一条可能还有剩余，因此判断哪条有剩并接上
+        return DummyHead-&gt;next;
+    }
+};
+</code></pre>
+<h2 id="7-快速排序quick-sort">7. 快速排序（Quick Sort）</h2>
+<ul>
+<li>平均时间复杂度$O(Nlog{N})$</li>
+<li>空间复杂度$O(Nlog{N})$</li>
+<li>不稳定</li>
+</ul>
+<p><strong>数组</strong><br>
+递归</p>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+////注意：数组不能为空
+///nowcoder pass
+//array
+int Partition(vector&lt;int&gt;&amp; a, int low, int high){
+    int key_value = a[low];
+    while(low&lt;high){
+        while(low &lt; high &amp;&amp; a[high] &gt;= key_value) high--;
+        a[low] = a[high];
+        while(low &lt; high &amp;&amp; a[low] &lt;= key_value) low++;
+        a[high] = a[low];
+    }
+    a[low] = key_value;
+    return low;
+}
+
+void QuickSort(vector&lt;int&gt;&amp; a, int start, int end){
+    int mid;
+    if(start&lt;end){
+        mid = Partition(a, start, end);
+        QuickSort(a, start, mid-1);
+        QuickSort(a, mid+1, end);
+    }
+}
+
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    int tmp = 0;
+    vector&lt;int&gt; a;
+    int n = 0;
+    cin&gt;&gt;n;//这个是nowcoder会用到的一个n，用来记录数组长度
+    cin&gt;&gt;tmp;
+    a.push_back(tmp);//注意用cin.get()要先输入一个数字，然后用cin.get()去接受空格和回车
+    while(true){
+        if(cin.get()=='\n') break;
+        cin&gt;&gt;tmp;
+        a.push_back(tmp);
+    }
+
+    n = a.size();
+    QuickSort(a, 0, n-1);
+
+
+    for(const int &amp;e:a){
+        cout&lt;&lt;e&lt;&lt;' ';
+    }
+    cout&lt;&lt;'\n';
+}
+</code></pre>
+<p><strong>链表</strong><br>
+交换val值</p>
+<p>交换节点</p>
+<pre><code class="language-cpp">占坑
+</code></pre>
+<hr>
+<p><strong>以下三种排序都是用空间换时间</strong></p>
+<h2 id="8-计数排序counting-sort">8. 计数排序（Counting Sort）</h2>
+<ul>
+<li>平均时间复杂度$O(N+K)$,K是数组最大最小值的差</li>
+<li>空间复杂度$O(N+K)$</li>
+<li>稳定</li>
+</ul>
+<blockquote>
+<p>前面想能不能用map来计数以减少内存开销，但是若用unordered_map无法保证计数的下标递增；使用map自动排序涉及其他的时间复杂度。桶排序类似。</p>
+</blockquote>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+////注意：数组不能为空
+///nowcoder no pass,内存超了
+//array
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    int tmp = 0;
+    vector&lt;int&gt; a;
+    int n = 0;
+    cin&gt;&gt;n;//这个是nowcoder会用到的一个n，用来记录数组长度
+    cin&gt;&gt;tmp;
+    a.push_back(tmp);//注意用cin.get()要先输入一个数字，然后用cin.get()去接受空格和回车
+    while(true){
+        if(cin.get()=='\n') break;
+        cin&gt;&gt;tmp;
+        a.push_back(tmp);
+    }
+
+    n = a.size();
+    int max_value = INT_MIN;
+    int min_value = INT_MAX;
+    for(auto &amp;v:a){
+        max_value = max(v, max_value);
+        min_value = min(v, min_value);
+    }//遍历数组找最大值
+    int b[max_value-min_value+1];
+    for(auto &amp;v:a){
+        b[v-min_value]++;
+    }
+    a.clear();//清除原数组
+    for(int i=min_value; i&lt;max_value; i++){
+        while(b[i]--){
+            a.push_back(i);
+        }//计数完成的数字挨个放入原数组
+    }
+
+
+    for(const int &amp;e:a){
+        cout&lt;&lt;e&lt;&lt;' ';
+    }
+    cout&lt;&lt;'\n';
+}
+</code></pre>
+<h2 id="9-桶排序bucket-sort">9. 桶排序（Bucket Sort）</h2>
+<ul>
+<li>平均时间复杂度$O(N+K)$,K是数组最大最小值的差</li>
+<li>空间复杂度$O(N+K)$</li>
+<li>稳定</li>
+</ul>
+<blockquote>
+<p>计数排序可以算作特殊的桶排序，即一个数一个桶 <br>
+时间复杂度还得考虑每个桶的插入排序，<em>以上的时间复杂度统计似乎未考虑</em> <br>
+<strong>数组</strong></p>
+</blockquote>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+////注意：数组不能为空
+///nowcoder pass
+//array
+//计数排序是特殊的桶排序，即每个桶只存相同的数字
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    int tmp = 0;
+    vector&lt;int&gt; a;
+    int n = 0;
+    cin&gt;&gt;n;//这个是nowcoder会用到的一个n，用来记录数组长度
+    cin&gt;&gt;tmp;
+    a.push_back(tmp);//注意用cin.get()要先输入一个数字，然后用cin.get()去接受空格和回车
+    while(true){
+        if(cin.get()=='\n') break;
+        cin&gt;&gt;tmp;
+        a.push_back(tmp);
+    }
+
+    n = a.size();
+    int max_value = INT_MIN;
+    int min_value = INT_MAX;
+    for(auto &amp;v:a){
+        max_value = max(v, max_value);
+        min_value = min(v, min_value);
+    }//遍历数组找最大值
+    int bucket_num = 5;//设计桶的的数量，可更改
+    float bucket_range = ((float)max_value-(float)min_value+1)/5;//每个桶包含的范围，也可以用其他映射方式，注意是float
+    vector&lt;vector&lt;int&gt;&gt; buckets(bucket_num);//定义二维数组保存每个桶及桶里的元素
+    int bucket_key = 0;//定义记录这个数所在桶的变量
+    for(auto &amp;v:a){
+        bucket_key = floor(((float)v-(float)min_value)/bucket_range);//每个数计算其所在桶
+        //下面是在每个桶内执行插入排序
+        if(buckets[bucket_key].empty() || v &gt;= buckets[bucket_key].back()) buckets[bucket_key].push_back(v);
+        else{
+            for(int i=0; i&lt;buckets[bucket_key].size(); ++i) {
+                if (v &lt; buckets[bucket_key][i]) {
+                    buckets[bucket_key].insert(buckets[bucket_key].begin()+i, v);
+                    break;
+                }
+            }
+        }
+    }
+    a.clear();//原数组清空
+    for(int i=0; i&lt;bucket_num; i++){
+        int thisBucketNum = buckets[i].size();
+        for(int j=0; j&lt;thisBucketNum; j++){
+            a.push_back(buckets[i][j]);
+        }
+    }//从桶中挨个取出数组
+
+
+    for(const int &amp;e:a){
+        cout&lt;&lt;e&lt;&lt;' ';
+    }
+    cout&lt;&lt;'\n';
+}
+</code></pre>
+<p><strong>链表</strong></p>
+<blockquote>
+<p>桶排序更适合用链表实现，定义一个vector保存表头，然后后续用链表保存，这个即可以用于链表排序也可以用于数组排序，前者是直接断链存到哦vector，后者是取数创建新的链表存入vector</p>
+</blockquote>
+<pre><code class="language-cpp">占坑
+</code></pre>
+<h2 id="10-基数排序radix-sort">10. 基数排序（Radix Sort）</h2>
+<ul>
+<li>平均时间复杂度$O(N*d)$,d为基数的个数</li>
+<li>空间复杂度$O(N+d)$</li>
+<li>稳定
+<strong>数组</strong></li>
+</ul>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+////注意：数组不能为空
+///nowcoder no pass,内存超了
+//array
+void countSort(vector&lt;int&gt;&amp; a, int digit){
+    vector&lt;vector&lt;int&gt;&gt; b(10);//定义二维数组保存数，第一维是10位
+    for(auto &amp;v:a){//遍历a中的每个数
+        int this_digit = v%(digit*10)/digit;//求这个数在当前位的值
+        if(b[this_digit].empty() || v &gt;= b[this_digit].back())
+            b[this_digit].push_back(v);//若这一位的数组是空的，或者比最后一个数大，直接插在最后一位
+        else{
+            for(int i=0; i&lt;b[this_digit].size(); i++){
+                if(v &lt; b[this_digit][i]){
+                    b[this_digit].insert(b[this_digit].begin()+i, v);
+                    break;
+                }
+            }
+        }//否则进行插入排序
+    }
+
+    a.clear();//清空原数组
+    for(int i=0; i&lt;b.size(); i++){
+        for(int j=0; j&lt;b[i].size(); j++){
+            a.push_back(b[i][j]);
+        }
+    }//挨个取数存入原数组
+    b.clear();
+}
+
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    int tmp = 0;
+    vector&lt;int&gt; a;
+    int n = 0;
+    cin&gt;&gt;n;//这个是nowcoder会用到的一个n，用来记录数组长度
+    cin&gt;&gt;tmp;
+    a.push_back(tmp);//注意用cin.get()要先输入一个数字，然后用cin.get()去接受空格和回车
+    while(true){
+        if(cin.get()=='\n') break;
+        cin&gt;&gt;tmp;
+        a.push_back(tmp);
+    }
+
+    n = a.size();
+    int max_value = INT_MIN;
+    for(auto &amp;v:a){
+        max_value = max(v, max_value);
+    }//遍历数组找最大值
+    int mag = 1;//定义最大数的数量级
+    while(max_value/mag &gt; 10) mag *= 10;
+
+    for(int i=1; i&lt;=mag; i *= 10){
+        countSort(a, i);//调用按位的计数排序
+    }
+
+
+
+
+    for(const int &amp;e:a){
+        cout&lt;&lt;e&lt;&lt;' ';
+    }
+    cout&lt;&lt;'\n';
+}
+</code></pre>
+<blockquote>
+<p>参考自</p>
+<ol>
+<li><a href="https://www.cnblogs.com/tenosdoit/p/3666585.html">https://www.cnblogs.com/tenosdoit/p/3666585.html</a></li>
+<li><a href="https://www.cnblogs.com/onepixel/articles/7674659.html">https://www.cnblogs.com/onepixel/articles/7674659.html</a></li>
+<li><a href="https://blog.csdn.net/Koala_Tree/article/details/79958965">https://blog.csdn.net/Koala_Tree/article/details/79958965</a></li>
+</ol>
+</blockquote>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">ChrisHRZ</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-04-22
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/sort/">Sort</a>
+          <a href="/tags/linked-list/">Linked List</a>
+          <a href="/tags/array/">Array</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/lct69sqrtx/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">[Lc]t69Sqrt(x)</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/lct22generate_parentheses/">
+            <span class="next-text nav-default">[Lc]t22Generate_Parentheses</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/%E5%8D%81%E5%A4%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%9A%84%E6%95%B0%E7%BB%84%E5%92%8C%E9%93%BE%E8%A1%A8%E5%AE%9E%E7%8E%B0/" class="leancloud_visitors" data-flag-title="十大排序算法的数组和链表实现">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'M8Fyr1YXIu2Ov8Wh4ByqtEzq-gzGzoHsz',
+        appKey: 'AHiPSGeLQbvrQGQ6KfhvOKvN',
+        notify:  false ,
+        verify:  false ,
+        avatar:'mm',
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/ChrisHRZ" class="iconfont icon-github" title="github"></a>
+  <a href="https://chrishrz.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">ChrisHRZ</span>
+  </span>
+</div>
+
+
+<script src="https://cdn.bootcss.com/mermaid/8.4.8/mermaid.min.js"></script>
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js"></script>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

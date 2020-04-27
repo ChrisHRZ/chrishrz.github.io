@@ -6,10 +6,19 @@
     <description>Recent content in C&#43;&#43; on Focus-ChrisHRZ&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 12 Mar 2020 22:34:40 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 18 Apr 2020 12:47:18 +0800</lastBuildDate>
     
 	<atom:link href="https://chrishrz.github.io/categories/c++/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cpp常见问题(待续)</title>
+      <link>https://chrishrz.github.io/post/cpp%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Sat, 18 Apr 2020 12:47:18 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/cpp%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</guid>
+      <description>数组 c++数组主要包括静态数组，动态数组，vector 1. 静态数组 未初始化的数组是随机数据，初始化方法有 int arr[1024] = {0}; //全部初始化为0 int arr[1024] = {1}; //</description>
+    </item>
     
     <item>
       <title>C&#43;&#43;哈希表unordered_map的常见方法小结</title>

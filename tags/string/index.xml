@@ -6,18 +6,54 @@
     <description>Recent content in String on Focus-ChrisHRZ&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 11 Apr 2020 22:04:52 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 21 Apr 2020 12:27:02 +0800</lastBuildDate>
     
 	<atom:link href="https://chrishrz.github.io/tags/string/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>[Lc]t50Pow(x,n)</title>
-      <link>https://chrishrz.github.io/post/lct50powxn/</link>
-      <pubDate>Sat, 11 Apr 2020 22:04:52 +0800</pubDate>
+      <title>[Lc]t22Generate_Parentheses</title>
+      <link>https://chrishrz.github.io/post/lct22generate_parentheses/</link>
+      <pubDate>Tue, 21 Apr 2020 12:27:02 +0800</pubDate>
       
-      <guid>https://chrishrz.github.io/post/lct50powxn/</guid>
-      <description>题目 Implement pow(x, n), which calculates x raised to the power n (xn). Example 1: Input: 2.00000, 10 Output: 1024.00000 Example 2: Input: 2.10000, 3 Output: 9.26100 Example 3: Input: 2.00000, -2 Output: 0.25000 Explanation: 2-2 = 1/22 = 1/4 = 0.25 Note: -100.0 &amp;lt; x &amp;lt; 100.0 n is a 32-bit signed integer, within the range [−231, 231 − 1]</description>
+      <guid>https://chrishrz.github.io/post/lct22generate_parentheses/</guid>
+      <description>题目 Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses. For example, given n = 3, a solution set is: [ &amp;ldquo;((()))&amp;quot;, &amp;ldquo;(()())&amp;quot;, &amp;ldquo;(())()&amp;quot;, &amp;ldquo;()(())&amp;quot;, &amp;ldquo;()()()&amp;rdquo; ] 题解 1.递归法 class Solution { vector&amp;lt;string&amp;gt; res;//在私有变量定义res在存结果， public: vector&amp;lt;string&amp;gt; generateParenthesis(int n)</description>
+    </item>
+    
+    <item>
+      <title>[lc]#20Valid_Parentheses</title>
+      <link>https://chrishrz.github.io/post/lct20valid_parentheses/</link>
+      <pubDate>Tue, 21 Apr 2020 11:49:21 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lct20valid_parentheses/</guid>
+      <description>题目 Given a string containing just the characters &amp;lsquo;(&#39;, &amp;lsquo;)&#39;, &amp;lsquo;{&#39;, &amp;lsquo;}&#39;, &amp;lsquo;[&amp;rsquo; and &amp;lsquo;]&#39;, determine if the input string is valid. An input string is valid if: Open brackets must be closed by the same type of brackets. Open brackets must be closed in the correct order. Note that an empty string is also considered valid. Example 1: Input: &amp;ldquo;()&amp;rdquo; Output: true Example 2: Input: &amp;ldquo;()[]{}&amp;rdquo; Output: true</description>
+    </item>
+    
+    <item>
+      <title>[lc]#17Letter_Combinations_of_a_Phone_Number</title>
+      <link>https://chrishrz.github.io/post/lct17letter_combinations_of_a_phone_number/</link>
+      <pubDate>Mon, 20 Apr 2020 20:25:18 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lct17letter_combinations_of_a_phone_number/</guid>
+      <description>题目 Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent. A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters. 题解 时间复杂度$O(3^{N}+4^{M})$，N是</description>
+    </item>
+    
+    <item>
+      <title>[Lc]t14Longest_Common_Prefix</title>
+      <link>https://chrishrz.github.io/post/lct14longest_common_prefix/</link>
+      <pubDate>Sat, 18 Apr 2020 21:01:06 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lct14longest_common_prefix/</guid>
+      <description>题目 Write a function to find the longest common prefix string amongst an array of strings. If there is no common prefix, return an empty string &amp;ldquo;&amp;quot;. Example 1: Input: [&amp;ldquo;flower&amp;rdquo;,&amp;ldquo;flow&amp;rdquo;,&amp;ldquo;flight&amp;rdquo;] Output: &amp;ldquo;fl&amp;rdquo; Example 2: Input: [&amp;ldquo;dog&amp;rdquo;,&amp;ldquo;racecar&amp;rdquo;,&amp;ldquo;car&amp;rdquo;] Output: &amp;quot;&amp;rdquo; Explanation: There is no common prefix among the input strings. Note: All given inputs are in lowercase letters a-z. 题解 1. 遍历法 时间复杂度</description>
+    </item>
+    
+    <item>
+      <title>[Lc]t67Add_Binary</title>
+      <link>https://chrishrz.github.io/post/lct67add_binary/</link>
+      <pubDate>Mon, 13 Apr 2020 22:36:11 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lct67add_binary/</guid>
+      <description>题目 Given two binary strings, return their sum (also a binary string). The input strings are both non-empty and contains only characters 1 or 0. Example 1: Input: a = &amp;ldquo;11&amp;rdquo;, b = &amp;ldquo;1&amp;rdquo; Output: &amp;ldquo;100&amp;rdquo; Example 2: Input: a = &amp;ldquo;1010&amp;rdquo;, b = &amp;ldquo;1011&amp;rdquo; Output: &amp;ldquo;10101&amp;rdquo; Constraints: Each string consists only of &amp;lsquo;0&amp;rsquo; or &amp;lsquo;1&amp;rsquo; characters. 1 &amp;lt;= a.length, b.length &amp;lt;= 10^4 Each string is either &amp;ldquo;0&amp;rdquo; or</description>
     </item>
     
     <item>
@@ -27,15 +63,6 @@
       
       <guid>https://chrishrz.github.io/post/lct43multiply_strings/</guid>
       <description>题目 Given two non-negative integers num1 and num2 represented as strings, return the product of num1 and num2, also represented as a string. Example 1: Input: num1 = &amp;ldquo;2&amp;rdquo;, num2 = &amp;ldquo;3&amp;rdquo; Output: &amp;ldquo;6&amp;rdquo; Example 2: Input: num1 = &amp;ldquo;123&amp;rdquo;, num2 = &amp;ldquo;456&amp;rdquo; Output: &amp;ldquo;56088&amp;rdquo; Note: The length of both num1 and num2 is &amp;lt; 110. Both num1 and num2 contain only digits 0-9. Both num1 and num2 do</description>
-    </item>
-    
-    <item>
-      <title>面经总结</title>
-      <link>https://chrishrz.github.io/post/%E9%9D%A2%E7%BB%8F%E6%80%BB%E7%BB%93/</link>
-      <pubDate>Sat, 11 Apr 2020 12:06:16 +0800</pubDate>
-      
-      <guid>https://chrishrz.github.io/post/%E9%9D%A2%E7%BB%8F%E6%80%BB%E7%BB%93/</guid>
-      <description>记录最近参加的面试的题目 腾讯春招实习提前批（客户端开发） 一面 二叉树的最大直径，编程题 链表的排序，要求时间复杂度$O(Nlog(N))$,空间</description>
     </item>
     
     <item>

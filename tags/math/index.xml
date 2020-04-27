@@ -6,18 +6,63 @@
     <description>Recent content in Math on Focus-ChrisHRZ&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 11 Apr 2020 22:04:52 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 24 Apr 2020 21:26:38 +0800</lastBuildDate>
     
 	<atom:link href="https://chrishrz.github.io/tags/math/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>[Lc]t50Pow(x,n)</title>
+      <title>[Lc]t28Implement_strStr()</title>
+      <link>https://chrishrz.github.io/post/lct28implement_strstr/</link>
+      <pubDate>Fri, 24 Apr 2020 21:26:38 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lct28implement_strstr/</guid>
+      <description>题目 Implement strStr(). Return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack. Example 1: Input: haystack = &amp;ldquo;hello&amp;rdquo;, needle = &amp;ldquo;ll&amp;rdquo; Output: 2 Example 2: Input: haystack = &amp;ldquo;aaaaa&amp;rdquo;, needle = &amp;ldquo;bba&amp;rdquo; Output: -1 题解 1. 正则表达式 这个在leetcode上超时，未</description>
+    </item>
+    
+    <item>
+      <title>[Lc]t69Sqrt(x)</title>
+      <link>https://chrishrz.github.io/post/lct69sqrtx/</link>
+      <pubDate>Fri, 24 Apr 2020 20:27:31 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lct69sqrtx/</guid>
+      <description>题目 Implement int sqrt(int x). Compute and return the square root of x, where x is guaranteed to be a non-negative integer. Since the return type is an integer, the decimal digits are truncated and only the integer part of the result is returned. Example 1: Input: 4 Output: 2 Example 2: Input: 8 Output: 2 Explanation: The square root of 8 is 2.82842&amp;hellip;, and since the decimal part</description>
+    </item>
+    
+    <item>
+      <title>[Lc]t67Add_Binary</title>
+      <link>https://chrishrz.github.io/post/lct67add_binary/</link>
+      <pubDate>Mon, 13 Apr 2020 22:36:11 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lct67add_binary/</guid>
+      <description>题目 Given two binary strings, return their sum (also a binary string). The input strings are both non-empty and contains only characters 1 or 0. Example 1: Input: a = &amp;ldquo;11&amp;rdquo;, b = &amp;ldquo;1&amp;rdquo; Output: &amp;ldquo;100&amp;rdquo; Example 2: Input: a = &amp;ldquo;1010&amp;rdquo;, b = &amp;ldquo;1011&amp;rdquo; Output: &amp;ldquo;10101&amp;rdquo; Constraints: Each string consists only of &amp;lsquo;0&amp;rsquo; or &amp;lsquo;1&amp;rsquo; characters. 1 &amp;lt;= a.length, b.length &amp;lt;= 10^4 Each string is either &amp;ldquo;0&amp;rdquo; or</description>
+    </item>
+    
+    <item>
+      <title>[lc]#31Next_Permutation</title>
+      <link>https://chrishrz.github.io/post/lct31next_permutation/</link>
+      <pubDate>Sun, 12 Apr 2020 00:34:19 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lct31next_permutation/</guid>
+      <description>题目 Implement next permutation, which rearranges numbers into the lexicographically next greater permutation of numbers. If such arrangement is not possible, it must rearrange it as the lowest possible order (ie, sorted in ascending order). The replacement must be in-place and use only constant extra memory. Here are some examples. Inputs are in the left-hand column and its corresponding outputs are in the right-hand column. 1,2,3 → 1,3,2 3,2,1</description>
+    </item>
+    
+    <item>
+      <title>[lc]#60Permutati_on_Sequence</title>
+      <link>https://chrishrz.github.io/post/lct60permutati_on_sequence/</link>
+      <pubDate>Sat, 11 Apr 2020 22:55:04 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lct60permutati_on_sequence/</guid>
+      <description>题目 The set [1,2,3,&amp;hellip;,n] contains a total of n! unique permutations. By listing and labeling all of the permutations in order, we get the following sequence for n = 3: &amp;ldquo;123&amp;rdquo; &amp;ldquo;132&amp;rdquo; &amp;ldquo;213&amp;rdquo; &amp;ldquo;231&amp;rdquo; &amp;ldquo;312&amp;rdquo; &amp;ldquo;321&amp;rdquo; Given n and k, return the kth permutation sequence. Note: Given n will be between 1 and 9 inclusive. Given k will be between 1 and n! inclusive. Example 1: Input: n =</description>
+    </item>
+    
+    <item>
+      <title>[lc]#50Pow(x,n)</title>
       <link>https://chrishrz.github.io/post/lct50powxn/</link>
       <pubDate>Sat, 11 Apr 2020 22:04:52 +0800</pubDate>
       
       <guid>https://chrishrz.github.io/post/lct50powxn/</guid>
-      <description>题目 Implement pow(x, n), which calculates x raised to the power n (xn). Example 1: Input: 2.00000, 10 Output: 1024.00000 Example 2: Input: 2.10000, 3 Output: 9.26100 Example 3: Input: 2.00000, -2 Output: 0.25000 Explanation: 2-2 = 1/22 = 1/4 = 0.25 Note: -100.0 &amp;lt; x &amp;lt; 100.0 n is a 32-bit signed integer, within the range [−231, 231 − 1]</description>
+      <description>题目 Implement pow(x, n), which calculates x raised to the power n (xn). Example 1: Input: 2.00000, 10 Output: 1024.00000 Example 2: Input: 2.10000, 3 Output: 9.26100 Example 3: Input: 2.00000, -2 Output: 0.25000 Explanation: 2-2 = 1/22 = 1/4 = 0.25 Note: -100.0 &amp;lt; x &amp;lt; 100.0 n is a 32-bit signed integer, within the range [−231, 231 − 1] 题解 快</description>
     </item>
     
     <item>
@@ -30,16 +75,7 @@
     </item>
     
     <item>
-      <title>面经总结</title>
-      <link>https://chrishrz.github.io/post/%E9%9D%A2%E7%BB%8F%E6%80%BB%E7%BB%93/</link>
-      <pubDate>Sat, 11 Apr 2020 12:06:16 +0800</pubDate>
-      
-      <guid>https://chrishrz.github.io/post/%E9%9D%A2%E7%BB%8F%E6%80%BB%E7%BB%93/</guid>
-      <description>记录最近参加的面试的题目 腾讯春招实习提前批（客户端开发） 一面 二叉树的最大直径，编程题 链表的排序，要求时间复杂度$O(Nlog(N))$,空间</description>
-    </item>
-    
-    <item>
-      <title>[lc]t29Divide_Two_Integers</title>
+      <title>[lc]#29Divide_Two_Integers</title>
       <link>https://chrishrz.github.io/post/lct29divide_two_integers/</link>
       <pubDate>Fri, 10 Apr 2020 22:46:20 +0800</pubDate>
       

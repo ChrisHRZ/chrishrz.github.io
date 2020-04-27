@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>[Lc]t84Largest_Rectangle_in_Histogram - Focus-ChrisHRZ&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ChrisHRZ" /><meta name="description" content="题目 Given n non-negative integers representing the histogram&amp;rsquo;s bar height where the width of each bar is 1, find the area of largest rectangle in the histogram. Above is a histogram where width of each bar is 1, given height = [2,1,5,6,2,3]. The largest rectangle is shown in the shaded area, which has area = 10 unit. Example: Input: [2,1,5,6,2,3] Output: 10 题解 1. 双数组法" /><meta name="keywords" content="code, life, study" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.66.0 with theme even" />
+
+
+<link rel="canonical" href="https://chrishrz.github.io/post/lct84largest_rectangle_in_histogram/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
+
+<meta property="og:title" content="[Lc]t84Largest_Rectangle_in_Histogram" />
+<meta property="og:description" content="题目 Given n non-negative integers representing the histogram&rsquo;s bar height where the width of each bar is 1, find the area of largest rectangle in the histogram. Above is a histogram where width of each bar is 1, given height = [2,1,5,6,2,3]. The largest rectangle is shown in the shaded area, which has area = 10 unit. Example: Input: [2,1,5,6,2,3] Output: 10 题解 1. 双数组法" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chrishrz.github.io/post/lct84largest_rectangle_in_histogram/" />
+<meta property="article:published_time" content="2020-04-26T13:23:35+08:00" />
+<meta property="article:modified_time" content="2020-04-26T13:23:35+08:00" />
+<meta itemprop="name" content="[Lc]t84Largest_Rectangle_in_Histogram">
+<meta itemprop="description" content="题目 Given n non-negative integers representing the histogram&rsquo;s bar height where the width of each bar is 1, find the area of largest rectangle in the histogram. Above is a histogram where width of each bar is 1, given height = [2,1,5,6,2,3]. The largest rectangle is shown in the shaded area, which has area = 10 unit. Example: Input: [2,1,5,6,2,3] Output: 10 题解 1. 双数组法">
+<meta itemprop="datePublished" content="2020-04-26T13:23:35&#43;08:00" />
+<meta itemprop="dateModified" content="2020-04-26T13:23:35&#43;08:00" />
+<meta itemprop="wordCount" content="846">
+
+
+
+<meta itemprop="keywords" content="Array," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[Lc]t84Largest_Rectangle_in_Histogram"/>
+<meta name="twitter:description" content="题目 Given n non-negative integers representing the histogram&rsquo;s bar height where the width of each bar is 1, find the area of largest rectangle in the histogram. Above is a histogram where width of each bar is 1, given height = [2,1,5,6,2,3]. The largest rectangle is shown in the shaded area, which has area = 10 unit. Example: Input: [2,1,5,6,2,3] Output: 10 题解 1. 双数组法"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+<script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
+
+<meta name="baidu-site-verification" content="GDMA35xQfM" />
+<meta name="google-site-verification" content="f-5-S53Hm0WIn0Tnfu-dg0sNmCZeahUFILgUSI9JLQA" />
+<meta name="baidu-site-verification" content="74mXju2aOk" />
+<meta name="google-site-verification" content="2yu63Vg3wEmB1XF77uGbZdOQB_a_KSLTk-zNxL4oGRg" />
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">FOCUS</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">FOCUS</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">[Lc]t84Largest_Rectangle_in_Histogram</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-04-26 </span>
+        <div class="post-category">
+            <a href="/categories/leetcode/"> leetcode </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#题目">题目</a></li>
+    <li><a href="#题解">题解</a>
+      <ul>
+        <li><a href="#1-双数组法">1. 双数组法</a></li>
+        <li><a href="#2-用栈">2. 用栈</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="题目">题目</h2>
+<p>Given n non-negative integers representing the histogram&rsquo;s bar height where the width of each bar is 1, find the area of largest rectangle in the histogram.
+<img src="/img/img2020-04-26-13-24-29.png" alt="">
+ </p>
+<p>Above is a histogram where width of each bar is 1, given height = [2,1,5,6,2,3].</p>
+<p> <img src="../../static/img/img2020-04-26-13-24-44.png" alt=""></p>
+<p>The largest rectangle is shown in the shaded area, which has area = 10 unit.</p>
+<p> </p>
+<p><strong>Example:</strong><br>
+Input: [2,1,5,6,2,3]<br>
+Output: 10</p>
+<h2 id="题解">题解</h2>
+<h3 id="1-双数组法">1. 双数组法</h3>
+<ul>
+<li>时间复杂度$O(N)$</li>
+<li>空间复杂度$O(N)$</li>
+</ul>
+<pre><code class="language-cpp">class Solution {
+public:
+    int largestRectangleArea(vector&lt;int&gt;&amp; heights) {//多种方法，可以暴力搜索，但会超时，这里用时间复杂度较低的方法。用两个主要的方法
+    //1.记录左右最小矩形，求最小面积法
+    //包含i处柱形图的最大矩形是左右两个小于该柱形图高度之间的宽度乘以该处柱形图的高度
+    if(heights.empty()) return 0;
+    int n = heights.size();
+    vector&lt;int&gt; leftLessMin(n);
+    vector&lt;int&gt; rightLessMin(n);
+    leftLessMin[0] = -1;
+    rightLessMin[n-1] = n;//定义两个数组存左右的最近的小于该处的矩形，最左和最右设置为-1和n，即两个空位置
+
+    //存每个坐标左边的最近小矩形
+    for(int i=1; i&lt;n; ++i){
+        int left = i-1;
+        while(left &gt;= 0 &amp;&amp; heights[left] &gt;= heights[i]){
+            left = leftLessMin[left];//注意这里，若i比左边某处left的高度低，则直接找到left已经保存的左边第一个小矩形，因为left和leftLessMin[left]之间的矩形肯定大于left，同时也肯定大于i
+        }
+        leftLessMin[i] = left;
+    }
+
+    //存每个坐标右边边的最近小矩形
+    for(int i=n-2; i&gt;=0; --i){
+        int right = i+1;
+        while(right &lt;= n-1 &amp;&amp; heights[right] &gt;= heights[i]){
+            right = rightLessMin[right];
+        }
+        rightLessMin[i] = right;
+    }
+
+    int max_surface = 0;
+    for(int i=0; i&lt;n; i++){
+        int area = (rightLessMin[i] - leftLessMin[i] - 1)*heights[i];//注意括号内要减一，取区间值
+        max_surface = max(max_surface, area);
+    }
+    return max_surface;
+        
+    }
+};
+</code></pre>
+<h3 id="2-用栈">2. 用栈</h3>
+<ul>
+<li>时间复杂度$O(N)$</li>
+<li>空间复杂度$O(N)$</li>
+</ul>
+<pre><code class="language-cpp">class Solution {
+public:
+    int largestRectangleArea(vector&lt;int&gt;&amp; heights) {
+        if(heights.empty()) return 0;
+        int n = heights.size();
+        int maxArea = 0;
+        stack&lt;int&gt; s;//定义栈，存每个柱状图的下标
+        s.push(-1);//先存个-1作为栈顶
+        for(int i=0; i&lt;n; i++){//遍历每个柱形图
+            while(s.top()!=-1 &amp;&amp; heights[s.top()] &gt;= heights[i]){//如果栈顶不为-1，且栈顶的的值大于当前遍历的值（有可能循环多次）
+                int tmp_heights = heights[s.top()];s.pop();//取出栈顶的值
+                maxArea = max(maxArea, tmp_heights*(i-s.top()-1));
+                //用取出的值作为高，栈顶的值作为左边的范围，正在遍历的值作为右边的范围(开区间),计算矩形面积，并取最大
+            }
+            s.push(i);//计算完成继续将遍历的值压入栈，或者不符合上述循环的条件也继续压栈，即若heights继续升高也压栈
+        }
+        while(s.top() != -1){//遍历完成就挨个从栈中取数，计算面积
+            int tmp_heights = heights[s.top()];s.pop();
+            maxArea = max(maxArea, tmp_heights*(n-s.top()-1));
+        }
+        return maxArea;
+    }
+};
+</code></pre>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">ChrisHRZ</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-04-26
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/array/">Array</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9840_%E6%9C%80%E5%B0%8F%E7%9A%84k%E4%B8%AA%E6%95%B0/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">[Lc]面试题40_最小的k个数</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/lct28implement_strstr/">
+            <span class="next-text nav-default">[Lc]t28Implement_strStr()</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/lct84largest_rectangle_in_histogram/" class="leancloud_visitors" data-flag-title="[Lc]t84Largest_Rectangle_in_Histogram">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'M8Fyr1YXIu2Ov8Wh4ByqtEzq-gzGzoHsz',
+        appKey: 'AHiPSGeLQbvrQGQ6KfhvOKvN',
+        notify:  false ,
+        verify:  false ,
+        avatar:'mm',
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/ChrisHRZ" class="iconfont icon-github" title="github"></a>
+  <a href="https://chrishrz.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">ChrisHRZ</span>
+  </span>
+</div>
+
+
+<script src="https://cdn.bootcss.com/mermaid/8.4.8/mermaid.min.js"></script>
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js"></script>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
