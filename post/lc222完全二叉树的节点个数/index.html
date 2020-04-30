@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>[Lc]222完全二叉树的节点个数 - Focus-ChrisHRZ&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ChrisHRZ" /><meta name="description" content="题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 递归法 class Solution { public: int countNodes(TreeNode* root) {//1.递归直接统计节点数 return root? 1&#43;countNodes(root-&amp;gt;left)&#43;countNodes(root-&amp;gt;right) : 0; } }; 2. 利用" /><meta name="keywords" content="code, life, study" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.66.0 with theme even" />
+
+
+<link rel="canonical" href="https://chrishrz.github.io/post/lc222%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%8A%82%E7%82%B9%E4%B8%AA%E6%95%B0/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
+
+<meta property="og:title" content="[Lc]222完全二叉树的节点个数" />
+<meta property="og:description" content="题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 递归法 class Solution { public: int countNodes(TreeNode* root) {//1.递归直接统计节点数 return root? 1&#43;countNodes(root-&gt;left)&#43;countNodes(root-&gt;right) : 0; } }; 2. 利用" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chrishrz.github.io/post/lc222%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%8A%82%E7%82%B9%E4%B8%AA%E6%95%B0/" />
+<meta property="article:published_time" content="2020-04-09T11:03:58+08:00" />
+<meta property="article:modified_time" content="2020-04-09T11:03:58+08:00" />
+<meta itemprop="name" content="[Lc]222完全二叉树的节点个数">
+<meta itemprop="description" content="题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 递归法 class Solution { public: int countNodes(TreeNode* root) {//1.递归直接统计节点数 return root? 1&#43;countNodes(root-&gt;left)&#43;countNodes(root-&gt;right) : 0; } }; 2. 利用">
+<meta itemprop="datePublished" content="2020-04-09T11:03:58&#43;08:00" />
+<meta itemprop="dateModified" content="2020-04-09T11:03:58&#43;08:00" />
+<meta itemprop="wordCount" content="1066">
+
+
+
+<meta itemprop="keywords" content="Tree,Binary tree," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[Lc]222完全二叉树的节点个数"/>
+<meta name="twitter:description" content="题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 递归法 class Solution { public: int countNodes(TreeNode* root) {//1.递归直接统计节点数 return root? 1&#43;countNodes(root-&gt;left)&#43;countNodes(root-&gt;right) : 0; } }; 2. 利用"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+<script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
+
+<meta name="baidu-site-verification" content="GDMA35xQfM" />
+<meta name="google-site-verification" content="f-5-S53Hm0WIn0Tnfu-dg0sNmCZeahUFILgUSI9JLQA" />
+<meta name="baidu-site-verification" content="74mXju2aOk" />
+<meta name="google-site-verification" content="2yu63Vg3wEmB1XF77uGbZdOQB_a_KSLTk-zNxL4oGRg" />
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">FOCUS</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">FOCUS</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">[Lc]222完全二叉树的节点个数</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-04-09 </span>
+        <div class="post-category">
+            <a href="/categories/leetcode/"> leetcode </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#题目">题目</a></li>
+    <li><a href="#题解">题解</a>
+      <ul>
+        <li><a href="#1-递归法">1. 递归法</a></li>
+        <li><a href="#2-利用完全二叉树的性质">2. 利用完全二叉树的性质</a></li>
+        <li><a href="#3-利用类似二分查找的思想">3. 利用类似二分查找的思想</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="题目">题目</h2>
+<p><img src="/img/img2020-04-28-13-17-09.png" alt=""></p>
+<h2 id="题解">题解</h2>
+<p>二叉树结构如下：</p>
+<pre><code class="language-cpp">//Definition for a binary tree node.
+    struct TreeNode {
+        int val;
+        TreeNode *left;
+        TreeNode *right;
+        TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+    };
+</code></pre>
+<h3 id="1-递归法">1. 递归法</h3>
+<pre><code class="language-cpp">class Solution {
+public:
+    int countNodes(TreeNode* root) {//1.递归直接统计节点数
+        return root? 1+countNodes(root-&gt;left)+countNodes(root-&gt;right) : 0;
+    }
+};
+</code></pre>
+<h3 id="2-利用完全二叉树的性质">2. 利用完全二叉树的性质</h3>
+<blockquote>
+<p><strong>完满(Full)二叉树 v.s. 完全(Complete)二叉树 v.s. 完美(Perfect)二叉树</strong><br>
+【图片来源： <a href="http://www.csie.ntnu.edu.tw/~u91029/BinaryTree2.png">http://www.csie.ntnu.edu.tw/~u91029/BinaryTree2.png</a>】<br>
+【转自<a href="https://www.cnblogs.com/idorax/p/6441043.html">https://www.cnblogs.com/idorax/p/6441043.html</a>】<br>
+<img src="/img/img2020-04-09-11-22-41.png" alt="">
+<img src="/img/img2020-04-09-11-20-06.png" alt=""></p>
+</blockquote>
+<p>完美二叉树的节点数为$2^{n}-1$,利用这个性质可以计算完全二叉树的节点数</p>
+<pre><code class="language-cpp">class Solution {
+public:
+    int countNodes(TreeNode* root) {//2.左右分别递归，使用完全二叉树的性质
+        int hLeft = 0, hRight = 0;//两个变量用于计算左右高度
+        TreeNode *treeLeft = root, *treeRight = root;//两个指针指向左右子树
+        while(treeLeft){
+            hLeft++;
+            treeLeft = treeLeft-&gt;left;
+        }//计算最左子树高度
+        while(treeRight){
+            hRight++;
+            treeRight = treeRight-&gt;right;
+        }//右子树同上
+        if(hLeft == hRight) return (1&lt;&lt;hLeft)-1;//若左右子树高度相同，则节点数位2**n-1，用&lt;&lt;代替2**n
+        else return countNodes(root-&gt;left)+countNodes(root-&gt;right)+1;//否则就递归左右子树计算节点数
+    }
+};
+</code></pre>
+<h3 id="3-利用类似二分查找的思想">3. 利用类似二分查找的思想</h3>
+<p>如果右子树的高度等于整个树的高度减 1，说明左边都填满了，所以左子树是 perfect binary tree ，如下图。<br>
+<img src="/img/img2020-04-09-19-40-24.png" alt=""><br>
+否则的话，右子树是 perfect binary tree ，如下图。<br>
+<img src="/img/img2020-04-09-19-40-38.png" alt=""><br>
+<strong>递归解法</strong></p>
+<pre><code class="language-cpp">class Solution {
+public:
+    int getLeftHeight(TreeNode* node){
+        return node? 1+getLeftHeight(node-&gt;left) : -1;//递归计算z左子树深度，不算根节点，因此用-1
+    }
+
+    int countNodes(TreeNode* root) {//3.使用类似二分查找的思想，分别计算左右子树的节点数
+        int h = getLeftHeight(root);//计算左子树高度
+        if(h&lt;0) return 0;//若小于0，则不存在该节点，直接返回0
+        if(getLeftHeight(root-&gt;right) == h-1) return (1&lt;&lt;h) + countNodes(root-&gt;right);//若右子树比左子树高度小1，则左子树是完美二叉树
+        else return (1&lt;&lt;h-1) +countNodes(root-&gt;left);//否则右子树是完美二叉树
+    }
+};
+</code></pre>
+<p><strong>非递归解法</strong></p>
+<pre><code class="language-cpp">class Solution {
+public:
+    int getLeftHeight(TreeNode* node){
+        return node? 1+getLeftHeight(node-&gt;left) : -1;//递归计算z左子树深度，不算根节点，因此用-1
+    }
+
+    int countNodes(TreeNode* root) {//3.使用类似二分查找的思想，分别计算左右子树的节点数
+        int res = 0, h = getLeftHeight(root);//计算左子树高度
+        if(h&lt;0) return 0;//若小于0，则不存在该节点，直接返回0
+        while(root){//进行二分迭代
+            if(getLeftHeight(root-&gt;right) == h-1){
+                res += (1&lt;&lt;h);
+                root = root-&gt;right;
+            }//右子树比左子树小1，则左子树完美，加左子树节点数，并进入右子树进行迭代
+            else{
+                res += (1&lt;&lt;(h-1));
+                root = root-&gt;left;
+            }//否则右子树完美，加右子树节点数，并进入左子树迭代
+            h--;//进入下一层h-1
+        }
+        return res;
+    }
+};
+</code></pre>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">ChrisHRZ</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-04-09
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/tree/">Tree</a>
+          <a href="/tags/binary-tree/">Binary tree</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/lc12%E6%95%B4%E6%95%B0%E8%BD%AC%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">[Lc]12整数转罗马数字</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/lc226%E7%BF%BB%E8%BD%AC%E4%BA%8C%E5%8F%89%E6%A0%91/">
+            <span class="next-text nav-default">[Lc]226翻转二叉树</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/lc222%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%8A%82%E7%82%B9%E4%B8%AA%E6%95%B0/" class="leancloud_visitors" data-flag-title="[Lc]222完全二叉树的节点个数">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'M8Fyr1YXIu2Ov8Wh4ByqtEzq-gzGzoHsz',
+        appKey: 'AHiPSGeLQbvrQGQ6KfhvOKvN',
+        notify:  false ,
+        verify:  false ,
+        avatar:'mm',
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/ChrisHRZ" class="iconfont icon-github" title="github"></a>
+  <a href="https://chrishrz.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">ChrisHRZ</span>
+  </span>
+</div>
+
+
+<script src="https://cdn.bootcss.com/mermaid/8.4.8/mermaid.min.js"></script>
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js"></script>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

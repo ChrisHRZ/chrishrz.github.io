@@ -45,7 +45,7 @@
 <meta property="og:description" content="Life is art. Live it up." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://chrishrz.github.io/" />
-<meta property="og:updated_time" content="2020-04-27T15:32:13+08:00" />
+<meta property="og:updated_time" content="2020-04-30T21:11:40+08:00" />
 <meta itemprop="name" content="Focus-ChrisHRZ&#39;s blog">
 <meta itemprop="description" content="Life is art. Live it up."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Focus-ChrisHRZ&#39;s blog"/>
@@ -157,7 +157,70 @@ code.has-jax {
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lct226invert_binary_tree/">[lc]#226Invert_Binary_Tree</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/lc29%E4%B8%A4%E6%95%B0%E7%9B%B8%E9%99%A4/">[Lc]29两数相除</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-04-10 </span>
+      <div class="post-category">
+          <a href="/categories/leetcode/"> leetcode </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      题目 题解 这道题太恶心了，溢出搞得我头疼，先记录一个答案，来自这里,作者：cglin-2 这道题目要求不使用乘法、除法和 mod 运算符，且假设环境只能
+    </div>
+    <div class="read-more">
+      <a href="/post/lc29%E4%B8%A4%E6%95%B0%E7%9B%B8%E9%99%A4/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/lc12%E6%95%B4%E6%95%B0%E8%BD%AC%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97/">[Lc]12整数转罗马数字</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-04-10 </span>
+      <div class="post-category">
+          <a href="/categories/leetcode/"> leetcode </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      题目 题解 1. 分类法 每个数量级可以分为4类，1~3，4，5~8，9。因此就使用每个数量级取商然后选择合适的类别进行表达，余数进行下一个数量级商的
+    </div>
+    <div class="read-more">
+      <a href="/post/lc12%E6%95%B4%E6%95%B0%E8%BD%AC%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/lc222%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%8A%82%E7%82%B9%E4%B8%AA%E6%95%B0/">[Lc]222完全二叉树的节点个数</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-04-09 </span>
+      <div class="post-category">
+          <a href="/categories/leetcode/"> leetcode </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 递归法 class Solution { public: int countNodes(TreeNode* root) {//1.递归直接统计节点数 return root? 1+countNodes(root-&gt;left)+countNodes(root-&gt;right) : 0; } }; 2. 利用
+    </div>
+    <div class="read-more">
+      <a href="/post/lc222%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%8A%82%E7%82%B9%E4%B8%AA%E6%95%B0/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/lc226%E7%BF%BB%E8%BD%AC%E4%BA%8C%E5%8F%89%E6%A0%91/">[Lc]226翻转二叉树</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2020-04-08 </span>
       <div class="post-category">
@@ -168,17 +231,17 @@ code.has-jax {
   
   <div class="post-content">
     <div class="post-summary">
-      题目 Invert a binary tree. Example: Input: 4 / \ 2 7 / \ / \ 1 3 6 9 Output: 4 / \ 7 2 / \ / \ 9 6 3 1 Trivia: This problem was inspired by this original tweet by Max Howell: Google: 90% of our engineers use the software you wrote (Homebrew), but you can’t invert a binary tree on
+      题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 递归法 class Solution {//两种方法。1、递归法 public: TreeNode* invertTree(TreeNode* root) { if(!root) return nullptr;/
     </div>
     <div class="read-more">
-      <a href="/post/lct226invert_binary_tree/" class="read-more-link">Read more...</a>
+      <a href="/post/lc226%E7%BF%BB%E8%BD%AC%E4%BA%8C%E5%8F%89%E6%A0%91/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lct199binary_tree_right_side_view/">[lc]#199Binary_Tree_Right_Side_View</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/lc199%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%8F%B3%E8%A7%86%E5%9B%BE/">[Lc]199二叉树的右视图</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2020-04-08 </span>
       <div class="post-category">
@@ -189,17 +252,17 @@ code.has-jax {
   
   <div class="post-content">
     <div class="post-summary">
-      题目 Given a binary tree, imagine yourself standing on the right side of it, return the values of the nodes you can see ordered from top to bottom. Example: Input: [1,2,3,null,5,null,4] Output: [1, 3, 4] Explanation: 1 &lt;--- / \ 2 3 &lt;--- \ \ 5 4 &lt;--- 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val;
+      题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; //本题借鉴#102层次遍历 class Solution { public: vector&lt;int&gt; rightSideView(TreeNode* root) { vector&lt;int&gt; res; if(!root) return res; queue&lt;TreeNode*&gt; q{{root}}; while(!q.empty()){ res.p
     </div>
     <div class="read-more">
-      <a href="/post/lct199binary_tree_right_side_view/" class="read-more-link">Read more...</a>
+      <a href="/post/lc199%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%8F%B3%E8%A7%86%E5%9B%BE/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lct173binary_search_tree_iterators/">[lc]#173Binary_Search_Tree_Iterators</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/lc173%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E8%BF%AD%E4%BB%A3%E5%99%A8/">[Lc]173二叉搜索树迭代器</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2020-04-08 </span>
       <div class="post-category">
@@ -210,17 +273,17 @@ code.has-jax {
   
   <div class="post-content">
     <div class="post-summary">
-      题目 Implement an iterator over a binary search tree (BST). Your iterator will be initialized with the root node of a BST. Calling next() will return the next smallest number in the BST. Example: BSTIterator iterator = new BSTIterator(root); iterator.next(); // return 3 iterator.next(); // return 7 iterator.hasNext(); // return true iterator.next(); // return 9 iterator.hasNext(); // return true iterator.next(); // return 15 iterator.hasNext(); // return true iterator.next(); //
+      题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; //这道题就是写一个中序遍历，因为题目提到是搜索二叉树 class BSTIterator { stack&lt;TreeNode*&gt; s;//
     </div>
     <div class="read-more">
-      <a href="/post/lct173binary_search_tree_iterators/" class="read-more-link">Read more...</a>
+      <a href="/post/lc173%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E8%BF%AD%E4%BB%A3%E5%99%A8/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lct129sum_root_to_leaf_numbers/">[lc]#129Sum_Root_to_Leaf_Numbers</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/lc129%E6%B1%82%E6%A0%B9%E5%88%B0%E5%8F%B6%E5%AD%90%E8%8A%82%E7%82%B9%E6%95%B0%E5%AD%97%E4%B9%8B%E5%92%8C/">[Lc]129求根到叶子节点数字之和</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2020-04-08 </span>
       <div class="post-category">
@@ -231,17 +294,17 @@ code.has-jax {
   
   <div class="post-content">
     <div class="post-summary">
-      题目 Given a binary tree containing digits from 0-9 only, each root-to-leaf path could represent a number. An example is the root-to-leaf path 1-&gt;2-&gt;3 which represents the number 123. Find the total sum of all root-to-leaf numbers. Note: A leaf is a node with no children. Example: Input: [1,2,3] 1 / \ 2 3 Output: 25 Explanation: The root-to-leaf path 1-&gt;2 represents the number 12. The root-to-leaf path 1-&gt;3
+      题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1.递归法 class Solution { public: int sumNumbers(TreeNode* root) {//两种方法。1.递归法 return DFSsunNum
     </div>
     <div class="read-more">
-      <a href="/post/lct129sum_root_to_leaf_numbers/" class="read-more-link">Read more...</a>
+      <a href="/post/lc129%E6%B1%82%E6%A0%B9%E5%88%B0%E5%8F%B6%E5%AD%90%E8%8A%82%E7%82%B9%E6%95%B0%E5%AD%97%E4%B9%8B%E5%92%8C/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lct117populating_next_right_pointers_in_each_node2/">[lc]#117Populating_Next_Right_Pointers_in_Each_Node2</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/lc117%E5%A1%AB%E5%85%85%E6%AF%8F%E4%B8%AA%E8%8A%82%E7%82%B9%E7%9A%84%E4%B8%8B%E4%B8%80%E4%B8%AA%E5%8F%B3%E4%BE%A7%E8%8A%82%E7%82%B9%E6%8C%87%E9%92%88ii/">[Lc]117填充每个节点的下一个右侧节点指针II</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2020-04-08 </span>
       <div class="post-category">
@@ -252,17 +315,17 @@ code.has-jax {
   
   <div class="post-content">
     <div class="post-summary">
-      题目 Given a binary tree struct Node { int val; Node *left; Node *right; Node *next; } Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL. Initially, all next pointers are set to NULL. Follow up: You may only use constant extra space. Recursive approach is fine, you may assume implicit stack
+      题目 题解 该题二叉树结构如下： // Definition for a Node. class Node { public: int val; Node* left; Node* right; Node* next; Node() : val(0), left(NULL), right(NULL), next(NULL) {} Node(int _val) : val(_val), left(NULL), right(NULL), next(NULL) {} Node(int _val, Node* _left, Node* _right, Node* _next) : val(_val), left(_left), right(_right), next(_next) {} }; 1.递归法 //和#
     </div>
     <div class="read-more">
-      <a href="/post/lct117populating_next_right_pointers_in_each_node2/" class="read-more-link">Read more...</a>
+      <a href="/post/lc117%E5%A1%AB%E5%85%85%E6%AF%8F%E4%B8%AA%E8%8A%82%E7%82%B9%E7%9A%84%E4%B8%8B%E4%B8%80%E4%B8%AA%E5%8F%B3%E4%BE%A7%E8%8A%82%E7%82%B9%E6%8C%87%E9%92%88ii/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lct116populating_next_right_pointers_in_each_node/">[lc]#116Populating_Next_Right_Pointers_in_Each_Node</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/lc116%E5%A1%AB%E5%85%85%E6%AF%8F%E4%B8%AA%E8%8A%82%E7%82%B9%E7%9A%84%E4%B8%8B%E4%B8%80%E4%B8%AA%E5%8F%B3%E4%BE%A7%E8%8A%82%E7%82%B9%E6%8C%87%E9%92%88/">[Lc]116填充每个节点的下一个右侧节点指针</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2020-04-07 </span>
       <div class="post-category">
@@ -273,17 +336,17 @@ code.has-jax {
   
   <div class="post-content">
     <div class="post-summary">
-      题目 You are given a perfect binary tree where all leaves are on the same level, and every parent has two children. The binary tree has the following definition: struct Node { int val; Node *left; Node *right; Node *next; } Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL. Initially, all
+      题目 题解 该题二叉树结构如下： // Definition for a Node. class Node { public: int val; Node* left; Node* right; Node* next; Node() : val(0), left(NULL), right(NULL), next(NULL) {} Node(int _val) : val(_val), left(NULL), right(NULL), next(NULL) {} Node(int _val, Node* _left, Node* _right, Node* _next) : val(_val), left(_left), right(_right), next(_next) {} }; 1. 递归法 //这道题
     </div>
     <div class="read-more">
-      <a href="/post/lct116populating_next_right_pointers_in_each_node/" class="read-more-link">Read more...</a>
+      <a href="/post/lc116%E5%A1%AB%E5%85%85%E6%AF%8F%E4%B8%AA%E8%8A%82%E7%82%B9%E7%9A%84%E4%B8%8B%E4%B8%80%E4%B8%AA%E5%8F%B3%E4%BE%A7%E8%8A%82%E7%82%B9%E6%8C%87%E9%92%88/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lct114flatten_binary_tree_to_linkedlist/">[lc]#114Flatten_Binary_Tree_to_LinkedList</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/lc114%E4%BA%8C%E5%8F%89%E6%A0%91%E5%B1%95%E5%BC%80%E4%B8%BA%E9%93%BE%E8%A1%A8/">[Lc]114二叉树展开为链表</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2020-04-07 </span>
       <div class="post-category">
@@ -294,73 +357,10 @@ code.has-jax {
   
   <div class="post-content">
     <div class="post-summary">
-      面试中题目大多以英文呈现，因此后面的[lc]文章题目改为英文,已经发表的博客后面有时间再修改 题目 Given a binary tree, flatten it to a linked list in-place. For example, given the following tree: 1 / \ 2 5
+      题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 先序递归法 //本题的顺序可以看出是先序遍历。 class Solution {//两种方法。1、
     </div>
     <div class="read-more">
-      <a href="/post/lct114flatten_binary_tree_to_linkedlist/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%80%83%E7%A0%94%E5%A4%A7%E7%BA%B22019/">[转载]计算机考研大纲2019</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-03-28 </span>
-      <div class="post-category">
-          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"> 计算机基础 </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      2019年计算机408的考试大纲。 转自https://kaoyan.eol.cn/nnews/201809/t20180915_162519
-    </div>
-    <div class="read-more">
-      <a href="/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%80%83%E7%A0%94%E5%A4%A7%E7%BA%B22019/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">计算机网络学习笔记（待续。。。）</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-03-28 </span>
-      <div class="post-category">
-          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"> 计算机网络 </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      这个主要来自谢希仁的《计算机网络》和网络课程，先记重点。 部分图和概念摘自菜鸟教程,侵删。 菜鸟教程的原文链接是这个:http://www.cn
-    </div>
-    <div class="read-more">
-      <a href="/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lct113%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8C2/">[lc]#113路径总和2</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-03-27 </span>
-      <div class="post-category">
-          <a href="/categories/leetcode/"> leetcode </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      题目 给定一个二叉树和一个目标和，找到所有从根节点到叶子节点路径总和等于给定目标和的路径。 说明: 叶子节点是指没有子节点的节点。 示例: 给定如下二
-    </div>
-    <div class="read-more">
-      <a href="/post/lct113%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8C2/" class="read-more-link">Read more...</a>
+      <a href="/post/lc114%E4%BA%8C%E5%8F%89%E6%A0%91%E5%B1%95%E5%BC%80%E4%B8%BA%E9%93%BE%E8%A1%A8/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>[Lc]28实现strStr() - Focus-ChrisHRZ&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ChrisHRZ" /><meta name="description" content="题目 题解 这道题说是简单题结果花了我两天，BF算法的确简单，但是其他的字符串匹配算法真的太复杂了。。。 1. 正则表达式 这个在leetcode上超时" /><meta name="keywords" content="code, life, study" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.66.0 with theme even" />
+
+
+<link rel="canonical" href="https://chrishrz.github.io/post/lc28%E5%AE%9E%E7%8E%B0strstr/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
+
+<meta property="og:title" content="[Lc]28实现strStr()" />
+<meta property="og:description" content="题目 题解 这道题说是简单题结果花了我两天，BF算法的确简单，但是其他的字符串匹配算法真的太复杂了。。。 1. 正则表达式 这个在leetcode上超时" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chrishrz.github.io/post/lc28%E5%AE%9E%E7%8E%B0strstr/" />
+<meta property="article:published_time" content="2020-04-24T21:26:38+08:00" />
+<meta property="article:modified_time" content="2020-04-24T21:26:38+08:00" />
+<meta itemprop="name" content="[Lc]28实现strStr()">
+<meta itemprop="description" content="题目 题解 这道题说是简单题结果花了我两天，BF算法的确简单，但是其他的字符串匹配算法真的太复杂了。。。 1. 正则表达式 这个在leetcode上超时">
+<meta itemprop="datePublished" content="2020-04-24T21:26:38&#43;08:00" />
+<meta itemprop="dateModified" content="2020-04-24T21:26:38&#43;08:00" />
+<meta itemprop="wordCount" content="1786">
+
+
+
+<meta itemprop="keywords" content="Math," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[Lc]28实现strStr()"/>
+<meta name="twitter:description" content="题目 题解 这道题说是简单题结果花了我两天，BF算法的确简单，但是其他的字符串匹配算法真的太复杂了。。。 1. 正则表达式 这个在leetcode上超时"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+<script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
+
+<meta name="baidu-site-verification" content="GDMA35xQfM" />
+<meta name="google-site-verification" content="f-5-S53Hm0WIn0Tnfu-dg0sNmCZeahUFILgUSI9JLQA" />
+<meta name="baidu-site-verification" content="74mXju2aOk" />
+<meta name="google-site-verification" content="2yu63Vg3wEmB1XF77uGbZdOQB_a_KSLTk-zNxL4oGRg" />
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">FOCUS</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">FOCUS</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">[Lc]28实现strStr()</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-04-24 </span>
+        <div class="post-category">
+            <a href="/categories/leetcode/"> leetcode </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#题目">题目</a></li>
+    <li><a href="#题解">题解</a>
+      <ul>
+        <li><a href="#1-正则表达式">1. 正则表达式</a></li>
+        <li><a href="#2-库函数法">2. 库函数法</a></li>
+        <li><a href="#3-bf算法">3. BF算法</a></li>
+        <li><a href="#4-kmp法">4. KMP法</a></li>
+        <li><a href="#5-bm法">5. BM法</a></li>
+        <li><a href="#6-horspool算法">6. Horspool算法</a></li>
+        <li><a href="#7-sunday法">7. SUNDAY法</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="题目">题目</h2>
+<p><img src="/img/img2020-04-28-12-24-27.png" alt=""></p>
+<h2 id="题解">题解</h2>
+<p>这道题说是简单题结果花了我两天，BF算法的确简单，但是其他的字符串匹配算法真的太复杂了。。。</p>
+<h3 id="1-正则表达式">1. 正则表达式</h3>
+<p>这个在leetcode上超时，未进行测试。</p>
+<pre><code class="language-cpp">class Solution {
+public:
+    int strStr(string haystack, string needle) {
+        regex r(needle);
+        smatch res;
+        regex_search(haystack, res, r);
+        if(!res.empty()) return res.position(0);
+        else return -1;
+    }
+};
+</code></pre>
+<h3 id="2-库函数法">2. 库函数法</h3>
+<pre><code class="language-cpp">class Solution {
+public:
+    int strStr(string haystack, string needle) {
+        if(needle.empty()) return 0;//特殊情况，返回0
+        int pos = haystack.find(needle);
+        return pos;
+    }
+};
+</code></pre>
+<h3 id="3-bf算法">3. BF算法</h3>
+<p>Brute-Force算法，简称为 BF算法</p>
+<ul>
+<li>时间复杂度：最坏时间复杂度为 $O((N - L)L)$，最优时间复杂度为 $O(N)$。</li>
+<li>空间复杂度: $O(1)$。</li>
+</ul>
+<pre><code class="language-cpp">class Solution {
+public:
+    int strStr(string haystack, string needle) {
+        if(needle.empty()) return 0;//特殊情况，返回0
+        int n = haystack.size();
+        int m = needle.size();//计算两个的长度
+        for(int i=0; i&lt;=n-m; ++i){//两个for循环遍历两个string,注意范围到[0,n-m],字符数量不足n-m就可以停止遍历
+            int j = 0;//j定义在第二个for循环外面，因为下面要判断j是否遍历到neddle末尾
+            for(; j&lt;m; ++j){
+                if(haystack[i+j] != needle[j]) break;//遍历neddle，遇到不相等的字符就跳出循环
+            }
+            if(j == m) return i;//如果遍历到neddle末尾，就返回当前i，也就是匹配到字符串的首位
+        }
+        return -1;//若全部遍历完还没有匹配，说明无匹配字符串，返回-1
+    }
+};
+</code></pre>
+<h3 id="4-kmp法">4. KMP法</h3>
+<p>其效率不是很高，用的不多<br>
+该算法的详细解释可以参考<a href="http://www.ruanyifeng.com/blog/2013/05/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm.html">阮一峰前辈的博客</a></p>
+<ul>
+<li>时间复杂度$O(M+N)$</li>
+<li>空间复杂度$O(N)$</li>
+</ul>
+<pre><code class="language-cpp">class Solution {
+public:
+    vector&lt;int&gt; getNext(string str){
+        int len = str.size();
+        //定义next存储部分匹配表，每个位置存该处前缀和后缀重合的最长子串
+        //注意第一个位置是-1，每一个位置的数字代表若该处不匹配子串下标跳到哪一位，因此每一位存的数是前一位数字的最长前缀和后缀匹配长度，最后一位不用存，因为最后一位匹配完成说明子串匹配完成。
+        vector&lt;int&gt; next;
+        next.push_back(-1);//先插入-1   
+        int j=0, k = -1;//j是后缀，k是前缀
+        while(j&lt;len){
+            //若k=-1说明又重新开时比较下一轮的子串，k跳回-1，因此j要增加一位，k跳到0
+            if(k == -1 || str[j] == str[k]){
+                j++;
+                k++;
+                next.push_back(k);
+                //这时k存储的是记录的重合子串最长的长度
+                //每次j和k增加都需要在next中记录该处的重合最长前后缀长度（这个需要画图理解一下）
+            } else{
+                k = next[k];//若出现不匹配的，k跳跃到此时next记录的该处前一位记录的的最长前缀那里
+            }
+        }
+        return next;
+    }
+
+    int strStr(string haystack, string needle) {
+        if(needle.empty()) return 0;
+        int len1 = haystack.size();
+        int len2 = needle.size();
+        int j=0;//源串下标
+        int k=0;//子串下标
+        vector&lt;int&gt; next;
+        next = getNext(needle);
+        //下面这一块和getNext()函数很像，可以一起记，我会标注不同
+        //其实这一块最好理解，其上下有想通的地方
+        while(j&lt;len1 &amp;&amp; k&lt;len2){//区别1，两个判断循环的条件
+            if(k == -1 || haystack[j] == needle[k]){//区别2，对比两个字符串
+                j++;
+                k++;
+                //区别3，不用在next中记录数了
+            } else{
+                k = next[k];//这个k的跳跃思想和上面类似
+            }
+        }
+        if(k == len2) return j-k;//若遍历完是neddle遍历完成，则说明匹配成功，返回j-k，即匹配完的源串部分长度减去子串的长度
+        return -1;//否则返回-1
+    }
+};
+</code></pre>
+<blockquote>
+<p>以下两个算法比较高效，理解起来更难一点，先占坑，回头来补</p>
+</blockquote>
+<h3 id="5-bm法">5. BM法</h3>
+<p>该算法的详细解释可以参考<a href="https://www.ruanyifeng.com/blog/2013/05/boyer-moore_string_search_algorithm.html">阮一峰前辈的博客</a></p>
+<pre><code class="language-cpp">占坑
+</code></pre>
+<h3 id="6-horspool算法">6. Horspool算法</h3>
+<p>BM算法的简化，详解见http://www.ifcoding.com/archives/247.html</p>
+<pre><code class="language-cpp">占坑
+</code></pre>
+<h3 id="7-sunday法">7. SUNDAY法</h3>
+<p>该算法的理解见https://wenzhiquan.github.io/2016/05/28/2016-05-28-string-match-sunday/和http://www.ifcoding.com/archives/247.html</p>
+<pre><code class="language-cpp">class Solution {
+public:
+    int strStr(string haystack, string needle) {
+        if(needle.empty()) return 0;
+        int len1 = haystack.size();
+        int len2 = needle.size();
+        int i=0, j=0;//源串和子串的下标
+        int m = len2;//m用于存储当前匹配过程中needle相对于haystack的下一个位置
+        int k = 0;//若不匹配时，k用于存此时与haystack[m]相同的最右的字符在needle中的位置
+        //m和k很重要，用于跳过大部分不需要比较的字符
+        while(i &lt; len1){
+            //出现不匹配的处理
+            if(haystack[i] != needle[j]) {
+                k = len2 - 1;
+                while (k&gt;0 &amp;&amp; haystack[m] != needle[k]) {
+                    k--;
+                }//找到k
+                i = m - k;//i移动到m-k处，即needle[k]在haystack里的位置
+                j = 0;//j回到needle首位
+                m = i + len2;//m变为现在needle的末尾在heaystack相对位置的后一位
+                if (m &gt; len1) return -1;//若此时已经超出haystack，返回-1
+            }else{
+                if(j == len2-1) return i-j;//若匹配到最后一位，返回匹配的第一位的位置
+                i++;
+                j++;
+            }
+        }
+        return -1;
+    }
+};
+
+</code></pre>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">ChrisHRZ</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-04-24
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/math/">Math</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/lc84%E6%9F%B1%E7%8A%B6%E5%9B%BE%E4%B8%AD%E6%9C%80%E5%A4%A7%E7%9A%84%E7%9F%A9%E5%BD%A2/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">[Lc]84柱状图中最大的矩形</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/%E5%8D%81%E5%A4%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%9A%84%E6%95%B0%E7%BB%84%E5%92%8C%E9%93%BE%E8%A1%A8%E5%AE%9E%E7%8E%B0/">
+            <span class="next-text nav-default">十大排序算法的数组和链表实现</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/lc28%E5%AE%9E%E7%8E%B0strstr/" class="leancloud_visitors" data-flag-title="[Lc]28实现strStr()">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'M8Fyr1YXIu2Ov8Wh4ByqtEzq-gzGzoHsz',
+        appKey: 'AHiPSGeLQbvrQGQ6KfhvOKvN',
+        notify:  false ,
+        verify:  false ,
+        avatar:'mm',
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/ChrisHRZ" class="iconfont icon-github" title="github"></a>
+  <a href="https://chrishrz.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">ChrisHRZ</span>
+  </span>
+</div>
+
+
+<script src="https://cdn.bootcss.com/mermaid/8.4.8/mermaid.min.js"></script>
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js"></script>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

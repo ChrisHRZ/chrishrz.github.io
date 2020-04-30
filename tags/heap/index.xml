@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>[Lc]面试题40_最小的k个数</title>
-      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9840_%E6%9C%80%E5%B0%8F%E7%9A%84k%E4%B8%AA%E6%95%B0/</link>
+      <title>[Lc]面试题40最小的k个数</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9840%E6%9C%80%E5%B0%8F%E7%9A%84k%E4%B8%AA%E6%95%B0/</link>
       <pubDate>Mon, 27 Apr 2020 15:32:13 +0800</pubDate>
       
-      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9840_%E6%9C%80%E5%B0%8F%E7%9A%84k%E4%B8%AA%E6%95%B0/</guid>
-      <description>题目 输入整数数组 arr ，找出其中最小的 k 个数。例如，输入4、5、1、6、2、7、3、8这8个数字，则最小的4个数字是1、2、3、4。 示例 1： 输入</description>
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9840%E6%9C%80%E5%B0%8F%E7%9A%84k%E4%B8%AA%E6%95%B0/</guid>
+      <description>题目 题解 1. 堆法 时间复杂度：$O(n\log k)$，其中 nn 是数组 arr 的长度。由于大根堆实时维护前 k 小值，所以插入删除都是 $O(\log k)$ 的时间复杂度，最坏情</description>
     </item>
     
   </channel>

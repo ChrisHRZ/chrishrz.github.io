@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DFS on Focus-ChrisHRZ&#39;s blog</title>
+    <link>https://chrishrz.github.io/tags/dfs/</link>
+    <description>Recent content in DFS on Focus-ChrisHRZ&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 28 Apr 2020 11:49:31 +0800</lastBuildDate>
+    
+	<atom:link href="https://chrishrz.github.io/tags/dfs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[Lc]1254统计封闭岛屿的数目</title>
+      <link>https://chrishrz.github.io/post/lc1254%E7%BB%9F%E8%AE%A1%E5%B0%81%E9%97%AD%E5%B2%9B%E5%B1%BF%E7%9A%84%E6%95%B0%E7%9B%AE/</link>
+      <pubDate>Tue, 28 Apr 2020 11:49:31 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc1254%E7%BB%9F%E8%AE%A1%E5%B0%81%E9%97%AD%E5%B2%9B%E5%B1%BF%E7%9A%84%E6%95%B0%E7%9B%AE/</guid>
+      <description>题目 题解 1. DFS 时间复杂度$O(MN)$ 空间复杂度$O(1)$ class Solution { public: int dfs(vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt;&amp;amp; grid, int row, int column){ int rows = grid.size(); int columns = grid[0].size();//计算行列数 if(row</description>
+    </item>
+    
+    <item>
+      <title>[Lc]200岛屿数量</title>
+      <link>https://chrishrz.github.io/post/lc200%E5%B2%9B%E5%B1%BF%E6%95%B0%E9%87%8F/</link>
+      <pubDate>Mon, 27 Apr 2020 17:05:33 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc200%E5%B2%9B%E5%B1%BF%E6%95%B0%E9%87%8F/</guid>
+      <description>题目 题解 1. DFS 时间复杂度$O(N*M)$ 空间复杂度$O(N*M)$（最坏情况） class Solution { public: void dfs(vector&amp;lt;vector&amp;lt;char&amp;gt;&amp;gt;&amp;amp; grid, int row, int column){ int rows = grid.size(); int columns = grid[0].size()</description>
+    </item>
+    
+  </channel>
+</rss>

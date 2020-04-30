@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>[Lc]101对称二叉树 - Focus-ChrisHRZ&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ChrisHRZ" /><meta name="description" content="题解 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 递归法 class Solution {//三种方法。1、递归法。有点像#100 public: bool isSymmetric(TreeNode* root) { if(!root) return t" /><meta name="keywords" content="code, life, study" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.66.0 with theme even" />
+
+
+<link rel="canonical" href="https://chrishrz.github.io/post/lc101%E5%AF%B9%E7%A7%B0%E4%BA%8C%E5%8F%89%E6%A0%91/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
+
+<meta property="og:title" content="[Lc]101对称二叉树" />
+<meta property="og:description" content="题解 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 递归法 class Solution {//三种方法。1、递归法。有点像#100 public: bool isSymmetric(TreeNode* root) { if(!root) return t" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chrishrz.github.io/post/lc101%E5%AF%B9%E7%A7%B0%E4%BA%8C%E5%8F%89%E6%A0%91/" />
+<meta property="article:published_time" content="2020-03-14T19:54:18+08:00" />
+<meta property="article:modified_time" content="2020-03-14T19:54:18+08:00" />
+<meta itemprop="name" content="[Lc]101对称二叉树">
+<meta itemprop="description" content="题解 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 递归法 class Solution {//三种方法。1、递归法。有点像#100 public: bool isSymmetric(TreeNode* root) { if(!root) return t">
+<meta itemprop="datePublished" content="2020-03-14T19:54:18&#43;08:00" />
+<meta itemprop="dateModified" content="2020-03-14T19:54:18&#43;08:00" />
+<meta itemprop="wordCount" content="1048">
+
+
+
+<meta itemprop="keywords" content="Tree,Binary tree," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[Lc]101对称二叉树"/>
+<meta name="twitter:description" content="题解 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 递归法 class Solution {//三种方法。1、递归法。有点像#100 public: bool isSymmetric(TreeNode* root) { if(!root) return t"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+<script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
+
+<meta name="baidu-site-verification" content="GDMA35xQfM" />
+<meta name="google-site-verification" content="f-5-S53Hm0WIn0Tnfu-dg0sNmCZeahUFILgUSI9JLQA" />
+<meta name="baidu-site-verification" content="74mXju2aOk" />
+<meta name="google-site-verification" content="2yu63Vg3wEmB1XF77uGbZdOQB_a_KSLTk-zNxL4oGRg" />
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">FOCUS</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">FOCUS</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">[Lc]101对称二叉树</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-03-14 </span>
+        <div class="post-category">
+            <a href="/categories/leetcode/"> leetcode </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#题解">题解</a></li>
+    <li><a href="#题解-1">题解</a>
+      <ul>
+        <li><a href="#1-递归法">1. 递归法</a></li>
+        <li><a href="#2-栈迭代法">2. 栈迭代法</a></li>
+        <li><a href="#2-队列迭代法">2. 队列迭代法</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="题解">题解</h2>
+<p><img src="/img/img2020-04-28-12-48-08.png" alt=""></p>
+<h2 id="题解-1">题解</h2>
+<p>二叉树结构如下：</p>
+<pre><code class="language-cpp">//Definition for a binary tree node.
+    struct TreeNode {
+        int val;
+        TreeNode *left;
+        TreeNode *right;
+        TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+    };
+</code></pre>
+<h3 id="1-递归法">1. 递归法</h3>
+<pre><code class="language-cpp">class Solution {//三种方法。1、递归法。有点像#100
+public:
+    bool isSymmetric(TreeNode* root) {
+        if(!root) return true;//特殊情况，为空直接返回true
+        return helper(root-&gt;left,root-&gt;right);//调用递归函数
+    }
+    bool helper(TreeNode* p,TreeNode* q){//这一块和#100很想
+        if(!p &amp;&amp; !q) return true;//都为空返回true，对称
+        if(!p || !q) return false;//一个为空则为false，不对称
+        if(p-&gt;val != q-&gt;val) return false;//左右不相等则返回false
+        return helper(p-&gt;left,q-&gt;right) &amp;&amp; helper(p-&gt;right,q-&gt;left);//进行递归
+    }
+};
+</code></pre>
+<h3 id="2-栈迭代法">2. 栈迭代法</h3>
+<pre><code class="language-cpp">class Solution {//三种方法。2、栈迭代法。和先序遍历的迭代法类似
+public:
+    bool isSymmetric(TreeNode* root) {
+        if(!root) return true;//特殊情况，为空直接返回true
+        stack&lt;TreeNode*&gt; sLeft;
+        stack&lt;TreeNode*&gt; sRight;//建立存结果的栈
+        TreeNode *curLeft = root-&gt;left;
+        TreeNode *curRight = root-&gt;right;//建立两个指针
+        while(curLeft || !sLeft.empty() || curRight || !sRight.empty()){
+            //当指针存在且栈不为空继续迭代
+            while(curLeft){//当指针存在继续迭代左子树并压入栈
+                sLeft.push(curLeft);
+                curLeft = curLeft-&gt;left;
+            }
+            while(curRight){//同上
+                sRight.push(curRight);
+                curRight = curRight-&gt;right;
+            }
+            if(sLeft.size() != sRight.size()) return false;//若栈长度不一致返回false
+            curLeft = sLeft.top(); sLeft.pop();
+            curRight = sRight.top(); sRight.pop();//到头了之后出栈
+            if(curLeft-&gt;val != curRight-&gt;val) return false;//并检测栈顶的值。和中序遍历一样，只是中序遍历是存值，这里是进行比较。
+            curLeft = curLeft-&gt;right;//再进入右子树
+            curRight = curRight-&gt;left;//同上
+        }
+        return true;
+    }
+};
+</code></pre>
+<h3 id="2-队列迭代法">2. 队列迭代法</h3>
+<pre><code class="language-cpp">class Solution {//三种方法。3、 队列迭代法。和层次遍历有点类似（广度优先遍历BFS）一层一层比较。
+public:
+    bool isSymmetric(TreeNode* root) {
+        if(!root) return true;//特殊情况，为空直接返回true
+        queue&lt;TreeNode*&gt; qLeft;
+        queue&lt;TreeNode*&gt; qRight;//建立两个队列存每一层的值
+        qLeft.push(root-&gt;left);
+        qRight.push(root-&gt;right);//存入根节点的左右子节点
+        while(!qLeft.empty() &amp;&amp; !qRight.empty()){
+            //当两个队列都有值时，继续循环。注意null也会压入队列，这时队列也不为空。
+            TreeNode *curLeft = qLeft.front();qLeft.pop();
+            TreeNode *curRight = qRight.front();qRight.pop();//挨个取出两队列的首值。
+            if(!curLeft &amp;&amp; !curRight) continue;
+            //当两个都为空时，继续循环。有可能两个对应节点都为空。
+            if(!curLeft || !curRight) return false;//当其中一个为空，返回false
+            if(curLeft-&gt;val != curRight-&gt;val) return false;//当对应值不想动，返回false
+            qLeft.push(curLeft-&gt;left);
+            qLeft.push(curLeft-&gt;right);
+            qRight.push(curRight-&gt;right);
+            qRight.push(curRight-&gt;left);//按对称依次为两个队列压入值。注意此时队列中可能还有上一层的值，但是队列有先进先出的性质，则下一步先计算上一层的值。
+        }
+        return true;
+    }
+};
+</code></pre>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">ChrisHRZ</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-03-14
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/tree/">Tree</a>
+          <a href="/tags/binary-tree/">Binary tree</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/lc102%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E6%AC%A1%E9%81%8D%E5%8E%86/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">[Lc]102二叉树的层次遍历</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/lc100%E7%9B%B8%E5%90%8C%E7%9A%84%E6%A0%91/">
+            <span class="next-text nav-default">[Lc]100相同的树</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/lc101%E5%AF%B9%E7%A7%B0%E4%BA%8C%E5%8F%89%E6%A0%91/" class="leancloud_visitors" data-flag-title="[Lc]101对称二叉树">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'M8Fyr1YXIu2Ov8Wh4ByqtEzq-gzGzoHsz',
+        appKey: 'AHiPSGeLQbvrQGQ6KfhvOKvN',
+        notify:  false ,
+        verify:  false ,
+        avatar:'mm',
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/ChrisHRZ" class="iconfont icon-github" title="github"></a>
+  <a href="https://chrishrz.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">ChrisHRZ</span>
+  </span>
+</div>
+
+
+<script src="https://cdn.bootcss.com/mermaid/8.4.8/mermaid.min.js"></script>
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js"></script>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
