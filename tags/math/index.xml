@@ -6,19 +6,10 @@
     <description>Recent content in Math on Focus-ChrisHRZ&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 24 Apr 2020 21:26:38 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 13 Apr 2020 22:36:11 +0800</lastBuildDate>
     
 	<atom:link href="https://chrishrz.github.io/tags/math/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>[Lc]28实现strStr()</title>
-      <link>https://chrishrz.github.io/post/lc28%E5%AE%9E%E7%8E%B0strstr/</link>
-      <pubDate>Fri, 24 Apr 2020 21:26:38 +0800</pubDate>
-      
-      <guid>https://chrishrz.github.io/post/lc28%E5%AE%9E%E7%8E%B0strstr/</guid>
-      <description>题目 题解 这道题说是简单题结果花了我两天，BF算法的确简单，但是其他的字符串匹配算法真的太复杂了。。。 1. 正则表达式 这个在leetcode上超时</description>
-    </item>
     
     <item>
       <title>[Lc]67二进制求和</title>
@@ -81,15 +72,6 @@
       
       <guid>https://chrishrz.github.io/post/lc29%E4%B8%A4%E6%95%B0%E7%9B%B8%E9%99%A4/</guid>
       <description>题目 题解 这道题太恶心了，溢出搞得我头疼，先记录一个答案，来自这里,作者：cglin-2 这道题目要求不使用乘法、除法和 mod 运算符，且假设环境只能</description>
-    </item>
-    
-    <item>
-      <title>[Lc]12整数转罗马数字</title>
-      <link>https://chrishrz.github.io/post/lc12%E6%95%B4%E6%95%B0%E8%BD%AC%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97/</link>
-      <pubDate>Fri, 10 Apr 2020 00:13:43 +0800</pubDate>
-      
-      <guid>https://chrishrz.github.io/post/lc12%E6%95%B4%E6%95%B0%E8%BD%AC%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97/</guid>
-      <description>题目 题解 1. 分类法 每个数量级可以分为4类，1~3，4，5~8，9。因此就使用每个数量级取商然后选择合适的类别进行表达，余数进行下一个数量级商的</description>
     </item>
     
   </channel>

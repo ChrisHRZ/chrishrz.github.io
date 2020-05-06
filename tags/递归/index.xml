@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>递归 on Focus-ChrisHRZ&#39;s blog</title>
+    <link>https://chrishrz.github.io/tags/%E9%80%92%E5%BD%92/</link>
+    <description>Recent content in 递归 on Focus-ChrisHRZ&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 06 May 2020 16:47:56 +0800</lastBuildDate>
+    
+	<atom:link href="https://chrishrz.github.io/tags/%E9%80%92%E5%BD%92/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[Lc]87扰乱字符串</title>
+      <link>https://chrishrz.github.io/post/lc87%E6%89%B0%E4%B9%B1%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+      <pubDate>Wed, 06 May 2020 16:47:56 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc87%E6%89%B0%E4%B9%B1%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+      <description>题目 题解 1. 递归法 就是通过递归左右子串，首先判断长度是否相等，不相等直接false；然后判断是否完全一样，一样直接true；然后判断排序后是否</description>
+    </item>
+    
+  </channel>
+</rss>

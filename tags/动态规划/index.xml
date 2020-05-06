@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>动态规划 on Focus-ChrisHRZ&#39;s blog</title>
+    <link>https://chrishrz.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
+    <description>Recent content in 动态规划 on Focus-ChrisHRZ&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 06 May 2020 16:47:56 +0800</lastBuildDate>
+    
+	<atom:link href="https://chrishrz.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[Lc]87扰乱字符串</title>
+      <link>https://chrishrz.github.io/post/lc87%E6%89%B0%E4%B9%B1%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+      <pubDate>Wed, 06 May 2020 16:47:56 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc87%E6%89%B0%E4%B9%B1%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+      <description>题目 题解 1. 递归法 就是通过递归左右子串，首先判断长度是否相等，不相等直接false；然后判断是否完全一样，一样直接true；然后判断排序后是否</description>
+    </item>
+    
+    <item>
+      <title>[Lc]72编辑距离</title>
+      <link>https://chrishrz.github.io/post/lc72%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB/</link>
+      <pubDate>Wed, 06 May 2020 13:18:11 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc72%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB/</guid>
+      <description>题目 题解 时间复杂度$O(mn)$ 空间复杂度$O(mn)$，都是搞dp数组用的 class Solution { public: int minDistance(string word1, string word2) { int n=word1.size(), m=word2.size(); if(n*m==0) return n+m;//若一个为空，返回另一个</description>
+    </item>
+    
+  </channel>
+</rss>

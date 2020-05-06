@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>[Lc]87扰乱字符串 - Focus-ChrisHRZ&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ChrisHRZ" /><meta name="description" content="题目 题解 1. 递归法 就是通过递归左右子串，首先判断长度是否相等，不相等直接false；然后判断是否完全一样，一样直接true；然后判断排序后是否" /><meta name="keywords" content="code, life, study" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.66.0 with theme even" />
+
+
+<link rel="canonical" href="https://chrishrz.github.io/post/lc87%E6%89%B0%E4%B9%B1%E5%AD%97%E7%AC%A6%E4%B8%B2/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
+
+<meta property="og:title" content="[Lc]87扰乱字符串" />
+<meta property="og:description" content="题目 题解 1. 递归法 就是通过递归左右子串，首先判断长度是否相等，不相等直接false；然后判断是否完全一样，一样直接true；然后判断排序后是否" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chrishrz.github.io/post/lc87%E6%89%B0%E4%B9%B1%E5%AD%97%E7%AC%A6%E4%B8%B2/" />
+<meta property="article:published_time" content="2020-05-06T16:47:56+08:00" />
+<meta property="article:modified_time" content="2020-05-06T16:47:56+08:00" />
+<meta itemprop="name" content="[Lc]87扰乱字符串">
+<meta itemprop="description" content="题目 题解 1. 递归法 就是通过递归左右子串，首先判断长度是否相等，不相等直接false；然后判断是否完全一样，一样直接true；然后判断排序后是否">
+<meta itemprop="datePublished" content="2020-05-06T16:47:56&#43;08:00" />
+<meta itemprop="dateModified" content="2020-05-06T16:47:56&#43;08:00" />
+<meta itemprop="wordCount" content="1066">
+
+
+
+<meta itemprop="keywords" content="字符串,动态规划,递归," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[Lc]87扰乱字符串"/>
+<meta name="twitter:description" content="题目 题解 1. 递归法 就是通过递归左右子串，首先判断长度是否相等，不相等直接false；然后判断是否完全一样，一样直接true；然后判断排序后是否"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+<script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
+
+<meta name="baidu-site-verification" content="GDMA35xQfM" />
+<meta name="google-site-verification" content="f-5-S53Hm0WIn0Tnfu-dg0sNmCZeahUFILgUSI9JLQA" />
+<meta name="baidu-site-verification" content="74mXju2aOk" />
+<meta name="google-site-verification" content="2yu63Vg3wEmB1XF77uGbZdOQB_a_KSLTk-zNxL4oGRg" />
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">FOCUS</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">FOCUS</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">[Lc]87扰乱字符串</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-05-06 </span>
+        <div class="post-category">
+            <a href="/categories/leetcode/"> leetcode </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#题目">题目</a></li>
+    <li><a href="#题解">题解</a>
+      <ul>
+        <li><a href="#1-递归法">1. 递归法</a></li>
+        <li><a href="#2-动态规划">2. 动态规划</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="题目">题目</h2>
+<p><img src="/img/img2020-05-06-16-48-45.png" alt=""></p>
+<h2 id="题解">题解</h2>
+<h3 id="1-递归法">1. 递归法</h3>
+<p>就是通过递归左右子串，首先判断长度是否相等，不相等直接false；然后判断是否完全一样，一样直接true；然后判断排序后是否相等，不相等也false，接下来分两种情况递归，即1左=2左且1右=2右，或1左=2右且1右=2左，=表示互为scramble，细节见注释</p>
+<pre><code class="language-cpp">class Solution {
+public:
+   bool isScramble(string s1, string s2) {
+       if(s1.size() != s2.size()) return false;//长度不一样，直接返回false
+       if(s1 == s2) return true;//完全一样，返回true
+       string sort_s1 = s1, sort_s2 = s2;
+       sort(sort_s1.begin(), sort_s1.end());
+       sort(sort_s2.begin(), sort_s2.end());
+       if(sort_s1 != sort_s2) return false;//比较两个排序后的数组，不一样直接返回false
+       for(int i=1; i&lt;s1.size(); ++i){
+           //在每个点对两个字符串进行划分，然后进行递归对比，有两种情况，具体看题解和下面
+           string s11 = s1.substr(0,i);
+           string s12 = s1.substr(i);
+           string s21 = s2.substr(0,i);
+           string s22 = s2.substr(i);
+           if(isScramble(s11,s21) &amp;&amp; isScramble(s12,s22)) return true;//情况一
+           //注意这两行，情况二的s2左右子串长度于情况一相反
+           s21 = s2.substr(0, s1.size()-i);
+           s22 = s2.substr(s1.size()-i);
+           if(isScramble(s11,s22) &amp;&amp; isScramble(s12,s21)) return true;//情况二
+       }
+       return false;//若全部遍历完还没有返回true说明不是scramble，返回false
+   }
+};
+</code></pre>
+<h3 id="2-动态规划">2. 动态规划</h3>
+<p>炒鸡难，看了https://www.cnblogs.com/grandyang/p/4318500.html和https://leetcode-cn.com/problems/scramble-string/solution/miao-dong-de-qu-jian-xing-dpsi-lu-by-sha-yu-la-jia/才懂得，那个状态转移矩阵比较麻烦，而且是三维的dp，详细看上述博客和注释吧。</p>
+<ul>
+<li>时间复杂度$O(n^{4})$，三维dp矩阵和一个状态转移时的遍历</li>
+<li>空间复杂度$O(n^{3})$，三维dp</li>
+</ul>
+<pre><code class="language-cpp">//动态规划，这个有点难了，其实原理和递归类似，也是判断划分后左右的子串是否是scramble
+class Solution {
+public:
+    bool isScramble(string s1, string s2) {
+        if(s1.size() != s2.size()) return false;//长度不一样，直接返回false
+        if(s1 == s2) return true;//完全一样，返回true
+        int n = s1.size();
+
+        //创建三维状态转移数数组,len是n+1.其中0是空的，长度为0的不考虑，1~n有值
+        //其实这个数组应该是一个四分之一的金字塔形，越往上越小,下面内层的两个循环用n-len就说明这一点
+        //可以在脑中想象这个图形
+        //int dp[n][n][n+1];
+        vector&lt;vector&lt;vector&lt;bool&gt;&gt;&gt; dp(n,vector&lt;vector&lt;bool&gt;&gt;(n,vector&lt;bool&gt;(n+1,false)));
+
+        for(int len=1; len&lt;=n; ++len){
+            for(int i=0; i&lt;=n-len; ++i){
+                for(int j=0; j&lt;=n-len; ++j){
+                    if(len == 1) dp[i][j][len] = (s1[i] == s2[j]);
+                    else{
+                        for(int k=1; k&lt;len; ++k){//遍历每一种劈法
+                            //状态转移方程，只要有一种劈法1左=2左且1右=2右，或1左=2右且1右=2左就可以，=表示互为scramble
+                            //注意第二种情况的括号内的数字，两个不完全一样，一个+k，一个+len-k
+                            if((dp[i][j][k] &amp;&amp; dp[i+k][j+k][len-k])||(dp[i][j+k][len-k] &amp;&amp; dp[i+len-k][j][k])){
+                                dp[i][j][len] = true;
+                                break;//有一种情况成立就可以break
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return dp[0][0][n];
+    }
+};
+</code></pre>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">ChrisHRZ</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-05-06
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
+          <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a>
+          <a href="/tags/%E9%80%92%E5%BD%92/">递归</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/lc125%E9%AA%8C%E8%AF%81%E5%9B%9E%E6%96%87%E4%B8%B2/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">[Lc]125验证回文串</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/lc72%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB/">
+            <span class="next-text nav-default">[Lc]72编辑距离</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/lc87%E6%89%B0%E4%B9%B1%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="leancloud_visitors" data-flag-title="[Lc]87扰乱字符串">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'M8Fyr1YXIu2Ov8Wh4ByqtEzq-gzGzoHsz',
+        appKey: 'AHiPSGeLQbvrQGQ6KfhvOKvN',
+        notify:  false ,
+        verify:  false ,
+        avatar:'mm',
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/ChrisHRZ" class="iconfont icon-github" title="github"></a>
+  <a href="https://chrishrz.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">ChrisHRZ</span>
+  </span>
+</div>
+
+
+<script src="https://cdn.bootcss.com/mermaid/8.4.8/mermaid.min.js"></script>
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js"></script>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
