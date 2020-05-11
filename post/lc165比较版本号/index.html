@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>[Lc]165比较版本号 - Focus-ChrisHRZ&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ChrisHRZ" /><meta name="description" content="题目 题解 1. stringstream法 用stringstream和getline切割字符串，并挨个比较，本来想用getline的，但是这样wh" /><meta name="keywords" content="code, life, study" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.66.0 with theme even" />
+
+
+<link rel="canonical" href="https://chrishrz.github.io/post/lc165%E6%AF%94%E8%BE%83%E7%89%88%E6%9C%AC%E5%8F%B7/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
+
+<meta property="og:title" content="[Lc]165比较版本号" />
+<meta property="og:description" content="题目 题解 1. stringstream法 用stringstream和getline切割字符串，并挨个比较，本来想用getline的，但是这样wh" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chrishrz.github.io/post/lc165%E6%AF%94%E8%BE%83%E7%89%88%E6%9C%AC%E5%8F%B7/" />
+<meta property="article:published_time" content="2020-05-07T20:25:09+08:00" />
+<meta property="article:modified_time" content="2020-05-07T20:25:09+08:00" />
+<meta itemprop="name" content="[Lc]165比较版本号">
+<meta itemprop="description" content="题目 题解 1. stringstream法 用stringstream和getline切割字符串，并挨个比较，本来想用getline的，但是这样wh">
+<meta itemprop="datePublished" content="2020-05-07T20:25:09&#43;08:00" />
+<meta itemprop="dateModified" content="2020-05-07T20:25:09&#43;08:00" />
+<meta itemprop="wordCount" content="591">
+
+
+
+<meta itemprop="keywords" content="字符串," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[Lc]165比较版本号"/>
+<meta name="twitter:description" content="题目 题解 1. stringstream法 用stringstream和getline切割字符串，并挨个比较，本来想用getline的，但是这样wh"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+<script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
+
+<meta name="baidu-site-verification" content="GDMA35xQfM" />
+<meta name="google-site-verification" content="f-5-S53Hm0WIn0Tnfu-dg0sNmCZeahUFILgUSI9JLQA" />
+<meta name="baidu-site-verification" content="74mXju2aOk" />
+<meta name="google-site-verification" content="2yu63Vg3wEmB1XF77uGbZdOQB_a_KSLTk-zNxL4oGRg" />
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">FOCUS</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">FOCUS</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">[Lc]165比较版本号</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-05-07 </span>
+        <div class="post-category">
+            <a href="/categories/leetcode/"> leetcode </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#题目">题目</a></li>
+    <li><a href="#题解">题解</a>
+      <ul>
+        <li><a href="#1-stringstream法">1. stringstream法</a></li>
+        <li><a href="#2-双指针法">2. 双指针法</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="题目">题目</h2>
+<p><img src="/img/img2020-05-07-20-25-37.png" alt=""></p>
+<h2 id="题解">题解</h2>
+<h3 id="1-stringstream法">1. stringstream法</h3>
+<p><del>用stringstream和getline切割字符串，并挨个比较</del>，本来想用getline的，但是这样while循环不好写，若写出或结构有短路操作，若getline()外面套个bool，while循环是可以写了，但是若两个字符串.的个数不一样又会有新的问题，因此还是乖乖用&raquo;</p>
+<ul>
+<li>时间复杂度$O(max{m,n})$</li>
+<li>空间复杂度$O(1)$</li>
+</ul>
+<pre><code class="language-cpp">class Solution {
+public:
+    int compareVersion(string version1, string version2) {
+        stringstream s1(version1+&quot;.&quot;), s2(version2+&quot;.&quot;);//加个.使字符串更规范，用&gt;&gt;更方便
+        char dot = '.';//用dot保存'.'，注意用char
+        int val1, val2;
+        while(s1.good() || s2.good()){
+            s1&gt;&gt;val1&gt;&gt;dot;
+            s2&gt;&gt;val2&gt;&gt;dot;
+            if(val1 &lt; val2) return -1;
+            else if(val1 &gt; val2) return 1;//进行比较
+            val1 = val2 =0;
+        }
+        return 0;
+    }
+};
+</code></pre>
+<h3 id="2-双指针法">2. 双指针法</h3>
+<p>两个指针挨个后移，取数比较，注意while循环个终止条件和里面两个while地循环终止条件</p>
+<ul>
+<li>时间复杂度$O(N)$</li>
+<li>空间复杂度$O(1)$</li>
+</ul>
+<pre><code class="language-cpp">class Solution {
+public:
+    int compareVersion(string version1, string version2) {
+        int p1 = 0, p2 = 0;//双指针
+        int n = max(version1.size(), version2.size());//取两个里面长的作为总遍历长度
+        while(p1&lt;n || p2&lt;n){//有一个没超过end就继续遍历
+            int val1 = 0, val2 = 0;//暂存当前值
+            while(p1&lt;version1.size() &amp;&amp; version1[p1]!='.'){
+                val1 = val1*10 + version1[p1++]-'0';
+            }//取当前值，到'.'停，挨个取数并×10再加在一起
+            while(p2&lt;version2.size() &amp;&amp; version2[p2]!='.'){
+                val2 = val2*10 + version2[p2++]-'0';
+            }//同上
+            if(val1 &gt; val2) return 1;
+            else if(val1 &lt; val2) return -1;//进行比较
+            p1++;
+            p2++;//两个指针后移，此时两个可能在末尾或者在'.'处
+        }
+        return 0;
+    }
+};
+</code></pre>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">ChrisHRZ</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-05-07
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/lc166%E5%88%86%E6%95%B0%E5%88%B0%E5%B0%8F%E6%95%B0/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">[Lc]166分数到小数</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/lc151%E7%BF%BB%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%87%8C%E7%9A%84%E5%8D%95%E8%AF%8D/">
+            <span class="next-text nav-default">[Lc]151翻转字符串里的单词</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/lc165%E6%AF%94%E8%BE%83%E7%89%88%E6%9C%AC%E5%8F%B7/" class="leancloud_visitors" data-flag-title="[Lc]165比较版本号">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'M8Fyr1YXIu2Ov8Wh4ByqtEzq-gzGzoHsz',
+        appKey: 'AHiPSGeLQbvrQGQ6KfhvOKvN',
+        notify:  false ,
+        verify:  false ,
+        avatar:'mm',
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/ChrisHRZ" class="iconfont icon-github" title="github"></a>
+  <a href="https://chrishrz.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">ChrisHRZ</span>
+  </span>
+</div>
+
+
+<script src="https://cdn.bootcss.com/mermaid/8.4.8/mermaid.min.js"></script>
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js"></script>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

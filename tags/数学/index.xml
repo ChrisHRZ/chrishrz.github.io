@@ -6,10 +6,91 @@
     <description>Recent content in 数学 on Focus-ChrisHRZ&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 13 Apr 2020 22:36:11 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 11 May 2020 12:13:41 +0800</lastBuildDate>
     
 	<atom:link href="https://chrishrz.github.io/tags/%E6%95%B0%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Lc]面试题10_II青蛙跳台阶问题</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9810_ii%E9%9D%92%E8%9B%99%E8%B7%B3%E5%8F%B0%E9%98%B6%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Mon, 11 May 2020 12:13:41 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9810_ii%E9%9D%92%E8%9B%99%E8%B7%B3%E5%8F%B0%E9%98%B6%E9%97%AE%E9%A2%98/</guid>
+      <description>题目 题解 这题与70题一样，详见70题题解，因为要取模，因此通项公式法无法通过，递推公式法也太慢通过不了，其分析详见70题题解，这里贴一个递推</description>
+    </item>
+    
+    <item>
+      <title>[Lc]509斐波那契数</title>
+      <link>https://chrishrz.github.io/post/lc509%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0/</link>
+      <pubDate>Mon, 11 May 2020 11:23:15 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc509%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0/</guid>
+      <description>题目 题解 这题和爬楼梯是一样的，这题与剑指offer10一样，三种方法 1. 递归 这个方法最慢，因为有大量的重复运算，写法最简单，就不写了 时间复杂度</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题10_I斐波那契数列</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9810_i%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/</link>
+      <pubDate>Mon, 11 May 2020 11:20:02 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9810_i%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/</guid>
+      <description>题目 题解 这题与[lc]509一样，区别在于结果需要取余，而对于最终结果取余和对于每一位取余再计算下一个数字答案是一样的。具体分析见(http</description>
+    </item>
+    
+    <item>
+      <title>[Lc]70爬楼梯</title>
+      <link>https://chrishrz.github.io/post/lc70%E7%88%AC%E6%A5%BC%E6%A2%AF/</link>
+      <pubDate>Sat, 09 May 2020 13:27:32 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc70%E7%88%AC%E6%A5%BC%E6%A2%AF/</guid>
+      <description>题目 题解 1. 动态规划（斐波那契数列递推公式） 其实就是斐波那契数列，可以用递推公式和通项公式求解 递推相当于动态规划，但是只和前两个数有关，所以不</description>
+    </item>
+    
+    <item>
+      <title>[Lc]204计数质数</title>
+      <link>https://chrishrz.github.io/post/lc204%E8%AE%A1%E6%95%B0%E8%B4%A8%E6%95%B0/</link>
+      <pubDate>Sat, 09 May 2020 11:34:43 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc204%E8%AE%A1%E6%95%B0%E8%B4%A8%E6%95%B0/</guid>
+      <description>题目 题解 1. 暴力法 直接用暴力法会超时，时间复杂度$O(n^{2})$，因此使用暴力法要进行优化，即isPrime()函数只用遍历到sqrt(N</description>
+    </item>
+    
+    <item>
+      <title>[Lc]172阶乘后的零</title>
+      <link>https://chrishrz.github.io/post/lc172%E9%98%B6%E4%B9%98%E5%90%8E%E7%9A%84%E9%9B%B6/</link>
+      <pubDate>Fri, 08 May 2020 17:33:58 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc172%E9%98%B6%E4%B9%98%E5%90%8E%E7%9A%84%E9%9B%B6/</guid>
+      <description>题目 题解 这道题代码不难，关键是数学归纳。 如果把阶乘算出来再求0一定会超时，时间复杂度$O(n)$，pass。 这道题的关键是找2和5的个数，只</description>
+    </item>
+    
+    <item>
+      <title>[Lc]171Excel表列序号</title>
+      <link>https://chrishrz.github.io/post/lc171excel%E8%A1%A8%E5%88%97%E5%BA%8F%E5%8F%B7/</link>
+      <pubDate>Fri, 08 May 2020 17:08:51 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc171excel%E8%A1%A8%E5%88%97%E5%BA%8F%E5%8F%B7/</guid>
+      <description>题目 题解 和168正好相反嘛 这题就简单多了，挨个取字母变成数字就可以了，注意有： 每次是乘26 每次要+1，和168的原因一样，这个是伪26进制，</description>
+    </item>
+    
+    <item>
+      <title>[Lc]168Excel表列名称</title>
+      <link>https://chrishrz.github.io/post/lc168excel%E8%A1%A8%E5%88%97%E5%90%8D%E7%A7%B0/</link>
+      <pubDate>Fri, 08 May 2020 16:07:04 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc168excel%E8%A1%A8%E5%88%97%E5%90%8D%E7%A7%B0/</guid>
+      <description>题目 题解 和171相反的一个题嘛，这个稍微难一点。 这道题就是十进制转26进制，但是有一些需要注意的问题 首先不能从前往后插入数字，即先放最大位，</description>
+    </item>
+    
+    <item>
+      <title>[Lc]166分数到小数</title>
+      <link>https://chrishrz.github.io/post/lc166%E5%88%86%E6%95%B0%E5%88%B0%E5%B0%8F%E6%95%B0/</link>
+      <pubDate>Fri, 08 May 2020 12:30:44 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc166%E5%88%86%E6%95%B0%E5%88%B0%E5%B0%8F%E6%95%B0/</guid>
+      <description>题目 题解 这道题其实就是模拟笔算除法的过程，挨个位产生商，主要判断是否除尽或者产生了循环。 class Solution { public: string fractionToDecimal(int numerator, int denominator) { string res; if(numerator==0) return &amp;quot;0&amp;quot;; //用异或判断是否为负</description>
+    </item>
     
     <item>
       <title>[Lc]67二进制求和</title>

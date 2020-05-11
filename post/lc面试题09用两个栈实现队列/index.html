@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>[Lc]面试题09用两个栈实现队列 - Focus-ChrisHRZ&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ChrisHRZ" /><meta name="description" content="题目 题解 腾讯的客户端开发就是面的这个。。。，当时还想了半天幸苦想出来了，可惜还是凉 //Your CQueue object will be instantiated and called as such: CQueue* obj = new CQueue(); bj-&amp;gt;appendTail(value); int param_2 = obj-&amp;gt;deleteHead(); 1. 快存慢取 这个方法" /><meta name="keywords" content="code, life, study" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.66.0 with theme even" />
+
+
+<link rel="canonical" href="https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9809%E7%94%A8%E4%B8%A4%E4%B8%AA%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
+
+<meta property="og:title" content="[Lc]面试题09用两个栈实现队列" />
+<meta property="og:description" content="题目 题解 腾讯的客户端开发就是面的这个。。。，当时还想了半天幸苦想出来了，可惜还是凉 //Your CQueue object will be instantiated and called as such: CQueue* obj = new CQueue(); bj-&gt;appendTail(value); int param_2 = obj-&gt;deleteHead(); 1. 快存慢取 这个方法" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9809%E7%94%A8%E4%B8%A4%E4%B8%AA%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97/" />
+<meta property="article:published_time" content="2020-05-10T20:54:36+08:00" />
+<meta property="article:modified_time" content="2020-05-10T20:54:36+08:00" />
+<meta itemprop="name" content="[Lc]面试题09用两个栈实现队列">
+<meta itemprop="description" content="题目 题解 腾讯的客户端开发就是面的这个。。。，当时还想了半天幸苦想出来了，可惜还是凉 //Your CQueue object will be instantiated and called as such: CQueue* obj = new CQueue(); bj-&gt;appendTail(value); int param_2 = obj-&gt;deleteHead(); 1. 快存慢取 这个方法">
+<meta itemprop="datePublished" content="2020-05-10T20:54:36&#43;08:00" />
+<meta itemprop="dateModified" content="2020-05-10T20:54:36&#43;08:00" />
+<meta itemprop="wordCount" content="415">
+
+
+
+<meta itemprop="keywords" content="栈,队列," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[Lc]面试题09用两个栈实现队列"/>
+<meta name="twitter:description" content="题目 题解 腾讯的客户端开发就是面的这个。。。，当时还想了半天幸苦想出来了，可惜还是凉 //Your CQueue object will be instantiated and called as such: CQueue* obj = new CQueue(); bj-&gt;appendTail(value); int param_2 = obj-&gt;deleteHead(); 1. 快存慢取 这个方法"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+<script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
+
+<meta name="baidu-site-verification" content="GDMA35xQfM" />
+<meta name="google-site-verification" content="f-5-S53Hm0WIn0Tnfu-dg0sNmCZeahUFILgUSI9JLQA" />
+<meta name="baidu-site-verification" content="74mXju2aOk" />
+<meta name="google-site-verification" content="2yu63Vg3wEmB1XF77uGbZdOQB_a_KSLTk-zNxL4oGRg" />
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">FOCUS</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">FOCUS</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">[Lc]面试题09用两个栈实现队列</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-05-10 </span>
+        <div class="post-category">
+            <a href="/categories/%E5%89%91%E6%8C%87offer/"> 剑指offer </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#题目">题目</a></li>
+    <li><a href="#题解">题解</a>
+      <ul>
+        <li><a href="#1-快存慢取">1. 快存慢取</a></li>
+        <li><a href="#2-慢存快取">2. 慢存快取</a></li>
+        <li><a href="#两个队列模拟一个栈">两个队列模拟一个栈</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="题目">题目</h2>
+<p><img src="/img/img2020-05-10-20-55-22.png" alt=""></p>
+<h2 id="题解">题解</h2>
+<p>腾讯的客户端开发就是面的这个。。。，当时还想了半天幸苦想出来了，可惜还是凉</p>
+<pre><code class="language-cpp">
+//Your CQueue object will be instantiated and called as such:
+CQueue* obj = new CQueue();
+bj-&gt;appendTail(value);
+int param_2 = obj-&gt;deleteHead();
+</code></pre>
+<h3 id="1-快存慢取">1. 快存慢取</h3>
+<p>这个方法存的时候特别快，取得时候比较慢<br>
+<strong>存的时候</strong><br>
+直接加入s1，  <strong>取的时候</strong></p>
+<ul>
+<li>若s2中有数，从s2的顶取数；</li>
+<li>若没数，把s1中的数全部挨个压入s2中，再取数</li>
+</ul>
+<pre><code class="language-cpp">class CQueue {
+    stack&lt;int&gt; s1;
+    stack&lt;int&gt; s2;
+public:
+    CQueue() {
+    }
+    
+    void appendTail(int value) {
+        s1.push(value);
+    }
+    
+    int deleteHead() {
+        if(s2.empty()){
+            while(!s1.empty()){
+                int tmp = s1.top();
+                s2.push(tmp);
+                s1.pop();
+            }
+        }
+        if(s2.empty()) return -1;
+        int res = s2.top();s2.pop();
+        return res;        
+    }
+};
+</code></pre>
+<h3 id="2-慢存快取">2. 慢存快取</h3>
+<p>这个方法刚好反过来，顾名思义。<br>
+<strong>存的过程</strong></p>
+<ol>
+<li>存的时候先看s1有没有数
+<ul>
+<li>若有，则全部按顺序取出放到s2；</li>
+<li>否则执行下一步</li>
+</ul>
+</li>
+<li>压入value</li>
+<li>看s2中有没有数（即第一步放过去的）
+<ul>
+<li>若有，全部按顺序放入s1</li>
+<li>没有，不操作<br>
+<strong>取的过程</strong></li>
+</ul>
+</li>
+<li>取的时候直接从最上面取，注意判断s1是不是为空  、</li>
+</ol>
+<pre><code class="language-cpp">class CQueue {
+    stack&lt;int&gt; s1;
+    stack&lt;int&gt; s2;
+public:
+    CQueue() {}
+    
+    void appendTail(int value) {
+        while(!s1.empty()){
+            s2.push(s1.top());s1.pop();
+        }
+        s1.push(value);
+        while(!s2.empty()){
+            s1.push(s2.top());s2.pop();
+        }
+    }
+    
+    int deleteHead() {
+        if(s1.empty()) return -1;
+        int res = s1.top();s1.pop();
+        return res;
+    }
+};
+</code></pre>
+<h3 id="两个队列模拟一个栈">两个队列模拟一个栈</h3>
+<p>这个问题只有一个方法，慢存快去<br>
+<strong>存的时候</strong></p>
+<ol>
+<li>挨个取出q1的数放入q2</li>
+<li>存入valse</li>
+<li>挨个取出q2的数放入q1
+<strong>取的时候</strong><br>
+直接从队首取值</li>
+</ol>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">ChrisHRZ</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-05-10
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E6%A0%88/">栈</a>
+          <a href="/tags/%E9%98%9F%E5%88%97/">队列</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9810_i%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">[Lc]面试题10_I斐波那契数列</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/lc105%E4%BB%8E%E5%89%8D%E5%BA%8F%E4%B8%8E%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97%E6%9E%84%E9%80%A0%E4%BA%8C%E5%8F%89%E6%A0%91/">
+            <span class="next-text nav-default">[Lc]105从前序与中序遍历序列构造二叉树</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9809%E7%94%A8%E4%B8%A4%E4%B8%AA%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97/" class="leancloud_visitors" data-flag-title="[Lc]面试题09用两个栈实现队列">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'M8Fyr1YXIu2Ov8Wh4ByqtEzq-gzGzoHsz',
+        appKey: 'AHiPSGeLQbvrQGQ6KfhvOKvN',
+        notify:  false ,
+        verify:  false ,
+        avatar:'mm',
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/ChrisHRZ" class="iconfont icon-github" title="github"></a>
+  <a href="https://chrishrz.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">ChrisHRZ</span>
+  </span>
+</div>
+
+
+<script src="https://cdn.bootcss.com/mermaid/8.4.8/mermaid.min.js"></script>
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js"></script>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

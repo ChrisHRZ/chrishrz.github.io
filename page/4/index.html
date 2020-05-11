@@ -45,7 +45,7 @@
 <meta property="og:description" content="Life is art. Live it up." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://chrishrz.github.io/" />
-<meta property="og:updated_time" content="2020-05-06T21:55:59+08:00" />
+<meta property="og:updated_time" content="2020-05-11T12:13:41+08:00" />
 <meta itemprop="name" content="Focus-ChrisHRZ&#39;s blog">
 <meta itemprop="description" content="Life is art. Live it up."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Focus-ChrisHRZ&#39;s blog"/>
@@ -157,9 +157,9 @@ code.has-jax {
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lc222%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%8A%82%E7%82%B9%E4%B8%AA%E6%95%B0/">[Lc]222完全二叉树的节点个数</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/lc71%E7%AE%80%E5%8C%96%E8%B7%AF%E5%BE%84/">[Lc]71简化路径</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2020-04-09 </span>
+      <span class="post-time"> 2020-05-06 </span>
       <div class="post-category">
           <a href="/categories/leetcode/"> leetcode </a>
           </div>
@@ -168,19 +168,19 @@ code.has-jax {
   
   <div class="post-content">
     <div class="post-summary">
-      题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 递归法 class Solution { public: int countNodes(TreeNode* root) {//1.递归直接统计节点数 return root? 1+countNodes(root-&gt;left)+countNodes(root-&gt;right) : 0; } }; 2. 利用
+      题目 题解 时间复杂度$O(N)$，遍历path 空间复杂度$O(N)$，两个n，t暂存路径，res存结果 class Solution { public: string simplifyPath(string path) { string res, tmp; if(path.empty()) return res;//特
     </div>
     <div class="read-more">
-      <a href="/post/lc222%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%8A%82%E7%82%B9%E4%B8%AA%E6%95%B0/" class="read-more-link">Read more...</a>
+      <a href="/post/lc71%E7%AE%80%E5%8C%96%E8%B7%AF%E5%BE%84/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lc226%E7%BF%BB%E8%BD%AC%E4%BA%8C%E5%8F%89%E6%A0%91/">[Lc]226翻转二叉树</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/lc58%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E5%8D%95%E8%AF%8D%E7%9A%84%E9%95%BF%E5%BA%A6/">[Lc]58最后一个单词的长度</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2020-04-08 </span>
+      <span class="post-time"> 2020-05-05 </span>
       <div class="post-category">
           <a href="/categories/leetcode/"> leetcode </a>
           </div>
@@ -189,19 +189,38 @@ code.has-jax {
   
   <div class="post-content">
     <div class="post-summary">
-      题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 递归法 class Solution {//两种方法。1、递归法 public: TreeNode* invertTree(TreeNode* root) { if(!root) return nullptr;/
+      题目 题解 时间复杂度$O(k)$, k为最后一个单词的长度。 空间复杂度$O(1)$ 从后往前遍历，开始的0全部跳过，然后计数，再次遇到0跳出循环 class
     </div>
     <div class="read-more">
-      <a href="/post/lc226%E7%BF%BB%E8%BD%AC%E4%BA%8C%E5%8F%89%E6%A0%91/" class="read-more-link">Read more...</a>
+      <a href="/post/lc58%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E5%8D%95%E8%AF%8D%E7%9A%84%E9%95%BF%E5%BA%A6/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lc199%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%8F%B3%E8%A7%86%E5%9B%BE/">[Lc]199二叉树的右视图</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/mingw%E4%BD%BF%E7%94%A8to_string%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3/">MinGW使用to_string报错解决</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2020-04-08 </span>
+      <span class="post-time"> 2020-05-05 </span>
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      在做leetcode49题时发现的错误，我是用clion对程序进行调试，报错，调试后发现是mingw中to_string的一个bug，在网上
+    </div>
+    <div class="read-more">
+      <a href="/post/mingw%E4%BD%BF%E7%94%A8to_string%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/lc49%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D%E5%88%86%E7%BB%84/">[Lc]49字母异位词分组</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-05-05 </span>
       <div class="post-category">
           <a href="/categories/leetcode/"> leetcode </a>
           </div>
@@ -210,19 +229,19 @@ code.has-jax {
   
   <div class="post-content">
     <div class="post-summary">
-      题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; //本题借鉴#102层次遍历 class Solution { public: vector&lt;int&gt; rightSideView(TreeNode* root) { vector&lt;int&gt; res; if(!root) return res; queue&lt;TreeNode*&gt; q{{root}}; while(!q.empty()){ res.p
+      题目 题解 1. unordered_map排序法 时间复杂度：排序的话算作$O(Klog{K})$,最外层的 for 循环，所以就是 $O(nKlog{K})
     </div>
     <div class="read-more">
-      <a href="/post/lc199%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%8F%B3%E8%A7%86%E5%9B%BE/" class="read-more-link">Read more...</a>
+      <a href="/post/lc49%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D%E5%88%86%E7%BB%84/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lc173%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E8%BF%AD%E4%BB%A3%E5%99%A8/">[Lc]173二叉搜索树迭代器</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/lc38%E5%A4%96%E8%A7%82%E6%95%B0%E5%88%97/">[Lc]38外观数列</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2020-04-08 </span>
+      <span class="post-time"> 2020-04-30 </span>
       <div class="post-category">
           <a href="/categories/leetcode/"> leetcode </a>
           </div>
@@ -231,19 +250,19 @@ code.has-jax {
   
   <div class="post-content">
     <div class="post-summary">
-      题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; //这道题就是写一个中序遍历，因为题目提到是搜索二叉树 class BSTIterator { stack&lt;TreeNode*&gt; s;//
+      题目 题解 时间复杂度$O(N*M)$ 空间复杂度$O(M_{end}+M_{end-1}) class Solution { public: string countAndSay(int n) { if(n == 0) return &quot;&quot;; string res = &quot;1&quo
     </div>
     <div class="read-more">
-      <a href="/post/lc173%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E8%BF%AD%E4%BB%A3%E5%99%A8/" class="read-more-link">Read more...</a>
+      <a href="/post/lc38%E5%A4%96%E8%A7%82%E6%95%B0%E5%88%97/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lc129%E6%B1%82%E6%A0%B9%E5%88%B0%E5%8F%B6%E5%AD%90%E8%8A%82%E7%82%B9%E6%95%B0%E5%AD%97%E4%B9%8B%E5%92%8C/">[Lc]129求根到叶子节点数字之和</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/lc1254%E7%BB%9F%E8%AE%A1%E5%B0%81%E9%97%AD%E5%B2%9B%E5%B1%BF%E7%9A%84%E6%95%B0%E7%9B%AE/">[Lc]1254统计封闭岛屿的数目</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2020-04-08 </span>
+      <span class="post-time"> 2020-04-28 </span>
       <div class="post-category">
           <a href="/categories/leetcode/"> leetcode </a>
           </div>
@@ -252,19 +271,19 @@ code.has-jax {
   
   <div class="post-content">
     <div class="post-summary">
-      题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1.递归法 class Solution { public: int sumNumbers(TreeNode* root) {//两种方法。1.递归法 return DFSsunNum
+      题目 题解 1. DFS 时间复杂度$O(MN)$ 空间复杂度$O(1)$ class Solution { public: int dfs(vector&lt;vector&lt;int&gt;&gt;&amp; grid, int row, int column){ int rows = grid.size(); int columns = grid[0].size();//计算行列数 if(row
     </div>
     <div class="read-more">
-      <a href="/post/lc129%E6%B1%82%E6%A0%B9%E5%88%B0%E5%8F%B6%E5%AD%90%E8%8A%82%E7%82%B9%E6%95%B0%E5%AD%97%E4%B9%8B%E5%92%8C/" class="read-more-link">Read more...</a>
+      <a href="/post/lc1254%E7%BB%9F%E8%AE%A1%E5%B0%81%E9%97%AD%E5%B2%9B%E5%B1%BF%E7%9A%84%E6%95%B0%E7%9B%AE/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lc117%E5%A1%AB%E5%85%85%E6%AF%8F%E4%B8%AA%E8%8A%82%E7%82%B9%E7%9A%84%E4%B8%8B%E4%B8%80%E4%B8%AA%E5%8F%B3%E4%BE%A7%E8%8A%82%E7%82%B9%E6%8C%87%E9%92%88ii/">[Lc]117填充每个节点的下一个右侧节点指针II</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/lc200%E5%B2%9B%E5%B1%BF%E6%95%B0%E9%87%8F/">[Lc]200岛屿数量</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2020-04-08 </span>
+      <span class="post-time"> 2020-04-27 </span>
       <div class="post-category">
           <a href="/categories/leetcode/"> leetcode </a>
           </div>
@@ -273,19 +292,40 @@ code.has-jax {
   
   <div class="post-content">
     <div class="post-summary">
-      题目 题解 该题二叉树结构如下： // Definition for a Node. class Node { public: int val; Node* left; Node* right; Node* next; Node() : val(0), left(NULL), right(NULL), next(NULL) {} Node(int _val) : val(_val), left(NULL), right(NULL), next(NULL) {} Node(int _val, Node* _left, Node* _right, Node* _next) : val(_val), left(_left), right(_right), next(_next) {} }; 1.递归法 //和#
+      题目 题解 1. DFS 时间复杂度$O(N*M)$ 空间复杂度$O(N*M)$（最坏情况） class Solution { public: void dfs(vector&lt;vector&lt;char&gt;&gt;&amp; grid, int row, int column){ int rows = grid.size(); int columns = grid[0].size()
     </div>
     <div class="read-more">
-      <a href="/post/lc117%E5%A1%AB%E5%85%85%E6%AF%8F%E4%B8%AA%E8%8A%82%E7%82%B9%E7%9A%84%E4%B8%8B%E4%B8%80%E4%B8%AA%E5%8F%B3%E4%BE%A7%E8%8A%82%E7%82%B9%E6%8C%87%E9%92%88ii/" class="read-more-link">Read more...</a>
+      <a href="/post/lc200%E5%B2%9B%E5%B1%BF%E6%95%B0%E9%87%8F/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lc116%E5%A1%AB%E5%85%85%E6%AF%8F%E4%B8%AA%E8%8A%82%E7%82%B9%E7%9A%84%E4%B8%8B%E4%B8%80%E4%B8%AA%E5%8F%B3%E4%BE%A7%E8%8A%82%E7%82%B9%E6%8C%87%E9%92%88/">[Lc]116填充每个节点的下一个右侧节点指针</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9840%E6%9C%80%E5%B0%8F%E7%9A%84k%E4%B8%AA%E6%95%B0/">[Lc]面试题40最小的k个数</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2020-04-07 </span>
+      <span class="post-time"> 2020-04-27 </span>
+      <div class="post-category">
+          <a href="/categories/%E5%89%91%E6%8C%87offer/"> 剑指offer </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      题目 题解 1. 堆法 时间复杂度：$O(n\log k)$，其中 nn 是数组 arr 的长度。由于大根堆实时维护前 k 小值，所以插入删除都是 $O(\log k)$ 的时间复杂度，最坏情
+    </div>
+    <div class="read-more">
+      <a href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9840%E6%9C%80%E5%B0%8F%E7%9A%84k%E4%B8%AA%E6%95%B0/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/lc84%E6%9F%B1%E7%8A%B6%E5%9B%BE%E4%B8%AD%E6%9C%80%E5%A4%A7%E7%9A%84%E7%9F%A9%E5%BD%A2/">[Lc]84柱状图中最大的矩形</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-04-26 </span>
       <div class="post-category">
           <a href="/categories/leetcode/"> leetcode </a>
           </div>
@@ -294,19 +334,19 @@ code.has-jax {
   
   <div class="post-content">
     <div class="post-summary">
-      题目 题解 该题二叉树结构如下： // Definition for a Node. class Node { public: int val; Node* left; Node* right; Node* next; Node() : val(0), left(NULL), right(NULL), next(NULL) {} Node(int _val) : val(_val), left(NULL), right(NULL), next(NULL) {} Node(int _val, Node* _left, Node* _right, Node* _next) : val(_val), left(_left), right(_right), next(_next) {} }; 1. 递归法 //这道题
+      题目 题解 1. 双数组法 时间复杂度$O(N)$ 空间复杂度$O(N)$ class Solution { public: int largestRectangleArea(vector&lt;int&gt;&amp; heights) {//多种方法，可以暴力搜索，但会超时，这里用时间复杂度较低的方
     </div>
     <div class="read-more">
-      <a href="/post/lc116%E5%A1%AB%E5%85%85%E6%AF%8F%E4%B8%AA%E8%8A%82%E7%82%B9%E7%9A%84%E4%B8%8B%E4%B8%80%E4%B8%AA%E5%8F%B3%E4%BE%A7%E8%8A%82%E7%82%B9%E6%8C%87%E9%92%88/" class="read-more-link">Read more...</a>
+      <a href="/post/lc84%E6%9F%B1%E7%8A%B6%E5%9B%BE%E4%B8%AD%E6%9C%80%E5%A4%A7%E7%9A%84%E7%9F%A9%E5%BD%A2/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lc114%E4%BA%8C%E5%8F%89%E6%A0%91%E5%B1%95%E5%BC%80%E4%B8%BA%E9%93%BE%E8%A1%A8/">[Lc]114二叉树展开为链表</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/lc28%E5%AE%9E%E7%8E%B0strstr/">[Lc]28实现strStr()</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2020-04-07 </span>
+      <span class="post-time"> 2020-04-24 </span>
       <div class="post-category">
           <a href="/categories/leetcode/"> leetcode </a>
           </div>
@@ -315,52 +355,10 @@ code.has-jax {
   
   <div class="post-content">
     <div class="post-summary">
-      题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 先序递归法 //本题的顺序可以看出是先序遍历。 class Solution {//两种方法。1、
+      题目 题解 这道题说是简单题结果花了我两天，BF算法的确简单，但是其他的字符串匹配算法真的太复杂了。。。 1. 正则表达式 这个在leetcode上超时
     </div>
     <div class="read-more">
-      <a href="/post/lc114%E4%BA%8C%E5%8F%89%E6%A0%91%E5%B1%95%E5%BC%80%E4%B8%BA%E9%93%BE%E8%A1%A8/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%80%83%E7%A0%94%E5%A4%A7%E7%BA%B22019/">[转载]计算机考研大纲2019</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-03-28 </span>
-      <div class="post-category">
-          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"> 计算机基础 </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      2019年计算机408的考试大纲。 转自https://kaoyan.eol.cn/nnews/201809/t20180915_162519
-    </div>
-    <div class="read-more">
-      <a href="/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%80%83%E7%A0%94%E5%A4%A7%E7%BA%B22019/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">计算机网络学习笔记（待续。。。）</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-03-28 </span>
-      <div class="post-category">
-          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"> 计算机网络 </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      这个主要来自谢希仁的《计算机网络》和网络课程，先记重点。 部分图和概念摘自菜鸟教程,侵删。 菜鸟教程的原文链接是这个:http://www.cn
-    </div>
-    <div class="read-more">
-      <a href="/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="read-more-link">Read more...</a>
+      <a href="/post/lc28%E5%AE%9E%E7%8E%B0strstr/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

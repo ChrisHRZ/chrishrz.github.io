@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>s&#34;数学&#34; on Focus-ChrisHRZ&#39;s blog</title>
+    <link>https://chrishrz.github.io/tags/s%E6%95%B0%E5%AD%A6/</link>
+    <description>Recent content in s&#34;数学&#34; on Focus-ChrisHRZ&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 08 May 2020 21:08:54 +0800</lastBuildDate>
+    
+	<atom:link href="https://chrishrz.github.io/tags/s%E6%95%B0%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[Lc]202快乐数</title>
+      <link>https://chrishrz.github.io/post/lc202%E5%BF%AB%E4%B9%90%E6%95%B0/</link>
+      <pubDate>Fri, 08 May 2020 21:08:54 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc202%E5%BF%AB%E4%B9%90%E6%95%B0/</guid>
+      <description>题目 题解 这题相当于142题的一个变形，相当于链表找环，但是不用找到起始点，判断是环就可以（这么说应该是141题） 1. set存值法 时间复杂度$O</description>
+    </item>
+    
+  </channel>
+</rss>

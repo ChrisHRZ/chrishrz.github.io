@@ -49,7 +49,7 @@
 <meta itemprop="description" content="题目 题解 1. 递归法 就是通过递归左右子串，首先判断长度是否相等，不相等直接false；然后判断是否完全一样，一样直接true；然后判断排序后是否">
 <meta itemprop="datePublished" content="2020-05-06T16:47:56&#43;08:00" />
 <meta itemprop="dateModified" content="2020-05-06T16:47:56&#43;08:00" />
-<meta itemprop="wordCount" content="1066">
+<meta itemprop="wordCount" content="1070">
 
 
 
@@ -195,7 +195,10 @@ code.has-jax {
 <p><img src="/img/img2020-05-06-16-48-45.png" alt=""></p>
 <h2 id="题解">题解</h2>
 <h3 id="1-递归法">1. 递归法</h3>
-<p>就是通过递归左右子串，首先判断长度是否相等，不相等直接false；然后判断是否完全一样，一样直接true；然后判断排序后是否相等，不相等也false，接下来分两种情况递归，即1左=2左且1右=2右，或1左=2右且1右=2左，=表示互为scramble，细节见注释</p>
+<p>就是通过递归左右子串，首先判断长度是否相等，不相等直接false；然后判断是否完全一样，一样直接true；然后判断排序后是否相等，不相等也false，接下来分两种情况递归，<br>
+即1左=2左且1右=2右，<br>
+或1左=2右且1右=2左，<br>
+=表示互为scramble，细节见注释</p>
 <pre><code class="language-cpp">class Solution {
 public:
    bool isScramble(string s1, string s2) {
@@ -222,7 +225,7 @@ public:
 };
 </code></pre>
 <h3 id="2-动态规划">2. 动态规划</h3>
-<p>炒鸡难，看了https://www.cnblogs.com/grandyang/p/4318500.html和https://leetcode-cn.com/problems/scramble-string/solution/miao-dong-de-qu-jian-xing-dpsi-lu-by-sha-yu-la-jia/才懂得，那个状态转移矩阵比较麻烦，而且是三维的dp，详细看上述博客和注释吧。</p>
+<p>炒鸡难，看了(<a href="https://www.cnblogs.com/grandyang/p/4318500.html">https://www.cnblogs.com/grandyang/p/4318500.html</a>)和(<a href="https://leetcode-cn.com/problems/scramble-string/solution/miao-dong-de-qu-jian-xing-dpsi-lu-by-sha-yu-la-jia/">https://leetcode-cn.com/problems/scramble-string/solution/miao-dong-de-qu-jian-xing-dpsi-lu-by-sha-yu-la-jia/</a>)才懂得，那个状态转移矩阵比较麻烦，而且是三维的dp，详细看上述博客和注释吧。</p>
 <ul>
 <li>时间复杂度$O(n^{4})$，三维dp矩阵和一个状态转移时的遍历</li>
 <li>空间复杂度$O(n^{3})$，三维dp</li>

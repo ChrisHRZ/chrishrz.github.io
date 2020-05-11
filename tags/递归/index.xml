@@ -6,10 +6,19 @@
     <description>Recent content in 递归 on Focus-ChrisHRZ&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 06 May 2020 16:47:56 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 07 May 2020 12:46:45 +0800</lastBuildDate>
     
 	<atom:link href="https://chrishrz.github.io/tags/%E9%80%92%E5%BD%92/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Lc]93复原IP地址</title>
+      <link>https://chrishrz.github.io/post/lc93%E5%A4%8D%E5%8E%9Fip%E5%9C%B0%E5%9D%80/</link>
+      <pubDate>Thu, 07 May 2020 12:46:45 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc93%E5%A4%8D%E5%8E%9Fip%E5%9C%B0%E5%9D%80/</guid>
+      <description>题目 题解 这道题主要是递归然后剪枝，符合条件的放入结果，不符合就键值，主要是要确定几种不符合条件的情况 剩下的数字不够分的，比如还有2个数，但是</description>
+    </item>
     
     <item>
       <title>[Lc]87扰乱字符串</title>

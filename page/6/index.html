@@ -45,7 +45,7 @@
 <meta property="og:description" content="Life is art. Live it up." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://chrishrz.github.io/" />
-<meta property="og:updated_time" content="2020-05-06T21:55:59+08:00" />
+<meta property="og:updated_time" content="2020-05-11T12:13:41+08:00" />
 <meta itemprop="name" content="Focus-ChrisHRZ&#39;s blog">
 <meta itemprop="description" content="Life is art. Live it up."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Focus-ChrisHRZ&#39;s blog"/>
@@ -157,9 +157,9 @@ code.has-jax {
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lc101%E5%AF%B9%E7%A7%B0%E4%BA%8C%E5%8F%89%E6%A0%91/">[Lc]101对称二叉树</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/lc69x%E7%9A%84%E5%B9%B3%E6%96%B9%E6%A0%B9/">[Lc]69x的平方根</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2020-03-14 </span>
+      <span class="post-time"> 2020-04-11 </span>
       <div class="post-category">
           <a href="/categories/leetcode/"> leetcode </a>
           </div>
@@ -168,19 +168,19 @@ code.has-jax {
   
   <div class="post-content">
     <div class="post-summary">
-      题解 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 递归法 class Solution {//三种方法。1、递归法。有点像#100 public: bool isSymmetric(TreeNode* root) { if(!root) return t
+      题目 题解 1. 二分查找法 时间复杂度$o(log{N})$ 空间复杂度$O(1)$ class Solution { public: int mySqrt(int x) {//两个方法。1、二分查找法 if (x &lt;= 1) return x;//0和
     </div>
     <div class="read-more">
-      <a href="/post/lc101%E5%AF%B9%E7%A7%B0%E4%BA%8C%E5%8F%89%E6%A0%91/" class="read-more-link">Read more...</a>
+      <a href="/post/lc69x%E7%9A%84%E5%B9%B3%E6%96%B9%E6%A0%B9/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lc100%E7%9B%B8%E5%90%8C%E7%9A%84%E6%A0%91/">[Lc]100相同的树</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/lc50powxn/">[Lc]50Pow(x,n)</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2020-03-14 </span>
+      <span class="post-time"> 2020-04-11 </span>
       <div class="post-category">
           <a href="/categories/leetcode/"> leetcode </a>
           </div>
@@ -189,19 +189,19 @@ code.has-jax {
   
   <div class="post-content">
     <div class="post-summary">
-      题目 题解 这道题就是遍历。这里写一个先序遍历，其他遍历方式见相应例题。 二叉树的遍历包括DFS(深度优先搜索)的先序遍历、中序遍历、后序遍历。 还
+      题目 题解 快速幂是指x**2n == x**n + x**n，利用这一性质，不断的一半的数进行运算。有递归法和迭代法两种，注意要区分n为奇偶和n为负数的情况。
     </div>
     <div class="read-more">
-      <a href="/post/lc100%E7%9B%B8%E5%90%8C%E7%9A%84%E6%A0%91/" class="read-more-link">Read more...</a>
+      <a href="/post/lc50powxn/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lc98%E9%AA%8C%E8%AF%81%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/">[Lc]98验证二叉搜索树</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/lc43%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9B%B8%E4%B9%98/">[Lc]43字符串相乘</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2020-03-14 </span>
+      <span class="post-time"> 2020-04-11 </span>
       <div class="post-category">
           <a href="/categories/leetcode/"> leetcode </a>
           </div>
@@ -210,19 +210,40 @@ code.has-jax {
   
   <div class="post-content">
     <div class="post-summary">
-      题目 题解 TreeNode的定义： /** * Definition for a binary tree node. * struct TreeNode { * int val; * TreeNode *left; * TreeNode *right; * TreeNode(int x) : val(x), left(NULL), right(NULL) {} * }; */ 1. 直接递归法 class Solution {//三种方法。1、直接递归
+      题目 题解 时间复杂度$O(mn)$ 空间复杂度$O(m+n)$ class Solution { public: string multiply(string num1, string num2) { string res = &quot;&quot;;//初始化结果res int len1 = num1.size(), len2
     </div>
     <div class="read-more">
-      <a href="/post/lc98%E9%AA%8C%E8%AF%81%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/" class="read-more-link">Read more...</a>
+      <a href="/post/lc43%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9B%B8%E4%B9%98/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lc95%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%912/">[Lc]95不同的二叉搜索树2</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/%E9%9D%A2%E7%BB%8F%E6%80%BB%E7%BB%93/">面经总结</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2020-03-14 </span>
+      <span class="post-time"> 2020-04-11 </span>
+      <div class="post-category">
+          <a href="/categories/%E9%9D%A2%E8%AF%95/"> 面试 </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      记录最近参加的面试的题目 腾讯春招实习提前批（客户端开发） 一面 二叉树的最大直径，编程题 链表的排序，要求时间复杂度$O(Nlog(N))$,空间
+    </div>
+    <div class="read-more">
+      <a href="/post/%E9%9D%A2%E7%BB%8F%E6%80%BB%E7%BB%93/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/lc29%E4%B8%A4%E6%95%B0%E7%9B%B8%E9%99%A4/">[Lc]29两数相除</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-04-10 </span>
       <div class="post-category">
           <a href="/categories/leetcode/"> leetcode </a>
           </div>
@@ -231,40 +252,19 @@ code.has-jax {
   
   <div class="post-content">
     <div class="post-summary">
-      题目 题解 定义二叉树: //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} * }; 1. 递归法 class Solution {//#96的升级版。两种方法。1、递归 public: vector&lt;TreeNode*&gt; generateTrees(int n) { vector&lt;TreeNode*&gt; ans; if(n==0) return a
+      题目 题解 这道题太恶心了，溢出搞得我头疼，先记录一个答案，来自这里,作者：cglin-2 这道题目要求不使用乘法、除法和 mod 运算符，且假设环境只能
     </div>
     <div class="read-more">
-      <a href="/post/lc95%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%912/" class="read-more-link">Read more...</a>
+      <a href="/post/lc29%E4%B8%A4%E6%95%B0%E7%9B%B8%E9%99%A4/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/%E8%BD%AC%E8%BD%BD%E5%9C%A8hugo%E4%B8%AD%E6%B7%BB%E5%8A%A0mermaid%E6%94%AF%E6%8C%81/">[转载]在hugo中添加mermaid支持</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/lc12%E6%95%B4%E6%95%B0%E8%BD%AC%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97/">[Lc]12整数转罗马数字</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2020-03-13 </span>
-      <div class="post-category">
-          <a href="/categories/hugo/"> hugo </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      在markdown中拓展mermaid 前面用有道云笔记的markdown功能，发现他画流程图非常好用。就想把这个功能加入到自己的blog中。
-    </div>
-    <div class="read-more">
-      <a href="/post/%E8%BD%AC%E8%BD%BD%E5%9C%A8hugo%E4%B8%AD%E6%B7%BB%E5%8A%A0mermaid%E6%94%AF%E6%8C%81/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lc96%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/">[Lc]96不同的二叉搜索树</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-03-13 </span>
+      <span class="post-time"> 2020-04-10 </span>
       <div class="post-category">
           <a href="/categories/leetcode/"> leetcode </a>
           </div>
@@ -273,61 +273,19 @@ code.has-jax {
   
   <div class="post-content">
     <div class="post-summary">
-      题目 题解 这道题是#95的简化版。#95要求写出所有的二叉搜索树，这道题只要求写出二叉搜索树的个数，因此要简单一点，其结题思路与卡塔兰数有关。
+      题目 题解 1. 分类法 每个数量级可以分为4类，1~3，4，5~8，9。因此就使用每个数量级取商然后选择合适的类别进行表达，余数进行下一个数量级商的
     </div>
     <div class="read-more">
-      <a href="/post/lc96%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/" class="read-more-link">Read more...</a>
+      <a href="/post/lc12%E6%95%B4%E6%95%B0%E8%BD%AC%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/c&#43;&#43;%E5%93%88%E5%B8%8C%E8%A1%A8unordered_map%E7%9A%84%E5%B8%B8%E8%A7%81%E6%96%B9%E6%B3%95%E5%B0%8F%E7%BB%93/">C&#43;&#43;哈希表unordered_map的常见方法小结</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/lc222%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%8A%82%E7%82%B9%E4%B8%AA%E6%95%B0/">[Lc]222完全二叉树的节点个数</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2020-03-12 </span>
-      <div class="post-category">
-          <a href="/categories/c&#43;&#43;/"> C&#43;&#43; </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      unordered_map的常见用法 unordered_map &lt;string,int&gt; res; res.empty();//判断是否为空 res.size();//计算res的大小 res[&quot;{key}&quot;]; res.at(
-    </div>
-    <div class="read-more">
-      <a href="/post/c&#43;&#43;%E5%93%88%E5%B8%8C%E8%A1%A8unordered_map%E7%9A%84%E5%B8%B8%E8%A7%81%E6%96%B9%E6%B3%95%E5%B0%8F%E7%BB%93/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/%E8%AE%BE%E7%BD%AEvscode%E7%9A%84%E7%BB%88%E7%AB%AF%E4%B8%BAcmder/">设置vscode的终端为cmder</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-03-12 </span>
-      <div class="post-category">
-          <a href="/categories/vscode/"> vscode </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      流程 1. 进入setting(ctrl+shift+p) 2. 依次进入User-&gt;Features-&gt;Terminal 3. 进入上图所示的E
-    </div>
-    <div class="read-more">
-      <a href="/post/%E8%AE%BE%E7%BD%AEvscode%E7%9A%84%E7%BB%88%E7%AB%AF%E4%B8%BAcmder/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lc94_144_145%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%89%E7%A7%8D%E9%81%8D%E5%8E%86/">[Lc]94/144/145二叉树的三种遍历</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-03-09 </span>
+      <span class="post-time"> 2020-04-09 </span>
       <div class="post-category">
           <a href="/categories/leetcode/"> leetcode </a>
           </div>
@@ -336,31 +294,73 @@ code.has-jax {
   
   <div class="post-content">
     <div class="post-summary">
-      题目 二叉树的遍历 简单地理解，满足以下两个条件的树就是二叉树： 本身是有序树； 树中包含的各个节点的度不能超过 2，即只能是 0、1 或者 2； 下图即一颗
+      题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 递归法 class Solution { public: int countNodes(TreeNode* root) {//1.递归直接统计节点数 return root? 1+countNodes(root-&gt;left)+countNodes(root-&gt;right) : 0; } }; 2. 利用
     </div>
     <div class="read-more">
-      <a href="/post/lc94_144_145%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%89%E7%A7%8D%E9%81%8D%E5%8E%86/" class="read-more-link">Read more...</a>
+      <a href="/post/lc222%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%8A%82%E7%82%B9%E4%B8%AA%E6%95%B0/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/first/">序</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/lc226%E7%BF%BB%E8%BD%AC%E4%BA%8C%E5%8F%89%E6%A0%91/">[Lc]226翻转二叉树</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2020-03-09 </span>
+      <span class="post-time"> 2020-04-08 </span>
       <div class="post-category">
-          <a href="/categories/%E9%9A%8F%E7%AC%94/"> 随笔 </a>
+          <a href="/categories/leetcode/"> leetcode </a>
           </div>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      ChrisHRZ的第一篇个人博客 写在前面 折腾了一天，终于搭建出来个人博客的雏形，过程还是挺有意思的。也算有了一片自己的领地。今天就这样了，后
+      题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 递归法 class Solution {//两种方法。1、递归法 public: TreeNode* invertTree(TreeNode* root) { if(!root) return nullptr;/
     </div>
     <div class="read-more">
-      <a href="/post/first/" class="read-more-link">Read more...</a>
+      <a href="/post/lc226%E7%BF%BB%E8%BD%AC%E4%BA%8C%E5%8F%89%E6%A0%91/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/lc199%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%8F%B3%E8%A7%86%E5%9B%BE/">[Lc]199二叉树的右视图</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-04-08 </span>
+      <div class="post-category">
+          <a href="/categories/leetcode/"> leetcode </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; //本题借鉴#102层次遍历 class Solution { public: vector&lt;int&gt; rightSideView(TreeNode* root) { vector&lt;int&gt; res; if(!root) return res; queue&lt;TreeNode*&gt; q{{root}}; while(!q.empty()){ res.p
+    </div>
+    <div class="read-more">
+      <a href="/post/lc199%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%8F%B3%E8%A7%86%E5%9B%BE/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/lc173%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E8%BF%AD%E4%BB%A3%E5%99%A8/">[Lc]173二叉搜索树迭代器</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-04-08 </span>
+      <div class="post-category">
+          <a href="/categories/leetcode/"> leetcode </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; //这道题就是写一个中序遍历，因为题目提到是搜索二叉树 class BSTIterator { stack&lt;TreeNode*&gt; s;//
+    </div>
+    <div class="read-more">
+      <a href="/post/lc173%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E8%BF%AD%E4%BB%A3%E5%99%A8/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
@@ -372,7 +372,10 @@ code.has-jax {
         <i class="iconfont icon-left"></i>
         <span class="prev-text">Prev</span>
       </a>
-    
+    <a class="next" href="/page/7/">
+        <span class="next-text">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
   </nav>
         </div>
         

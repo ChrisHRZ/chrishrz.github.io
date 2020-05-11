@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>[Lc]204计数质数 - Focus-ChrisHRZ&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ChrisHRZ" /><meta name="description" content="题目 题解 1. 暴力法 直接用暴力法会超时，时间复杂度$O(n^{2})$，因此使用暴力法要进行优化，即isPrime()函数只用遍历到sqrt(N" /><meta name="keywords" content="code, life, study" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.66.0 with theme even" />
+
+
+<link rel="canonical" href="https://chrishrz.github.io/post/lc204%E8%AE%A1%E6%95%B0%E8%B4%A8%E6%95%B0/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
+
+<meta property="og:title" content="[Lc]204计数质数" />
+<meta property="og:description" content="题目 题解 1. 暴力法 直接用暴力法会超时，时间复杂度$O(n^{2})$，因此使用暴力法要进行优化，即isPrime()函数只用遍历到sqrt(N" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chrishrz.github.io/post/lc204%E8%AE%A1%E6%95%B0%E8%B4%A8%E6%95%B0/" />
+<meta property="article:published_time" content="2020-05-09T11:34:43+08:00" />
+<meta property="article:modified_time" content="2020-05-09T11:34:43+08:00" />
+<meta itemprop="name" content="[Lc]204计数质数">
+<meta itemprop="description" content="题目 题解 1. 暴力法 直接用暴力法会超时，时间复杂度$O(n^{2})$，因此使用暴力法要进行优化，即isPrime()函数只用遍历到sqrt(N">
+<meta itemprop="datePublished" content="2020-05-09T11:34:43&#43;08:00" />
+<meta itemprop="dateModified" content="2020-05-09T11:34:43&#43;08:00" />
+<meta itemprop="wordCount" content="640">
+
+
+
+<meta itemprop="keywords" content="数学," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[Lc]204计数质数"/>
+<meta name="twitter:description" content="题目 题解 1. 暴力法 直接用暴力法会超时，时间复杂度$O(n^{2})$，因此使用暴力法要进行优化，即isPrime()函数只用遍历到sqrt(N"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+<script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
+
+<meta name="baidu-site-verification" content="GDMA35xQfM" />
+<meta name="google-site-verification" content="f-5-S53Hm0WIn0Tnfu-dg0sNmCZeahUFILgUSI9JLQA" />
+<meta name="baidu-site-verification" content="74mXju2aOk" />
+<meta name="google-site-verification" content="2yu63Vg3wEmB1XF77uGbZdOQB_a_KSLTk-zNxL4oGRg" />
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">FOCUS</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">FOCUS</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">[Lc]204计数质数</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-05-09 </span>
+        <div class="post-category">
+            <a href="/categories/leetcode/"> leetcode </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#题目">题目</a></li>
+    <li><a href="#题解">题解</a>
+      <ul>
+        <li><a href="#1-暴力法">1. 暴力法</a></li>
+        <li><a href="#2-埃拉托斯特尼筛法">2. 埃拉托斯特尼筛法</a></li>
+        <li><a href="#其他">其他</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="题目">题目</h2>
+<p><img src="/img/img2020-05-09-11-35-27.png" alt=""></p>
+<h2 id="题解">题解</h2>
+<h3 id="1-暴力法">1. 暴力法</h3>
+<p>直接用暴力法会超时，时间复杂度$O(n^{2})$，因此使用暴力法要进行优化，即isPrime()函数只用遍历到sqrt(N)，因为：<br>
+$$
+2 × 6 = 12\\<br>
+3 × 4 = 12\\<br>
+sqrt(12) × sqrt(12) = 12\\<br>
+4 × 3 = 12\\<br>
+6 × 2 = 12\\<br>
+$$
+可以看出从sqrt(12)开始上下的对称的，那么sqrt(12)上面若没找到因数，则下面也没有</p>
+<ul>
+<li>时间复杂度$O(sqrt(n)*n)$</li>
+<li>空间复杂度$O(1)$</li>
+</ul>
+<pre><code class="language-cpp">class Solution {
+public:
+    //0和1不是质数
+    bool isPrime(int n){
+        for(int i=2; i*i&lt;=n;++i){//注意只要搜索到sqrt(n)就可以，因为在sqrt(n)前后是对称的，见提示3
+            if(n%i==0) return false;
+        }
+        return true;
+    }
+    int countPrimes(int n) {//两个方法。1暴力法
+        int res = 0;
+        for(int i=2; i&lt;n; ++i){
+            if(isPrime(i)) res++;
+        }
+        return res;
+    }
+};
+</code></pre>
+<h3 id="2-埃拉托斯特尼筛法">2. 埃拉托斯特尼筛法</h3>
+<p>用一个vector存小于n的所有数是否为质数，然后挨个筛，从2开始，2的倍数全为合数，筛掉，然后3的倍数，遇到合数就不求倍数，具体看这个图：</p>
+<p><img src="/img/350px-Sieve_of_Eratosthenes_animation.gif" alt=""><br>
+来源<a href="https://zh.wikipedia.org/wiki/%E5%9F%83%E6%8B%89%E6%89%98%E6%96%AF%E7%89%B9%E5%B0%BC%E7%AD%9B%E6%B3%95">wikipedia</a></p>
+<ul>
+<li>时间复杂度$O(nlog{log{n}})$</li>
+<li>空间复杂度$O(n)$</li>
+</ul>
+<pre><code class="language-cpp">class Solution {
+public:
+    //0和1不是质数
+    int countPrimes(int n) {//两个方法。2埃拉托斯特尼筛法
+        int res = 0;
+        vector&lt;bool&gt; prime(n-1, true);
+        for(int i=2; i&lt;n; ++i){
+            if(!prime[i]) continue;
+            res++;
+            for(int k=2; k*i&lt;n; ++k){
+                prime[i*k] = false;
+            }
+        }
+        return res;
+    }
+};
+</code></pre>
+<h3 id="其他">其他</h3>
+<p>另外还有欧拉筛法，Sundaram筛法等待等,时间复杂度更低，理解起来相对更复杂一点，这里先记录，有空好好研究完善素数筛法<br>
+详见(<a href="https://bruceking.site/2017/09/18/prime-sieves/">https://bruceking.site/2017/09/18/prime-sieves/</a>)和(<a href="https://www.cnblogs.com/grubbyskyer/p/3852421.html">https://www.cnblogs.com/grubbyskyer/p/3852421.html</a>)</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">ChrisHRZ</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-05-09
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/lc70%E7%88%AC%E6%A5%BC%E6%A2%AF/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">[Lc]70爬楼梯</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/lc141%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/">
+            <span class="next-text nav-default">[Lc]141环形链表</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/lc204%E8%AE%A1%E6%95%B0%E8%B4%A8%E6%95%B0/" class="leancloud_visitors" data-flag-title="[Lc]204计数质数">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'M8Fyr1YXIu2Ov8Wh4ByqtEzq-gzGzoHsz',
+        appKey: 'AHiPSGeLQbvrQGQ6KfhvOKvN',
+        notify:  false ,
+        verify:  false ,
+        avatar:'mm',
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/ChrisHRZ" class="iconfont icon-github" title="github"></a>
+  <a href="https://chrishrz.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">ChrisHRZ</span>
+  </span>
+</div>
+
+
+<script src="https://cdn.bootcss.com/mermaid/8.4.8/mermaid.min.js"></script>
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js"></script>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

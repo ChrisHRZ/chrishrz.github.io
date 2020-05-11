@@ -6,10 +6,46 @@
     <description>Recent content in 数组 on Focus-ChrisHRZ&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 27 Apr 2020 15:32:13 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 09 May 2020 21:27:34 +0800</lastBuildDate>
     
 	<atom:link href="https://chrishrz.github.io/tags/%E6%95%B0%E7%BB%84/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Lc]74搜索二维矩阵</title>
+      <link>https://chrishrz.github.io/post/lc74%E6%90%9C%E7%B4%A2%E4%BA%8C%E7%BB%B4%E7%9F%A9%E9%98%B5/</link>
+      <pubDate>Sat, 09 May 2020 21:27:34 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc74%E6%90%9C%E7%B4%A2%E4%BA%8C%E7%BB%B4%E7%9F%A9%E9%98%B5/</guid>
+      <description>题目 题解 稍微变形的二分查找，其实写法是一样的，主要就是在取mid的时候需要转化一下，开始取二分查找最初的left和right也要注意，还有二</description>
+    </item>
+    
+    <item>
+      <title>[Lc]240搜索二维矩阵II</title>
+      <link>https://chrishrz.github.io/post/lc240%E6%90%9C%E7%B4%A2%E4%BA%8C%E7%BB%B4%E7%9F%A9%E9%98%B5ii/</link>
+      <pubDate>Sat, 09 May 2020 21:12:12 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc240%E6%90%9C%E7%B4%A2%E4%BA%8C%E7%BB%B4%E7%9F%A9%E9%98%B5ii/</guid>
+      <description>题目 题解 可以一行一行的二分查找，但是比较慢，也没有利用这道题矩阵的性质 确定起点很重要，由于这道题矩阵的特殊形式，我们可以将起点定在右上（或者</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题04二维数组中的查找</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9804%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9F%A5%E6%89%BE/</link>
+      <pubDate>Sat, 09 May 2020 21:06:19 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9804%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9F%A5%E6%89%BE/</guid>
+      <description>题目 240题 题解 可以一行一行的二分查找，但是比较慢，也没有利用这道题矩阵的性质 确定起点很重要，由于这道题矩阵的特殊形式，我们可以将起点定在右</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题03数组中重复的数字</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9803%E6%95%B0%E7%BB%84%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E6%95%B0%E5%AD%97/</link>
+      <pubDate>Sat, 09 May 2020 17:53:52 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9803%E6%95%B0%E7%BB%84%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E6%95%B0%E5%AD%97/</guid>
+      <description>题目 题解 1. 排序法（改变输入数组） 数组排序后找重复项 时间复杂度$O(nlog{n})$，主要是排序花费的 空间复杂度$O(1)$ class Solution {//三种方</description>
+    </item>
     
     <item>
       <title>[Lc]面试题40最小的k个数</title>
