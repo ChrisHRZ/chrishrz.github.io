@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>[Lc]面试题13机器人的运动范围 - Focus-ChrisHRZ&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ChrisHRZ" /><meta name="description" content="题目 题解 1. DFS 利用递归实现DFS搜索，注意要使用一个额外的矩阵保存已经访问过的位置，防止重复访问。当越界或者不满足数位条件或者已经访问过的时候" /><meta name="keywords" content="code, life, study" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.66.0 with theme even" />
+
+
+<link rel="canonical" href="https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9813%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%9A%84%E8%BF%90%E5%8A%A8%E8%8C%83%E5%9B%B4/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
+
+<meta property="og:title" content="[Lc]面试题13机器人的运动范围" />
+<meta property="og:description" content="题目 题解 1. DFS 利用递归实现DFS搜索，注意要使用一个额外的矩阵保存已经访问过的位置，防止重复访问。当越界或者不满足数位条件或者已经访问过的时候" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9813%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%9A%84%E8%BF%90%E5%8A%A8%E8%8C%83%E5%9B%B4/" />
+<meta property="article:published_time" content="2020-05-11T21:31:13+08:00" />
+<meta property="article:modified_time" content="2020-05-11T21:31:13+08:00" />
+<meta itemprop="name" content="[Lc]面试题13机器人的运动范围">
+<meta itemprop="description" content="题目 题解 1. DFS 利用递归实现DFS搜索，注意要使用一个额外的矩阵保存已经访问过的位置，防止重复访问。当越界或者不满足数位条件或者已经访问过的时候">
+<meta itemprop="datePublished" content="2020-05-11T21:31:13&#43;08:00" />
+<meta itemprop="dateModified" content="2020-05-11T21:31:13&#43;08:00" />
+<meta itemprop="wordCount" content="707">
+
+
+
+<meta itemprop="keywords" content="数组,DFS,BFS," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[Lc]面试题13机器人的运动范围"/>
+<meta name="twitter:description" content="题目 题解 1. DFS 利用递归实现DFS搜索，注意要使用一个额外的矩阵保存已经访问过的位置，防止重复访问。当越界或者不满足数位条件或者已经访问过的时候"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+<script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
+
+<meta name="baidu-site-verification" content="GDMA35xQfM" />
+<meta name="google-site-verification" content="f-5-S53Hm0WIn0Tnfu-dg0sNmCZeahUFILgUSI9JLQA" />
+<meta name="baidu-site-verification" content="74mXju2aOk" />
+<meta name="google-site-verification" content="2yu63Vg3wEmB1XF77uGbZdOQB_a_KSLTk-zNxL4oGRg" />
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">FOCUS</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">FOCUS</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">[Lc]面试题13机器人的运动范围</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-05-11 </span>
+        <div class="post-category">
+            <a href="/categories/%E5%89%91%E6%8C%87offer/"> 剑指offer </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#题目">题目</a></li>
+    <li><a href="#题解">题解</a>
+      <ul>
+        <li><a href="#1-dfs">1. DFS</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-bfs">2. BFS</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="题目">题目</h2>
+<p><img src="/img/img2020-05-11-21-31-48.png" alt=""></p>
+<h2 id="题解">题解</h2>
+<h3 id="1-dfs">1. DFS</h3>
+<p>利用递归实现DFS搜索，注意要使用一个额外的矩阵保存已经访问过的位置，防止重复访问。当越界或者不满足数位条件或者已经访问过的时候剪枝。<br>
+另外只需要向右下搜索就可以，因为数组是从左上开始的。</p>
+<ul>
+<li>时间复杂度$O(m*n)$</li>
+<li>空间复杂度$O(m*n)$</li>
+</ul>
+<pre><code class="language-cpp">class Solution {//两个方法。1.DFS
+public:
+    int get(int n){//计算位数和
+        int sum = 0;
+        while(n&gt;0){
+            sum += n%10;
+            n /= 10;
+        }
+        return sum;
+    }
+    int dfs(vector&lt;vector&lt;bool&gt;&gt;&amp; vis, int i, int j, int m, int n, int k){
+        if(i&lt;0 || j&lt;0 || i&gt;=m || j&gt;=n || get(i)+get(j)&gt;k || vis[i][j]==true) return 0;
+        vis[i][j] = true;
+        int res = 1 + dfs(vis, i+1, j, m, n, k) + 
+                  dfs(vis, i, j+1, m, n, k);//只用搜索右下就可以，因为是从左上开始的
+        return res;
+    }
+    int movingCount(int m, int n, int k) {
+        vector&lt;vector&lt;bool&gt;&gt; vis(m,vector&lt;bool&gt;(n));//存访问过的数组，防止重复访问
+        return dfs(vis, 0, 0, m, n, k);
+    }
+};
+</code></pre>
+<h2 id="2-bfs">2. BFS</h2>
+<p>用队列实现BFS<br>
+注意这个的顺序，是先判断下一个位置是否符合条件再加入队列，，即加入队列的位置全部是作为寻找下一个节点的种子。</p>
+<ul>
+<li>时间复杂度$O(m*n)$</li>
+<li>空间复杂度$O(m*n)$</li>
+</ul>
+<pre><code class="language-cpp">class Solution {//两个方法。2.BFS
+public:
+    int get(int n){//计算位数和
+        int sum = 0;
+        while(n&gt;0){
+            sum += n%10;
+            n /= 10;
+        }
+        return sum;
+    }
+    int movingCount(int m, int n, int k) {
+        int res = 1;
+        vector&lt;vector&lt;bool&gt;&gt; vis(m, vector&lt;bool&gt;(n,false));//存是否访问过
+        int dx[2] = {0,1};
+        int dy[2] = {1,0};//指向右下搜索就可以
+        queue&lt;pair&lt;int,int&gt;&gt; q;//队列完成BFS
+        q.push(make_pair(0,0));//先存第一个数
+        vis[0][0] = true;
+        while(!q.empty()){
+            auto [x,y] = q.front();//这个写法看题解的，觉得很牛逼啊
+            q.pop();//弹出队首
+            for(int i=0; i&lt;2; ++i){
+                int nx = x + dx[i];
+                int ny = y + dy[i];//下个位置的坐标
+                //判断是否符合条件，不符合跳过本次循环
+                if(nx&lt;0 || ny&lt;0 || nx&gt;=m || ny&gt;=n || vis[nx][ny]==true || get(nx)+get(ny)&gt;k) continue;
+                //符合就加入队列，vis置为true，并res++计一个位置
+                q.push(make_pair(nx,ny));
+                vis[nx][ny] = true;
+                res++;
+            }
+        }
+        return res;
+    }
+};
+</code></pre>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">ChrisHRZ</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-05-11
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E6%95%B0%E7%BB%84/">数组</a>
+          <a href="/tags/dfs/">DFS</a>
+          <a href="/tags/bfs/">BFS</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9814_i%E5%89%AA%E7%BB%B3%E5%AD%90/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">[Lc]面试题14_I剪绳子</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9812%E7%9F%A9%E9%98%B5%E4%B8%AD%E7%9A%84%E8%B7%AF%E5%BE%84/">
+            <span class="next-text nav-default">[Lc]面试题12矩阵中的路径</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9813%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%9A%84%E8%BF%90%E5%8A%A8%E8%8C%83%E5%9B%B4/" class="leancloud_visitors" data-flag-title="[Lc]面试题13机器人的运动范围">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'M8Fyr1YXIu2Ov8Wh4ByqtEzq-gzGzoHsz',
+        appKey: 'AHiPSGeLQbvrQGQ6KfhvOKvN',
+        notify:  false ,
+        verify:  false ,
+        avatar:'mm',
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/ChrisHRZ" class="iconfont icon-github" title="github"></a>
+  <a href="https://chrishrz.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">ChrisHRZ</span>
+  </span>
+</div>
+
+
+<script src="https://cdn.bootcss.com/mermaid/8.4.8/mermaid.min.js"></script>
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js"></script>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

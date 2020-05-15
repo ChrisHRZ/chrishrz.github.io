@@ -6,10 +6,28 @@
     <description>Recent content in DFS on Focus-ChrisHRZ&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 28 Apr 2020 11:49:31 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 11 May 2020 21:31:13 +0800</lastBuildDate>
     
 	<atom:link href="https://chrishrz.github.io/tags/dfs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Lc]面试题13机器人的运动范围</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9813%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%9A%84%E8%BF%90%E5%8A%A8%E8%8C%83%E5%9B%B4/</link>
+      <pubDate>Mon, 11 May 2020 21:31:13 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9813%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%9A%84%E8%BF%90%E5%8A%A8%E8%8C%83%E5%9B%B4/</guid>
+      <description>题目 题解 1. DFS 利用递归实现DFS搜索，注意要使用一个额外的矩阵保存已经访问过的位置，防止重复访问。当越界或者不满足数位条件或者已经访问过的时候</description>
+    </item>
+    
+    <item>
+      <title>[Lc]79单词搜索</title>
+      <link>https://chrishrz.github.io/post/lc79%E5%8D%95%E8%AF%8D%E6%90%9C%E7%B4%A2/</link>
+      <pubDate>Mon, 11 May 2020 18:18:49 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc79%E5%8D%95%E8%AF%8D%E6%90%9C%E7%B4%A2/</guid>
+      <description>题目 题解 这道题用递归，DFS，找到和首字母相同的就继续找下去，找到不同的就回溯再找首字母 时间复杂度：${\mathcal{O}}((M\ti</description>
+    </item>
     
     <item>
       <title>[Lc]1254统计封闭岛屿的数目</title>

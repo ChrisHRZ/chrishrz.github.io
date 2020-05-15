@@ -6,10 +6,181 @@
     <description>Recent content on Focus-ChrisHRZ&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 11 May 2020 12:13:41 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 14 May 2020 21:25:53 +0800</lastBuildDate>
     
 	<atom:link href="https://chrishrz.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Lc]面试题22链表中倒数第k个节点</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9822%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E8%8A%82%E7%82%B9/</link>
+      <pubDate>Thu, 14 May 2020 21:25:53 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9822%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E8%8A%82%E7%82%B9/</guid>
+      <description>题目 题解 快慢指针 时间复杂度$O(n)$ 空间复杂度$O(1)$ class Solution { public: ListNode* getKthFromEnd(ListNode* head, int k) { if(k==0 || !head) return nullptr; ListNode *fast = head, *slow = head; int n = 0; while(fast){ if(n &amp;gt;= k) slow = slow-&amp;gt;next; fast = fast-&amp;gt;next; n++; } if(n&amp;lt;k) return</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题21调整数组顺序使奇数位于偶数前面</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9821%E8%B0%83%E6%95%B4%E6%95%B0%E7%BB%84%E9%A1%BA%E5%BA%8F%E4%BD%BF%E5%A5%87%E6%95%B0%E4%BD%8D%E4%BA%8E%E5%81%B6%E6%95%B0%E5%89%8D%E9%9D%A2/</link>
+      <pubDate>Thu, 14 May 2020 21:14:29 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9821%E8%B0%83%E6%95%B4%E6%95%B0%E7%BB%84%E9%A1%BA%E5%BA%8F%E4%BD%BF%E5%A5%87%E6%95%B0%E4%BD%8D%E4%BA%8E%E5%81%B6%E6%95%B0%E5%89%8D%E9%9D%A2/</guid>
+      <description>题目 题解 双指针，左找到偶数，右找到奇数，然后交换，继续循环 时间复杂度$O(n)$ 空间复杂度$O(1)$，原地交换 class Solution { public: vector&amp;lt;int&amp;gt; exchange(vector&amp;lt;int&amp;gt;&amp;amp; nums) { int p1=0, p2 = nums.size()-1; while(p1&amp;lt;p2){</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题19正则表达式匹配</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9819%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8C%B9%E9%85%8D/</link>
+      <pubDate>Thu, 14 May 2020 13:17:07 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9819%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8C%B9%E9%85%8D/</guid>
+      <description>题目 题解 1. 普通递归 class Solution { public: bool isMatch(string s, string p) { if(p.empty()) return s.empty();//若p为空，则s为空返回false。否则返回true //若s不为空且当前字符</description>
+    </item>
+    
+    <item>
+      <title>[Lc]10正则表达式匹配</title>
+      <link>https://chrishrz.github.io/post/lc10%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8C%B9%E9%85%8D/</link>
+      <pubDate>Thu, 14 May 2020 13:13:40 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc10%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8C%B9%E9%85%8D/</guid>
+      <description>题目 题解 1. 普通递归 class Solution { public: bool isMatch(string s, string p) { if(p.empty()) return s.empty();//若p为空，则s为空返回false。否则返回true //若s不为空且当前字符</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题18删除链表的节点</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9818%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E8%8A%82%E7%82%B9/</link>
+      <pubDate>Wed, 13 May 2020 21:39:00 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9818%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E8%8A%82%E7%82%B9/</guid>
+      <description>题目 链表定义： //Definition for singly-linked list. struct ListNode { int val; ListNode *next; ListNode(int x) : val(x), next(NULL) {} }; 题解 这题简单，两个指针，一个指向cur，一个是cur之前pre。当cur的值为val时，p</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题17打印从1到最大的n位数</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9817%E6%89%93%E5%8D%B0%E4%BB%8E1%E5%88%B0%E6%9C%80%E5%A4%A7%E7%9A%84n%E4%BD%8D%E6%95%B0/</link>
+      <pubDate>Wed, 13 May 2020 16:08:43 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9817%E6%89%93%E5%8D%B0%E4%BB%8E1%E5%88%B0%E6%9C%80%E5%A4%A7%E7%9A%84n%E4%BD%8D%E6%95%B0/</guid>
+      <description>题目 题解 这道题如果不考虑大数的话很简单，但是原书主要是解决输出大数的问题，因此大数也要加以练习（leetcode不考虑大树也能通过） 1. 普通解</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题16数值的整数次方</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9816%E6%95%B0%E5%80%BC%E7%9A%84%E6%95%B4%E6%95%B0%E6%AC%A1%E6%96%B9/</link>
+      <pubDate>Wed, 13 May 2020 12:58:28 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9816%E6%95%B0%E5%80%BC%E7%9A%84%E6%95%B4%E6%95%B0%E6%AC%A1%E6%96%B9/</guid>
+      <description>题目 题解 这道题在leetcode上用挨个累乘的方法会超时因此需要用快速幂法 快速幂是指x**2n == x**n + x**n，利用这一性质，不断的一半的数进</description>
+    </item>
+    
+    <item>
+      <title>[Lc]191位1的个数</title>
+      <link>https://chrishrz.github.io/post/lc191%E4%BD%8D1%E7%9A%84%E4%B8%AA%E6%95%B0/</link>
+      <pubDate>Wed, 13 May 2020 12:09:00 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc191%E4%BD%8D1%E7%9A%84%E4%B8%AA%E6%95%B0/</guid>
+      <description>题目 题解 1. 位掩码 设置一个位掩码mask，初值为1，每次1向左移动一位，mask与n做与运算之后只有mask中为1的那一位为保留，其余归0。因</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题15二进制中1的个数</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9815%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%B8%AD1%E7%9A%84%E4%B8%AA%E6%95%B0/</link>
+      <pubDate>Wed, 13 May 2020 12:08:41 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9815%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%B8%AD1%E7%9A%84%E4%B8%AA%E6%95%B0/</guid>
+      <description>题目 题解 1. 位掩码 设置一个位掩码mask，初值为1，每次1向左移动一位，mask与n做与运算之后只有mask中为1的那一位为保留，其余归0。因</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题14_II剪绳子II</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9814_ii%E5%89%AA%E7%BB%B3%E5%AD%90ii/</link>
+      <pubDate>Wed, 13 May 2020 11:26:05 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9814_ii%E5%89%AA%E7%BB%B3%E5%AD%90ii/</guid>
+      <description>题目 题解 这题写的我不行了，其实这题思路很简单，就是c++取余太麻烦了，我想写一个自己的pow()函数，用clion跑的结果和oj还不一样，取</description>
+    </item>
+    
+    <item>
+      <title>[Lc]343整数拆分</title>
+      <link>https://chrishrz.github.io/post/lc343%E6%95%B4%E6%95%B0%E6%8B%86%E5%88%86/</link>
+      <pubDate>Tue, 12 May 2020 17:51:35 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc343%E6%95%B4%E6%95%B0%E6%8B%86%E5%88%86/</guid>
+      <description>题目 题解 1. 普通DP 具体思路看注释。前面遇到一个问题，即循环里dp[i] = max(dp[i], max(j*(i-j), j*dp[i-j]));为什么不是dp[i], j*(i-j), dp[j]*dp[i-j] 这是因为在内循</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题14_I剪绳子</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9814_i%E5%89%AA%E7%BB%B3%E5%AD%90/</link>
+      <pubDate>Tue, 12 May 2020 13:12:27 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9814_i%E5%89%AA%E7%BB%B3%E5%AD%90/</guid>
+      <description>题目 题解 1. 普通DP 具体思路看注释。前面遇到一个问题，即循环里dp[i] = max(dp[i], max(j*(i-j), j*dp[i-j]));为什么不是dp[i], j*(i-j), dp[j]*dp[i-j] 这是因为在内循</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题13机器人的运动范围</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9813%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%9A%84%E8%BF%90%E5%8A%A8%E8%8C%83%E5%9B%B4/</link>
+      <pubDate>Mon, 11 May 2020 21:31:13 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9813%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%9A%84%E8%BF%90%E5%8A%A8%E8%8C%83%E5%9B%B4/</guid>
+      <description>题目 题解 1. DFS 利用递归实现DFS搜索，注意要使用一个额外的矩阵保存已经访问过的位置，防止重复访问。当越界或者不满足数位条件或者已经访问过的时候</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题12矩阵中的路径</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9812%E7%9F%A9%E9%98%B5%E4%B8%AD%E7%9A%84%E8%B7%AF%E5%BE%84/</link>
+      <pubDate>Mon, 11 May 2020 18:32:06 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9812%E7%9F%A9%E9%98%B5%E4%B8%AD%E7%9A%84%E8%B7%AF%E5%BE%84/</guid>
+      <description>题目 注意：本题与主站 79 题相同：(https://leetcode-cn.com/problems/word-search/) 题解 这道题用递归</description>
+    </item>
+    
+    <item>
+      <title>[Lc]79单词搜索</title>
+      <link>https://chrishrz.github.io/post/lc79%E5%8D%95%E8%AF%8D%E6%90%9C%E7%B4%A2/</link>
+      <pubDate>Mon, 11 May 2020 18:18:49 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc79%E5%8D%95%E8%AF%8D%E6%90%9C%E7%B4%A2/</guid>
+      <description>题目 题解 这道题用递归，DFS，找到和首字母相同的就继续找下去，找到不同的就回溯再找首字母 时间复杂度：${\mathcal{O}}((M\ti</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题11旋转数组的最小数字</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9811%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%B0%8F%E6%95%B0%E5%AD%97/</link>
+      <pubDate>Mon, 11 May 2020 17:38:36 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9811%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%B0%8F%E6%95%B0%E5%AD%97/</guid>
+      <description>题目 注意：本题与主站 154 题相同：(https://leetcode-cn.com/problems/find-minimum-in-rotat</description>
+    </item>
+    
+    <item>
+      <title>[Lc]154寻找旋转排序数组中的最小值II</title>
+      <link>https://chrishrz.github.io/post/lc154%E5%AF%BB%E6%89%BE%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9C%80%E5%B0%8F%E5%80%BCii/</link>
+      <pubDate>Mon, 11 May 2020 13:29:04 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc154%E5%AF%BB%E6%89%BE%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9C%80%E5%B0%8F%E5%80%BCii/</guid>
+      <description>题目 题解 这道题与153题类似，是其进阶，主要是出现了重复元素，因此要加上情况三的判断 如果中间的数小于最右边的数，则右半段是有序的,最小值在左</description>
+    </item>
+    
+    <item>
+      <title>[Lc]33搜索旋转排序数组</title>
+      <link>https://chrishrz.github.io/post/lc33%E6%90%9C%E7%B4%A2%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84/</link>
+      <pubDate>Mon, 11 May 2020 13:08:34 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc33%E6%90%9C%E7%B4%A2%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84/</guid>
+      <description>题目 题解 题目要求的复杂度一看就得联想到二分查找，这道题需要先分析一下如何二分查找，看下面的数组进行分析 如果中间的数小于最右边的数，则右半段是</description>
+    </item>
+    
+    <item>
+      <title>[Lc]153寻找旋转排序数组中的最小值</title>
+      <link>https://chrishrz.github.io/post/lc153%E5%AF%BB%E6%89%BE%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9C%80%E5%B0%8F%E5%80%BC/</link>
+      <pubDate>Mon, 11 May 2020 13:05:17 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc153%E5%AF%BB%E6%89%BE%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9C%80%E5%B0%8F%E5%80%BC/</guid>
+      <description>题目 题解 这题与33题类似，33是查找，这一题是找最小值，也要利用旋转数组的性质 如果中间的数小于等于最右边的数，则右半段是有序的,最小值在左半</description>
+    </item>
     
     <item>
       <title>[Lc]面试题10_II青蛙跳台阶问题</title>
@@ -377,7 +548,7 @@
       <pubDate>Wed, 22 Apr 2020 16:40:07 +0800</pubDate>
       
       <guid>https://chrishrz.github.io/post/%E5%8D%81%E5%A4%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%9A%84%E6%95%B0%E7%BB%84%E5%92%8C%E9%93%BE%E8%A1%A8%E5%AE%9E%E7%8E%B0/</guid>
-      <description>数组排序在牛客,进行测试；链表排序在leetcode进行测试。 链表定义： Definition for singly-linked list. struct ListNode { int val; ListNode *next; ListNode(int x) : val(x), next(NULL) {} }; 概述 相关概念 稳定：如果a原本在b</description>
+      <description>数组排序在牛客,进行测试；链表排序在leetcode进行测试。 发现一个牛逼的数据结构与算法的可视化网站(https://visualgo.n</description>
     </item>
     
     <item>

@@ -6,10 +6,28 @@
     <description>Recent content in 数学 on Focus-ChrisHRZ&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 11 May 2020 12:13:41 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 13 May 2020 16:08:43 +0800</lastBuildDate>
     
 	<atom:link href="https://chrishrz.github.io/tags/%E6%95%B0%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Lc]面试题17打印从1到最大的n位数</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9817%E6%89%93%E5%8D%B0%E4%BB%8E1%E5%88%B0%E6%9C%80%E5%A4%A7%E7%9A%84n%E4%BD%8D%E6%95%B0/</link>
+      <pubDate>Wed, 13 May 2020 16:08:43 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9817%E6%89%93%E5%8D%B0%E4%BB%8E1%E5%88%B0%E6%9C%80%E5%A4%A7%E7%9A%84n%E4%BD%8D%E6%95%B0/</guid>
+      <description>题目 题解 这道题如果不考虑大数的话很简单，但是原书主要是解决输出大数的问题，因此大数也要加以练习（leetcode不考虑大树也能通过） 1. 普通解</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题16数值的整数次方</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9816%E6%95%B0%E5%80%BC%E7%9A%84%E6%95%B4%E6%95%B0%E6%AC%A1%E6%96%B9/</link>
+      <pubDate>Wed, 13 May 2020 12:58:28 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9816%E6%95%B0%E5%80%BC%E7%9A%84%E6%95%B4%E6%95%B0%E6%AC%A1%E6%96%B9/</guid>
+      <description>题目 题解 这道题在leetcode上用挨个累乘的方法会超时因此需要用快速幂法 快速幂是指x**2n == x**n + x**n，利用这一性质，不断的一半的数进</description>
+    </item>
     
     <item>
       <title>[Lc]面试题10_II青蛙跳台阶问题</title>

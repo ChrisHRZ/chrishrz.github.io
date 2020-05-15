@@ -6,10 +6,73 @@
     <description>Recent content in leetcode on Focus-ChrisHRZ&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 11 May 2020 11:23:15 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 14 May 2020 13:13:40 +0800</lastBuildDate>
     
 	<atom:link href="https://chrishrz.github.io/categories/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Lc]10正则表达式匹配</title>
+      <link>https://chrishrz.github.io/post/lc10%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8C%B9%E9%85%8D/</link>
+      <pubDate>Thu, 14 May 2020 13:13:40 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc10%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8C%B9%E9%85%8D/</guid>
+      <description>题目 题解 1. 普通递归 class Solution { public: bool isMatch(string s, string p) { if(p.empty()) return s.empty();//若p为空，则s为空返回false。否则返回true //若s不为空且当前字符</description>
+    </item>
+    
+    <item>
+      <title>[Lc]191位1的个数</title>
+      <link>https://chrishrz.github.io/post/lc191%E4%BD%8D1%E7%9A%84%E4%B8%AA%E6%95%B0/</link>
+      <pubDate>Wed, 13 May 2020 12:09:00 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc191%E4%BD%8D1%E7%9A%84%E4%B8%AA%E6%95%B0/</guid>
+      <description>题目 题解 1. 位掩码 设置一个位掩码mask，初值为1，每次1向左移动一位，mask与n做与运算之后只有mask中为1的那一位为保留，其余归0。因</description>
+    </item>
+    
+    <item>
+      <title>[Lc]343整数拆分</title>
+      <link>https://chrishrz.github.io/post/lc343%E6%95%B4%E6%95%B0%E6%8B%86%E5%88%86/</link>
+      <pubDate>Tue, 12 May 2020 17:51:35 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc343%E6%95%B4%E6%95%B0%E6%8B%86%E5%88%86/</guid>
+      <description>题目 题解 1. 普通DP 具体思路看注释。前面遇到一个问题，即循环里dp[i] = max(dp[i], max(j*(i-j), j*dp[i-j]));为什么不是dp[i], j*(i-j), dp[j]*dp[i-j] 这是因为在内循</description>
+    </item>
+    
+    <item>
+      <title>[Lc]79单词搜索</title>
+      <link>https://chrishrz.github.io/post/lc79%E5%8D%95%E8%AF%8D%E6%90%9C%E7%B4%A2/</link>
+      <pubDate>Mon, 11 May 2020 18:18:49 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc79%E5%8D%95%E8%AF%8D%E6%90%9C%E7%B4%A2/</guid>
+      <description>题目 题解 这道题用递归，DFS，找到和首字母相同的就继续找下去，找到不同的就回溯再找首字母 时间复杂度：${\mathcal{O}}((M\ti</description>
+    </item>
+    
+    <item>
+      <title>[Lc]154寻找旋转排序数组中的最小值II</title>
+      <link>https://chrishrz.github.io/post/lc154%E5%AF%BB%E6%89%BE%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9C%80%E5%B0%8F%E5%80%BCii/</link>
+      <pubDate>Mon, 11 May 2020 13:29:04 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc154%E5%AF%BB%E6%89%BE%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9C%80%E5%B0%8F%E5%80%BCii/</guid>
+      <description>题目 题解 这道题与153题类似，是其进阶，主要是出现了重复元素，因此要加上情况三的判断 如果中间的数小于最右边的数，则右半段是有序的,最小值在左</description>
+    </item>
+    
+    <item>
+      <title>[Lc]33搜索旋转排序数组</title>
+      <link>https://chrishrz.github.io/post/lc33%E6%90%9C%E7%B4%A2%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84/</link>
+      <pubDate>Mon, 11 May 2020 13:08:34 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc33%E6%90%9C%E7%B4%A2%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84/</guid>
+      <description>题目 题解 题目要求的复杂度一看就得联想到二分查找，这道题需要先分析一下如何二分查找，看下面的数组进行分析 如果中间的数小于最右边的数，则右半段是</description>
+    </item>
+    
+    <item>
+      <title>[Lc]153寻找旋转排序数组中的最小值</title>
+      <link>https://chrishrz.github.io/post/lc153%E5%AF%BB%E6%89%BE%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9C%80%E5%B0%8F%E5%80%BC/</link>
+      <pubDate>Mon, 11 May 2020 13:05:17 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc153%E5%AF%BB%E6%89%BE%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9C%80%E5%B0%8F%E5%80%BC/</guid>
+      <description>题目 题解 这题与33题类似，33是查找，这一题是找最小值，也要利用旋转数组的性质 如果中间的数小于等于最右边的数，则右半段是有序的,最小值在左半</description>
+    </item>
     
     <item>
       <title>[Lc]509斐波那契数</title>

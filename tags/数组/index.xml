@@ -6,10 +6,82 @@
     <description>Recent content in 数组 on Focus-ChrisHRZ&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 09 May 2020 21:27:34 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 14 May 2020 21:14:29 +0800</lastBuildDate>
     
 	<atom:link href="https://chrishrz.github.io/tags/%E6%95%B0%E7%BB%84/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Lc]面试题21调整数组顺序使奇数位于偶数前面</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9821%E8%B0%83%E6%95%B4%E6%95%B0%E7%BB%84%E9%A1%BA%E5%BA%8F%E4%BD%BF%E5%A5%87%E6%95%B0%E4%BD%8D%E4%BA%8E%E5%81%B6%E6%95%B0%E5%89%8D%E9%9D%A2/</link>
+      <pubDate>Thu, 14 May 2020 21:14:29 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9821%E8%B0%83%E6%95%B4%E6%95%B0%E7%BB%84%E9%A1%BA%E5%BA%8F%E4%BD%BF%E5%A5%87%E6%95%B0%E4%BD%8D%E4%BA%8E%E5%81%B6%E6%95%B0%E5%89%8D%E9%9D%A2/</guid>
+      <description>题目 题解 双指针，左找到偶数，右找到奇数，然后交换，继续循环 时间复杂度$O(n)$ 空间复杂度$O(1)$，原地交换 class Solution { public: vector&amp;lt;int&amp;gt; exchange(vector&amp;lt;int&amp;gt;&amp;amp; nums) { int p1=0, p2 = nums.size()-1; while(p1&amp;lt;p2){</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题13机器人的运动范围</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9813%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%9A%84%E8%BF%90%E5%8A%A8%E8%8C%83%E5%9B%B4/</link>
+      <pubDate>Mon, 11 May 2020 21:31:13 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9813%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%9A%84%E8%BF%90%E5%8A%A8%E8%8C%83%E5%9B%B4/</guid>
+      <description>题目 题解 1. DFS 利用递归实现DFS搜索，注意要使用一个额外的矩阵保存已经访问过的位置，防止重复访问。当越界或者不满足数位条件或者已经访问过的时候</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题12矩阵中的路径</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9812%E7%9F%A9%E9%98%B5%E4%B8%AD%E7%9A%84%E8%B7%AF%E5%BE%84/</link>
+      <pubDate>Mon, 11 May 2020 18:32:06 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9812%E7%9F%A9%E9%98%B5%E4%B8%AD%E7%9A%84%E8%B7%AF%E5%BE%84/</guid>
+      <description>题目 注意：本题与主站 79 题相同：(https://leetcode-cn.com/problems/word-search/) 题解 这道题用递归</description>
+    </item>
+    
+    <item>
+      <title>[Lc]79单词搜索</title>
+      <link>https://chrishrz.github.io/post/lc79%E5%8D%95%E8%AF%8D%E6%90%9C%E7%B4%A2/</link>
+      <pubDate>Mon, 11 May 2020 18:18:49 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc79%E5%8D%95%E8%AF%8D%E6%90%9C%E7%B4%A2/</guid>
+      <description>题目 题解 这道题用递归，DFS，找到和首字母相同的就继续找下去，找到不同的就回溯再找首字母 时间复杂度：${\mathcal{O}}((M\ti</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题11旋转数组的最小数字</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9811%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%B0%8F%E6%95%B0%E5%AD%97/</link>
+      <pubDate>Mon, 11 May 2020 17:38:36 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9811%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%B0%8F%E6%95%B0%E5%AD%97/</guid>
+      <description>题目 注意：本题与主站 154 题相同：(https://leetcode-cn.com/problems/find-minimum-in-rotat</description>
+    </item>
+    
+    <item>
+      <title>[Lc]154寻找旋转排序数组中的最小值II</title>
+      <link>https://chrishrz.github.io/post/lc154%E5%AF%BB%E6%89%BE%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9C%80%E5%B0%8F%E5%80%BCii/</link>
+      <pubDate>Mon, 11 May 2020 13:29:04 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc154%E5%AF%BB%E6%89%BE%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9C%80%E5%B0%8F%E5%80%BCii/</guid>
+      <description>题目 题解 这道题与153题类似，是其进阶，主要是出现了重复元素，因此要加上情况三的判断 如果中间的数小于最右边的数，则右半段是有序的,最小值在左</description>
+    </item>
+    
+    <item>
+      <title>[Lc]33搜索旋转排序数组</title>
+      <link>https://chrishrz.github.io/post/lc33%E6%90%9C%E7%B4%A2%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84/</link>
+      <pubDate>Mon, 11 May 2020 13:08:34 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc33%E6%90%9C%E7%B4%A2%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84/</guid>
+      <description>题目 题解 题目要求的复杂度一看就得联想到二分查找，这道题需要先分析一下如何二分查找，看下面的数组进行分析 如果中间的数小于最右边的数，则右半段是</description>
+    </item>
+    
+    <item>
+      <title>[Lc]153寻找旋转排序数组中的最小值</title>
+      <link>https://chrishrz.github.io/post/lc153%E5%AF%BB%E6%89%BE%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9C%80%E5%B0%8F%E5%80%BC/</link>
+      <pubDate>Mon, 11 May 2020 13:05:17 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc153%E5%AF%BB%E6%89%BE%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9C%80%E5%B0%8F%E5%80%BC/</guid>
+      <description>题目 题解 这题与33题类似，33是查找，这一题是找最小值，也要利用旋转数组的性质 如果中间的数小于等于最右边的数，则右半段是有序的,最小值在左半</description>
+    </item>
     
     <item>
       <title>[Lc]74搜索二维矩阵</title>

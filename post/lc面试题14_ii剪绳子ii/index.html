@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>[Lc]面试题14_II剪绳子II - Focus-ChrisHRZ&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ChrisHRZ" /><meta name="description" content="题目 题解 这题写的我不行了，其实这题思路很简单，就是c&#43;&#43;取余太麻烦了，我想写一个自己的pow()函数，用clion跑的结果和oj还不一样，取" /><meta name="keywords" content="code, life, study" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.66.0 with theme even" />
+
+
+<link rel="canonical" href="https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9814_ii%E5%89%AA%E7%BB%B3%E5%AD%90ii/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
+
+<meta property="og:title" content="[Lc]面试题14_II剪绳子II" />
+<meta property="og:description" content="题目 题解 这题写的我不行了，其实这题思路很简单，就是c&#43;&#43;取余太麻烦了，我想写一个自己的pow()函数，用clion跑的结果和oj还不一样，取" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9814_ii%E5%89%AA%E7%BB%B3%E5%AD%90ii/" />
+<meta property="article:published_time" content="2020-05-13T11:26:05+08:00" />
+<meta property="article:modified_time" content="2020-05-13T11:26:05+08:00" />
+<meta itemprop="name" content="[Lc]面试题14_II剪绳子II">
+<meta itemprop="description" content="题目 题解 这题写的我不行了，其实这题思路很简单，就是c&#43;&#43;取余太麻烦了，我想写一个自己的pow()函数，用clion跑的结果和oj还不一样，取">
+<meta itemprop="datePublished" content="2020-05-13T11:26:05&#43;08:00" />
+<meta itemprop="dateModified" content="2020-05-13T11:26:05&#43;08:00" />
+<meta itemprop="wordCount" content="435">
+
+
+
+<meta itemprop="keywords" content="DP,贪心," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[Lc]面试题14_II剪绳子II"/>
+<meta name="twitter:description" content="题目 题解 这题写的我不行了，其实这题思路很简单，就是c&#43;&#43;取余太麻烦了，我想写一个自己的pow()函数，用clion跑的结果和oj还不一样，取"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+<script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
+
+<meta name="baidu-site-verification" content="GDMA35xQfM" />
+<meta name="google-site-verification" content="f-5-S53Hm0WIn0Tnfu-dg0sNmCZeahUFILgUSI9JLQA" />
+<meta name="baidu-site-verification" content="74mXju2aOk" />
+<meta name="google-site-verification" content="2yu63Vg3wEmB1XF77uGbZdOQB_a_KSLTk-zNxL4oGRg" />
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">FOCUS</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">FOCUS</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">[Lc]面试题14_II剪绳子II</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-05-13 </span>
+        <div class="post-category">
+            <a href="/categories/%E5%89%91%E6%8C%87offer/"> 剑指offer </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#题目">题目</a></li>
+    <li><a href="#题解">题解</a>
+      <ul>
+        <li><a href="#1-循环取余">1. 循环取余</a></li>
+        <li><a href="#2-快速幂">2. 快速幂</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="题目">题目</h2>
+<p><img src="/img/img2020-05-13-11-29-10.png" alt=""></p>
+<h2 id="题解">题解</h2>
+<p>这题写的我不行了，其实这题思路很简单，就是c++取余太麻烦了，我想写一个自己的pow()函数，用clion跑的结果和oj还不一样，取个余还有负数。也不知道咋回事，有知道的大神麻烦告知一下。<br>
+取余有两种，循环取余和快速幂取余，其时间复杂度也不同，详见<a href="https://leetcode-cn.com/problems/jian-sheng-zi-ii-lcof/solution/mian-shi-ti-14-ii-jian-sheng-zi-iitan-xin-er-fen-f/">这里</a>。<br>
+而这道题由于要取余就不能用动态规划了，只能用推导出来的找3的方法。
+题解来源于<a href="https://leetcode-cn.com/problems/jian-sheng-zi-ii-lcof/solution/zhao-zhe-dao-ti-de-ben-zhi-by-lui-6/">LUI</a>和<a href="https://leetcode-cn.com/problems/jian-sheng-zi-ii-lcof/solution/di-gui-kuai-su-mi-liang-chong-fang-fa-by-magic_con/">Magic_Conch</a>，反正今天不想看了，回过头再看<br>
+这题的思路和算幂都好理解，就是取余和类型转换绕的我头晕<br>
+两种取余的方法。快速幂具体可以看50题</p>
+<h3 id="1-循环取余">1. 循环取余</h3>
+<ul>
+<li>时间复杂度$O(N)$</li>
+<li>空间复杂度$O(1)$</li>
+</ul>
+<pre><code class="language-cpp">class Solution {
+public:
+    int cuttingRope(int n) {
+        if(n==2)    return 1;
+        if(n==3)    return 2;
+        if(n==4)    return 4;
+        long res=1;
+        while(n&gt;4){
+            res*=3;
+            res%=1000000007;
+            n-=3;
+        }
+        return (int)(res*n%1000000007);//这里必须取括号，否则会优先计算res*n的值，报错会超出范围
+    }
+};
+</code></pre>
+<h3 id="2-快速幂">2. 快速幂</h3>
+<ul>
+<li>时间复杂度$O(log{N})$</li>
+<li>空间复杂度$O(1)$</li>
+</ul>
+<pre><code class="language-cpp">class Solution {
+public:
+    long long mypow(int x){//pow(n,x)
+        if(x==0)
+            return 1; 
+        if(x%2)
+            return 3*(mypow(x-1))%1000000007;
+        else
+        {
+            long long half = mypow(x/2);
+            return (half%1000000007*half%1000000007)%1000000007;    
+        }
+    }
+    int cuttingRope(int n) {
+        if(n&lt;4)
+            return n-1;
+        int a = n%3,b = n/3;
+        if(a==1)
+            return mypow(b-1)*(long long)4%1000000007;
+        if(a==2)
+            return mypow(b)*(long long)2%1000000007;
+        return mypow(b);
+    }
+};
+
+</code></pre>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">ChrisHRZ</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-05-13
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/dp/">DP</a>
+          <a href="/tags/%E8%B4%AA%E5%BF%83/">贪心</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9815%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%B8%AD1%E7%9A%84%E4%B8%AA%E6%95%B0/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">[Lc]面试题15二进制中1的个数</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/lc343%E6%95%B4%E6%95%B0%E6%8B%86%E5%88%86/">
+            <span class="next-text nav-default">[Lc]343整数拆分</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9814_ii%E5%89%AA%E7%BB%B3%E5%AD%90ii/" class="leancloud_visitors" data-flag-title="[Lc]面试题14_II剪绳子II">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'M8Fyr1YXIu2Ov8Wh4ByqtEzq-gzGzoHsz',
+        appKey: 'AHiPSGeLQbvrQGQ6KfhvOKvN',
+        notify:  false ,
+        verify:  false ,
+        avatar:'mm',
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/ChrisHRZ" class="iconfont icon-github" title="github"></a>
+  <a href="https://chrishrz.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">ChrisHRZ</span>
+  </span>
+</div>
+
+
+<script src="https://cdn.bootcss.com/mermaid/8.4.8/mermaid.min.js"></script>
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js"></script>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

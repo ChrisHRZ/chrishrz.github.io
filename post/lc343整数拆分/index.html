@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>[Lc]343整数拆分 - Focus-ChrisHRZ&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ChrisHRZ" /><meta name="description" content="题目 题解 1. 普通DP 具体思路看注释。前面遇到一个问题，即循环里dp[i] = max(dp[i], max(j*(i-j), j*dp[i-j]));为什么不是dp[i], j*(i-j), dp[j]*dp[i-j] 这是因为在内循" /><meta name="keywords" content="code, life, study" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.66.0 with theme even" />
+
+
+<link rel="canonical" href="https://chrishrz.github.io/post/lc343%E6%95%B4%E6%95%B0%E6%8B%86%E5%88%86/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
+
+<meta property="og:title" content="[Lc]343整数拆分" />
+<meta property="og:description" content="题目 题解 1. 普通DP 具体思路看注释。前面遇到一个问题，即循环里dp[i] = max(dp[i], max(j*(i-j), j*dp[i-j]));为什么不是dp[i], j*(i-j), dp[j]*dp[i-j] 这是因为在内循" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chrishrz.github.io/post/lc343%E6%95%B4%E6%95%B0%E6%8B%86%E5%88%86/" />
+<meta property="article:published_time" content="2020-05-12T17:51:35+08:00" />
+<meta property="article:modified_time" content="2020-05-12T17:51:35+08:00" />
+<meta itemprop="name" content="[Lc]343整数拆分">
+<meta itemprop="description" content="题目 题解 1. 普通DP 具体思路看注释。前面遇到一个问题，即循环里dp[i] = max(dp[i], max(j*(i-j), j*dp[i-j]));为什么不是dp[i], j*(i-j), dp[j]*dp[i-j] 这是因为在内循">
+<meta itemprop="datePublished" content="2020-05-12T17:51:35&#43;08:00" />
+<meta itemprop="dateModified" content="2020-05-12T17:51:35&#43;08:00" />
+<meta itemprop="wordCount" content="811">
+
+
+
+<meta itemprop="keywords" content="DP,贪心," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[Lc]343整数拆分"/>
+<meta name="twitter:description" content="题目 题解 1. 普通DP 具体思路看注释。前面遇到一个问题，即循环里dp[i] = max(dp[i], max(j*(i-j), j*dp[i-j]));为什么不是dp[i], j*(i-j), dp[j]*dp[i-j] 这是因为在内循"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+<script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
+
+<meta name="baidu-site-verification" content="GDMA35xQfM" />
+<meta name="google-site-verification" content="f-5-S53Hm0WIn0Tnfu-dg0sNmCZeahUFILgUSI9JLQA" />
+<meta name="baidu-site-verification" content="74mXju2aOk" />
+<meta name="google-site-verification" content="2yu63Vg3wEmB1XF77uGbZdOQB_a_KSLTk-zNxL4oGRg" />
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">FOCUS</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">FOCUS</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">[Lc]343整数拆分</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-05-12 </span>
+        <div class="post-category">
+            <a href="/categories/leetcode/"> leetcode </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#题目">题目</a></li>
+    <li><a href="#题解">题解</a>
+      <ul>
+        <li><a href="#1-普通dp">1. 普通DP</a></li>
+        <li><a href="#2-贪婪算法">2. 贪婪算法</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="题目">题目</h2>
+<p><img src="/img/img2020-05-12-17-52-08.png" alt=""></p>
+<h2 id="题解">题解</h2>
+<h3 id="1-普通dp">1. 普通DP</h3>
+<p>具体思路看注释。前面遇到一个问题，即循环里<code>dp[i] = max(dp[i], max(j*(i-j), j*dp[i-j]));</code>为什么不是<code>dp[i], j*(i-j), dp[j]*dp[i-j]</code><br>
+这是因为在内循环时，随着j的增大，就包括了dp[j]中的分割情况，因此不用dp[j]来计算。即有可能dp[j]大于j，但是在前面j的分割值中已经计算过了。<br>
+但是对于dp[i-j]如果也这么思考就不对了，若把dp[i-j]改成i-j就会缺失很多种分割情况，即j，i-j至少有一个需要用dp以包含多种分割情况。<br>
+经过测试，写成</p>
+<pre><code class="language-cpp">dp[i] = max(dp[i], max(j*(i-j), j*dp[i-j]));
+dp[i] = max(dp[i], max(j*(i-j), dp[j]*(i-j)));
+</code></pre>
+<p>都是对的。但是写成</p>
+<pre><code class="language-cpp">dp[i] = max(dp[i], max(j*(i-j), dp[j]*dp[i-j]));
+</code></pre>
+<p>会报错。这是因为dp[i]至少要分割一次，不包含不分割自身的情况。</p>
+<ul>
+<li>时间复杂度$O(n^{2})$，双循环</li>
+<li>空间复杂度$O(n)$，dp数组</li>
+</ul>
+<pre><code class="language-cpp">class Solution {
+public:
+    int cuttingRope(int n) {
+        vector&lt;int&gt; dp(n+1);
+        //由题目可知，n不为0和1，且dp[0]和dp[1]是没用的，因为在求切分的最大值时j*(i-j)中的j=1时已经承担了dp[1]的作用，而0是完全用不到，因此初始化dp[2]即可
+        dp[2] = 1;
+        //外循环从下往上生成dp数组，绳子越来越长
+        for(int i=3; i&lt;=n; ++i){
+            //内循环遍历所有切割点，前半段绳子从1开始到n-1
+            for(int j=2; j&lt;i; ++j){
+                //dp[i]是暂存本次内循环中的最大乘积
+                //j*(i-j)是切断后两边直接相乘的结果
+                //j*dp[i-j]是切断后后半段继续切，后半段获得乘积最大值
+                dp[i] = max(dp[i], max(j*(i-j), j*dp[i-j]));
+            }
+        }
+        return dp[n];
+    }
+};
+</code></pre>
+<h3 id="2-贪婪算法">2. 贪婪算法</h3>
+<p>看Krahets大神的<a href="https://leetcode-cn.com/problems/jian-sheng-zi-lcof/solution/mian-shi-ti-14-i-jian-sheng-zi-tan-xin-si-xiang-by/">分析</a>可知，每一段取3时最终的乘积最大，即要使绳子每一段的3尽量多一点。那么就可以计算$a=n/3$，然后计算3的a次幕。需要注意的是对余数b的处理，有三种情况：</p>
+<ol>
+<li>b==0。直接返回pow(3,a)</li>
+<li>b==1。需要拆一个前面的3，将3和1变为2和2。因为3×1&gt;2×2</li>
+<li>b==2。直接返回pow(3,a)*2</li>
+</ol>
+<pre><code class="language-cpp">class Solution {//两种方法。2.贪婪
+public:
+    int integerBreak(int n) {
+        if(n&lt;4) return n-1;//n为2，3时，返回1，2。n不能为0，1
+        int a = n/3, b = n%3;//计算n除以3的商和余数
+        if(b==0) return pow(3,a);
+        else if(b==1) return pow(3,a-1)*4;
+        else return pow(3,a)*2;
+    }
+};
+</code></pre>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">ChrisHRZ</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-05-12
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/dp/">DP</a>
+          <a href="/tags/%E8%B4%AA%E5%BF%83/">贪心</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9814_ii%E5%89%AA%E7%BB%B3%E5%AD%90ii/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">[Lc]面试题14_II剪绳子II</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9814_i%E5%89%AA%E7%BB%B3%E5%AD%90/">
+            <span class="next-text nav-default">[Lc]面试题14_I剪绳子</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/lc343%E6%95%B4%E6%95%B0%E6%8B%86%E5%88%86/" class="leancloud_visitors" data-flag-title="[Lc]343整数拆分">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'M8Fyr1YXIu2Ov8Wh4ByqtEzq-gzGzoHsz',
+        appKey: 'AHiPSGeLQbvrQGQ6KfhvOKvN',
+        notify:  false ,
+        verify:  false ,
+        avatar:'mm',
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/ChrisHRZ" class="iconfont icon-github" title="github"></a>
+  <a href="https://chrishrz.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">ChrisHRZ</span>
+  </span>
+</div>
+
+
+<script src="https://cdn.bootcss.com/mermaid/8.4.8/mermaid.min.js"></script>
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js"></script>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -6,10 +6,28 @@
     <description>Recent content in 递归 on Focus-ChrisHRZ&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 07 May 2020 12:46:45 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 14 May 2020 13:17:07 +0800</lastBuildDate>
     
 	<atom:link href="https://chrishrz.github.io/tags/%E9%80%92%E5%BD%92/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Lc]面试题19正则表达式匹配</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9819%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8C%B9%E9%85%8D/</link>
+      <pubDate>Thu, 14 May 2020 13:17:07 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9819%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8C%B9%E9%85%8D/</guid>
+      <description>题目 题解 1. 普通递归 class Solution { public: bool isMatch(string s, string p) { if(p.empty()) return s.empty();//若p为空，则s为空返回false。否则返回true //若s不为空且当前字符</description>
+    </item>
+    
+    <item>
+      <title>[Lc]10正则表达式匹配</title>
+      <link>https://chrishrz.github.io/post/lc10%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8C%B9%E9%85%8D/</link>
+      <pubDate>Thu, 14 May 2020 13:13:40 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc10%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8C%B9%E9%85%8D/</guid>
+      <description>题目 题解 1. 普通递归 class Solution { public: bool isMatch(string s, string p) { if(p.empty()) return s.empty();//若p为空，则s为空返回false。否则返回true //若s不为空且当前字符</description>
+    </item>
     
     <item>
       <title>[Lc]93复原IP地址</title>
