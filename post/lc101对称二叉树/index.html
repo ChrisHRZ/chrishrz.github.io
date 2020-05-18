@@ -49,7 +49,7 @@
 <meta itemprop="description" content="题解 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 递归法 class Solution {//三种方法。1、递归法。有点像#100 public: bool isSymmetric(TreeNode* root) { if(!root) return t">
 <meta itemprop="datePublished" content="2020-03-14T19:54:18&#43;08:00" />
 <meta itemprop="dateModified" content="2020-03-14T19:54:18&#43;08:00" />
-<meta itemprop="wordCount" content="1048">
+<meta itemprop="wordCount" content="1085">
 
 
 
@@ -184,7 +184,7 @@ code.has-jax {
       <ul>
         <li><a href="#1-递归法">1. 递归法</a></li>
         <li><a href="#2-栈迭代法">2. 栈迭代法</a></li>
-        <li><a href="#2-队列迭代法">2. 队列迭代法</a></li>
+        <li><a href="#3-队列迭代法">3. 队列迭代法</a></li>
       </ul>
     </li>
   </ul>
@@ -229,7 +229,8 @@ public:
         TreeNode *curLeft = root-&gt;left;
         TreeNode *curRight = root-&gt;right;//建立两个指针
         while(curLeft || !sLeft.empty() || curRight || !sRight.empty()){
-            //当指针存在且栈不为空继续迭代
+            //当指针存在或栈不为空继续迭代
+            //指针为空可能是到叶子节点，栈为空可能是回到了根节点，这里和先序遍历一样
             while(curLeft){//当指针存在继续迭代左子树并压入栈
                 sLeft.push(curLeft);
                 curLeft = curLeft-&gt;left;
@@ -249,7 +250,7 @@ public:
     }
 };
 </code></pre>
-<h3 id="2-队列迭代法">2. 队列迭代法</h3>
+<h3 id="3-队列迭代法">3. 队列迭代法</h3>
 <pre><code class="language-cpp">class Solution {//三种方法。3、 队列迭代法。和层次遍历有点类似（广度优先遍历BFS）一层一层比较。
 public:
     bool isSymmetric(TreeNode* root) {

@@ -6,10 +6,64 @@
     <description>Recent content in 链表 on Focus-ChrisHRZ&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 14 May 2020 21:25:53 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 16 May 2020 11:31:08 +0800</lastBuildDate>
     
 	<atom:link href="https://chrishrz.github.io/tags/%E9%93%BE%E8%A1%A8/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Lc]面试题27二叉树的镜像</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9827%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%95%9C%E5%83%8F/</link>
+      <pubDate>Sat, 16 May 2020 11:31:08 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9827%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%95%9C%E5%83%8F/</guid>
+      <description>题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 递归法 这个方法就是递归的翻转左右子树，若遇到空子树直接返回，然后当前</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题26树的子结构</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9826%E6%A0%91%E7%9A%84%E5%AD%90%E7%BB%93%E6%9E%84/</link>
+      <pubDate>Fri, 15 May 2020 21:22:56 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9826%E6%A0%91%E7%9A%84%E5%AD%90%E7%BB%93%E6%9E%84/</guid>
+      <description>题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 双递归法 两个递归函数，一个用来看当前节点是否匹配，一个用来遍历a的所</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题25合并两个排序的链表</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9825%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%8E%92%E5%BA%8F%E7%9A%84%E9%93%BE%E8%A1%A8/</link>
+      <pubDate>Fri, 15 May 2020 17:43:28 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9825%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%8E%92%E5%BA%8F%E7%9A%84%E9%93%BE%E8%A1%A8/</guid>
+      <description>题目 链表定义： //Definition for singly-linked list. struct ListNode { int val; ListNode *next; ListNode(int x) : val(x), next(NULL) {} }; 题解 这道题的思想是链表归并排序中的一个重要环节，即对有序的两个链表进行归并。比较表头，小的</description>
+    </item>
+    
+    <item>
+      <title>[Lc]21合并两个有序链表</title>
+      <link>https://chrishrz.github.io/post/lc21%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8/</link>
+      <pubDate>Fri, 15 May 2020 17:36:13 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc21%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8/</guid>
+      <description>题目 链表定义： //Definition for singly-linked list. struct ListNode { int val; ListNode *next; ListNode(int x) : val(x), next(NULL) {} }; 题解 这道题的思想是链表归并排序中的一个重要环节，即对有序的两个链表进行归并。比较表头，小的</description>
+    </item>
+    
+    <item>
+      <title>[Lc]206反转链表</title>
+      <link>https://chrishrz.github.io/post/lc206%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/</link>
+      <pubDate>Fri, 15 May 2020 17:08:28 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc206%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/</guid>
+      <description>题目 链表定义： //Definition for singly-linked list. struct ListNode { int val; ListNode *next; ListNode(int x) : val(x), next(NULL) {} }; 题解 1. 迭代法（双指针） 实际上是三个指针，一个指向当前节点之前pre，一个指向当前节点cur</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题24反转链表</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9824%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/</link>
+      <pubDate>Fri, 15 May 2020 16:31:44 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9824%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/</guid>
+      <description>题目 链表定义： //Definition for singly-linked list. struct ListNode { int val; ListNode *next; ListNode(int x) : val(x), next(NULL) {} }; 题解 1. 迭代法（双指针） 实际上是三个指针，一个指向当前节点之前pre，一个指向当前节点cur</description>
+    </item>
     
     <item>
       <title>[Lc]面试题22链表中倒数第k个节点</title>

@@ -6,10 +6,37 @@
     <description>Recent content in 数组 on Focus-ChrisHRZ&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 14 May 2020 21:14:29 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 17 May 2020 17:10:02 +0800</lastBuildDate>
     
 	<atom:link href="https://chrishrz.github.io/tags/%E6%95%B0%E7%BB%84/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Lc]54螺旋矩阵</title>
+      <link>https://chrishrz.github.io/post/lc54%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5/</link>
+      <pubDate>Sun, 17 May 2020 17:10:02 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc54%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5/</guid>
+      <description>题目 题解 就是分四种情况，从左到右，上到下，右到左，下到上循环遍历，和59题类似 时间复杂度$O(nm)$ 空间复杂度$O(nm)$ class Solution { public: vector&amp;lt;int&amp;gt; spiralOrder(vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt;&amp;amp; matrix)</description>
+    </item>
+    
+    <item>
+      <title>[Lc]59螺旋矩阵II</title>
+      <link>https://chrishrz.github.io/post/lc59%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5ii/</link>
+      <pubDate>Sun, 17 May 2020 17:07:32 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc59%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5ii/</guid>
+      <description>题目 题解 就是分四种情况，从左到右，上到下，右到左，下到上循环遍历，和54题类似 时间复杂度$O(nm)$ 空间复杂度$O(nm)$ class Solution { public: vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; generateMatrix(int n)</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题29顺时针打印矩阵</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9829%E9%A1%BA%E6%97%B6%E9%92%88%E6%89%93%E5%8D%B0%E7%9F%A9%E9%98%B5/</link>
+      <pubDate>Sun, 17 May 2020 17:07:04 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9829%E9%A1%BA%E6%97%B6%E9%92%88%E6%89%93%E5%8D%B0%E7%9F%A9%E9%98%B5/</guid>
+      <description>题解 题解 直接迭代，四个方向将结果输入res，注意边界条件的判断 时间复杂度$O(n)$ 空间复杂度$O(n)$ class Solution { public: vector&amp;lt;int&amp;gt; spiralOrder(vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt;&amp;amp; matrix) { vector&amp;lt;int&amp;gt; res; if(matrix.empty()) return res; int u=0, d=matrix.size()-1, l=0,</description>
+    </item>
     
     <item>
       <title>[Lc]面试题21调整数组顺序使奇数位于偶数前面</title>

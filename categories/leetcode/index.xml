@@ -6,10 +6,55 @@
     <description>Recent content in leetcode on Focus-ChrisHRZ&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 14 May 2020 13:13:40 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 18 May 2020 18:26:17 +0800</lastBuildDate>
     
 	<atom:link href="https://chrishrz.github.io/categories/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Lc]946验证栈序列</title>
+      <link>https://chrishrz.github.io/post/lc946%E9%AA%8C%E8%AF%81%E6%A0%88%E5%BA%8F%E5%88%97/</link>
+      <pubDate>Mon, 18 May 2020 18:26:17 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc946%E9%AA%8C%E8%AF%81%E6%A0%88%E5%BA%8F%E5%88%97/</guid>
+      <description>题目 题解 这个就用一个栈来模拟压入，出栈就可以了。每存一个数要检查当前的popped数组的首位 时间复杂度$O(n)$ 空间复杂度$O(n)$ class Solution</description>
+    </item>
+    
+    <item>
+      <title>[Lc]155最小栈</title>
+      <link>https://chrishrz.github.io/post/lc155%E6%9C%80%E5%B0%8F%E6%A0%88/</link>
+      <pubDate>Mon, 18 May 2020 17:06:23 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc155%E6%9C%80%E5%B0%8F%E6%A0%88/</guid>
+      <description>题目 题解 两个类似的方法，一个是使用辅助栈存当前的最小值，一个是直接用一个栈保存一个pari，包括原值和最小值，个人感觉后一种方法更加直观，即</description>
+    </item>
+    
+    <item>
+      <title>[Lc]54螺旋矩阵</title>
+      <link>https://chrishrz.github.io/post/lc54%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5/</link>
+      <pubDate>Sun, 17 May 2020 17:10:02 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc54%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5/</guid>
+      <description>题目 题解 就是分四种情况，从左到右，上到下，右到左，下到上循环遍历，和59题类似 时间复杂度$O(nm)$ 空间复杂度$O(nm)$ class Solution { public: vector&amp;lt;int&amp;gt; spiralOrder(vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt;&amp;amp; matrix)</description>
+    </item>
+    
+    <item>
+      <title>[Lc]59螺旋矩阵II</title>
+      <link>https://chrishrz.github.io/post/lc59%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5ii/</link>
+      <pubDate>Sun, 17 May 2020 17:07:32 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc59%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5ii/</guid>
+      <description>题目 题解 就是分四种情况，从左到右，上到下，右到左，下到上循环遍历，和54题类似 时间复杂度$O(nm)$ 空间复杂度$O(nm)$ class Solution { public: vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; generateMatrix(int n)</description>
+    </item>
+    
+    <item>
+      <title>[Lc]21合并两个有序链表</title>
+      <link>https://chrishrz.github.io/post/lc21%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8/</link>
+      <pubDate>Fri, 15 May 2020 17:36:13 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc21%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8/</guid>
+      <description>题目 链表定义： //Definition for singly-linked list. struct ListNode { int val; ListNode *next; ListNode(int x) : val(x), next(NULL) {} }; 题解 这道题的思想是链表归并排序中的一个重要环节，即对有序的两个链表进行归并。比较表头，小的</description>
+    </item>
     
     <item>
       <title>[Lc]10正则表达式匹配</title>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数 on Focus-ChrisHRZ&#39;s blog</title>
+    <link>https://chrishrz.github.io/tags/%E6%95%B0/</link>
+    <description>Recent content in 数 on Focus-ChrisHRZ&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 18 May 2020 19:01:09 +0800</lastBuildDate>
+    
+	<atom:link href="https://chrishrz.github.io/tags/%E6%95%B0/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[Lc]面试题32_I从上到下打印二叉树</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9832_i%E4%BB%8E%E4%B8%8A%E5%88%B0%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
+      <pubDate>Mon, 18 May 2020 19:01:09 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9832_i%E4%BB%8E%E4%B8%8A%E5%88%B0%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
+      <description>题目 题解 其实就是二叉树的层次遍历，比102简单。因为这道题不分层因此用dfs不好做，还是用bfs好 时间复杂度$O(n)$ 空间复杂度$O(n)</description>
+    </item>
+    
+  </channel>
+</rss>

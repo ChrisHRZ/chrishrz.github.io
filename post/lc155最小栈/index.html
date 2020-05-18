@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>[Lc]155最小栈 - Focus-ChrisHRZ&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ChrisHRZ" /><meta name="description" content="题目 题解 两个类似的方法，一个是使用辅助栈存当前的最小值，一个是直接用一个栈保存一个pari，包括原值和最小值，个人感觉后一种方法更加直观，即" /><meta name="keywords" content="code, life, study" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.66.0 with theme even" />
+
+
+<link rel="canonical" href="https://chrishrz.github.io/post/lc155%E6%9C%80%E5%B0%8F%E6%A0%88/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
+
+<meta property="og:title" content="[Lc]155最小栈" />
+<meta property="og:description" content="题目 题解 两个类似的方法，一个是使用辅助栈存当前的最小值，一个是直接用一个栈保存一个pari，包括原值和最小值，个人感觉后一种方法更加直观，即" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chrishrz.github.io/post/lc155%E6%9C%80%E5%B0%8F%E6%A0%88/" />
+<meta property="article:published_time" content="2020-05-18T17:06:23+08:00" />
+<meta property="article:modified_time" content="2020-05-18T17:06:23+08:00" />
+<meta itemprop="name" content="[Lc]155最小栈">
+<meta itemprop="description" content="题目 题解 两个类似的方法，一个是使用辅助栈存当前的最小值，一个是直接用一个栈保存一个pari，包括原值和最小值，个人感觉后一种方法更加直观，即">
+<meta itemprop="datePublished" content="2020-05-18T17:06:23&#43;08:00" />
+<meta itemprop="dateModified" content="2020-05-18T17:06:23&#43;08:00" />
+<meta itemprop="wordCount" content="701">
+
+
+
+<meta itemprop="keywords" content="栈," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[Lc]155最小栈"/>
+<meta name="twitter:description" content="题目 题解 两个类似的方法，一个是使用辅助栈存当前的最小值，一个是直接用一个栈保存一个pari，包括原值和最小值，个人感觉后一种方法更加直观，即"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+<script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
+
+<meta name="baidu-site-verification" content="GDMA35xQfM" />
+<meta name="google-site-verification" content="f-5-S53Hm0WIn0Tnfu-dg0sNmCZeahUFILgUSI9JLQA" />
+<meta name="baidu-site-verification" content="74mXju2aOk" />
+<meta name="google-site-verification" content="2yu63Vg3wEmB1XF77uGbZdOQB_a_KSLTk-zNxL4oGRg" />
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">FOCUS</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">FOCUS</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">[Lc]155最小栈</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-05-18 </span>
+        <div class="post-category">
+            <a href="/categories/leetcode/"> leetcode </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#题目">题目</a></li>
+    <li><a href="#题解">题解</a>
+      <ul>
+        <li><a href="#1-单栈双值法">1. 单栈双值法</a></li>
+        <li><a href="#2-双栈法">2. 双栈法</a></li>
+        <li><a href="#3-单栈单值法">3. 单栈单值法</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="题目">题目</h2>
+<p><img src="/img/img2020-05-18-17-07-02.png" alt=""></p>
+<h2 id="题解">题解</h2>
+<p>两个类似的方法，一个是使用辅助栈存当前的最小值，一个是直接用一个栈保存一个pari，包括原值和最小值，个人感觉后一种方法更加直观，即方法1
+看了下题解还有第三种方法，这个方法只需要一个栈和一个变量存最小值，具体见题解3</p>
+<h3 id="1-单栈双值法">1. 单栈双值法</h3>
+<ul>
+<li>时间复杂度$O(1)$</li>
+<li>空间复杂度$O(n)$</li>
+</ul>
+<pre><code class="language-cpp">class MinStack {
+    stack&lt;pair&lt;int,int&gt;&gt; s;
+public:
+    /** initialize your data structure here. */
+    MinStack() {
+
+    }
+    
+    void push(int x) {
+        if(s.size()==0) s.push({x,x});
+        else s.push({x,std::min(x, s.top().second)});
+    }
+    
+    void pop() {
+        s.pop();
+    }
+    
+    int top() {
+        return s.top().first;
+    }
+    
+    int getMin() {
+        return s.top().second;
+    }
+};
+
+/**
+ * Your MinStack object will be instantiated and called as such:
+ * MinStack* obj = new MinStack();
+ * obj-&gt;push(x);
+ * obj-&gt;pop();
+ * int param_3 = obj-&gt;top();
+ * int param_4 = obj-&gt;getMin();
+ */
+</code></pre>
+<h3 id="2-双栈法">2. 双栈法</h3>
+<ul>
+<li>时间复杂度$O(1)$</li>
+<li>空间复杂度$O(n)$</li>
+</ul>
+<pre><code class="language-cpp">class MinStack {
+    stack&lt;int&gt; s;
+    stack&lt;int&gt; min_s;
+public:
+    /** initialize your data structure here. */
+    MinStack() {
+
+    }
+    
+    void push(int x) {
+        if(s.size()==0){
+            s.push(x);
+            min_s.push(x);
+        }else{
+            s.push(x);
+            min_s.push(std::min(x,min_s.top()));
+        }
+    }
+    
+    void pop() {
+        s.pop();
+        min_s.pop();
+    }
+    
+    int top() {
+        return s.top();
+    }
+    
+    int getMin() {
+        return min_s.top();
+    }
+};
+
+/**
+ * Your MinStack object will be instantiated and called as such:
+ * MinStack* obj = new MinStack();
+ * obj-&gt;push(x);
+ * obj-&gt;pop();
+ * int param_3 = obj-&gt;top();
+ * int param_4 = obj-&gt;getMin();
+ */
+</code></pre>
+<h3 id="3-单栈单值法">3. 单栈单值法</h3>
+<p>这个方法用一个栈，但是栈中要在每个最小值的下面多存一个数保存次小值，当最小值已经出栈之后就把次小值放到min_val中</p>
+<ul>
+<li>时间复杂度$O(1)$</li>
+<li>空间复杂度$O(n)$</li>
+</ul>
+<pre><code class="language-cpp"> class MinStack {
+    stack&lt;int&gt; s;
+    int min_val;
+public:
+    /** initialize your data structure here. */
+    MinStack() {
+        
+    }
+    
+    void push(int x) {
+        if(s.size()==0){//第一个数字，在栈中存两遍，并更新min_val，这一步是为了在只有一个值pop()时不会报错
+            s.push(x);
+            min_val = x;
+        }else if(x&lt;=min_val){//新x小于等于min_val，把min_val压入栈中，再存x，更新min_val
+            s.push(min_val);
+            min_val = x;
+        }
+        //其他情况直接存x
+        s.push(x);
+    }
+    
+    void pop() {
+        if(min_val == s.top()){//若取出的数是最小值，则将其下面存的次小值放入min_val，再将该值弹出
+            s.pop();
+            min_val = s.top();s.pop();
+        }else{//其他情况直接出栈
+            s.pop();
+        }
+    }
+    
+    int top() {
+        return s.top();
+    }
+    
+    int getMin() {
+        return min_val;
+    }
+};
+
+/**
+ * Your MinStack object will be instantiated and called as such:
+ * MinStack* obj = new MinStack();
+ * obj-&gt;push(x);
+ * obj-&gt;pop();
+ * int param_3 = obj-&gt;top();
+ * int param_4 = obj-&gt;min();
+ */
+</code></pre>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">ChrisHRZ</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-05-18
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E6%A0%88/">栈</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9830%E5%8C%85%E5%90%ABmin%E5%87%BD%E6%95%B0%E7%9A%84%E6%A0%88/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">[Lc]面试题30包含min函数的栈</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/lc54%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5/">
+            <span class="next-text nav-default">[Lc]54螺旋矩阵</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/lc155%E6%9C%80%E5%B0%8F%E6%A0%88/" class="leancloud_visitors" data-flag-title="[Lc]155最小栈">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'M8Fyr1YXIu2Ov8Wh4ByqtEzq-gzGzoHsz',
+        appKey: 'AHiPSGeLQbvrQGQ6KfhvOKvN',
+        notify:  false ,
+        verify:  false ,
+        avatar:'mm',
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/ChrisHRZ" class="iconfont icon-github" title="github"></a>
+  <a href="https://chrishrz.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">ChrisHRZ</span>
+  </span>
+</div>
+
+
+<script src="https://cdn.bootcss.com/mermaid/8.4.8/mermaid.min.js"></script>
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js"></script>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

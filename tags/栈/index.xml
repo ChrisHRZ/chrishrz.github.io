@@ -6,10 +6,46 @@
     <description>Recent content in 栈 on Focus-ChrisHRZ&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 10 May 2020 20:54:36 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 18 May 2020 18:45:41 +0800</lastBuildDate>
     
 	<atom:link href="https://chrishrz.github.io/tags/%E6%A0%88/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Lc]面试题31栈的压入、弹出序列</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9831%E6%A0%88%E7%9A%84%E5%8E%8B%E5%85%A5%E5%BC%B9%E5%87%BA%E5%BA%8F%E5%88%97/</link>
+      <pubDate>Mon, 18 May 2020 18:45:41 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9831%E6%A0%88%E7%9A%84%E5%8E%8B%E5%85%A5%E5%BC%B9%E5%87%BA%E5%BA%8F%E5%88%97/</guid>
+      <description>题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 这个就用一个栈来模拟压入，出栈就可以了。每存一个数要检查当前的popp</description>
+    </item>
+    
+    <item>
+      <title>[Lc]946验证栈序列</title>
+      <link>https://chrishrz.github.io/post/lc946%E9%AA%8C%E8%AF%81%E6%A0%88%E5%BA%8F%E5%88%97/</link>
+      <pubDate>Mon, 18 May 2020 18:26:17 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc946%E9%AA%8C%E8%AF%81%E6%A0%88%E5%BA%8F%E5%88%97/</guid>
+      <description>题目 题解 这个就用一个栈来模拟压入，出栈就可以了。每存一个数要检查当前的popped数组的首位 时间复杂度$O(n)$ 空间复杂度$O(n)$ class Solution</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题30包含min函数的栈</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9830%E5%8C%85%E5%90%ABmin%E5%87%BD%E6%95%B0%E7%9A%84%E6%A0%88/</link>
+      <pubDate>Mon, 18 May 2020 17:10:48 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9830%E5%8C%85%E5%90%ABmin%E5%87%BD%E6%95%B0%E7%9A%84%E6%A0%88/</guid>
+      <description>题目 题解 两个类似的方法，一个是使用辅助栈存当前的最小值，一个是直接用一个栈保存一个pari，包括原值和最小值，个人感觉后一种方法更加直观，即</description>
+    </item>
+    
+    <item>
+      <title>[Lc]155最小栈</title>
+      <link>https://chrishrz.github.io/post/lc155%E6%9C%80%E5%B0%8F%E6%A0%88/</link>
+      <pubDate>Mon, 18 May 2020 17:06:23 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc155%E6%9C%80%E5%B0%8F%E6%A0%88/</guid>
+      <description>题目 题解 两个类似的方法，一个是使用辅助栈存当前的最小值，一个是直接用一个栈保存一个pari，包括原值和最小值，个人感觉后一种方法更加直观，即</description>
+    </item>
     
     <item>
       <title>[Lc]面试题09用两个栈实现队列</title>
