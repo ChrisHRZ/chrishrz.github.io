@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>机器码 on Focus-ChrisHRZ&#39;s blog</title>
+    <link>https://chrishrz.github.io/tags/%E6%9C%BA%E5%99%A8%E7%A0%81/</link>
+    <description>Recent content in 机器码 on Focus-ChrisHRZ&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 22 May 2020 11:22:04 +0800</lastBuildDate>
+    
+	<atom:link href="https://chrishrz.github.io/tags/%E6%9C%BA%E5%99%A8%E7%A0%81/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>源码，反码，补码浅析</title>
+      <link>https://chrishrz.github.io/post/%E6%BA%90%E7%A0%81%E5%8F%8D%E7%A0%81%E8%A1%A5%E7%A0%81%E6%B5%85%E6%9E%90/</link>
+      <pubDate>Fri, 22 May 2020 11:22:04 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/%E6%BA%90%E7%A0%81%E5%8F%8D%E7%A0%81%E8%A1%A5%E7%A0%81%E6%B5%85%E6%9E%90/</guid>
+      <description>源码，反码和补码的形式 以下三种码都是二进制码 **源码：**符号位+真值的绝对值。符号位0表示正数，1表示负数。 **反码：**正数时，反码=源</description>
+    </item>
+    
+  </channel>
+</rss>

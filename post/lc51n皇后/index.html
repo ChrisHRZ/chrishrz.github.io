@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>[Lc]51N皇后 - Focus-ChrisHRZ&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ChrisHRZ" /><meta name="description" content="题目 题解 这道题是很经典的一道题，思路就是dfs与回溯剪枝。这类回溯题的递归函数基本套路是这样的 判断是否终止并满足条件，满足了就加入res中 遍" /><meta name="keywords" content="code, life, study" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.66.0 with theme even" />
+
+
+<link rel="canonical" href="https://chrishrz.github.io/post/lc51n%E7%9A%87%E5%90%8E/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
+
+<meta property="og:title" content="[Lc]51N皇后" />
+<meta property="og:description" content="题目 题解 这道题是很经典的一道题，思路就是dfs与回溯剪枝。这类回溯题的递归函数基本套路是这样的 判断是否终止并满足条件，满足了就加入res中 遍" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chrishrz.github.io/post/lc51n%E7%9A%87%E5%90%8E/" />
+<meta property="article:published_time" content="2020-05-21T11:23:26+08:00" />
+<meta property="article:modified_time" content="2020-05-21T11:23:26+08:00" />
+<meta itemprop="name" content="[Lc]51N皇后">
+<meta itemprop="description" content="题目 题解 这道题是很经典的一道题，思路就是dfs与回溯剪枝。这类回溯题的递归函数基本套路是这样的 判断是否终止并满足条件，满足了就加入res中 遍">
+<meta itemprop="datePublished" content="2020-05-21T11:23:26&#43;08:00" />
+<meta itemprop="dateModified" content="2020-05-21T11:23:26&#43;08:00" />
+<meta itemprop="wordCount" content="1148">
+
+
+
+<meta itemprop="keywords" content="字符串,dfs,回溯," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[Lc]51N皇后"/>
+<meta name="twitter:description" content="题目 题解 这道题是很经典的一道题，思路就是dfs与回溯剪枝。这类回溯题的递归函数基本套路是这样的 判断是否终止并满足条件，满足了就加入res中 遍"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+<script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
+
+<meta name="baidu-site-verification" content="GDMA35xQfM" />
+<meta name="google-site-verification" content="f-5-S53Hm0WIn0Tnfu-dg0sNmCZeahUFILgUSI9JLQA" />
+<meta name="baidu-site-verification" content="74mXju2aOk" />
+<meta name="google-site-verification" content="2yu63Vg3wEmB1XF77uGbZdOQB_a_KSLTk-zNxL4oGRg" />
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">FOCUS</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">FOCUS</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">[Lc]51N皇后</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-05-21 </span>
+        <div class="post-category">
+            <a href="/categories/leetcode/"> leetcode </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#题目">题目</a></li>
+    <li><a href="#题解">题解</a>
+      <ul>
+        <li><a href="#1-string保存法">1. string保存法</a></li>
+        <li><a href="#2-数组保存法">2. 数组保存法</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="题目">题目</h2>
+<p><img src="/img/img2020-05-21-11-24-26.png" alt=""></p>
+<h2 id="题解">题解</h2>
+<p>这道题是很经典的一道题，思路就是dfs与回溯剪枝。这类回溯题的递归函数基本套路是这样的</p>
+<ol>
+<li>判断是否终止并满足条件，满足了就加入res中</li>
+<li>遍历每一种可能，在每一种可能中：
+<ol>
+<li>先改变当前状态</li>
+<li>递归下一层</li>
+<li>回溯时再把状态变回去</li>
+</ol>
+</li>
+</ol>
+<p>这道题就是用的这种思想，用dfs遍历每一种情况，在放下一个皇后的时候判断该位置能否放皇后。能放的话递归下一层，有两种存储皇后的方式，用string直接存储和用数组标记每一行皇后的列数，后者在存储结果时要转化为字符串再存储，但其在判断能否放皇后的时候更加便捷。</p>
+<h3 id="1-string保存法">1. string保存法</h3>
+<ul>
+<li>时间复杂度$O(n!)$，放置第1个皇后有n种可能的方法，放置两个皇后的方法不超过 $n(n-2)$ ，放置 3 个皇后的方法不超过 $n(n-2)(n-4)$ ，以此类推。总体上，时间复杂度为 $\mathcal{O}(N!)$.<br>
+<em>（摘自leetcode官方题解）</em></li>
+<li>空间复杂度$O(n)$</li>
+</ul>
+<pre><code class="language-cpp">class Solution {//两个方法。1.string保存法
+    vector&lt;vector&lt;string&gt;&gt; res;//存最终结果
+    vector&lt;string&gt; queens;//存当前棋盘
+public:
+    //检验当前位置放皇后是否符合要求
+    bool check(vector&lt;string&gt; queens, int row, int col, int n){
+        for(int i=1; i&lt;=row; ++i){//这里的i与row的差距，从row的上一行到第0行
+            if(queens[row-i][col] == 'Q') return false;//若当前列有皇后，报错
+            if(col-i&gt;=0 &amp;&amp; queens[row-i][col-i]=='Q') return false;//若左上角有皇后，报错
+            if(col+i&lt;n &amp;&amp; queens[row-i][col+i]=='Q') return false;//若右上角有皇后，报错
+        }
+        return true;//未报错返回true
+    }
+    //dfs与回溯，当递归超出最后一行时将当前棋盘加入结果
+    void dfs(int row, int n){
+        if(row&gt;=n){
+            res.push_back(queens);
+            return ;
+        }
+        //在当前行的每一列尝试放棋子
+        for(int i=0; i&lt;n; ++i){
+            if(check(queens, row, i, n)){
+                queens[row][i] = 'Q';//在row行i列放棋子
+                dfs(row+1, n);//递归下一行
+                queens[row][i] = '.';//回溯时将放的棋子变回'.'
+            }
+        }
+    }
+
+    vector&lt;vector&lt;string&gt;&gt; solveNQueens(int n) {
+        queens = vector&lt;string&gt;(n,string(n,'.'));//先将棋盘均设置为空
+        dfs(0, n);//从第0行开始递归
+        return res;
+
+    }
+};
+</code></pre>
+<h3 id="2-数组保存法">2. 数组保存法</h3>
+<p>这个方法用一个数组保存每个皇后所在的列，在递归完成的时候需要将结果转化为字符串，而这个方法在check的时候比较方便，只需要一句</p>
+<pre><code class="language-cpp">class Solution {//两个方法。2. 数组保存法
+    vector&lt;vector&lt;string&gt;&gt; res;//存最终结果
+    vector&lt;int&gt; queensCol;//存当前棋盘每个皇后的列数
+public:
+    //检验当前位置放皇后是否符合要求
+    bool check(vector&lt;int&gt; queensCol, int row, int col, int n){
+        for(int i=0; i&lt;row; ++i){//这里的i表示第i行
+            //遇到同列的或者两个斜线的（斜线的按照正方形考虑，长宽一样）
+            if(col == queensCol[i] || abs(row-i)==abs(col-queensCol[i])) return false;
+        }
+        return true;//未报错返回true
+    }
+    //dfs与回溯，当递归超出最后一行时将当前棋盘加入结果
+    void dfs(int row, int n){
+        //递归完成将结果转化为棋盘
+        if(row&gt;=n){
+            vector&lt;string&gt; queens(n, string(n,'.'));
+            for(int i=0; i&lt;queensCol.size(); ++i){
+                queens[i][queensCol[i]] = 'Q';
+            }
+            res.push_back(queens);
+            return ;
+        }
+        //在当前行的每一列尝试放棋子
+        for(int i=0; i&lt;n; ++i){
+            if(check(queensCol, row, i, n)){
+                queensCol[row] = i;//在row行i列放棋子
+                dfs(row+1, n);//递归下一行
+                queensCol[row] = -1;//回溯时将放的棋子变回-1
+            }
+        }
+    }
+
+    vector&lt;vector&lt;string&gt;&gt; solveNQueens(int n) {
+        queensCol = vector&lt;int&gt;(n,-1);//先将棋盘均设置为空
+        dfs(0, n);//从第0行开始递归
+        return res;
+
+    }
+};
+</code></pre>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">ChrisHRZ</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-05-21
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
+          <a href="/tags/dfs/">dfs</a>
+          <a href="/tags/%E5%9B%9E%E6%BA%AF/">回溯</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/lc52n%E7%9A%87%E5%90%8Eii/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">[Lc]52N皇后II</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9839%E6%95%B0%E7%BB%84%E4%B8%AD%E5%87%BA%E7%8E%B0%E6%AC%A1%E6%95%B0%E8%B6%85%E8%BF%87%E4%B8%80%E5%8D%8A%E7%9A%84%E6%95%B0%E5%AD%97/">
+            <span class="next-text nav-default">[Lc]面试题39数组中出现次数超过一半的数字</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/lc51n%E7%9A%87%E5%90%8E/" class="leancloud_visitors" data-flag-title="[Lc]51N皇后">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'M8Fyr1YXIu2Ov8Wh4ByqtEzq-gzGzoHsz',
+        appKey: 'AHiPSGeLQbvrQGQ6KfhvOKvN',
+        notify:  false ,
+        verify:  false ,
+        avatar:'mm',
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/ChrisHRZ" class="iconfont icon-github" title="github"></a>
+  <a href="https://chrishrz.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">ChrisHRZ</span>
+  </span>
+</div>
+
+
+<script src="https://cdn.bootcss.com/mermaid/8.4.8/mermaid.min.js"></script>
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js"></script>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

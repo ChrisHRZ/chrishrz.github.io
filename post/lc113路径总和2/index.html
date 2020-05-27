@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="ChrisHRZ" /><meta name="description" content="题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 递归法 时间复杂度：$O(N)$ 空间复杂度：？？需要额外空间。 //#1" /><meta name="keywords" content="code, life, study" />
+<meta name="author" content="ChrisHRZ" /><meta name="description" content="题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 递归法 时间复杂度：$O(N)$ 空间复杂度：$O(N)$ 需要额外空间。" /><meta name="keywords" content="code, life, study" />
 
 
 
@@ -40,22 +40,22 @@
 
 
 <meta property="og:title" content="[Lc]113路径总和2" />
-<meta property="og:description" content="题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 递归法 时间复杂度：$O(N)$ 空间复杂度：？？需要额外空间。 //#1" />
+<meta property="og:description" content="题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 递归法 时间复杂度：$O(N)$ 空间复杂度：$O(N)$ 需要额外空间。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://chrishrz.github.io/post/lc113%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8C2/" />
 <meta property="article:published_time" content="2020-03-27T22:34:03+08:00" />
 <meta property="article:modified_time" content="2020-03-27T22:34:03+08:00" />
 <meta itemprop="name" content="[Lc]113路径总和2">
-<meta itemprop="description" content="题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 递归法 时间复杂度：$O(N)$ 空间复杂度：？？需要额外空间。 //#1">
+<meta itemprop="description" content="题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 递归法 时间复杂度：$O(N)$ 空间复杂度：$O(N)$ 需要额外空间。">
 <meta itemprop="datePublished" content="2020-03-27T22:34:03&#43;08:00" />
 <meta itemprop="dateModified" content="2020-03-27T22:34:03&#43;08:00" />
-<meta itemprop="wordCount" content="995">
+<meta itemprop="wordCount" content="965">
 
 
 
 <meta itemprop="keywords" content="树,二叉树," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="[Lc]113路径总和2"/>
-<meta name="twitter:description" content="题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 递归法 时间复杂度：$O(N)$ 空间复杂度：？？需要额外空间。 //#1"/>
+<meta name="twitter:description" content="题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 递归法 时间复杂度：$O(N)$ 空间复杂度：$O(N)$ 需要额外空间。"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -206,10 +206,9 @@ code.has-jax {
 <h3 id="1-递归法">1. 递归法</h3>
 <ul>
 <li>时间复杂度：$O(N)$</li>
-<li>空间复杂度：？？需要额外空间。</li>
+<li>空间复杂度：$O(N)$ 需要额外空间。</li>
 </ul>
-<pre><code class="language-cpp"> //#112的升级版，要记录该路径上的值，注意题干是保存每一条路径，所以要全部遍历
-class Solution {//两个方法。1.递归
+<pre><code class="language-cpp的升级版，要记录该路径上的值，注意题干是保存每一条路径，所以要全部遍历">class Solution {//两个方法。1.递归
 public:
     vector&lt;vector&lt;int&gt;&gt; pathSum(TreeNode* root, int sum) {
         vector&lt;vector&lt;int&gt;&gt; res;//定义保存最终结果的二维数组
@@ -236,7 +235,7 @@ public:
 </blockquote>
 <ul>
 <li>时间复杂度：$O(N)$</li>
-<li>空间复杂度：？？需要额外空间。</li>
+<li>空间复杂度：$O(N)$ 需要额外空间。</li>
 </ul>
 <pre><code class="language-cpp"> //#112的升级版，要记录该路径上的值，注意题干是保存每一条路径，所以要全部遍历
 class Solution {//两个方法。2.栈迭代，类似后序遍历
@@ -246,7 +245,7 @@ public:
         if(!root) return res;
         vector&lt;TreeNode*&gt; st;//用一位数组，因为中间要取数出来
         TreeNode *cur = root;//用cur指向根节点
-        TreeNode *last = nullptr;//last用于存储上一次指向的值，先设置为nullptr
+        TreeNode *last = nullptr;//last用于存储上一次指遍历输出的值，先设置为nullptr
         int oneSum = 0;//oneSum用于存储当前路径的和
         while(cur || !st.empty()){//只有cur指向nullptr且栈s空了才停止遍历。cur指向nullptr可能是遍历完一个子树；s空了可能回到根节点。
             if(cur){

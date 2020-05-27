@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="ChrisHRZ" /><meta name="description" content="题解 题解 直接迭代，四个方向将结果输入res，注意边界条件的判断 时间复杂度$O(n)$ 空间复杂度$O(n)$ class Solution { public: vector&amp;lt;int&amp;gt; spiralOrder(vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt;&amp;amp; matrix) { vector&amp;lt;int&amp;gt; res; if(matrix.empty()) return res; int u=0, d=matrix.size()-1, l=0," /><meta name="keywords" content="code, life, study" />
+<meta name="author" content="ChrisHRZ" /><meta name="description" content="题目 题解 直接迭代，四个方向将结果输入res，注意边界条件的判断 时间复杂度$O(n)$ 空间复杂度$O(n)$ class Solution { public: vector&amp;lt;int&amp;gt; spiralOrder(vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt;&amp;amp; matrix) { vector&amp;lt;int&amp;gt; res; if(matrix.empty()) return res; int u=0, d=matrix.size()-1, l=0," /><meta name="keywords" content="code, life, study" />
 
 
 
@@ -40,13 +40,13 @@
 
 
 <meta property="og:title" content="[Lc]面试题29顺时针打印矩阵" />
-<meta property="og:description" content="题解 题解 直接迭代，四个方向将结果输入res，注意边界条件的判断 时间复杂度$O(n)$ 空间复杂度$O(n)$ class Solution { public: vector&lt;int&gt; spiralOrder(vector&lt;vector&lt;int&gt;&gt;&amp; matrix) { vector&lt;int&gt; res; if(matrix.empty()) return res; int u=0, d=matrix.size()-1, l=0," />
+<meta property="og:description" content="题目 题解 直接迭代，四个方向将结果输入res，注意边界条件的判断 时间复杂度$O(n)$ 空间复杂度$O(n)$ class Solution { public: vector&lt;int&gt; spiralOrder(vector&lt;vector&lt;int&gt;&gt;&amp; matrix) { vector&lt;int&gt; res; if(matrix.empty()) return res; int u=0, d=matrix.size()-1, l=0," />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9829%E9%A1%BA%E6%97%B6%E9%92%88%E6%89%93%E5%8D%B0%E7%9F%A9%E9%98%B5/" />
 <meta property="article:published_time" content="2020-05-17T17:07:04+08:00" />
 <meta property="article:modified_time" content="2020-05-17T17:07:04+08:00" />
 <meta itemprop="name" content="[Lc]面试题29顺时针打印矩阵">
-<meta itemprop="description" content="题解 题解 直接迭代，四个方向将结果输入res，注意边界条件的判断 时间复杂度$O(n)$ 空间复杂度$O(n)$ class Solution { public: vector&lt;int&gt; spiralOrder(vector&lt;vector&lt;int&gt;&gt;&amp; matrix) { vector&lt;int&gt; res; if(matrix.empty()) return res; int u=0, d=matrix.size()-1, l=0,">
+<meta itemprop="description" content="题目 题解 直接迭代，四个方向将结果输入res，注意边界条件的判断 时间复杂度$O(n)$ 空间复杂度$O(n)$ class Solution { public: vector&lt;int&gt; spiralOrder(vector&lt;vector&lt;int&gt;&gt;&amp; matrix) { vector&lt;int&gt; res; if(matrix.empty()) return res; int u=0, d=matrix.size()-1, l=0,">
 <meta itemprop="datePublished" content="2020-05-17T17:07:04&#43;08:00" />
 <meta itemprop="dateModified" content="2020-05-17T17:07:04&#43;08:00" />
 <meta itemprop="wordCount" content="125">
@@ -55,7 +55,7 @@
 
 <meta itemprop="keywords" content="数组," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="[Lc]面试题29顺时针打印矩阵"/>
-<meta name="twitter:description" content="题解 题解 直接迭代，四个方向将结果输入res，注意边界条件的判断 时间复杂度$O(n)$ 空间复杂度$O(n)$ class Solution { public: vector&lt;int&gt; spiralOrder(vector&lt;vector&lt;int&gt;&gt;&amp; matrix) { vector&lt;int&gt; res; if(matrix.empty()) return res; int u=0, d=matrix.size()-1, l=0,"/>
+<meta name="twitter:description" content="题目 题解 直接迭代，四个方向将结果输入res，注意边界条件的判断 时间复杂度$O(n)$ 空间复杂度$O(n)$ class Solution { public: vector&lt;int&gt; spiralOrder(vector&lt;vector&lt;int&gt;&gt;&amp; matrix) { vector&lt;int&gt; res; if(matrix.empty()) return res; int u=0, d=matrix.size()-1, l=0,"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -179,16 +179,16 @@ code.has-jax {
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
   <ul>
+    <li><a href="#题目">题目</a></li>
     <li><a href="#题解">题解</a></li>
-    <li><a href="#题解-1">题解</a></li>
   </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      <h2 id="题解">题解</h2>
+      <h2 id="题目">题目</h2>
 <p><img src="/img/img2020-05-17-17-51-37.png" alt=""></p>
-<h2 id="题解-1">题解</h2>
+<h2 id="题解">题解</h2>
 <p>直接迭代，四个方向将结果输入res，注意边界条件的判断</p>
 <ul>
 <li>时间复杂度$O(n)$</li>

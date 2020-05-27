@@ -6,10 +6,55 @@
     <description>Recent content in 链表 on Focus-ChrisHRZ&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 16 May 2020 11:31:08 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2020 16:54:15 +0800</lastBuildDate>
     
 	<atom:link href="https://chrishrz.github.io/tags/%E9%93%BE%E8%A1%A8/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Lc]面试题37序列化二叉树</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9837%E5%BA%8F%E5%88%97%E5%8C%96%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
+      <pubDate>Wed, 20 May 2020 16:54:15 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9837%E5%BA%8F%E5%88%97%E5%8C%96%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
+      <description>题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 先序遍历法 按先序遍历的顺序对数组进行序列化，遇到nullptr记位#</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题36二叉搜索树与双向链表</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9836%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%8E%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/</link>
+      <pubDate>Wed, 20 May 2020 12:05:20 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9836%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%8E%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/</guid>
+      <description>题目 题解 节点定义如下： // Definition for a Node. class Node { public: int val; Node* left; Node* right; Node() {} Node(int _val) { val = _val; left = NULL; right = NULL; } Node(int _val, Node* _left, Node* _right) { val = _val; left = _left; right = _right; } }; 这道题要利用二叉搜索树</description>
+    </item>
+    
+    <item>
+      <title>[Lc]426将二叉搜索树转化为排序的双向链表</title>
+      <link>https://chrishrz.github.io/post/lc426%E5%B0%86%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E8%BD%AC%E5%8C%96%E4%B8%BA%E6%8E%92%E5%BA%8F%E7%9A%84%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/</link>
+      <pubDate>Wed, 20 May 2020 11:58:34 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc426%E5%B0%86%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E8%BD%AC%E5%8C%96%E4%B8%BA%E6%8E%92%E5%BA%8F%E7%9A%84%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/</guid>
+      <description>题目 题解 节点定义如下： // Definition for a Node. class Node { public: int val; Node* left; Node* right; Node() {} Node(int _val) { val = _val; left = NULL; right = NULL; } Node(int _val, Node* _left, Node* _right) { val = _val; left = _left; right = _right; } }; 这道题要利用二叉搜索树</description>
+    </item>
+    
+    <item>
+      <title>[Lc]138复制带随机指针的链表</title>
+      <link>https://chrishrz.github.io/post/lc138%E5%A4%8D%E5%88%B6%E5%B8%A6%E9%9A%8F%E6%9C%BA%E6%8C%87%E9%92%88%E7%9A%84%E9%93%BE%E8%A1%A8/</link>
+      <pubDate>Tue, 19 May 2020 20:06:03 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc138%E5%A4%8D%E5%88%B6%E5%B8%A6%E9%9A%8F%E6%9C%BA%E6%8C%87%E9%92%88%E7%9A%84%E9%93%BE%E8%A1%A8/</guid>
+      <description>题目 题解 链表定义： // Definition for a Node. class Node { public: int val; Node* next; Node* random; Node(int _val) { val = _val; next = NULL; random = NULL; } }; 1. 复制链表节点法 在每个节点后复制新的节点，三次遍历 先复制新的节点</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题35复杂链表的复制</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9835%E5%A4%8D%E6%9D%82%E9%93%BE%E8%A1%A8%E7%9A%84%E5%A4%8D%E5%88%B6/</link>
+      <pubDate>Tue, 19 May 2020 20:02:50 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9835%E5%A4%8D%E6%9D%82%E9%93%BE%E8%A1%A8%E7%9A%84%E5%A4%8D%E5%88%B6/</guid>
+      <description>题目 题解 链表定义： // Definition for a Node. class Node { public: int val; Node* next; Node* random; Node(int _val) { val = _val; next = NULL; random = NULL; } }; 详细注释看138题 1. 复制链表节点法 在每个节点后复制新的节点，三次</description>
+    </item>
     
     <item>
       <title>[Lc]面试题27二叉树的镜像</title>

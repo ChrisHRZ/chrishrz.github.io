@@ -6,10 +6,64 @@
     <description>Recent content in leetcode on Focus-ChrisHRZ&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 18 May 2020 18:26:17 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 21 May 2020 18:45:47 +0800</lastBuildDate>
     
 	<atom:link href="https://chrishrz.github.io/categories/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Lc]52N皇后II</title>
+      <link>https://chrishrz.github.io/post/lc52n%E7%9A%87%E5%90%8Eii/</link>
+      <pubDate>Thu, 21 May 2020 18:45:47 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc52n%E7%9A%87%E5%90%8Eii/</guid>
+      <description>题目 题解 这道题是51题的化简版，这里贴上51题的思路。唯一的区别就说不用统计所有的棋盘情况，而是遍历完一个分支就计数+1 这道题是很经典的一道</description>
+    </item>
+    
+    <item>
+      <title>[Lc]51N皇后</title>
+      <link>https://chrishrz.github.io/post/lc51n%E7%9A%87%E5%90%8E/</link>
+      <pubDate>Thu, 21 May 2020 11:23:26 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc51n%E7%9A%87%E5%90%8E/</guid>
+      <description>题目 题解 这道题是很经典的一道题，思路就是dfs与回溯剪枝。这类回溯题的递归函数基本套路是这样的 判断是否终止并满足条件，满足了就加入res中 遍</description>
+    </item>
+    
+    <item>
+      <title>[Lc]169多数元素</title>
+      <link>https://chrishrz.github.io/post/lc169%E5%A4%9A%E6%95%B0%E5%85%83%E7%B4%A0/</link>
+      <pubDate>Wed, 20 May 2020 21:36:39 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc169%E5%A4%9A%E6%95%B0%E5%85%83%E7%B4%A0/</guid>
+      <description>题目 题解 1. 排序取中法 时间复杂度$O(nlog{n})$，主要是排序耗费的 空间复杂度$O(1)$ class Solution {//三种方法，这是1.排序后取中间数 //</description>
+    </item>
+    
+    <item>
+      <title>[Lc]297二叉树的序列化与反序列化</title>
+      <link>https://chrishrz.github.io/post/lc297%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%BA%8F%E5%88%97%E5%8C%96%E4%B8%8E%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/</link>
+      <pubDate>Wed, 20 May 2020 15:59:53 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc297%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%BA%8F%E5%88%97%E5%8C%96%E4%B8%8E%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/</guid>
+      <description>题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 先序遍历法 按先序遍历的顺序对数组进行序列化，遇到nullptr记位#</description>
+    </item>
+    
+    <item>
+      <title>[Lc]426将二叉搜索树转化为排序的双向链表</title>
+      <link>https://chrishrz.github.io/post/lc426%E5%B0%86%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E8%BD%AC%E5%8C%96%E4%B8%BA%E6%8E%92%E5%BA%8F%E7%9A%84%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/</link>
+      <pubDate>Wed, 20 May 2020 11:58:34 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc426%E5%B0%86%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E8%BD%AC%E5%8C%96%E4%B8%BA%E6%8E%92%E5%BA%8F%E7%9A%84%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/</guid>
+      <description>题目 题解 节点定义如下： // Definition for a Node. class Node { public: int val; Node* left; Node* right; Node() {} Node(int _val) { val = _val; left = NULL; right = NULL; } Node(int _val, Node* _left, Node* _right) { val = _val; left = _left; right = _right; } }; 这道题要利用二叉搜索树</description>
+    </item>
+    
+    <item>
+      <title>[Lc]138复制带随机指针的链表</title>
+      <link>https://chrishrz.github.io/post/lc138%E5%A4%8D%E5%88%B6%E5%B8%A6%E9%9A%8F%E6%9C%BA%E6%8C%87%E9%92%88%E7%9A%84%E9%93%BE%E8%A1%A8/</link>
+      <pubDate>Tue, 19 May 2020 20:06:03 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc138%E5%A4%8D%E5%88%B6%E5%B8%A6%E9%9A%8F%E6%9C%BA%E6%8C%87%E9%92%88%E7%9A%84%E9%93%BE%E8%A1%A8/</guid>
+      <description>题目 题解 链表定义： // Definition for a Node. class Node { public: int val; Node* next; Node* random; Node(int _val) { val = _val; next = NULL; random = NULL; } }; 1. 复制链表节点法 在每个节点后复制新的节点，三次遍历 先复制新的节点</description>
+    </item>
     
     <item>
       <title>[Lc]946验证栈序列</title>
@@ -566,7 +620,7 @@
       <pubDate>Fri, 27 Mar 2020 22:34:03 +0800</pubDate>
       
       <guid>https://chrishrz.github.io/post/lc113%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8C2/</guid>
-      <description>题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 递归法 时间复杂度：$O(N)$ 空间复杂度：？？需要额外空间。 //#1</description>
+      <description>题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 递归法 时间复杂度：$O(N)$ 空间复杂度：$O(N)$ 需要额外空间。</description>
     </item>
     
     <item>

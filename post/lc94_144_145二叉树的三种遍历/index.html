@@ -49,7 +49,7 @@
 <meta itemprop="description" content="题目 二叉树的遍历 简单地理解，满足以下两个条件的树就是二叉树： 本身是有序树； 树中包含的各个节点的度不能超过 2，即只能是 0、1 或者 2； 下图即一颗">
 <meta itemprop="datePublished" content="2020-03-09T11:28:56&#43;08:00" />
 <meta itemprop="dateModified" content="2020-03-09T11:28:56&#43;08:00" />
-<meta itemprop="wordCount" content="2878">
+<meta itemprop="wordCount" content="3717">
 
 
 
@@ -304,6 +304,27 @@ public:
    }
 };
 </code></pre>
+<p>感觉用while更好理解一点，下面的方法和上面的思路一样，只是将if改为while</p>
+<pre><code class="language-cpp">class Solution {//三种方法。2、栈迭代
+public:
+    vector&lt;int&gt; preorderTraversal(TreeNode* root) {
+        vector&lt;int&gt; res;
+        if(!root) return res;//遇到特殊情况返回
+        stack&lt;TreeNode*&gt; s;//创建栈
+        auto *cur = root;//设置指针
+        while(cur || !s.empty()){//只有cur指向nullptr且栈s空了才停止遍历。cur指向nullptr可能是遍历完一个子树；s空了可能回到根节点。
+            while(cur){
+                res.push_back(cur-&gt;val);//这是主要区别，先取值再入栈
+                s.push(cur);//入栈
+                cur = cur-&gt;left;
+            }
+            cur = s.top();s.pop();//弹出该栈顶元素
+            cur = cur-&gt;right;//进入右子树
+        }
+        return res;
+    }
+};
+</code></pre>
 <p>还可以用先把右子树压入栈的方法：</p>
 <pre><code class="language-cpp">class Solution {//三种方法。2、栈迭代
 public:
@@ -347,6 +368,29 @@ public:
     }
 };
 </code></pre>
+<p>感觉用while更好理解一点，下面的方法和上面的思路一样，只是将if改为while</p>
+<pre><code class="language-cpp">class Solution {//链表，树用递归都比较简单，但递归会用栈，效率比较低。
+                //2、迭代法，三种遍历通用
+                //时间O(n)，空间O(n)和迭代一样都是栈消耗
+public:
+    vector&lt;int&gt; inorderTraversal(TreeNode* root) {
+        vector&lt;int&gt; res;//创建结果
+        stack&lt;TreeNode*&gt; s;//创建使用的栈
+        TreeNode *cur = root;//辅助指针指向根节点
+        while(cur || !s.empty()){//只有cur指向nullptr且栈s空了才停止遍历。cur指向nullptr可能是遍历完一个子树；s空了可能回到根节点。
+            while(cur){//若cur为存在，则将该节点压入栈，并继续遍历左子树
+                s.push(cur);
+                cur = cur-&gt;left;
+            }
+            //否则就可以从栈中取数存入结果，并遍历
+            cur = s.top();s.pop();
+            res.push_back(cur-&gt;val);
+            cur = cur-&gt;right;
+        }//若左子树为空，则存入该店，若其右子树也为空，则存入其父节点。
+        return res;
+    }
+};
+</code></pre>
 <h4 id="后序遍历-1"><strong>后序遍历</strong></h4>
 <blockquote>
 <p><strong>注意这种方法不是严格的后序遍历，是反向后序遍历再翻转整个数组</strong></p>
@@ -369,6 +413,28 @@ public:
                 cur = s.top();s.pop();
                 cur = cur-&gt;left;
             }
+        }
+        return res;
+    }  
+};
+</code></pre>
+<p>感觉用while更好理解一点，下面的方法和上面的思路一样，只是将if改为while</p>
+<pre><code class="language-cpp">class Solution {//三种方法。2、栈迭代
+public:
+    vector&lt;int&gt; postorderTraversal(TreeNode* root) {
+        vector&lt;int&gt; res;
+        if(!root) return res;
+        stack&lt;TreeNode*&gt; s;
+        auto cur = root;
+        while(cur || !s.empty()){
+            while(cur){
+                s.push(cur);//这里和先序一样，和中序不一样
+                res.insert(res.begin(),cur-&gt;val);
+                //主要区别，在res开头插入，即由左右中变为中右左
+                cur = cur-&gt;right;//这也是区别，要注意
+            }
+            cur = s.top();s.pop();
+            cur = cur-&gt;left;//这也是区别
         }
         return res;
     }  
@@ -457,12 +523,12 @@ public:
 <p>后序遍历有三种方法。递归法前面已经写了，这里写一个严格后序遍历的<strong>栈迭代法</strong>。 <br>
 后序遍历与中序遍历的区别就在于<strong>在返回根节点时要判断是从左子树回来的还是从右子树回来的</strong>。实现方式就有</p>
 <ol>
-<li>用一个set存储遍历过的节点</li>
-<li>存储上一次遍历的几点</li>
+<li>用一个set存储已经遍历输出过的节点</li>
+<li>存储上一次遍历输出的节点</li>
 <li>stack中push两遍值</li>
 </ol>
 <blockquote>
-<p>这里写一个方法2，用的额外空间最少</p>
+<p>这里写一个方法2，用的额外空间最少，其他方法有机会再补充</p>
 </blockquote>
 <pre><code class="language-cpp">class Solution {
 public:

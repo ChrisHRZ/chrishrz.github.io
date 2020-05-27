@@ -49,7 +49,7 @@
 <meta itemprop="description" content="题目 题解 腾讯的客户端开发就是面的这个。。。，当时还想了半天幸苦想出来了，可惜还是凉 //Your CQueue object will be instantiated and called as such: CQueue* obj = new CQueue(); bj-&gt;appendTail(value); int param_2 = obj-&gt;deleteHead(); 1. 快存慢取 这个方法">
 <meta itemprop="datePublished" content="2020-05-10T20:54:36&#43;08:00" />
 <meta itemprop="dateModified" content="2020-05-10T20:54:36&#43;08:00" />
-<meta itemprop="wordCount" content="415">
+<meta itemprop="wordCount" content="414">
 
 
 
@@ -205,7 +205,8 @@ int param_2 = obj-&gt;deleteHead();
 <h3 id="1-快存慢取">1. 快存慢取</h3>
 <p>这个方法存的时候特别快，取得时候比较慢<br>
 <strong>存的时候</strong><br>
-直接加入s1，  <strong>取的时候</strong></p>
+直接加入s1</p>
+<p><strong>取的时候</strong></p>
 <ul>
 <li>若s2中有数，从s2的顶取数；</li>
 <li>若没数，把s1中的数全部挨个压入s2中，再取数</li>
@@ -249,10 +250,12 @@ public:
 <li>看s2中有没有数（即第一步放过去的）
 <ul>
 <li>若有，全部按顺序放入s1</li>
-<li>没有，不操作<br>
-<strong>取的过程</strong></li>
+<li>没有，不操作</li>
 </ul>
 </li>
+</ol>
+<p><strong>取的过程</strong></p>
+<ol>
 <li>取的时候直接从最上面取，注意判断s1是不是为空  、</li>
 </ol>
 <pre><code class="language-cpp">class CQueue {
@@ -279,12 +282,12 @@ public:
 };
 </code></pre>
 <h3 id="两个队列模拟一个栈">两个队列模拟一个栈</h3>
-<p>这个问题只有一个方法，慢存快去<br>
+<p>这个问题只有一个方法，慢存快取<br>
 <strong>存的时候</strong></p>
 <ol>
 <li>挨个取出q1的数放入q2</li>
 <li>存入valse</li>
-<li>挨个取出q2的数放入q1
+<li>挨个取出q2的数放入q1<br>
 <strong>取的时候</strong><br>
 直接从队首取值</li>
 </ol>

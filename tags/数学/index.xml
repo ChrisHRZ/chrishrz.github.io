@@ -6,10 +6,19 @@
     <description>Recent content in 数学 on Focus-ChrisHRZ&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 13 May 2020 16:08:43 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2020 21:36:39 +0800</lastBuildDate>
     
 	<atom:link href="https://chrishrz.github.io/tags/%E6%95%B0%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Lc]169多数元素</title>
+      <link>https://chrishrz.github.io/post/lc169%E5%A4%9A%E6%95%B0%E5%85%83%E7%B4%A0/</link>
+      <pubDate>Wed, 20 May 2020 21:36:39 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc169%E5%A4%9A%E6%95%B0%E5%85%83%E7%B4%A0/</guid>
+      <description>题目 题解 1. 排序取中法 时间复杂度$O(nlog{n})$，主要是排序耗费的 空间复杂度$O(1)$ class Solution {//三种方法，这是1.排序后取中间数 //</description>
+    </item>
     
     <item>
       <title>[Lc]面试题17打印从1到最大的n位数</title>
