@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>[Lc]295数据流的中位数 - Focus-ChrisHRZ&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ChrisHRZ" /><meta name="description" content="题目 //Your MedianFinder object will be instantiated and called as such: MedianFinder* obj = new MedianFinder(); obj-&amp;gt;addNum(num); double param_2 = obj-&amp;gt;findMedian(); 题解 有三种方法 1. 插入排序法 在插入每一个数时使用插入排序的思路，这样在取数的时候只需要取中间的数（" /><meta name="keywords" content="code, life, study" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.66.0 with theme even" />
+
+
+<link rel="canonical" href="https://chrishrz.github.io/post/lc295%E6%95%B0%E6%8D%AE%E6%B5%81%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
+
+<meta property="og:title" content="[Lc]295数据流的中位数" />
+<meta property="og:description" content="题目 //Your MedianFinder object will be instantiated and called as such: MedianFinder* obj = new MedianFinder(); obj-&gt;addNum(num); double param_2 = obj-&gt;findMedian(); 题解 有三种方法 1. 插入排序法 在插入每一个数时使用插入排序的思路，这样在取数的时候只需要取中间的数（" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chrishrz.github.io/post/lc295%E6%95%B0%E6%8D%AE%E6%B5%81%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0/" />
+<meta property="article:published_time" content="2020-06-03T18:17:03+08:00" />
+<meta property="article:modified_time" content="2020-06-03T18:17:03+08:00" />
+<meta itemprop="name" content="[Lc]295数据流的中位数">
+<meta itemprop="description" content="题目 //Your MedianFinder object will be instantiated and called as such: MedianFinder* obj = new MedianFinder(); obj-&gt;addNum(num); double param_2 = obj-&gt;findMedian(); 题解 有三种方法 1. 插入排序法 在插入每一个数时使用插入排序的思路，这样在取数的时候只需要取中间的数（">
+<meta itemprop="datePublished" content="2020-06-03T18:17:03&#43;08:00" />
+<meta itemprop="dateModified" content="2020-06-03T18:17:03&#43;08:00" />
+<meta itemprop="wordCount" content="1686">
+
+
+
+<meta itemprop="keywords" content="数组,插入排序,堆," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[Lc]295数据流的中位数"/>
+<meta name="twitter:description" content="题目 //Your MedianFinder object will be instantiated and called as such: MedianFinder* obj = new MedianFinder(); obj-&gt;addNum(num); double param_2 = obj-&gt;findMedian(); 题解 有三种方法 1. 插入排序法 在插入每一个数时使用插入排序的思路，这样在取数的时候只需要取中间的数（"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+<script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
+
+<meta name="baidu-site-verification" content="GDMA35xQfM" />
+<meta name="google-site-verification" content="f-5-S53Hm0WIn0Tnfu-dg0sNmCZeahUFILgUSI9JLQA" />
+<meta name="baidu-site-verification" content="74mXju2aOk" />
+<meta name="google-site-verification" content="2yu63Vg3wEmB1XF77uGbZdOQB_a_KSLTk-zNxL4oGRg" />
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">FOCUS</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">FOCUS</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">[Lc]295数据流的中位数</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-06-03 </span>
+        <div class="post-category">
+            <a href="/categories/leetcode/"> leetcode </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#题目">题目</a></li>
+    <li><a href="#题解">题解</a>
+      <ul>
+        <li><a href="#1-插入排序法">1. 插入排序法</a></li>
+        <li><a href="#2-两堆法">2. 两堆法</a></li>
+        <li><a href="#3-红黑树法multiset">3. 红黑树法（multiset）</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="题目">题目</h2>
+<p><img src="/img/img2020-06-03-18-17-42.png" alt="">
+<img src="/img/img2020-06-03-18-17-57.png" alt=""></p>
+<pre><code class="language-cpp">//Your MedianFinder object will be instantiated and called as such:
+MedianFinder* obj = new MedianFinder();
+obj-&gt;addNum(num);
+double param_2 = obj-&gt;findMedian();
+</code></pre>
+<h2 id="题解">题解</h2>
+<p>有三种方法</p>
+<h3 id="1-插入排序法">1. 插入排序法</h3>
+<p>在插入每一个数时使用插入排序的思路，这样在取数的时候只需要取中间的数（奇数）或者中间两数的平均数（偶数）。<br>
+注意插入时使用了upper_bound()，这是函数找到最后一个匹配数的下一个迭代器，或者插入不影响升序。<br>
+理论上用upper_bound会更快一些，插入时移动的数字较少。</p>
+<blockquote>
+<p>lower_bound和upper_bound。这两个操作都接受一个关键字，返回一个迭代器。如果关键字在容器中，lower_bound 返回的迭代器将指向第一个具有给定关键字的元素，而upper_bound返回的迭代器则指向最后一个匹配给定关键字的元素之后的位置。如果元素不在multimap 中，则lower_bound 和upper_bound 会返回相等的迭代器一—指向一个不影响排序的关键字插入位置。<br>
+——c++ primer 第五版</p>
+</blockquote>
+<ul>
+<li>时间复杂度：插入$O(n)+O(logn)$，插入时移动数组与二分查找。<br>
+取数$O(1)$</li>
+<li>空间复杂度$O(n)$，保存数组</li>
+</ul>
+<pre><code class="language-cpp">class MedianFinder {//三种方法。1.插入排序法
+    vector&lt;int&gt; nums;//定义数组
+public:
+    /** initialize your data structure here. */
+    MedianFinder() {}
+    
+    void addNum(int num) {
+        if(nums.empty()) nums.push_back(num);//为空直接加入num
+        else nums.insert(upper_bound(nums.begin(), nums.end(), num),num);//不为空进行插入排序，用upper_bound比lower_bound要移动的数字少
+    }
+    
+    double findMedian() {
+        int n = nums.size();
+        //分正负取中位数
+        return n &amp; 1? nums[n/2] : (nums[n/2-1]+nums[n/2])*0.5;//用0.5而不是/2来取小数部分
+    }
+};
+</code></pre>
+<h3 id="2-两堆法">2. 两堆法</h3>
+<p>这个方法利用了堆的性质，在c++中是priority_queue，建立一个大顶堆存小的半部分，一个小顶堆放大的半个部分，注意存数时不能直接存，详见注释</p>
+<ul>
+<li>时间复杂度：插入$O(logn)$，插入堆消耗，其他操作都是$O(1)$。<br>
+取数$O(1)$</li>
+<li>空间复杂度$O(n)$，保存两个堆</li>
+</ul>
+<pre><code class="language-cpp">class MedianFinder {//三种方法。2.两堆法
+    priority_queue&lt;int, vector&lt;int&gt;, less&lt;int&gt; &gt; lo;//大顶堆存小的一半的数字
+    priority_queue&lt;int, vector&lt;int&gt;, greater&lt;int&gt; &gt; hi;//小顶堆存大的一半的数字
+public:
+    /** initialize your data structure here. */
+    MedianFinder() {}
+    
+    void addNum(int num) {
+        //若两个堆数字数量相等，总数为偶数，此时需要将数字加入hi
+        //但是不能直接加，因为有可能num属于lo，需要将num加入lo，再把堆顶push给hi
+        //这里的条件判断起到了平衡两个堆的作用
+        if(lo.size() == hi.size()){
+            lo.push(num);
+            hi.push(lo.top());
+            lo.pop();
+        }
+        //当两个堆数字数量不等，总数为奇数时需要将num加入lo，操作与上面类似，只是相反
+        else{
+            hi.push(num);
+            lo.push(hi.top());
+            hi.pop();
+        }
+    }
+    
+    double findMedian() {
+        //用0.5而不是/2，这样才能取float
+        return lo.size()==hi.size()? (lo.top()+hi.top())*0.5 : hi.top();
+    }
+};
+</code></pre>
+<h3 id="3-红黑树法multiset">3. 红黑树法（multiset）</h3>
+<p>也可以直接用自平衡二叉搜索树的性质，multiset的底层实现是红黑树，符合我们的要求（set中不能有重复数组，因此需要用multiset），再定义一个迭代器指针指向中位数（奇数）或中间偏后的数（偶数）即可，每次插入只需要判断奇偶和输入的数属于哪半边，更新迭代器的指向即可，具体更新见注释。根据奇偶输出中位数即可</p>
+<ul>
+<li>时间复杂度：插入$O(logn)$</li>
+<li>空间复杂度：$O(n)$</li>
+</ul>
+<pre><code class="language-cpp">class MedianFinder {//三种方法。3.红黑树法（multiset）
+    multiset&lt;int&gt; nums;//定义mutliset存数组
+    multiset&lt;int&gt;::iterator mid;//定义指向中位数的指针
+public:
+    /** initialize your data structure here. */
+    //这里用委托构造函数初始化mid的值，相比于在构造函数内部初始化效率更高
+    MedianFinder():mid(nums.end()){}
+    
+    void addNum(int num) {
+        const int n = nums.size();//用const int存数组长度
+        nums.insert(num);//插入新数
+        //注意n是插入num之前的multiset长度
+        //只有一个数的时候，mid为这个数
+        if(!n) mid = nums.begin();
+        //当num为前半段的数时，判断n的奇偶
+        //若n为奇数，+1为偶数，mid不变，指向中间偏后的数
+        //若n为偶数，+1为奇数，指向前一个数，即当前的中位数
+        else if(num &lt; *mid) mid = n&amp;1? mid : prev(mid);
+        //当num为后半段的数时，判断n的奇偶
+        //若n为奇数，+1为偶数，mid指向后一个数，指向中间偏后的数
+        //若n为偶数，+1为奇数，mid不变，即当前的中位数
+        else n&amp;1? mid = next(mid) : mid;
+    }
+    
+    double findMedian() {
+        const int n = nums.size();
+        //取中位数的时候判断奇偶，奇数直接取mid，偶数取mid和前一个数
+        return n&amp;1? *mid : (*mid+*prev(mid))*0.5;
+        //也可以这么输出
+        //return (*mid + *next(mid, n%2-1))*0.5;
+    }
+};</code></pre>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">ChrisHRZ</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-06-03
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E6%95%B0%E7%BB%84/">数组</a>
+          <a href="/tags/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/">插入排序</a>
+          <a href="/tags/%E5%A0%86/">堆</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/%E8%BD%AC%E8%BD%BDc&#43;&#43;%E5%AD%90%E7%B1%BB%E7%9A%84%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%90%8E%E9%9D%A2%E5%8A%A0%E5%86%92%E5%8F%B7%E7%9A%84%E4%BD%9C%E7%94%A8/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">[转载]C&#43;&#43;子类的构造函数后面加冒号的作用</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9841%E6%95%B0%E6%8D%AE%E6%B5%81%E4%B8%AD%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0/">
+            <span class="next-text nav-default">[Lc]面试题41数据流中的中位数</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/lc295%E6%95%B0%E6%8D%AE%E6%B5%81%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0/" class="leancloud_visitors" data-flag-title="[Lc]295数据流的中位数">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'M8Fyr1YXIu2Ov8Wh4ByqtEzq-gzGzoHsz',
+        appKey: 'AHiPSGeLQbvrQGQ6KfhvOKvN',
+        notify:  false ,
+        verify:  false ,
+        avatar:'mm',
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/ChrisHRZ" class="iconfont icon-github" title="github"></a>
+  <a href="https://chrishrz.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">ChrisHRZ</span>
+  </span>
+</div>
+
+
+<script src="https://cdn.bootcss.com/mermaid/8.4.8/mermaid.min.js"></script>
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js"></script>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

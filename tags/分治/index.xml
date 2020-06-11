@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>分治 on Focus-ChrisHRZ&#39;s blog</title>
+    <link>https://chrishrz.github.io/tags/%E5%88%86%E6%B2%BB/</link>
+    <description>Recent content in 分治 on Focus-ChrisHRZ&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 06 Jun 2020 22:21:20 +0800</lastBuildDate>
+    
+	<atom:link href="https://chrishrz.github.io/tags/%E5%88%86%E6%B2%BB/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[Lc]面试题42连续子数组的最大和</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9842%E8%BF%9E%E7%BB%AD%E5%AD%90%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%A4%A7%E5%92%8C/</link>
+      <pubDate>Sat, 06 Jun 2020 22:21:20 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9842%E8%BF%9E%E7%BB%AD%E5%AD%90%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%A4%A7%E5%92%8C/</guid>
+      <description>题目 题解 这题有三种解法，其中第一种暴力法肯定超时，因此主要讨论后两种方法 1. 暴力法 这个方法就是取每种情况并计算当前情况的子序和，时间复杂度达到</description>
+    </item>
+    
+    <item>
+      <title>[Lc]53最大子序和</title>
+      <link>https://chrishrz.github.io/post/lc53%E6%9C%80%E5%A4%A7%E5%AD%90%E5%BA%8F%E5%92%8C/</link>
+      <pubDate>Sat, 06 Jun 2020 20:37:44 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc53%E6%9C%80%E5%A4%A7%E5%AD%90%E5%BA%8F%E5%92%8C/</guid>
+      <description>题目 题解 这题有三种解法，其中第一种暴力法肯定超时，因此主要讨论后两种方法 1. 暴力法 这个方法就是取每种情况并计算当前情况的子序和，时间复杂度达到</description>
+    </item>
+    
+  </channel>
+</rss>

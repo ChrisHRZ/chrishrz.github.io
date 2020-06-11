@@ -6,10 +6,19 @@
     <description>Recent content in 字符串 on Focus-ChrisHRZ&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 21 May 2020 18:45:47 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jun 2020 15:11:58 +0800</lastBuildDate>
     
 	<atom:link href="https://chrishrz.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Lc]面试题45把数组排成最小的数</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9845%E6%8A%8A%E6%95%B0%E7%BB%84%E6%8E%92%E6%88%90%E6%9C%80%E5%B0%8F%E7%9A%84%E6%95%B0/</link>
+      <pubDate>Thu, 11 Jun 2020 15:11:58 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9845%E6%8A%8A%E6%95%B0%E7%BB%84%E6%8E%92%E6%88%90%E6%9C%80%E5%B0%8F%E7%9A%84%E6%95%B0/</guid>
+      <description>题目 题解 这道题实际上是字符串排序，需要重新定义字符串大小的定义 ，具体的排序方法见注释 时间复杂度$O(nlog{n})$ 空间复杂度$O(n)$</description>
+    </item>
     
     <item>
       <title>[Lc]52N皇后II</title>
