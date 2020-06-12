@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>滑动窗口 on Focus-ChrisHRZ&#39;s blog</title>
+    <link>https://chrishrz.github.io/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</link>
+    <description>Recent content in 滑动窗口 on Focus-ChrisHRZ&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 12 Jun 2020 11:06:15 +0800</lastBuildDate>
+    
+	<atom:link href="https://chrishrz.github.io/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[Lc]3无重复字符的最长子串</title>
+      <link>https://chrishrz.github.io/post/lc3%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/</link>
+      <pubDate>Fri, 12 Jun 2020 11:06:15 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc3%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/</guid>
+      <description>题目 题解 这道题是用滑动窗口法，用一个哈希表（或者vector或者unordered_set）存已经遍历过的字符和最近出现该字符的位置 若重复遇</description>
+    </item>
+    
+  </channel>
+</rss>

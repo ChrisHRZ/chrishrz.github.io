@@ -49,7 +49,7 @@
 <meta itemprop="description" content="题目 题解 这道题也是dp，但是不用数组保存过去的状态，经过分析讨论当前状态只与前两个状态有关，所以只用存前两个状态即可，共有四种情况，详解见I">
 <meta itemprop="datePublished" content="2020-05-07T11:13:52&#43;08:00" />
 <meta itemprop="dateModified" content="2020-05-07T11:13:52&#43;08:00" />
-<meta itemprop="wordCount" content="405">
+<meta itemprop="wordCount" content="810">
 
 
 
@@ -198,20 +198,44 @@ code.has-jax {
 public:
     int numDecodings(string s) {
         if(s[0] == '0') return 0;
-        int cur = 1, pre = 1;//cur存当前编码总数dp[i-1]，pre存dp[i-2],每次更新结束cur变为dp[i]
+        int cur = 1, pre = 1;//cur存当前编码总数dp[i]，pre存dp[i-1],每次更新结束cur变为dp[i]
         for(int i=1; i&lt;s.size(); ++i){
-            int tmp = cur;//暂存cur
+            int tmp = cur;//暂存cur，此时tmp变为dp[i-1]，pre变为dp[i-2]，cur变为dp[i]
             if(s[i]=='0'){
                 if(s[i-1]=='1' || s[i-1]=='2') cur = pre;//情况一，0前面是1或2，总数不变，因为0只能和前面的数组合
                 else return 0;//情况二，0前面是其他数，直接返回0，因为0无法与其他数组合
             }else{
-                //情况三四，若前面是1，或者前面是2这个数在2-6之间，总数是dp[i-1]+dp[i-2]
+                //情况三，若前面是1，或者前面是2这个数在2-6之间，总数是dp[i-1]+dp[i-2]
                 //dp[i-1]是这两个数分开解码，dp[i-2]是这两个数合并解码
                 if(s[i-1]=='1' || (s[i-1]=='2' &amp;&amp; s[i]&gt;='1' &amp;&amp; s[i]&lt;='6')) cur += pre;
+                //情况四，即这个数非0且不符合上述条件，这种情况cur=cur
             }
             pre = tmp;//更新pre为最初的cur，即dp[i-1]
         }
         return cur;
+    }
+};
+</code></pre>
+<p>贴一个空间复杂度$O(n)$的辅助理解，来自(<a href="https://leetcode-cn.com/problems/decode-ways/solution/c-wo-ren-wei-hen-jian-dan-zhi-guan-de-jie-fa-by-pr/">https://leetcode-cn.com/problems/decode-ways/solution/c-wo-ren-wei-hen-jian-dan-zhi-guan-de-jie-fa-by-pr/</a>)</p>
+<pre><code class="language-cpp">class Solution {
+public:
+    int numDecodings(string s) {
+        if (s[0] == '0') return 0;
+        vector&lt;int&gt; dp(s.size()+1);
+        dp[0]=1;dp[1]=1;
+        for (int i =1; i &lt; s.size(); i++) {
+            if (s[i] == '0')//1.s[i]为0的情况
+                if (s[i - 1] == '1' || s[i - 1] == '2') //s[i - 1]等于1或2的情况
+                    dp[i+1] = dp[i-1];//由于s[1]指第二个下标，对应为dp[2],所以dp的下标要比s大1，故为dp[i+1]
+                else 
+                    return 0;
+            else //2.s[i]不为0的情况
+                if (s[i - 1] == '1' || (s[i - 1] == '2' &amp;&amp; s[i] &lt;= '6'))//s[i-1]s[i]两位数要小于26的情况
+                    dp[i+1] = dp[i]+dp[i-1];
+                else//其他情况
+                    dp[i+1] = dp[i];
+        }
+        return dp[s.size()];
     }
 };
 </code></pre>

@@ -6,10 +6,28 @@
     <description>Recent content in DP on Focus-ChrisHRZ&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 06 Jun 2020 22:21:20 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jun 2020 22:21:58 +0800</lastBuildDate>
     
 	<atom:link href="https://chrishrz.github.io/tags/dp/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Lc]面试题47礼物的最大价值</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9847%E7%A4%BC%E7%89%A9%E7%9A%84%E6%9C%80%E5%A4%A7%E4%BB%B7%E5%80%BC/</link>
+      <pubDate>Thu, 11 Jun 2020 22:21:58 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9847%E7%A4%BC%E7%89%A9%E7%9A%84%E6%9C%80%E5%A4%A7%E4%BB%B7%E5%80%BC/</guid>
+      <description>题目 题解 这道题感觉做过类似的，忘了是哪一道了，反正就是原地动态规划，原地更新数组，边界直接加上左（或上）的数，中间的加左或上中比较大的数比较</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题46把数字翻译成字符串</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9846%E6%8A%8A%E6%95%B0%E5%AD%97%E7%BF%BB%E8%AF%91%E6%88%90%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+      <pubDate>Thu, 11 Jun 2020 22:07:48 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9846%E6%8A%8A%E6%95%B0%E5%AD%97%E7%BF%BB%E8%AF%91%E6%88%90%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+      <description>题目 题解 这道题和91题很像，区别在于这道题从0开始编码，就不用讨论当前数为0的情况，因此更简单，可以转化为字符串使用91题的方法进行解决，这</description>
+    </item>
     
     <item>
       <title>[Lc]面试题42连续子数组的最大和</title>

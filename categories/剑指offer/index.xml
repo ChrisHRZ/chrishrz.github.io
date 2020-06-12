@@ -6,10 +6,55 @@
     <description>Recent content in 剑指offer on Focus-ChrisHRZ&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 11 Jun 2020 15:11:58 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jun 2020 19:14:08 +0800</lastBuildDate>
     
 	<atom:link href="https://chrishrz.github.io/categories/%E5%89%91%E6%8C%87offer/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Lc]面试题50第一个只出现一次的字符</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9850%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E5%AD%97%E7%AC%A6/</link>
+      <pubDate>Fri, 12 Jun 2020 19:14:08 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9850%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E5%AD%97%E7%AC%A6/</guid>
+      <description>题目 题解 三个方法，前两个都是基于哈希表，只是哈希表的实现方式不同；最后一个是对于数据流的处理情况，这个情况只能遍历字符串一遍，因此需要再遍历</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题49丑数</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9849%E4%B8%91%E6%95%B0/</link>
+      <pubDate>Fri, 12 Jun 2020 16:50:55 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9849%E4%B8%91%E6%95%B0/</guid>
+      <description>题目 题解 两个方法 1. 动态规划 就是找到丑数的生成规律，然后递推不断地生成下一个丑数，直到生成第n个丑数，需要使用三个指针，分析见注释 时间复杂度$</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题48最长不含重复字符的子字符串</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9848%E6%9C%80%E9%95%BF%E4%B8%8D%E5%90%AB%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+      <pubDate>Fri, 12 Jun 2020 12:30:43 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9848%E6%9C%80%E9%95%BF%E4%B8%8D%E5%90%AB%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+      <description>题目 题解 这道题是用滑动窗口法，用一个哈希表（或者vector或者unordered_set）存已经遍历过的字符和最近出现该字符的位置 若重复遇</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题47礼物的最大价值</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9847%E7%A4%BC%E7%89%A9%E7%9A%84%E6%9C%80%E5%A4%A7%E4%BB%B7%E5%80%BC/</link>
+      <pubDate>Thu, 11 Jun 2020 22:21:58 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9847%E7%A4%BC%E7%89%A9%E7%9A%84%E6%9C%80%E5%A4%A7%E4%BB%B7%E5%80%BC/</guid>
+      <description>题目 题解 这道题感觉做过类似的，忘了是哪一道了，反正就是原地动态规划，原地更新数组，边界直接加上左（或上）的数，中间的加左或上中比较大的数比较</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题46把数字翻译成字符串</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9846%E6%8A%8A%E6%95%B0%E5%AD%97%E7%BF%BB%E8%AF%91%E6%88%90%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+      <pubDate>Thu, 11 Jun 2020 22:07:48 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9846%E6%8A%8A%E6%95%B0%E5%AD%97%E7%BF%BB%E8%AF%91%E6%88%90%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+      <description>题目 题解 这道题和91题很像，区别在于这道题从0开始编码，就不用讨论当前数为0的情况，因此更简单，可以转化为字符串使用91题的方法进行解决，这</description>
+    </item>
     
     <item>
       <title>[Lc]面试题45把数组排成最小的数</title>
