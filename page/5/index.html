@@ -45,7 +45,7 @@
 <meta property="og:description" content="Life is art. Live it up." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://chrishrz.github.io/" />
-<meta property="og:updated_time" content="2020-06-12T19:14:08+08:00" />
+<meta property="og:updated_time" content="2020-07-04T14:08:27+08:00" />
 <meta itemprop="name" content="Focus-ChrisHRZ&#39;s blog">
 <meta itemprop="description" content="Life is art. Live it up."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Focus-ChrisHRZ&#39;s blog"/>
@@ -157,9 +157,9 @@ code.has-jax {
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lc59%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5ii/">[Lc]59螺旋矩阵II</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/lc53%E6%9C%80%E5%A4%A7%E5%AD%90%E5%BA%8F%E5%92%8C/">[Lc]53最大子序和</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2020-05-17 </span>
+      <span class="post-time"> 2020-06-06 </span>
       <div class="post-category">
           <a href="/categories/leetcode/"> leetcode </a>
           </div>
@@ -168,124 +168,40 @@ code.has-jax {
   
   <div class="post-content">
     <div class="post-summary">
-      题目 题解 就是分四种情况，从左到右，上到下，右到左，下到上循环遍历，和54题类似 时间复杂度$O(nm)$ 空间复杂度$O(nm)$ class Solution { public: vector&lt;vector&lt;int&gt;&gt; generateMatrix(int n)
+      题目 题解 这题有三种解法，其中第一种暴力法肯定超时，因此主要讨论后两种方法 1. 暴力法 这个方法就是取每种情况并计算当前情况的子序和，时间复杂度达到
     </div>
     <div class="read-more">
-      <a href="/post/lc59%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5ii/" class="read-more-link">Read more...</a>
+      <a href="/post/lc53%E6%9C%80%E5%A4%A7%E5%AD%90%E5%BA%8F%E5%92%8C/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9829%E9%A1%BA%E6%97%B6%E9%92%88%E6%89%93%E5%8D%B0%E7%9F%A9%E9%98%B5/">[Lc]面试题29顺时针打印矩阵</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/%E8%BD%AC%E8%BD%BDc&#43;&#43;%E5%AD%90%E7%B1%BB%E7%9A%84%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%90%8E%E9%9D%A2%E5%8A%A0%E5%86%92%E5%8F%B7%E7%9A%84%E4%BD%9C%E7%94%A8/">[转载]C&#43;&#43;子类的构造函数后面加冒号的作用</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2020-05-17 </span>
+      <span class="post-time"> 2020-06-06 </span>
       <div class="post-category">
-          <a href="/categories/%E5%89%91%E6%8C%87offer/"> 剑指offer </a>
+          <a href="/categories/c&#43;&#43;/"> c&#43;&#43; </a>
           </div>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      题目 题解 直接迭代，四个方向将结果输入res，注意边界条件的判断 时间复杂度$O(n)$ 空间复杂度$O(n)$ class Solution { public: vector&lt;int&gt; spiralOrder(vector&lt;vector&lt;int&gt;&gt;&amp; matrix) { vector&lt;int&gt; res; if(matrix.empty()) return res; int u=0, d=matrix.size()-1, l=0,
+      在C++类的构造函数中经常会看到如下格式的写法： MyWindow::MyWindow(QWidget* parent , Qt::WindowFlags flag) : QMainWindow(parent,flag) 上述语句中单冒号(:)的作用是表示后面是初始化列表，一般有三种使用场景。 1. 对父
     </div>
     <div class="read-more">
-      <a href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9829%E9%A1%BA%E6%97%B6%E9%92%88%E6%89%93%E5%8D%B0%E7%9F%A9%E9%98%B5/" class="read-more-link">Read more...</a>
+      <a href="/post/%E8%BD%AC%E8%BD%BDc&#43;&#43;%E5%AD%90%E7%B1%BB%E7%9A%84%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%90%8E%E9%9D%A2%E5%8A%A0%E5%86%92%E5%8F%B7%E7%9A%84%E4%BD%9C%E7%94%A8/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9828%E5%AF%B9%E7%A7%B0%E7%9A%84%E4%BA%8C%E5%8F%89%E6%A0%91/">[Lc]面试题28对称的二叉树</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/lc295%E6%95%B0%E6%8D%AE%E6%B5%81%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0/">[Lc]295数据流的中位数</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2020-05-17 </span>
-      <div class="post-category">
-          <a href="/categories/%E5%89%91%E6%8C%87offer/"> 剑指offer </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 这道题三种解法，递归，栈迭代（先序遍历），队列迭代（层次遍历）。与10
-    </div>
-    <div class="read-more">
-      <a href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9828%E5%AF%B9%E7%A7%B0%E7%9A%84%E4%BA%8C%E5%8F%89%E6%A0%91/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9827%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%95%9C%E5%83%8F/">[Lc]面试题27二叉树的镜像</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-05-16 </span>
-      <div class="post-category">
-          <a href="/categories/%E5%89%91%E6%8C%87offer/"> 剑指offer </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 递归法 这个方法就是递归的翻转左右子树，若遇到空子树直接返回，然后当前
-    </div>
-    <div class="read-more">
-      <a href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9827%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%95%9C%E5%83%8F/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9826%E6%A0%91%E7%9A%84%E5%AD%90%E7%BB%93%E6%9E%84/">[Lc]面试题26树的子结构</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-05-15 </span>
-      <div class="post-category">
-          <a href="/categories/%E5%89%91%E6%8C%87offer/"> 剑指offer </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 双递归法 两个递归函数，一个用来看当前节点是否匹配，一个用来遍历a的所
-    </div>
-    <div class="read-more">
-      <a href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9826%E6%A0%91%E7%9A%84%E5%AD%90%E7%BB%93%E6%9E%84/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9825%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%8E%92%E5%BA%8F%E7%9A%84%E9%93%BE%E8%A1%A8/">[Lc]面试题25合并两个排序的链表</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-05-15 </span>
-      <div class="post-category">
-          <a href="/categories/%E5%89%91%E6%8C%87offer/"> 剑指offer </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      题目 链表定义： //Definition for singly-linked list. struct ListNode { int val; ListNode *next; ListNode(int x) : val(x), next(NULL) {} }; 题解 这道题的思想是链表归并排序中的一个重要环节，即对有序的两个链表进行归并。比较表头，小的
-    </div>
-    <div class="read-more">
-      <a href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9825%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%8E%92%E5%BA%8F%E7%9A%84%E9%93%BE%E8%A1%A8/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lc21%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8/">[Lc]21合并两个有序链表</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-05-15 </span>
+      <span class="post-time"> 2020-06-03 </span>
       <div class="post-category">
           <a href="/categories/leetcode/"> leetcode </a>
           </div>
@@ -294,19 +210,103 @@ code.has-jax {
   
   <div class="post-content">
     <div class="post-summary">
-      题目 链表定义： //Definition for singly-linked list. struct ListNode { int val; ListNode *next; ListNode(int x) : val(x), next(NULL) {} }; 题解 这道题的思想是链表归并排序中的一个重要环节，即对有序的两个链表进行归并。比较表头，小的
+      题目 //Your MedianFinder object will be instantiated and called as such: MedianFinder* obj = new MedianFinder(); obj-&gt;addNum(num); double param_2 = obj-&gt;findMedian(); 题解 有三种方法 1. 插入排序法 在插入每一个数时使用插入排序的思路，这样在取数的时候只需要取中间的数（
     </div>
     <div class="read-more">
-      <a href="/post/lc21%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8/" class="read-more-link">Read more...</a>
+      <a href="/post/lc295%E6%95%B0%E6%8D%AE%E6%B5%81%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lc206%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/">[Lc]206反转链表</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9841%E6%95%B0%E6%8D%AE%E6%B5%81%E4%B8%AD%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0/">[Lc]面试题41数据流中的中位数</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2020-05-15 </span>
+      <span class="post-time"> 2020-06-03 </span>
+      <div class="post-category">
+          <a href="/categories/leetcode/"> leetcode </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      题目 //Your MedianFinder object will be instantiated and called as such: MedianFinder* obj = new MedianFinder(); obj-&gt;addNum(num); double param_2 = obj-&gt;findMedian(); 题解 有三种方法 1. 插入排序法 在插入每一个数时使用插入排序的思路，这样在取数的时候只需要取中间的数（
+    </div>
+    <div class="read-more">
+      <a href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9841%E6%95%B0%E6%8D%AE%E6%B5%81%E4%B8%AD%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/%E6%BA%90%E7%A0%81%E5%8F%8D%E7%A0%81%E8%A1%A5%E7%A0%81%E6%B5%85%E6%9E%90/">源码，反码，补码浅析</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-05-22 </span>
+      <div class="post-category">
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"> 计算机基础 </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      源码，反码和补码的形式 以下三种码都是二进制码 **源码：**符号位+真值的绝对值。符号位0表示正数，1表示负数。 **反码：**正数时，反码=源
+    </div>
+    <div class="read-more">
+      <a href="/post/%E6%BA%90%E7%A0%81%E5%8F%8D%E7%A0%81%E8%A1%A5%E7%A0%81%E6%B5%85%E6%9E%90/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/lc52n%E7%9A%87%E5%90%8Eii/">[Lc]52N皇后II</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-05-21 </span>
+      <div class="post-category">
+          <a href="/categories/leetcode/"> leetcode </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      题目 题解 这道题是51题的化简版，这里贴上51题的思路。唯一的区别就说不用统计所有的棋盘情况，而是遍历完一个分支就计数+1 这道题是很经典的一道
+    </div>
+    <div class="read-more">
+      <a href="/post/lc52n%E7%9A%87%E5%90%8Eii/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/lc51n%E7%9A%87%E5%90%8E/">[Lc]51N皇后</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-05-21 </span>
+      <div class="post-category">
+          <a href="/categories/leetcode/"> leetcode </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      题目 题解 这道题是很经典的一道题，思路就是dfs与回溯剪枝。这类回溯题的递归函数基本套路是这样的 判断是否终止并满足条件，满足了就加入res中 遍
+    </div>
+    <div class="read-more">
+      <a href="/post/lc51n%E7%9A%87%E5%90%8E/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9839%E6%95%B0%E7%BB%84%E4%B8%AD%E5%87%BA%E7%8E%B0%E6%AC%A1%E6%95%B0%E8%B6%85%E8%BF%87%E4%B8%80%E5%8D%8A%E7%9A%84%E6%95%B0%E5%AD%97/">[Lc]面试题39数组中出现次数超过一半的数字</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-05-20 </span>
       <div class="post-category">
           <a href="/categories/%E5%89%91%E6%8C%87offer/"> 剑指offer </a>
           </div>
@@ -315,19 +315,40 @@ code.has-jax {
   
   <div class="post-content">
     <div class="post-summary">
-      题目 链表定义： //Definition for singly-linked list. struct ListNode { int val; ListNode *next; ListNode(int x) : val(x), next(NULL) {} }; 题解 1. 迭代法（双指针） 实际上是三个指针，一个指向当前节点之前pre，一个指向当前节点cur
+      题目 题解 详细注释见169题，这里再练习一下 1. 排序取中法 时间复杂度$O(nlog{n})$，主要是排序耗费的 空间复杂度$O(1)$ class Solution {//三
     </div>
     <div class="read-more">
-      <a href="/post/lc206%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/" class="read-more-link">Read more...</a>
+      <a href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9839%E6%95%B0%E7%BB%84%E4%B8%AD%E5%87%BA%E7%8E%B0%E6%AC%A1%E6%95%B0%E8%B6%85%E8%BF%87%E4%B8%80%E5%8D%8A%E7%9A%84%E6%95%B0%E5%AD%97/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9824%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/">[Lc]面试题24反转链表</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/lc169%E5%A4%9A%E6%95%B0%E5%85%83%E7%B4%A0/">[Lc]169多数元素</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2020-05-15 </span>
+      <span class="post-time"> 2020-05-20 </span>
+      <div class="post-category">
+          <a href="/categories/leetcode/"> leetcode </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      题目 题解 1. 排序取中法 时间复杂度$O(nlog{n})$，主要是排序耗费的 空间复杂度$O(1)$ class Solution {//三种方法，这是1.排序后取中间数 //
+    </div>
+    <div class="read-more">
+      <a href="/post/lc169%E5%A4%9A%E6%95%B0%E5%85%83%E7%B4%A0/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9838%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%8E%92%E5%88%97/">[Lc]面试题38字符串的排列</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-05-20 </span>
       <div class="post-category">
           <a href="/categories/%E5%89%91%E6%8C%87offer/"> 剑指offer </a>
           </div>
@@ -336,31 +357,10 @@ code.has-jax {
   
   <div class="post-content">
     <div class="post-summary">
-      题目 链表定义： //Definition for singly-linked list. struct ListNode { int val; ListNode *next; ListNode(int x) : val(x), next(NULL) {} }; 题解 1. 迭代法（双指针） 实际上是三个指针，一个指向当前节点之前pre，一个指向当前节点cur
+      题目 题解 整体思路是从第一个数开始，不断地与后面的数进行交换（这个交换也包括与自己交换，即不交换），每一个数都有s.size()-start种
     </div>
     <div class="read-more">
-      <a href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9824%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9822%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E8%8A%82%E7%82%B9/">[Lc]面试题22链表中倒数第k个节点</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-05-14 </span>
-      <div class="post-category">
-          <a href="/categories/%E5%89%91%E6%8C%87offer/"> 剑指offer </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      题目 题解 快慢指针 时间复杂度$O(n)$ 空间复杂度$O(1)$ class Solution { public: ListNode* getKthFromEnd(ListNode* head, int k) { if(k==0 || !head) return nullptr; ListNode *fast = head, *slow = head; int n = 0; while(fast){ if(n &gt;= k) slow = slow-&gt;next; fast = fast-&gt;next; n++; } if(n&lt;k) return
-    </div>
-    <div class="read-more">
-      <a href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9822%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E8%8A%82%E7%82%B9/" class="read-more-link">Read more...</a>
+      <a href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9838%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%8E%92%E5%88%97/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

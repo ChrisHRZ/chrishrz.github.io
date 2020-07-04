@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>[Lc]面试题56_II数组中数字出现的次数II - Focus-ChrisHRZ&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ChrisHRZ" /><meta name="description" content="题目 题解 1. 有限状态机 详细题解看这里。这里放几张来自该题解的图。详细题解还是看 Krahets 大神的题解吧。 时间复杂度: $O(n)$ 空间复杂度: $O(1)$ 重点掌握one和tw" /><meta name="keywords" content="code, life, study" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.66.0 with theme even" />
+
+
+<link rel="canonical" href="https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9856_ii%E6%95%B0%E7%BB%84%E4%B8%AD%E6%95%B0%E5%AD%97%E5%87%BA%E7%8E%B0%E7%9A%84%E6%AC%A1%E6%95%B0ii/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
+
+<meta property="og:title" content="[Lc]面试题56_II数组中数字出现的次数II" />
+<meta property="og:description" content="题目 题解 1. 有限状态机 详细题解看这里。这里放几张来自该题解的图。详细题解还是看 Krahets 大神的题解吧。 时间复杂度: $O(n)$ 空间复杂度: $O(1)$ 重点掌握one和tw" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9856_ii%E6%95%B0%E7%BB%84%E4%B8%AD%E6%95%B0%E5%AD%97%E5%87%BA%E7%8E%B0%E7%9A%84%E6%AC%A1%E6%95%B0ii/" />
+<meta property="article:published_time" content="2020-06-24T17:09:28+08:00" />
+<meta property="article:modified_time" content="2020-06-24T17:09:28+08:00" />
+<meta itemprop="name" content="[Lc]面试题56_II数组中数字出现的次数II">
+<meta itemprop="description" content="题目 题解 1. 有限状态机 详细题解看这里。这里放几张来自该题解的图。详细题解还是看 Krahets 大神的题解吧。 时间复杂度: $O(n)$ 空间复杂度: $O(1)$ 重点掌握one和tw">
+<meta itemprop="datePublished" content="2020-06-24T17:09:28&#43;08:00" />
+<meta itemprop="dateModified" content="2020-06-24T17:09:28&#43;08:00" />
+<meta itemprop="wordCount" content="568">
+
+
+
+<meta itemprop="keywords" content="数组," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[Lc]面试题56_II数组中数字出现的次数II"/>
+<meta name="twitter:description" content="题目 题解 1. 有限状态机 详细题解看这里。这里放几张来自该题解的图。详细题解还是看 Krahets 大神的题解吧。 时间复杂度: $O(n)$ 空间复杂度: $O(1)$ 重点掌握one和tw"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+<script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
+
+<meta name="baidu-site-verification" content="GDMA35xQfM" />
+<meta name="google-site-verification" content="f-5-S53Hm0WIn0Tnfu-dg0sNmCZeahUFILgUSI9JLQA" />
+<meta name="baidu-site-verification" content="74mXju2aOk" />
+<meta name="google-site-verification" content="2yu63Vg3wEmB1XF77uGbZdOQB_a_KSLTk-zNxL4oGRg" />
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">FOCUS</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">FOCUS</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">[Lc]面试题56_II数组中数字出现的次数II</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-06-24 </span>
+        <div class="post-category">
+            <a href="/categories/%E5%89%91%E6%8C%87offer/"> 剑指offer </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#题目">题目</a></li>
+    <li><a href="#题解">题解</a>
+      <ul>
+        <li><a href="#1-有限状态机">1. 有限状态机</a></li>
+        <li><a href="#2-挨个统计每一位的次数">2. 挨个统计每一位的次数</a></li>
+        <li><a href="#3-哈希存值法">3. 哈希存值法</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="题目">题目</h2>
+<p><img src="/img/img2020-06-24-17-09-56.png" alt=""></p>
+<h2 id="题解">题解</h2>
+<h3 id="1-有限状态机">1. 有限状态机</h3>
+<p>详细题解看<a href="https://leetcode-cn.com/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-ii-lcof/solution/mian-shi-ti-56-ii-shu-zu-zhong-shu-zi-chu-xian-d-4/">这里</a>。这里放几张来自该题解的图。详细题解还是看  Krahets 大神的题解吧。<br>
+<img src="/img/img2020-06-24-19-20-44.png" alt=""><br>
+<img src="/img/img2020-06-24-19-20-55.png" alt=""><br>
+<img src="/img/img2020-06-24-19-21-07.png" alt=""><br>
+<img src="/img/img2020-06-24-19-21-24.png" alt=""><br>
+<img src="/img/img2020-06-24-19-21-34.png" alt=""></p>
+<ul>
+<li>时间复杂度: $O(n)$</li>
+<li>空间复杂度: $O(1)$ <br>
+重点掌握one和two的状态转换方程：<br>
+<strong>one = (one ^ n) &amp; ~two;</strong><br>
+<strong>two = (two ^ n) &amp; ~one;</strong></li>
+</ul>
+<pre><code class="language-cpp">class Solution {//三个方法。1. 有限状态机
+public:
+    int singleNumber(vector&lt;int&gt;&amp; nums) {
+        int two = 0, one = 0;
+        for(auto n : nums){
+            one = (one ^ n) &amp; ~two;
+            two = (two ^ n) &amp; ~one;
+        }
+        return one;
+    }
+};
+</code></pre>
+<h3 id="2-挨个统计每一位的次数">2. 挨个统计每一位的次数</h3>
+<p>这道题有一个性质是，统计每一位的个数，然后对3取余，剩下的就是要求的数。有限状态机的方法也是用的这个性质。但是挨个统计每一位会比较慢。题目限定num了最多为32位，因此要挨个相加32位</p>
+<ul>
+<li>时间复杂度: $O(32n)$</li>
+<li>空间复杂度: $O(1)$</li>
+</ul>
+<pre><code class="language-cpp">class Solution {//三个方法。2. 挨个统计每一位
+public:
+    int singleNumber(vector&lt;int&gt;&amp; nums) {
+        int res = 0;//定义res存结果
+        //挨个统计每一位1的个数，最多32位
+        for(int i = 0; i &lt; 32; ++i){
+            int count = 0;
+            //统计每一个数
+            for(auto n : nums){
+                //与（1&lt;&lt;i）与，大于0说明该位为1，等于0说明该位为0
+                if((n &amp; (1 &lt;&lt; i)) &gt; 0) count++;
+            }
+            //将计数值对3取余，为1的话结果这一位置1
+            if(count % 3 == 1) res ^= (1 &lt;&lt; i);
+        }
+        return res;
+    }
+};
+</code></pre>
+<h3 id="3-哈希存值法">3. 哈希存值法</h3>
+<p>这个方法比较好理解，就是挨个计数存入unordered_map，然后取value为1的key。遍历两遍</p>
+<ul>
+<li>时间复杂度: $O(n)$</li>
+<li>空间复杂度: $O(1)$</li>
+</ul>
+<pre><code class="language-cpp">class Solution {//三个方法。3. 哈希存值
+public:
+    int singleNumber(vector&lt;int&gt;&amp; nums) {
+        unordered_map&lt;int, int&gt; m;
+        for(auto n : nums) m[n]++;//统计每个数组的个数
+        //为1就返回该key
+        for(auto m_pair : m){
+            if(m_pair.second == 1) return m_pair.first;
+        }
+        return -1;
+
+    }
+};
+</code></pre>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">ChrisHRZ</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-06-24
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E6%95%B0%E7%BB%84/">数组</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/lc1%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">[Lc]1两数之和</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9856_i%E6%95%B0%E7%BB%84%E4%B8%AD%E6%95%B0%E5%AD%97%E5%87%BA%E7%8E%B0%E7%9A%84%E6%AC%A1%E6%95%B0/">
+            <span class="next-text nav-default">[Lc]面试题56_I数组中数字出现的次数</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9856_ii%E6%95%B0%E7%BB%84%E4%B8%AD%E6%95%B0%E5%AD%97%E5%87%BA%E7%8E%B0%E7%9A%84%E6%AC%A1%E6%95%B0ii/" class="leancloud_visitors" data-flag-title="[Lc]面试题56_II数组中数字出现的次数II">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'M8Fyr1YXIu2Ov8Wh4ByqtEzq-gzGzoHsz',
+        appKey: 'AHiPSGeLQbvrQGQ6KfhvOKvN',
+        notify:  false ,
+        verify:  false ,
+        avatar:'mm',
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/ChrisHRZ" class="iconfont icon-github" title="github"></a>
+  <a href="https://chrishrz.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">ChrisHRZ</span>
+  </span>
+</div>
+
+
+<script src="https://cdn.bootcss.com/mermaid/8.4.8/mermaid.min.js"></script>
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js"></script>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

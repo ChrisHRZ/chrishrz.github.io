@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>[Lc]面试题60n个骰子的点数 - Focus-ChrisHRZ&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ChrisHRZ" /><meta name="description" content="题目 题解 这道题有两个方法，递归与动态规划，动态规划会超时。而且我刚开始看递归反而看不懂，因此转为先看动态规划，借助路漫漫我不畏的题解加图解，" /><meta name="keywords" content="code, life, study" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.66.0 with theme even" />
+
+
+<link rel="canonical" href="https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9860n%E4%B8%AA%E9%AA%B0%E5%AD%90%E7%9A%84%E7%82%B9%E6%95%B0/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
+
+<meta property="og:title" content="[Lc]面试题60n个骰子的点数" />
+<meta property="og:description" content="题目 题解 这道题有两个方法，递归与动态规划，动态规划会超时。而且我刚开始看递归反而看不懂，因此转为先看动态规划，借助路漫漫我不畏的题解加图解，" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9860n%E4%B8%AA%E9%AA%B0%E5%AD%90%E7%9A%84%E7%82%B9%E6%95%B0/" />
+<meta property="article:published_time" content="2020-07-04T14:08:27+08:00" />
+<meta property="article:modified_time" content="2020-07-04T14:08:27+08:00" />
+<meta itemprop="name" content="[Lc]面试题60n个骰子的点数">
+<meta itemprop="description" content="题目 题解 这道题有两个方法，递归与动态规划，动态规划会超时。而且我刚开始看递归反而看不懂，因此转为先看动态规划，借助路漫漫我不畏的题解加图解，">
+<meta itemprop="datePublished" content="2020-07-04T14:08:27&#43;08:00" />
+<meta itemprop="dateModified" content="2020-07-04T14:08:27&#43;08:00" />
+<meta itemprop="wordCount" content="936">
+
+
+
+<meta itemprop="keywords" content="dp," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[Lc]面试题60n个骰子的点数"/>
+<meta name="twitter:description" content="题目 题解 这道题有两个方法，递归与动态规划，动态规划会超时。而且我刚开始看递归反而看不懂，因此转为先看动态规划，借助路漫漫我不畏的题解加图解，"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+<script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
+
+<meta name="baidu-site-verification" content="GDMA35xQfM" />
+<meta name="google-site-verification" content="f-5-S53Hm0WIn0Tnfu-dg0sNmCZeahUFILgUSI9JLQA" />
+<meta name="baidu-site-verification" content="74mXju2aOk" />
+<meta name="google-site-verification" content="2yu63Vg3wEmB1XF77uGbZdOQB_a_KSLTk-zNxL4oGRg" />
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">FOCUS</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">FOCUS</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">[Lc]面试题60n个骰子的点数</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-07-04 </span>
+        <div class="post-category">
+            <a href="/categories/%E5%89%91%E6%8C%87offer/"> 剑指offer </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#题目">题目</a></li>
+    <li><a href="#题解">题解</a>
+      <ul>
+        <li><a href="#1-动态规划">1. 动态规划</a></li>
+        <li><a href="#2-递归">2. 递归</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="题目">题目</h2>
+<p><img src="/img/img2020-07-04-14-08-59.png" alt=""></p>
+<h2 id="题解">题解</h2>
+<p>这道题有两个方法，递归与动态规划，动态规划会超时。而且我刚开始看递归反而看不懂，因此转为先看动态规划，借助<a href="https://leetcode-cn.com/problems/nge-tou-zi-de-dian-shu-lcof/solution/nge-tou-zi-de-dian-shu-dong-tai-gui-hua-ji-qi-yo-3/">路漫漫我不畏</a>的题解加图解，理解了动态规划的思想，进而明白了递归的思想</p>
+<h3 id="1-动态规划">1. 动态规划</h3>
+<p>重点看上面大佬提供的<strong>图解</strong></p>
+<ul>
+<li>时间复杂度$O(n^{2})$，（不确定，感觉是两个n的循环套一个6的循环）</li>
+<li>空间复杂度$O(n)$，dp数组</li>
+</ul>
+<pre><code class="language-cpp">class Solution {//一个方法。1.一维dp
+public:
+    vector&lt;double&gt; twoSum(int n) {
+        vector&lt;int&gt; dp(70, 0);//n&lt;=11，动态规划最大用66个数组这里用70个
+        //先初始化dp[1]，即只有一个骰子的情况，此时前6个数为1
+        for(int i = 0; i &lt;= 6; ++i){
+            dp[i] = 1;
+        }
+        //进行动态规划，从2个骰子到n个骰子，注意判别条件是小于等于
+        for(int i = 2; i &lt;= n; ++i){
+            //从后向前挨个更新dp数组
+            //从6*i开始，一直更新到第i个数，这个就是投掷i个骰子的数字取值范围
+            for(int j = 6 * i; j &gt;= i; --j){
+                //重点1！！！注意要先把该更新的位置设置为0再进行后面的累加，否则会累加上dp[i-1]的数据，出错
+                dp[j] = 0;
+                //累加当前这个数的前6个数的dp，这里可以这么理解
+                //即投第i个骰子有1~6 6种情况，而要累加到当前值，就要借助dp[i-1]~dp[i-6]的值
+                for(int cur = 1; cur &lt;= 6; ++cur){
+                    //重点2！！！注意累加值会小于i-1，因为i-1个骰子最小值就是i-1
+                    //累加之前的数据其实是上一个dp的值
+                    if(j - cur &lt; i - 1) break;
+                    //累加上述的前6个值
+                    dp[j] += dp[j-cur];
+                }
+            }
+        }
+        vector&lt;double&gt; res;
+        //当前存的都是可能出现的情况次数，还要转化为概率
+        int all = pow(6, n);//所有可能出现的情况的个数
+        //将最后一个dp的情况出现次数转化为概率
+        //注意范围是n~6*n
+        for(int i = n; i &lt;= 6 * n; ++i){
+            //这里注意要除以一个1.0将int转化为double
+            res.push_back(dp[i] * 1.0 / all);
+        }
+        return res;
+    }
+};
+</code></pre>
+<h3 id="2-递归">2. 递归</h3>
+<ul>
+<li>时间复杂度$O(6^{n})$，必超时</li>
+<li>空间复杂度$O(1)$</li>
+</ul>
+<p>这个方法必超时，但是我们可以借助这个问题思考一下dp和递归的关系。<strong>个人感觉对这道题来说</strong></p>
+<ol>
+<li>动态规划就是一种带记忆的递归思想</li>
+<li>动态规划自顶向下，递归自底向上再返回</li>
+</ol>
+<p>其实还借助大佬提供的图解，即动态规划每次存下来当前的状态，下一次状态时直接从数组中取值即刻，空间占用多少取决于和前几次的状态有关。<br>
+而递归就是每次取前面状态时需要再重新从下到上算一下，推算到只有一个骰子的情况，这样造成了大量的重复计算，因此会超时。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">ChrisHRZ</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-07-04
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/dp/">dp</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9868_i%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/">
+            <span class="next-text nav-default">[Lc]面试题68_I二叉搜索树的最近公共祖先</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9860n%E4%B8%AA%E9%AA%B0%E5%AD%90%E7%9A%84%E7%82%B9%E6%95%B0/" class="leancloud_visitors" data-flag-title="[Lc]面试题60n个骰子的点数">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'M8Fyr1YXIu2Ov8Wh4ByqtEzq-gzGzoHsz',
+        appKey: 'AHiPSGeLQbvrQGQ6KfhvOKvN',
+        notify:  false ,
+        verify:  false ,
+        avatar:'mm',
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/ChrisHRZ" class="iconfont icon-github" title="github"></a>
+  <a href="https://chrishrz.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">ChrisHRZ</span>
+  </span>
+</div>
+
+
+<script src="https://cdn.bootcss.com/mermaid/8.4.8/mermaid.min.js"></script>
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js"></script>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

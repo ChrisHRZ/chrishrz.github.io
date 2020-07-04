@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>图 on Focus-ChrisHRZ&#39;s blog</title>
+    <link>https://chrishrz.github.io/tags/%E5%9B%BE/</link>
+    <description>Recent content in 图 on Focus-ChrisHRZ&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 23 Jun 2020 14:33:59 +0800</lastBuildDate>
+    
+	<atom:link href="https://chrishrz.github.io/tags/%E5%9B%BE/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[Lc]133克隆图</title>
+      <link>https://chrishrz.github.io/post/lc133%E5%85%8B%E9%9A%86%E5%9B%BE/</link>
+      <pubDate>Tue, 23 Jun 2020 14:33:59 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc133%E5%85%8B%E9%9A%86%E5%9B%BE/</guid>
+      <description>题目 图的定义如下： // Definition for a Node. class Node { public: int val; vector&amp;lt;Node*&amp;gt; neighbors; Node() { val = 0; neighbors = vector&amp;lt;Node*&amp;gt;(); } Node(int _val) { val = _val; neighbors = vector&amp;lt;Node*&amp;gt;(); } Node(int _val, vector&amp;lt;Node*&amp;gt; _neighbors) { val = _val; neighbors = _neighbors; } }; 题解 两个方法。DFS，BFS 1. DFS</description>
+    </item>
+    
+  </channel>
+</rss>

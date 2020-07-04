@@ -49,7 +49,7 @@
 <meta itemprop="description" content="题目 题解 1. 双旋转单擦除法 题目要求空间复杂度$O(1)$，该方法符合，即先整体翻转全部字符串，再逐个单词串翻转，空格跳过，不同单词之间的空格自">
 <meta itemprop="datePublished" content="2020-05-07T19:33:04&#43;08:00" />
 <meta itemprop="dateModified" content="2020-05-07T19:33:04&#43;08:00" />
-<meta itemprop="wordCount" content="726">
+<meta itemprop="wordCount" content="793">
 
 
 
@@ -214,7 +214,9 @@ public:
                 if(index != 0 ) s[index++] = ' ';//若遇到第二个字符串，则需要在原来的字符串上加一个空格，再加后面的
                 int end = start;//end和start是当前字符串的首尾
                 while(end &lt; s.size() &amp;&amp; s[end] != ' ') s[index++] = s[end++];//找到该字符串的末尾，并存到index之前
-                reverse(s.begin()+index-(end-start), s.begin()+index);//再把这个字符串翻转回来
+                //再把这个字符串翻转回来
+                //注意翻转的区间，前者end-start是该子字符串的长度，index指向子字符串的末尾
+                reverse(s.begin()+index-(end-start), s.begin()+index);
                 start = end;//start从end处开始
             }
         }
@@ -253,10 +255,11 @@ public:
 public:
     string reverseWords(string s) {
         stringstream ss(s);
+        //输出流应该是会覆盖原有变量（存疑）
         ss&gt;&gt;s;//先存第一个单词
-        string tmp;
-        while(ss&gt;&gt;tmp) s = tmp+&quot; &quot;+s;//存接下来的单词
-        if(s.empty() || s[0]==' ') s=&quot;&quot;;//若初始s为空或者一堆空格，直接清空
+        string tmp;//暂存每个子字符串
+        while(ss&gt;&gt;tmp) s = tmp+&quot; &quot;+s;//存接下来的单词，ss没输出完就一直遍历
+        if(s[0]==' ') s=&quot;&quot;;//若初始s只有空格，直接清空
         return s;
     }
 };

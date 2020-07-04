@@ -49,7 +49,7 @@
 <meta itemprop="description" content="题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 递归法 时间复杂度: $O(N)$ 空间复杂度: $O(N)$ class Solution {//这个题就是遍历然后存最大">
 <meta itemprop="datePublished" content="2020-03-17T13:12:19&#43;08:00" />
 <meta itemprop="dateModified" content="2020-03-17T13:12:19&#43;08:00" />
-<meta itemprop="wordCount" content="379">
+<meta itemprop="wordCount" content="384">
 
 
 
@@ -185,7 +185,7 @@ code.has-jax {
         <li><a href="#1-递归法">1. 递归法</a></li>
       </ul>
     </li>
-    <li><a href="#2-队列迭代法">2. 队列迭代法</a></li>
+    <li><a href="#2-队列迭代法bfs">2. 队列迭代法（BFS）</a></li>
   </ul>
 </nav>
   </div>
@@ -214,7 +214,7 @@ public:
     }
 };
 </code></pre>
-<h2 id="2-队列迭代法">2. 队列迭代法</h2>
+<h2 id="2-队列迭代法bfs">2. 队列迭代法（BFS）</h2>
 <p>时间复杂度: $O(N)$<br>
 空间复杂度: $O(N)$</p>
 <pre><code class="language-cpp">class Solution {//这个题就是遍历然后存最大深度。两种方法2. 队列迭代

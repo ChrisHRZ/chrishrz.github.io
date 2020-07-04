@@ -45,7 +45,7 @@
 <meta property="og:description" content="Life is art. Live it up." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://chrishrz.github.io/" />
-<meta property="og:updated_time" content="2020-06-12T19:14:08+08:00" />
+<meta property="og:updated_time" content="2020-07-04T14:08:27+08:00" />
 <meta itemprop="name" content="Focus-ChrisHRZ&#39;s blog">
 <meta itemprop="description" content="Life is art. Live it up."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Focus-ChrisHRZ&#39;s blog"/>
@@ -157,9 +157,9 @@ code.has-jax {
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9821%E8%B0%83%E6%95%B4%E6%95%B0%E7%BB%84%E9%A1%BA%E5%BA%8F%E4%BD%BF%E5%A5%87%E6%95%B0%E4%BD%8D%E4%BA%8E%E5%81%B6%E6%95%B0%E5%89%8D%E9%9D%A2/">[Lc]面试题21调整数组顺序使奇数位于偶数前面</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9837%E5%BA%8F%E5%88%97%E5%8C%96%E4%BA%8C%E5%8F%89%E6%A0%91/">[Lc]面试题37序列化二叉树</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2020-05-14 </span>
+      <span class="post-time"> 2020-05-20 </span>
       <div class="post-category">
           <a href="/categories/%E5%89%91%E6%8C%87offer/"> 剑指offer </a>
           </div>
@@ -168,40 +168,19 @@ code.has-jax {
   
   <div class="post-content">
     <div class="post-summary">
-      题目 题解 双指针，左找到偶数，右找到奇数，然后交换，继续循环 时间复杂度$O(n)$ 空间复杂度$O(1)$，原地交换 class Solution { public: vector&lt;int&gt; exchange(vector&lt;int&gt;&amp; nums) { int p1=0, p2 = nums.size()-1; while(p1&lt;p2){
+      题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 先序遍历法 按先序遍历的顺序对数组进行序列化，遇到nullptr记位#
     </div>
     <div class="read-more">
-      <a href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9821%E8%B0%83%E6%95%B4%E6%95%B0%E7%BB%84%E9%A1%BA%E5%BA%8F%E4%BD%BF%E5%A5%87%E6%95%B0%E4%BD%8D%E4%BA%8E%E5%81%B6%E6%95%B0%E5%89%8D%E9%9D%A2/" class="read-more-link">Read more...</a>
+      <a href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9837%E5%BA%8F%E5%88%97%E5%8C%96%E4%BA%8C%E5%8F%89%E6%A0%91/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9819%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8C%B9%E9%85%8D/">[Lc]面试题19正则表达式匹配</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/lc297%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%BA%8F%E5%88%97%E5%8C%96%E4%B8%8E%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/">[Lc]297二叉树的序列化与反序列化</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2020-05-14 </span>
-      <div class="post-category">
-          <a href="/categories/%E5%89%91%E6%8C%87offer/"> 剑指offer </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      题目 题解 1. 普通递归 class Solution { public: bool isMatch(string s, string p) { if(p.empty()) return s.empty();//若p为空，则s为空返回false。否则返回true //若s不为空且当前字符
-    </div>
-    <div class="read-more">
-      <a href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9819%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8C%B9%E9%85%8D/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lc10%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8C%B9%E9%85%8D/">[Lc]10正则表达式匹配</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-05-14 </span>
+      <span class="post-time"> 2020-05-20 </span>
       <div class="post-category">
           <a href="/categories/leetcode/"> leetcode </a>
           </div>
@@ -210,19 +189,19 @@ code.has-jax {
   
   <div class="post-content">
     <div class="post-summary">
-      题目 题解 1. 普通递归 class Solution { public: bool isMatch(string s, string p) { if(p.empty()) return s.empty();//若p为空，则s为空返回false。否则返回true //若s不为空且当前字符
+      题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 先序遍历法 按先序遍历的顺序对数组进行序列化，遇到nullptr记位#
     </div>
     <div class="read-more">
-      <a href="/post/lc10%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8C%B9%E9%85%8D/" class="read-more-link">Read more...</a>
+      <a href="/post/lc297%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%BA%8F%E5%88%97%E5%8C%96%E4%B8%8E%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9818%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E8%8A%82%E7%82%B9/">[Lc]面试题18删除链表的节点</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9836%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%8E%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/">[Lc]面试题36二叉搜索树与双向链表</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2020-05-13 </span>
+      <span class="post-time"> 2020-05-20 </span>
       <div class="post-category">
           <a href="/categories/%E5%89%91%E6%8C%87offer/"> 剑指offer </a>
           </div>
@@ -231,61 +210,19 @@ code.has-jax {
   
   <div class="post-content">
     <div class="post-summary">
-      题目 链表定义： //Definition for singly-linked list. struct ListNode { int val; ListNode *next; ListNode(int x) : val(x), next(NULL) {} }; 题解 这题简单，两个指针，一个指向cur，一个是cur之前pre。当cur的值为val时，p
+      题目 题解 节点定义如下： // Definition for a Node. class Node { public: int val; Node* left; Node* right; Node() {} Node(int _val) { val = _val; left = NULL; right = NULL; } Node(int _val, Node* _left, Node* _right) { val = _val; left = _left; right = _right; } }; 这道题要利用二叉搜索树
     </div>
     <div class="read-more">
-      <a href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9818%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E8%8A%82%E7%82%B9/" class="read-more-link">Read more...</a>
+      <a href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9836%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%8E%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9817%E6%89%93%E5%8D%B0%E4%BB%8E1%E5%88%B0%E6%9C%80%E5%A4%A7%E7%9A%84n%E4%BD%8D%E6%95%B0/">[Lc]面试题17打印从1到最大的n位数</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/lc426%E5%B0%86%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E8%BD%AC%E5%8C%96%E4%B8%BA%E6%8E%92%E5%BA%8F%E7%9A%84%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/">[Lc]426将二叉搜索树转化为排序的双向链表</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2020-05-13 </span>
-      <div class="post-category">
-          <a href="/categories/%E5%89%91%E6%8C%87offer/"> 剑指offer </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      题目 题解 这道题如果不考虑大数的话很简单，但是原书主要是解决输出大数的问题，因此大数也要加以练习（leetcode不考虑大树也能通过） 1. 普通解
-    </div>
-    <div class="read-more">
-      <a href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9817%E6%89%93%E5%8D%B0%E4%BB%8E1%E5%88%B0%E6%9C%80%E5%A4%A7%E7%9A%84n%E4%BD%8D%E6%95%B0/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9816%E6%95%B0%E5%80%BC%E7%9A%84%E6%95%B4%E6%95%B0%E6%AC%A1%E6%96%B9/">[Lc]面试题16数值的整数次方</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-05-13 </span>
-      <div class="post-category">
-          <a href="/categories/%E5%89%91%E6%8C%87offer/"> 剑指offer </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      题目 题解 这道题在leetcode上用挨个累乘的方法会超时因此需要用快速幂法 快速幂是指x**2n == x**n + x**n，利用这一性质，不断的一半的数进
-    </div>
-    <div class="read-more">
-      <a href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9816%E6%95%B0%E5%80%BC%E7%9A%84%E6%95%B4%E6%95%B0%E6%AC%A1%E6%96%B9/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lc191%E4%BD%8D1%E7%9A%84%E4%B8%AA%E6%95%B0/">[Lc]191位1的个数</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-05-13 </span>
+      <span class="post-time"> 2020-05-20 </span>
       <div class="post-category">
           <a href="/categories/leetcode/"> leetcode </a>
           </div>
@@ -294,61 +231,19 @@ code.has-jax {
   
   <div class="post-content">
     <div class="post-summary">
-      题目 题解 1. 位掩码 设置一个位掩码mask，初值为1，每次1向左移动一位，mask与n做与运算之后只有mask中为1的那一位为保留，其余归0。因
+      题目 题解 节点定义如下： // Definition for a Node. class Node { public: int val; Node* left; Node* right; Node() {} Node(int _val) { val = _val; left = NULL; right = NULL; } Node(int _val, Node* _left, Node* _right) { val = _val; left = _left; right = _right; } }; 这道题要利用二叉搜索树
     </div>
     <div class="read-more">
-      <a href="/post/lc191%E4%BD%8D1%E7%9A%84%E4%B8%AA%E6%95%B0/" class="read-more-link">Read more...</a>
+      <a href="/post/lc426%E5%B0%86%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E8%BD%AC%E5%8C%96%E4%B8%BA%E6%8E%92%E5%BA%8F%E7%9A%84%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9815%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%B8%AD1%E7%9A%84%E4%B8%AA%E6%95%B0/">[Lc]面试题15二进制中1的个数</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/lc138%E5%A4%8D%E5%88%B6%E5%B8%A6%E9%9A%8F%E6%9C%BA%E6%8C%87%E9%92%88%E7%9A%84%E9%93%BE%E8%A1%A8/">[Lc]138复制带随机指针的链表</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2020-05-13 </span>
-      <div class="post-category">
-          <a href="/categories/%E5%89%91%E6%8C%87offer/"> 剑指offer </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      题目 题解 1. 位掩码 设置一个位掩码mask，初值为1，每次1向左移动一位，mask与n做与运算之后只有mask中为1的那一位为保留，其余归0。因
-    </div>
-    <div class="read-more">
-      <a href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9815%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%B8%AD1%E7%9A%84%E4%B8%AA%E6%95%B0/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9814_ii%E5%89%AA%E7%BB%B3%E5%AD%90ii/">[Lc]面试题14_II剪绳子II</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-05-13 </span>
-      <div class="post-category">
-          <a href="/categories/%E5%89%91%E6%8C%87offer/"> 剑指offer </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      题目 题解 这题写的我不行了，其实这题思路很简单，就是c++取余太麻烦了，我想写一个自己的pow()函数，用clion跑的结果和oj还不一样，取
-    </div>
-    <div class="read-more">
-      <a href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9814_ii%E5%89%AA%E7%BB%B3%E5%AD%90ii/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lc343%E6%95%B4%E6%95%B0%E6%8B%86%E5%88%86/">[Lc]343整数拆分</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-05-12 </span>
+      <span class="post-time"> 2020-05-19 </span>
       <div class="post-category">
           <a href="/categories/leetcode/"> leetcode </a>
           </div>
@@ -357,10 +252,115 @@ code.has-jax {
   
   <div class="post-content">
     <div class="post-summary">
-      题目 题解 1. 普通DP 具体思路看注释。前面遇到一个问题，即循环里dp[i] = max(dp[i], max(j*(i-j), j*dp[i-j]));为什么不是dp[i], j*(i-j), dp[j]*dp[i-j] 这是因为在内循
+      题目 题解 链表定义： // Definition for a Node. class Node { public: int val; Node* next; Node* random; Node(int _val) { val = _val; next = NULL; random = NULL; } }; 1. 复制链表节点法 在每个节点后复制新的节点，三次遍历 先复制新的节点
     </div>
     <div class="read-more">
-      <a href="/post/lc343%E6%95%B4%E6%95%B0%E6%8B%86%E5%88%86/" class="read-more-link">Read more...</a>
+      <a href="/post/lc138%E5%A4%8D%E5%88%B6%E5%B8%A6%E9%9A%8F%E6%9C%BA%E6%8C%87%E9%92%88%E7%9A%84%E9%93%BE%E8%A1%A8/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9835%E5%A4%8D%E6%9D%82%E9%93%BE%E8%A1%A8%E7%9A%84%E5%A4%8D%E5%88%B6/">[Lc]面试题35复杂链表的复制</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-05-19 </span>
+      <div class="post-category">
+          <a href="/categories/%E5%89%91%E6%8C%87offer/"> 剑指offer </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      题目 题解 链表定义： // Definition for a Node. class Node { public: int val; Node* next; Node* random; Node(int _val) { val = _val; next = NULL; random = NULL; } }; 详细注释看138题 1. 复制链表节点法 在每个节点后复制新的节点，三次
+    </div>
+    <div class="read-more">
+      <a href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9835%E5%A4%8D%E6%9D%82%E9%93%BE%E8%A1%A8%E7%9A%84%E5%A4%8D%E5%88%B6/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9834%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E5%92%8C%E4%B8%BA%E6%9F%90%E4%B8%80%E5%80%BC%E7%9A%84%E8%B7%AF%E5%BE%84/">[Lc]面试题34二叉树中和为某一值的路径</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-05-19 </span>
+      <div class="post-category">
+          <a href="/categories/%E5%89%91%E6%8C%87offer/"> 剑指offer </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      题目 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 题解 这道题和113一样，可以用递归和迭代两种方法。这里再练习写一遍，详细题
+    </div>
+    <div class="read-more">
+      <a href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9834%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E5%92%8C%E4%B8%BA%E6%9F%90%E4%B8%80%E5%80%BC%E7%9A%84%E8%B7%AF%E5%BE%84/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9833%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97/">[Lc]面试题33二叉搜索树的后序遍历序列</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-05-19 </span>
+      <div class="post-category">
+          <a href="/categories/%E5%89%91%E6%8C%87offer/"> 剑指offer </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 分治递归法 二叉搜索树的性质见这里。后序遍历的顺序是左-&gt;根-&
+    </div>
+    <div class="read-more">
+      <a href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9833%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9832_iii%E4%BB%8E%E4%B8%8A%E5%88%B0%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91iii/">[Lc]面试题32_III从上到下打印二叉树III</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-05-18 </span>
+      <div class="post-category">
+          <a href="/categories/%E5%89%91%E6%8C%87offer/"> 剑指offer </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 队列迭代法 比上一题再复杂一点，要区分奇偶行，偶数行从后面加数，奇数行
+    </div>
+    <div class="read-more">
+      <a href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9832_iii%E4%BB%8E%E4%B8%8A%E5%88%B0%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91iii/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9832_ii%E4%BB%8E%E4%B8%8A%E5%88%B0%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91ii/">[Lc]面试题32_II从上到下打印二叉树II</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-05-18 </span>
+      <div class="post-category">
+          <a href="/categories/%E5%89%91%E6%8C%87offer/"> 剑指offer </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      题目 题解 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 1. 队列迭代法 比上一题稍微复杂一点，不同层次要分开存，因此这里要多一个循
+    </div>
+    <div class="read-more">
+      <a href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9832_ii%E4%BB%8E%E4%B8%8A%E5%88%B0%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91ii/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

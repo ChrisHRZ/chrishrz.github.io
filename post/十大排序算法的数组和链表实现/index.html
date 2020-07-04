@@ -49,7 +49,7 @@
 <meta itemprop="description" content="数组排序在牛客,进行测试；链表排序在leetcode进行测试。 发现一个牛逼的数据结构与算法的可视化网站(https://visualgo.n">
 <meta itemprop="datePublished" content="2020-04-22T16:40:07&#43;08:00" />
 <meta itemprop="dateModified" content="2020-04-22T16:40:07&#43;08:00" />
-<meta itemprop="wordCount" content="6313">
+<meta itemprop="wordCount" content="6521">
 
 
 
@@ -203,7 +203,7 @@ code.has-jax {
       <blockquote>
 <p>数组排序在<a href="https://www.nowcoder.com/questionTerminal/508f66c6c93d4191ab25151066cb50ef">牛客</a>,进行测试；链表排序在<a href="https://leetcode-cn.com/problems/insertion-sort-list/submissions/">leetcode</a>进行测试。</p>
 </blockquote>
-<p>发现一个牛逼的数据结构与算法的可视化网站(<a href="https://visualgo.net/zh">https://visualgo.net/zh</a>)
+<p>发现一个牛逼的数据结构与算法的可视化网站(<a href="https://visualgo.net/zh">https://visualgo.net/zh</a>)<br>
 链表定义：</p>
 <pre><code class="language-cpp">Definition for singly-linked list.
 struct ListNode {
@@ -513,14 +513,15 @@ using namespace std;
 //array
 //递归
 void Merge(vector&lt;int&gt;&amp; a, vector&lt;int&gt; &amp;b, int start1, int end1, int start2, int end2){
-    int b_start = start1;
+    int b_start = start1;//定义b开始位置的指针
     int tmp_start = start1;
     while(start1 &lt;= end1 &amp;&amp; start2 &lt;= end2){
         b[b_start++] = a[start1] &lt; a[start2]? a[start1++]:a[start2++];//取两序列比较中小的值
     }
     while(start1 &lt;= end1) b[b_start++] = (a[start1++]);
-    while(start2 &lt;= end2) b[b_start++] = (a[start2++]);//会有一个序列还剩一些数，接到tmp_vec后面
+    while(start2 &lt;= end2) b[b_start++] = (a[start2++]);//会有一个序列还剩一些数，接到b后面
 
+    //在b中排好序再放入a中
     for(int i=tmp_start; i&lt;=end2; i++){
         a[i] = b[i];
     }
@@ -553,8 +554,8 @@ int main(){
         a.push_back(tmp);
     }
 
-    n = a.size();
-    vector&lt;int&gt; b(n);
+    n = a.size();//a是原始数组
+    vector&lt;int&gt; b(n);//b是用来辅助排序的数组
     MergeSort(a,b,0,n-1);
 
 
@@ -578,20 +579,23 @@ void Merge(vector&lt;int&gt;&amp; a, vector&lt;int&gt; &amp;b, int start1, int e
         b[b_start++] = a[start1] &lt; a[start2]? a[start1++]:a[start2++];//取两序列比较中小的值
     }
     while(start1 &lt;= end1) b[b_start++] = (a[start1++]);
-    while(start2 &lt;= end2) b[b_start++] = (a[start2++]);//会有一个序列还剩一些数，接到tmp_vec后面
+    while(start2 &lt;= end2) b[b_start++] = (a[start2++]);//会有一个序列还剩一些数，接到b后面
 
     for(int i=tmp_start; i&lt;=end2; i++){
         a[i] = b[i];
     }
 }
-
+//主要区别在于这一部分不使用递归实现了
 void MergeSort(vector&lt;int&gt;&amp; a, vector&lt;int&gt;&amp; b, int start, int end){
-    int n = end-start+1;
+    int n = end-start+1;//n是数组的长度
+    //从下向上，先1个1个，再2个2个，最后到stride为n，进行归并
     for(int stride = 1;stride &lt;= n; stride *= 2){
         int i = start;
+        //按stride为步长进行两两归并，当数组剩下的数少于2*stride时停止
         for(; i&lt;=end-2*stride+1; i += 2*stride){
             Merge(a, b, i, i+stride-1, i+stride, i+2*stride-1);
         }
+        //看剩下的数够不够1个stride，够的话就再归并一次，即使两个数组长度可能不一样
         if(i &lt; end-stride+1){
             Merge(a, b, i, i+stride-1, i+stride, end);
         }

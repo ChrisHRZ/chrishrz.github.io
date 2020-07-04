@@ -6,10 +6,64 @@
     <description>Recent content in leetcode on Focus-ChrisHRZ&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 12 Jun 2020 17:32:36 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jul 2020 11:32:03 +0800</lastBuildDate>
     
 	<atom:link href="https://chrishrz.github.io/categories/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Lc]235二叉搜索树的最近公共祖先</title>
+      <link>https://chrishrz.github.io/post/lc235%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/</link>
+      <pubDate>Fri, 03 Jul 2020 11:32:03 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc235%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/</guid>
+      <description>题目 二叉树结构如下： //Definition for a binary tree node. struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} }; 题解 两个方法 这道题是236的子问题，多了二叉搜索树的限制。用236的方法也</description>
+    </item>
+    
+    <item>
+      <title>[Lc]121买卖股票的最佳时机</title>
+      <link>https://chrishrz.github.io/post/lc121%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA/</link>
+      <pubDate>Tue, 30 Jun 2020 11:13:51 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc121%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA/</guid>
+      <description>题目 题解 动态规划的思想。即一次遍历，寻找两个数，一个是当前的全局最小值，一个是在当前的全局最小值后可以得到的最大差值 时间复杂度$O(n)$ 空</description>
+    </item>
+    
+    <item>
+      <title>[Lc]1两数之和</title>
+      <link>https://chrishrz.github.io/post/lc1%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/</link>
+      <pubDate>Thu, 25 Jun 2020 19:30:14 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc1%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/</guid>
+      <description>题目 题解 1. 暴力法 就是挨个两两相加，找到相加为target的两个数。会超时，比较好写，这里不写了 时间复杂度$O(n^{2})$ 空间复杂度$O(</description>
+    </item>
+    
+    <item>
+      <title>[Lc]133克隆图</title>
+      <link>https://chrishrz.github.io/post/lc133%E5%85%8B%E9%9A%86%E5%9B%BE/</link>
+      <pubDate>Tue, 23 Jun 2020 14:33:59 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc133%E5%85%8B%E9%9A%86%E5%9B%BE/</guid>
+      <description>题目 图的定义如下： // Definition for a Node. class Node { public: int val; vector&amp;lt;Node*&amp;gt; neighbors; Node() { val = 0; neighbors = vector&amp;lt;Node*&amp;gt;(); } Node(int _val) { val = _val; neighbors = vector&amp;lt;Node*&amp;gt;(); } Node(int _val, vector&amp;lt;Node*&amp;gt; _neighbors) { val = _val; neighbors = _neighbors; } }; 题解 两个方法。DFS，BFS 1. DFS</description>
+    </item>
+    
+    <item>
+      <title>[Lc]34在排序数组中查找元素的第一个和最后一个位置</title>
+      <link>https://chrishrz.github.io/post/lc34%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E5%85%83%E7%B4%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%92%8C%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E4%BD%8D%E7%BD%AE/</link>
+      <pubDate>Mon, 22 Jun 2020 19:42:13 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc34%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E5%85%83%E7%B4%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%92%8C%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E4%BD%8D%E7%BD%AE/</guid>
+      <description>题目 题解 1. 挨个查找法 时间复杂度$O(N)$ 空间复杂度$O(1)$ 就是挨个查找数组，找到的第一个就是开始位置，找到的最后一个就是结束位置。 这个</description>
+    </item>
+    
+    <item>
+      <title>[Lc]160相交链表</title>
+      <link>https://chrishrz.github.io/post/lc160%E7%9B%B8%E4%BA%A4%E9%93%BE%E8%A1%A8/</link>
+      <pubDate>Sun, 21 Jun 2020 17:50:26 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc160%E7%9B%B8%E4%BA%A4%E9%93%BE%E8%A1%A8/</guid>
+      <description>题目 链表定义： //Definition for singly-linked list. struct ListNode { int val; ListNode *next; ListNode(int x) : val(x), next(NULL) {} }; 题解 1. 双指针法交替遍历 时间复杂度$O(n)$ 空间复杂度$O(1)$ 从两个链表的表头开始遍历</description>
+    </item>
     
     <item>
       <title>[Lc]263丑数</title>

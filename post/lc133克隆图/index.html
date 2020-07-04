@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>[Lc]133克隆图 - Focus-ChrisHRZ&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ChrisHRZ" /><meta name="description" content="题目 图的定义如下： // Definition for a Node. class Node { public: int val; vector&amp;lt;Node*&amp;gt; neighbors; Node() { val = 0; neighbors = vector&amp;lt;Node*&amp;gt;(); } Node(int _val) { val = _val; neighbors = vector&amp;lt;Node*&amp;gt;(); } Node(int _val, vector&amp;lt;Node*&amp;gt; _neighbors) { val = _val; neighbors = _neighbors; } }; 题解 两个方法。DFS，BFS 1. DFS" /><meta name="keywords" content="code, life, study" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.66.0 with theme even" />
+
+
+<link rel="canonical" href="https://chrishrz.github.io/post/lc133%E5%85%8B%E9%9A%86%E5%9B%BE/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
+
+<meta property="og:title" content="[Lc]133克隆图" />
+<meta property="og:description" content="题目 图的定义如下： // Definition for a Node. class Node { public: int val; vector&lt;Node*&gt; neighbors; Node() { val = 0; neighbors = vector&lt;Node*&gt;(); } Node(int _val) { val = _val; neighbors = vector&lt;Node*&gt;(); } Node(int _val, vector&lt;Node*&gt; _neighbors) { val = _val; neighbors = _neighbors; } }; 题解 两个方法。DFS，BFS 1. DFS" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chrishrz.github.io/post/lc133%E5%85%8B%E9%9A%86%E5%9B%BE/" />
+<meta property="article:published_time" content="2020-06-23T14:33:59+08:00" />
+<meta property="article:modified_time" content="2020-06-23T14:33:59+08:00" />
+<meta itemprop="name" content="[Lc]133克隆图">
+<meta itemprop="description" content="题目 图的定义如下： // Definition for a Node. class Node { public: int val; vector&lt;Node*&gt; neighbors; Node() { val = 0; neighbors = vector&lt;Node*&gt;(); } Node(int _val) { val = _val; neighbors = vector&lt;Node*&gt;(); } Node(int _val, vector&lt;Node*&gt; _neighbors) { val = _val; neighbors = _neighbors; } }; 题解 两个方法。DFS，BFS 1. DFS">
+<meta itemprop="datePublished" content="2020-06-23T14:33:59&#43;08:00" />
+<meta itemprop="dateModified" content="2020-06-23T14:33:59&#43;08:00" />
+<meta itemprop="wordCount" content="640">
+
+
+
+<meta itemprop="keywords" content="图," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[Lc]133克隆图"/>
+<meta name="twitter:description" content="题目 图的定义如下： // Definition for a Node. class Node { public: int val; vector&lt;Node*&gt; neighbors; Node() { val = 0; neighbors = vector&lt;Node*&gt;(); } Node(int _val) { val = _val; neighbors = vector&lt;Node*&gt;(); } Node(int _val, vector&lt;Node*&gt; _neighbors) { val = _val; neighbors = _neighbors; } }; 题解 两个方法。DFS，BFS 1. DFS"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+<script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
+
+<meta name="baidu-site-verification" content="GDMA35xQfM" />
+<meta name="google-site-verification" content="f-5-S53Hm0WIn0Tnfu-dg0sNmCZeahUFILgUSI9JLQA" />
+<meta name="baidu-site-verification" content="74mXju2aOk" />
+<meta name="google-site-verification" content="2yu63Vg3wEmB1XF77uGbZdOQB_a_KSLTk-zNxL4oGRg" />
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">FOCUS</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">FOCUS</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">[Lc]133克隆图</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-06-23 </span>
+        <div class="post-category">
+            <a href="/categories/leetcode/"> leetcode </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#题目">题目</a></li>
+    <li><a href="#题解">题解</a>
+      <ul>
+        <li><a href="#1-dfs">1. DFS</a></li>
+        <li><a href="#2-bfs">2. BFS</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="题目">题目</h2>
+<p><img src="/img/img2020-06-23-14-35-00.png" alt="">
+<img src="/img/img2020-06-23-14-35-22.png" alt=""></p>
+<p>图的定义如下：</p>
+<pre><code class="language-cpp">// Definition for a Node.
+class Node {
+public:
+    int val;
+    vector&lt;Node*&gt; neighbors;
+    
+    Node() {
+        val = 0;
+        neighbors = vector&lt;Node*&gt;();
+    }
+    
+    Node(int _val) {
+        val = _val;
+        neighbors = vector&lt;Node*&gt;();
+    }
+    
+    Node(int _val, vector&lt;Node*&gt; _neighbors) {
+        val = _val;
+        neighbors = _neighbors;
+    }
+};
+</code></pre>
+<h2 id="题解">题解</h2>
+<p>两个方法。DFS，BFS</p>
+<h3 id="1-dfs">1. DFS</h3>
+<ul>
+<li>时间复杂度$O(N)$</li>
+<li>空间复杂度$O(N)$</li>
+</ul>
+<p>用一个unorder_map联系新旧两个图。从当前节点开始挨个复制，如果当前节点已经复制过则直接从map里面取</p>
+<pre><code class="language-cpp">class Solution {//两个方法。1.DFS
+    //hash_map用于联系新旧两个图
+    unordered_map&lt;Node*, Node*&gt; old_new;
+public:
+    Node* cloneGraph(Node* node) {
+        return dfs(node);
+    }
+
+    Node* dfs(Node* a){
+        if(!a) return nullptr;
+        if(old_new.count(a)) return old_new[a];
+        auto b = new Node(a-&gt;val);//复制当前节点
+        old_new[a] = b;//将该节点的新旧节点均复制到map中
+        //挨个dfs当前节点的每一个邻居节点
+        for(auto n : a-&gt;neighbors){
+            b-&gt;neighbors.emplace_back(dfs(n));
+        }
+        return b;
+    }
+};
+</code></pre>
+<h3 id="2-bfs">2. BFS</h3>
+<ul>
+<li>时间复杂度$O(N)$</li>
+<li>空间复杂度$O(N)$</li>
+</ul>
+<p>和DFS类似，只是多了一个队列q用于遍历当前节点的所有邻节点</p>
+<pre><code class="language-cpp">class Solution {//两个方法。2. BFS
+public:
+    Node* cloneGraph(Node* node) {
+        if(!node) return nullptr;
+        unordered_map&lt;Node*, Node*&gt; old_new;//定义关联新旧图各节点的map
+        auto new_node = new Node(node-&gt;val);//先复制第一个节点
+        old_new[node] = new_node;//关联第一个节点
+        queue&lt;Node*&gt; q;
+        q.push(node);//定义队列并压入第一个节点，用于BFS
+        while(!q.empty()){
+            auto tmp = q.front(); q.pop();//先取第一个节点
+            //挨个处理当前节点的每一个邻节点
+            for(auto n : tmp-&gt;neighbors){
+                //若这个邻节点还没有加入map，则加入，并加入队列q
+                if(!old_new.count(n)){
+                    old_new[n] = new Node(n-&gt;val);
+                    q.push(n);
+                }
+                //若已经加入map。直接添加到当前处理的节点的邻节点中
+                //加入map说明已经遍历过其所有的邻节点，不用加入队列q中
+                //若没加入map。上一步将其加入了，再进行这一步的处理
+                old_new[tmp]-&gt;neighbors.emplace_back(old_new[n]);
+            }
+        }
+        return new_node;
+    }
+};
+</code></pre>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">ChrisHRZ</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-06-23
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E5%9B%BE/">图</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9854%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E7%AC%ACk%E5%A4%A7%E8%8A%82%E7%82%B9/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">[Lc]面试题54二叉搜索树的第k大节点</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9853_ii.0n-1%E4%B8%AD%E7%BC%BA%E5%A4%B1%E7%9A%84%E6%95%B0%E5%AD%97/">
+            <span class="next-text nav-default">[Lc]面试题53_II</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/lc133%E5%85%8B%E9%9A%86%E5%9B%BE/" class="leancloud_visitors" data-flag-title="[Lc]133克隆图">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'M8Fyr1YXIu2Ov8Wh4ByqtEzq-gzGzoHsz',
+        appKey: 'AHiPSGeLQbvrQGQ6KfhvOKvN',
+        notify:  false ,
+        verify:  false ,
+        avatar:'mm',
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/ChrisHRZ" class="iconfont icon-github" title="github"></a>
+  <a href="https://chrishrz.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">ChrisHRZ</span>
+  </span>
+</div>
+
+
+<script src="https://cdn.bootcss.com/mermaid/8.4.8/mermaid.min.js"></script>
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js"></script>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

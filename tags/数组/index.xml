@@ -6,10 +6,109 @@
     <description>Recent content in 数组 on Focus-ChrisHRZ&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 03 Jun 2020 18:17:03 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2020 11:22:21 +0800</lastBuildDate>
     
 	<atom:link href="https://chrishrz.github.io/tags/%E6%95%B0%E7%BB%84/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Lc]面试题63股票的最大利润</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9863%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E5%A4%A7%E5%88%A9%E6%B6%A6/</link>
+      <pubDate>Tue, 30 Jun 2020 11:22:21 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9863%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E5%A4%A7%E5%88%A9%E6%B6%A6/</guid>
+      <description>题目 题解 动态规划的思想。即一次遍历，寻找两个数，一个是当前的全局最小值，一个是在当前的全局最小值后可以得到的最大差值 时间复杂度$O(n)$ 空</description>
+    </item>
+    
+    <item>
+      <title>[Lc]121买卖股票的最佳时机</title>
+      <link>https://chrishrz.github.io/post/lc121%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA/</link>
+      <pubDate>Tue, 30 Jun 2020 11:13:51 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc121%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA/</guid>
+      <description>题目 题解 动态规划的思想。即一次遍历，寻找两个数，一个是当前的全局最小值，一个是在当前的全局最小值后可以得到的最大差值 时间复杂度$O(n)$ 空</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题57_II和为s的连续正数序列</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9857_ii%E5%92%8C%E4%B8%BAs%E7%9A%84%E8%BF%9E%E7%BB%AD%E6%AD%A3%E6%95%B0%E5%BA%8F%E5%88%97/</link>
+      <pubDate>Fri, 26 Jun 2020 22:21:12 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9857_ii%E5%92%8C%E4%B8%BAs%E7%9A%84%E8%BF%9E%E7%BB%AD%E6%AD%A3%E6%95%B0%E5%BA%8F%E5%88%97/</guid>
+      <description>题目 题解 1. 暴力法 挨个计算所有数组的和，时间复杂度太高 时间复杂度: $O(n^{2})$ 空间复杂度: $O(1)$ 2. 滑动窗口法 看注释吧，不太难，证明可以看题解 时间复杂度: $O(n)$ 空</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题57_I和为s的两个数字</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9857_i%E5%92%8C%E4%B8%BAs%E7%9A%84%E4%B8%A4%E4%B8%AA%E6%95%B0%E5%AD%97/</link>
+      <pubDate>Thu, 25 Jun 2020 20:09:52 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9857_i%E5%92%8C%E4%B8%BAs%E7%9A%84%E4%B8%A4%E4%B8%AA%E6%95%B0%E5%AD%97/</guid>
+      <description>题目 题解 可以用哈希表，但是需要用额外的存储空间，这道题有递增的性质，直接双指针，很简单，看代码就可以。 时间复杂度: $O(n)$ 空间复杂度: $O(1)$ class Solution { public: vector&amp;lt;int&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>[Lc]1两数之和</title>
+      <link>https://chrishrz.github.io/post/lc1%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/</link>
+      <pubDate>Thu, 25 Jun 2020 19:30:14 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc1%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/</guid>
+      <description>题目 题解 1. 暴力法 就是挨个两两相加，找到相加为target的两个数。会超时，比较好写，这里不写了 时间复杂度$O(n^{2})$ 空间复杂度$O(</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题56_II数组中数字出现的次数II</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9856_ii%E6%95%B0%E7%BB%84%E4%B8%AD%E6%95%B0%E5%AD%97%E5%87%BA%E7%8E%B0%E7%9A%84%E6%AC%A1%E6%95%B0ii/</link>
+      <pubDate>Wed, 24 Jun 2020 17:09:28 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9856_ii%E6%95%B0%E7%BB%84%E4%B8%AD%E6%95%B0%E5%AD%97%E5%87%BA%E7%8E%B0%E7%9A%84%E6%AC%A1%E6%95%B0ii/</guid>
+      <description>题目 题解 1. 有限状态机 详细题解看这里。这里放几张来自该题解的图。详细题解还是看 Krahets 大神的题解吧。 时间复杂度: $O(n)$ 空间复杂度: $O(1)$ 重点掌握one和tw</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题56_I数组中数字出现的次数</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9856_i%E6%95%B0%E7%BB%84%E4%B8%AD%E6%95%B0%E5%AD%97%E5%87%BA%E7%8E%B0%E7%9A%84%E6%AC%A1%E6%95%B0/</link>
+      <pubDate>Wed, 24 Jun 2020 16:29:29 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9856_i%E6%95%B0%E7%BB%84%E4%B8%AD%E6%95%B0%E5%AD%97%E5%87%BA%E7%8E%B0%E7%9A%84%E6%AC%A1%E6%95%B0/</guid>
+      <description>题目 题解 我们先来看下异或的性质（数学里异或的符号是 $\oplus$）： 交换律：$p \oplus q = q \oplus p$ 结合律：$p \oplus (q \oplus r) = (p \oplus q) \oplus r$ 恒等率：$p \oplus</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题53_II</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9853_ii.0n-1%E4%B8%AD%E7%BC%BA%E5%A4%B1%E7%9A%84%E6%95%B0%E5%AD%97/</link>
+      <pubDate>Tue, 23 Jun 2020 14:10:37 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9853_ii.0n-1%E4%B8%AD%E7%BC%BA%E5%A4%B1%E7%9A%84%E6%95%B0%E5%AD%97/</guid>
+      <description>题目 题解 1. 挨个查找法 时间复杂度$O(N)$ 空间复杂度$O(1)$ 就是挨个查找数组，找到与下标不一致的数即可，但不是最右的方法 2. 二分查找法 时间</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题53_I在排序数组中查找数字I</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9853_i%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E6%95%B0%E5%AD%97i/</link>
+      <pubDate>Mon, 22 Jun 2020 20:02:46 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9853_i%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E6%95%B0%E5%AD%97i/</guid>
+      <description>题目 题解 1. 挨个查找法 时间复杂度$O(N)$ 空间复杂度$O(1)$ 就是挨个查找数组，找到的第一个就是开始位置，找到的最后一个就是结束位置。 这个</description>
+    </item>
+    
+    <item>
+      <title>[Lc]34在排序数组中查找元素的第一个和最后一个位置</title>
+      <link>https://chrishrz.github.io/post/lc34%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E5%85%83%E7%B4%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%92%8C%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E4%BD%8D%E7%BD%AE/</link>
+      <pubDate>Mon, 22 Jun 2020 19:42:13 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc34%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E5%85%83%E7%B4%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%92%8C%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E4%BD%8D%E7%BD%AE/</guid>
+      <description>题目 题解 1. 挨个查找法 时间复杂度$O(N)$ 空间复杂度$O(1)$ 就是挨个查找数组，找到的第一个就是开始位置，找到的最后一个就是结束位置。 这个</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题51数组中的逆序对</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9851%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%80%86%E5%BA%8F%E5%AF%B9/</link>
+      <pubDate>Sun, 14 Jun 2020 17:31:50 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9851%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%80%86%E5%BA%8F%E5%AF%B9/</guid>
+      <description>题目 题解 三个方法 1. 暴力法 必超时，挨个比较每两个数 时间复杂度$O(n^{2})$ 空间复杂度$O(1)$ 2. 归并排序法 就是用归并排序的思想，在归并</description>
+    </item>
     
     <item>
       <title>[Lc]295数据流的中位数</title>

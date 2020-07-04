@@ -6,10 +6,37 @@
     <description>Recent content in 二分查找 on Focus-ChrisHRZ&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 11 May 2020 18:32:06 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jun 2020 14:10:37 +0800</lastBuildDate>
     
 	<atom:link href="https://chrishrz.github.io/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Lc]面试题53_II</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9853_ii.0n-1%E4%B8%AD%E7%BC%BA%E5%A4%B1%E7%9A%84%E6%95%B0%E5%AD%97/</link>
+      <pubDate>Tue, 23 Jun 2020 14:10:37 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9853_ii.0n-1%E4%B8%AD%E7%BC%BA%E5%A4%B1%E7%9A%84%E6%95%B0%E5%AD%97/</guid>
+      <description>题目 题解 1. 挨个查找法 时间复杂度$O(N)$ 空间复杂度$O(1)$ 就是挨个查找数组，找到与下标不一致的数即可，但不是最右的方法 2. 二分查找法 时间</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题53_I在排序数组中查找数字I</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9853_i%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E6%95%B0%E5%AD%97i/</link>
+      <pubDate>Mon, 22 Jun 2020 20:02:46 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9853_i%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E6%95%B0%E5%AD%97i/</guid>
+      <description>题目 题解 1. 挨个查找法 时间复杂度$O(N)$ 空间复杂度$O(1)$ 就是挨个查找数组，找到的第一个就是开始位置，找到的最后一个就是结束位置。 这个</description>
+    </item>
+    
+    <item>
+      <title>[Lc]34在排序数组中查找元素的第一个和最后一个位置</title>
+      <link>https://chrishrz.github.io/post/lc34%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E5%85%83%E7%B4%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%92%8C%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E4%BD%8D%E7%BD%AE/</link>
+      <pubDate>Mon, 22 Jun 2020 19:42:13 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc34%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E5%85%83%E7%B4%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%92%8C%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E4%BD%8D%E7%BD%AE/</guid>
+      <description>题目 题解 1. 挨个查找法 时间复杂度$O(N)$ 空间复杂度$O(1)$ 就是挨个查找数组，找到的第一个就是开始位置，找到的最后一个就是结束位置。 这个</description>
+    </item>
     
     <item>
       <title>[Lc]面试题12矩阵中的路径</title>
