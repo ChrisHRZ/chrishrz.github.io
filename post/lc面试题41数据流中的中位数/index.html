@@ -228,7 +228,7 @@ public:
     
     double findMedian() {
         int n = nums.size();
-        //分正负取中位数
+        //分奇偶取中位数
         return n &amp; 1? nums[n/2] : (nums[n/2-1]+nums[n/2])*0.5;//用0.5而不是/2来取小数部分
     }
 };

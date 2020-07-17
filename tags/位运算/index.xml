@@ -6,10 +6,19 @@
     <description>Recent content in 位运算 on Focus-ChrisHRZ&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 13 May 2020 12:09:00 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jul 2020 16:49:21 +0800</lastBuildDate>
     
 	<atom:link href="https://chrishrz.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Lc]面试题65不用加减乘除做加法</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9865%E4%B8%8D%E7%94%A8%E5%8A%A0%E5%87%8F%E4%B9%98%E9%99%A4%E5%81%9A%E5%8A%A0%E6%B3%95/</link>
+      <pubDate>Sat, 11 Jul 2020 16:49:21 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9865%E4%B8%8D%E7%94%A8%E5%8A%A0%E5%87%8F%E4%B9%98%E9%99%A4%E5%81%9A%E5%8A%A0%E6%B3%95/</guid>
+      <description>题目 题解 这道题要求不能使用四则运算，一般这种题就要用位运算。对加法进行分析一下 a b 新a（非进位和） 新b（c，进位位） 0 0 0 0 0 1 1 0 1 0 1 0</description>
+    </item>
     
     <item>
       <title>[Lc]191位1的个数</title>

@@ -6,10 +6,19 @@
     <description>Recent content in 数组 on Focus-ChrisHRZ&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 30 Jun 2020 11:22:21 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jul 2020 16:51:50 +0800</lastBuildDate>
     
 	<atom:link href="https://chrishrz.github.io/tags/%E6%95%B0%E7%BB%84/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Lc]面试题61扑克牌中的顺子</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9861%E6%89%91%E5%85%8B%E7%89%8C%E4%B8%AD%E7%9A%84%E9%A1%BA%E5%AD%90/</link>
+      <pubDate>Fri, 10 Jul 2020 16:51:50 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9861%E6%89%91%E5%85%8B%E7%89%8C%E4%B8%AD%E7%9A%84%E9%A1%BA%E5%AD%90/</guid>
+      <description>题目 题解 两个方法。set去重+遍历和排序+遍历 这道题的核心是确定判断顺子的条件，有两个 数组中没有重复的数 最大值 - 最小值 &amp;lt; 5 1. set查重+遍历</description>
+    </item>
     
     <item>
       <title>[Lc]面试题63股票的最大利润</title>

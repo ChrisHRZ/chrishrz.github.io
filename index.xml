@@ -6,10 +6,64 @@
     <description>Recent content on Focus-ChrisHRZ&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 04 Jul 2020 14:08:27 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jul 2020 17:48:19 +0800</lastBuildDate>
     
 	<atom:link href="https://chrishrz.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Lc]239滑动窗口最大值</title>
+      <link>https://chrishrz.github.io/post/lc239%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E6%9C%80%E5%A4%A7%E5%80%BC/</link>
+      <pubDate>Sat, 11 Jul 2020 17:48:19 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc239%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E6%9C%80%E5%A4%A7%E5%80%BC/</guid>
+      <description>题目 题解 看题解有三个方法。最重要的是滑动窗口法，记录一下，其他的还有暴力法（超时）和动态规划法（没看懂，有时间再看） 1. 滑动窗口+单调递减队列</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题59_I滑动窗口的最大值</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9859_i%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E7%9A%84%E6%9C%80%E5%A4%A7%E5%80%BC/</link>
+      <pubDate>Sat, 11 Jul 2020 17:42:23 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9859_i%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E7%9A%84%E6%9C%80%E5%A4%A7%E5%80%BC/</guid>
+      <description>题目 题解 看题解有三个方法。最重要的是滑动窗口法，记录一下，其他的还有暴力法（超时）和动态规划法（没看懂，有时间再看） 1. 滑动窗口+单调递减队列</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题65不用加减乘除做加法</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9865%E4%B8%8D%E7%94%A8%E5%8A%A0%E5%87%8F%E4%B9%98%E9%99%A4%E5%81%9A%E5%8A%A0%E6%B3%95/</link>
+      <pubDate>Sat, 11 Jul 2020 16:49:21 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9865%E4%B8%8D%E7%94%A8%E5%8A%A0%E5%87%8F%E4%B9%98%E9%99%A4%E5%81%9A%E5%8A%A0%E6%B3%95/</guid>
+      <description>题目 题解 这道题要求不能使用四则运算，一般这种题就要用位运算。对加法进行分析一下 a b 新a（非进位和） 新b（c，进位位） 0 0 0 0 0 1 1 0 1 0 1 0</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题61扑克牌中的顺子</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9861%E6%89%91%E5%85%8B%E7%89%8C%E4%B8%AD%E7%9A%84%E9%A1%BA%E5%AD%90/</link>
+      <pubDate>Fri, 10 Jul 2020 16:51:50 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9861%E6%89%91%E5%85%8B%E7%89%8C%E4%B8%AD%E7%9A%84%E9%A1%BA%E5%AD%90/</guid>
+      <description>题目 题解 两个方法。set去重+遍历和排序+遍历 这道题的核心是确定判断顺子的条件，有两个 数组中没有重复的数 最大值 - 最小值 &amp;lt; 5 1. set查重+遍历</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题59_II队列的最大值</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9859_ii%E9%98%9F%E5%88%97%E7%9A%84%E6%9C%80%E5%A4%A7%E5%80%BC/</link>
+      <pubDate>Fri, 10 Jul 2020 16:07:07 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9859_ii%E9%98%9F%E5%88%97%E7%9A%84%E6%9C%80%E5%A4%A7%E5%80%BC/</guid>
+      <description>题目 //Your MaxQueue object will be instantiated and called as such: MaxQueue* obj = new MaxQueue(); int param_1 = obj-&amp;gt;max_value(); obj-&amp;gt;push_back(value); int param_3 = obj-&amp;gt;pop_front(); 题解 添加一个辅助的递减双端队列，用来保存对应队列中该数的最大值 push时： 当新添加的数小</description>
+    </item>
+    
+    <item>
+      <title>[Lc]面试题66构建乘积数组</title>
+      <link>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9866%E6%9E%84%E5%BB%BA%E4%B9%98%E7%A7%AF%E6%95%B0%E7%BB%84/</link>
+      <pubDate>Tue, 07 Jul 2020 22:41:00 +0800</pubDate>
+      
+      <guid>https://chrishrz.github.io/post/lc%E9%9D%A2%E8%AF%95%E9%A2%9866%E6%9E%84%E5%BB%BA%E4%B9%98%E7%A7%AF%E6%95%B0%E7%BB%84/</guid>
+      <description>题目 题解 两个方法，其实本质是一个，第二个是第一个优化空间复杂度 1. 左右分开动态规划(双数组) 其实就是dp左右两边的数组，左边的从1开始到n-1</description>
+    </item>
     
     <item>
       <title>[Lc]面试题60n个骰子的点数</title>
@@ -593,7 +647,7 @@
       <pubDate>Mon, 18 May 2020 17:06:23 +0800</pubDate>
       
       <guid>https://chrishrz.github.io/post/lc155%E6%9C%80%E5%B0%8F%E6%A0%88/</guid>
-      <description>题目 题解 两个类似的方法，一个是使用辅助栈存当前的最小值，一个是直接用一个栈保存一个pari，包括原值和最小值，个人感觉后一种方法更加直观，即</description>
+      <description>题目 题解 两个类似的方法，一个是使用辅助栈存当前的最小值，一个是直接用一个栈保存一个pair，包括原值和最小值，个人感觉后一种方法更加直观，即</description>
     </item>
     
     <item>
